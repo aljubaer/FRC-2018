@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">FRC-Offline</string>
+    <item type="string" name="databaseVersion" format="integer">1</item>
+</resources>

@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginBottom="15dp"
+            >
+
+            <TextView
+                android:id="@+id/txt_crop_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Select your crop"
+                android:padding="15dp"
+                android:layout_marginBottom="10dp"
+                android:textSize="18sp"
+                android:onClick="selectCrop"
+                android:drawableRight="@drawable/ic_arrow_drop_down"
+                android:background="@drawable/back_round"
+                android:focusable="true"
+                />
+
+            <TextView
+                android:id="@+id/txt_var"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Select var"
+                android:padding="15dp"
+                android:layout_marginBottom="10dp"
+                android:textSize="18sp"
+                android:onClick="selectVar"
+                android:drawableRight="@drawable/ic_arrow_drop_down"
+                android:background="@drawable/back_round"
+                android:focusable="true"
+                />
+
+            <TextView
+                android:id="@+id/txt_texture"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Texture"
+                android:padding="15dp"
+                android:layout_marginBottom="10dp"
+                android:textSize="18sp"
+                android:onClick="selectTexture"
+                android:drawableRight="@drawable/ic_arrow_drop_down"
+                android:background="@drawable/back_round"
+                android:focusable="true"
+                />
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/nWrapper"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                >
+
+                <EditText
+                    android:id="@+id/etxt_N"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxLength="7"
+                    android:inputType="numberDecimal"
+                    android:hint="Total N (%)"
+                    android:padding="15dp"
+                    />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/pWrapper"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                >
+
+                <EditText
+                    android:id="@+id/etxt_P"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxLength="7"
+                    android:inputType="numberDecimal"
+                    android:hint="Available P (μg/g)"
+                    android:padding="15dp"
+                    />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/kWrapper"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                >
+
+                <EditText
+                    android:id="@+id/etxt_K"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxLength="7"
+                    android:inputType="numberDecimal"
+                    android:hint="Exchangeable K (meq/100g)"
+                    android:padding="15dp"
+                    />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/sWrapper"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                >
+
+                <EditText
+                    android:id="@+id/etxt_S"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxLength="7"
+                    android:inputType="numberDecimal"
+                    android:hint="Available S (μg/g)"
+                    android:padding="15dp"
+                    />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/znWrapper"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                >
+
+                <EditText
+                    android:id="@+id/etxt_Zn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxLength="7"
+                    android:inputType="numberDecimal"
+                    android:hint="Available Zn (μg/g)"
+                    android:padding="15dp"
+                    />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/bWrapper"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                >
+
+                <EditText
+                    android:id="@+id/etxt_B"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxLength="7"
+                    android:inputType="numberDecimal"
+                    android:hint="Available B (μg/g)"
+                    android:padding="15dp"
+                    />
+            </android.support.design.widget.TextInputLayout>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Submit"
+                android:layout_marginBottom="20dp"
+                />
+
+
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>
