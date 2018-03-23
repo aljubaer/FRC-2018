@@ -1,4 +1,4 @@
-package com.example.abdullahaljubaer.frc_offline;
+package com.example.abdullahaljubaer.frc_offline.CustomViews;
 
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -13,8 +13,10 @@ import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import com.example.abdullahaljubaer.frc_offline.GUI.MainActivity;
+import com.example.abdullahaljubaer.frc_offline.R;
+
 import java.util.ArrayList;
-import java.util.Arrays;
 
 /**
  * Created by ABDULLAH AL JUBAER on 12-02-18.
@@ -23,7 +25,7 @@ import java.util.Arrays;
 public class CustomSearchableDialog {
     
     private Context context;
-    private String[] values = {""};
+    private ArrayList<String> values;
     private ArrayList<String> currentValueList;
     private AlertDialog dialog = null;
     private int textLength = 0;
@@ -32,15 +34,15 @@ public class CustomSearchableDialog {
     public ArrayList<String> a = null;
     public int flag;
     
-    public CustomSearchableDialog (Context context, String[] values, AlertDialog dialog, TextView v, int flag){
+    public CustomSearchableDialog (){}
 
+    public void init(Context context, ArrayList<String> values, AlertDialog dialog, TextView v) {
         this.dialog = dialog;
         this.context = context;
         this.values = values;
         this.textView = v;
         this.flag = flag;
         createView();
-
     }
 
 
@@ -52,7 +54,7 @@ public class CustomSearchableDialog {
         editText.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_search, 0, 0, 0);
         editText.setPadding(10,10,10,10);
         editText.setTextSize(30);
-        currentValueList = new ArrayList<String> (Arrays.asList(values));
+        currentValueList = values;
 
         LinearLayout layout = new LinearLayout(context);
         layout.setOrientation(LinearLayout.VERTICAL);
@@ -68,8 +70,9 @@ public class CustomSearchableDialog {
                                                 dialog.dismiss();
                                                 if (currentValueList.size() > 0 && position >= 0 && position < currentValueList.size())
                                                     selectedText = currentValueList.get(position);
-                                                else selectedText = values[position];
+                                                else selectedText = values.get(position);
                                                 textView.setText(selectedText);
+                                                MainActivity.INPUT_FLAG = true;
                                             }
                                         }
         );
@@ -87,10 +90,10 @@ public class CustomSearchableDialog {
                 editText.setCompoundDrawablesWithIntrinsicBounds(0, 0, 0, 0);
                 textLength = editText.getText().length();
                 currentValueList.clear();
-                for (int i = 0; i < values.length; i++) {
-                    if (textLength <= values[i].length()) {
-                        if(values[i].toLowerCase().contains(editText.getText().toString().toLowerCase().trim())) {
-                            currentValueList.add(values[i]);
+                for (int i = 0; i < values.size(); i++) {
+                    if (textLength <= values.get(i).length()) {
+                        if(values.get(i).toLowerCase().contains(editText.getText().toString().toLowerCase().trim())) {
+                            currentValueList.add(values.get(i));
                         }
                     }
                 }
@@ -102,9 +105,7 @@ public class CustomSearchableDialog {
 
             @Override
             public void onClick(DialogInterface dialog, int which) {
-
                 dialog.dismiss();
-
             }
         });
         dialog = mDialog.show();
