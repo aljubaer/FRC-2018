@@ -21,9 +21,15 @@ public abstract class DBHelper extends SQLiteOpenHelper {
     }
 
     @Override
-    public abstract void onCreate(SQLiteDatabase db);
+    public synchronized void onCreate(SQLiteDatabase db) {
+
+    }
+
     @Override
-    public abstract void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion);
+    public synchronized void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
+
+    }
+
     public abstract int numberOfRows();
     public abstract Cursor getData();
 }

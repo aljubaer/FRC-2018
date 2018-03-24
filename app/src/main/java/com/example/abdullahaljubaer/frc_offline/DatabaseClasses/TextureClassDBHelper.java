@@ -30,7 +30,7 @@ public class TextureClassDBHelper extends DBHelper {
     }
 
     @Override
-    public void onCreate(SQLiteDatabase db) {
+    public synchronized void onCreate(SQLiteDatabase db) {
 
         String queryCreateDB = String.format(
                 "CREATE TABLE IF NOT EXISTS %s ( %s text NOT NULL, %s text NOT NULL, %s text NOT NULL)",
@@ -75,7 +75,7 @@ public class TextureClassDBHelper extends DBHelper {
     }
 
     @Override
-    public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
+    public synchronized void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         db.execSQL("DROP TABLE IF EXISTS " + TABLE_NAME);
         onCreate(db);
     }
@@ -90,7 +90,13 @@ public class TextureClassDBHelper extends DBHelper {
     @Override
     public Cursor getData() {
         SQLiteDatabase db = this.getReadableDatabase();
-        Cursor res =  db.rawQuery( "select * from " + TABLE_NAME, null );
+        Cursor res =  db.rawQuery( "SELECT * FROM " + TABLE_NAME, null );
+        return res;
+    }
+
+    public Cursor getDistTexture() {
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor res =  db.rawQuery( "SELECT DISTINCT " + COLUMN_TEXTURE + " FROM " + TABLE_NAME, null );
         return res;
     }
 }

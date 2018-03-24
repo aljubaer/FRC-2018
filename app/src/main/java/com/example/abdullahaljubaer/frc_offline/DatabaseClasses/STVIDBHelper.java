@@ -32,7 +32,7 @@ public class STVIDBHelper extends DBHelper {
     }
 
     @Override
-    public void onCreate(SQLiteDatabase db) {
+    public synchronized void onCreate(SQLiteDatabase db) {
 
         String queryCreateDB = String.format(
                 "CREATE TABLE IF NOT EXISTS %s " +
@@ -93,7 +93,7 @@ public class STVIDBHelper extends DBHelper {
     }
 
     @Override
-    public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
+    public synchronized void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         db.execSQL("DROP TABLE IF EXISTS " + TABLE_NAME);
         onCreate(db);
     }

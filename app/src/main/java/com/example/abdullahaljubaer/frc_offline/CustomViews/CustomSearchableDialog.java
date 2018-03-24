@@ -72,7 +72,6 @@ public class CustomSearchableDialog {
                                                     selectedText = currentValueList.get(position);
                                                 else selectedText = values.get(position);
                                                 textView.setText(selectedText);
-                                                MainActivity.INPUT_FLAG = true;
                                             }
                                         }
         );
