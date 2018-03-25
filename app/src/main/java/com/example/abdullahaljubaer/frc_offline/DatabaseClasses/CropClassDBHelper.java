@@ -82,7 +82,7 @@ public class CropClassDBHelper extends DBHelper {
 
     public Cursor getAllCropSeason(){
         SQLiteDatabase db = this.getReadableDatabase();
-        Cursor res =  db.rawQuery( "SELECT distinct `season` FROM "
+        Cursor res =  db.rawQuery( "SELECT DISTINCT `season` FROM "
                 + TABLE_NAME
                 + " ORDER BY `season`", null );
         return res;
@@ -91,7 +91,7 @@ public class CropClassDBHelper extends DBHelper {
     public Cursor getAllVariety( String season ){
         String s = "'" + season + "'";
         SQLiteDatabase db = this.getReadableDatabase();
-        Cursor res =  db.rawQuery( "SELECT distinct `variety` FROM "
+        Cursor res =  db.rawQuery( "SELECT DISTINCT `variety` FROM "
                 + TABLE_NAME
                 + " WHERE `season` = " + s, null );
         return res;
@@ -100,7 +100,7 @@ public class CropClassDBHelper extends DBHelper {
     @Override
     public Cursor getData() {
         SQLiteDatabase db = this.getReadableDatabase();
-        Cursor res =  db.rawQuery( "select * from " + TABLE_NAME, null );
+        Cursor res =  db.rawQuery( "SELECT * FROM " + TABLE_NAME, null );
         return res;
     }
 
@@ -110,4 +110,19 @@ public class CropClassDBHelper extends DBHelper {
         int numRows = (int) DatabaseUtils.queryNumEntries(db, TABLE_NAME);
         return numRows;
     }
+
+    public String getClass (String season, String var) {
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor res =  db.rawQuery( "SELECT " + COLUMN_CLASS + " FROM " + TABLE_NAME
+                + " WHERE " + COLUMN_SEASON + " = '" + season + "' AND " + COLUMN_VARIETY
+                + " = '" + var + "'", null );
+        String cClass = "NULL";
+
+        if (res.moveToFirst()){
+            cClass = res.getString(res.getColumnIndex(COLUMN_CLASS));;
+        }
+
+        return cClass;
+    }
+
 }

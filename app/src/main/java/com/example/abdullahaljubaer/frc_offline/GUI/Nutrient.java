@@ -14,4 +14,15 @@ public class Nutrient {
         this.symbol = symbol;
     }
 
+    public double calculateRequiredNutrient ( Crop crop, String status ) {
+
+        Interpretation RecommendationInterpretation = crop.getInterpretation(symbol, status);
+
+        return calculateFr(0, 0, 0 , 0 , 0);
+    }
+
+    private double calculateFr (double Uf, double Ci, double Cs, double St, double Ls) {
+        return 0.0;
+    }
+
 }

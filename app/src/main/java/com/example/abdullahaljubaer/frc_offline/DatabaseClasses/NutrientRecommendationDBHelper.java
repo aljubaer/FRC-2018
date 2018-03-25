@@ -6,6 +6,8 @@ import android.database.Cursor;
 import android.database.DatabaseUtils;
 import android.database.sqlite.SQLiteDatabase;
 
+import com.example.abdullahaljubaer.frc_offline.GUI.*;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
@@ -111,6 +113,30 @@ public class NutrientRecommendationDBHelper extends DBHelper {
 
     @Override
     public Cursor getData() {
-        return null;
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor res =  db.rawQuery( "SELECT * FROM " + TABLE_NAME, null );
+        return res;
     }
+
+    public Interpretation getInterpretation (String season, String cls, String status, String nutrient) {
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor res =  db.rawQuery( "SELECT * FROM " + TABLE_NAME
+                + " WHERE " + COLUMN_SEASON + " = '" + season + "' AND "
+                + COLUMN_CLASS + " = '" + cls + "' " + "AND " + COLUMN_INTERPRETATION
+                + " = '" + status + "' AND "
+                + COLUMN_NUTRIENT + " = '" + nutrient + "'", null );
+
+        String d1 = "0", d2 = "0", d3 = "0";
+
+        if (res.moveToFirst()) {
+            d1 = res.getString(res.getColumnIndex(COLUMN_LOWER_LIMIT));
+            d2 = res.getString(res.getColumnIndex(COLUMN_UPPER_LIMIT));
+            d3 = res.getString(res.getColumnIndex(COLUMN_INTERVAL));
+        }
+
+        return new Interpretation(status, Double.parseDouble(d1), Double.parseDouble(d2), Double.parseDouble(d3));
+
+    }
+
+
 }

@@ -42,6 +42,8 @@ public class MainActivity extends AppCompatActivity {
     private ArrayList<String> varietyList = new ArrayList<>();
     private ArrayList<String> textureList = new ArrayList<>();
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -142,6 +144,8 @@ public class MainActivity extends AppCompatActivity {
         });
 
         Nutrient nitrogen = new Nutrient("Nitrogen", "N");
+
+
     }
 
 
