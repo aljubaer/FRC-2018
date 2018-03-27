@@ -24,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
     private STVIDBHelper stvidbHelper = null;
     private TextureClassDBHelper textureClassDBHelper = null;
     private NutrientRecommendationDBHelper nutrientRecommendationDBHelper = null;
+    private CropGroupDBHelper cropGroupDBHelper = null;
 
 
     private TextView textViewCrop;

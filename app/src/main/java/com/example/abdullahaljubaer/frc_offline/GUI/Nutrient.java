@@ -14,9 +14,9 @@ public class Nutrient {
         this.symbol = symbol;
     }
 
-    public double calculateRequiredNutrient ( Crop crop, String status ) {
+    public double calculateRequiredNutrient ( Crop crop, String status, double soilTestValue ) {
 
-        Interpretation RecommendationInterpretation = crop.getInterpretation(symbol, status);
+        Interpretation recommendationInterpretation = crop.getInterpretation(symbol, status);
 
         return calculateFr(0, 0, 0 , 0 , 0);
     }

@@ -12,36 +12,34 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 
 /**
- * Created by ABDULLAH AL JUBAER on 23-03-18.
+ * Created by ABDULLAH AL JUBAER on 28-03-18.
  */
 
-public class TextureClassDBHelper extends DBHelper {
+public class CropGroupDBHelper extends DBHelper {
 
     private Context context;
-    public static final String TABLE_NAME = "texture_class";
-    public static final String COLUMN_TEXTURE = "texture";
-    public static final String COLUMN_CROP_TYPE = "crop_type";
-    public static final String COLUMN_CLASS = "class";
+    public static final String TABLE_NAME = "crop_group";
+    public static final String COLUMN_GROUP = "group";
+    public static final String COLUMN_SEASON = "season";
+    public static final String COLUMN_CROP_TYPE = "type";
 
-
-    public TextureClassDBHelper(Context context) {
+    public CropGroupDBHelper(Context context) {
         super(context);
         this.context = context;
     }
 
     @Override
     public synchronized void onCreate(SQLiteDatabase db) {
-
         String queryCreateDB = String.format(
                 "CREATE TABLE IF NOT EXISTS %s ( %s text NOT NULL, %s text NOT NULL, %s text NOT NULL)",
                 TABLE_NAME,
-                COLUMN_TEXTURE,
-                COLUMN_CROP_TYPE,
-                COLUMN_CLASS);
+                COLUMN_GROUP,
+                COLUMN_SEASON,
+                COLUMN_CROP_TYPE);
 
         db.execSQL(queryCreateDB);
 
-        String mCSVFile = "texture_class.csv";
+        String mCSVFile = "crop_group.csv";
         AssetManager manager = context.getAssets();
         InputStream inStream = null;
         try {
@@ -52,7 +50,7 @@ public class TextureClassDBHelper extends DBHelper {
 
         BufferedReader buffer = new BufferedReader(new InputStreamReader(inStream));
         String line = "";
-        String columns = COLUMN_TEXTURE + ", " + COLUMN_CROP_TYPE + ", " + COLUMN_CLASS;
+        String columns = COLUMN_GROUP + ", " + COLUMN_SEASON + ", " + COLUMN_CROP_TYPE;
         String str1 = "INSERT INTO " + TABLE_NAME + " (" + columns + ") values(";
         String str2 = ");";
 
@@ -94,21 +92,14 @@ public class TextureClassDBHelper extends DBHelper {
         return res;
     }
 
-    public Cursor getDistTexture() {
+    public String getCropGroup (String season) {
         SQLiteDatabase db = this.getReadableDatabase();
-        Cursor res =  db.rawQuery( "SELECT DISTINCT " + COLUMN_TEXTURE + " FROM " + TABLE_NAME, null );
-        return res;
-    }
-
-    public String getClass ( String text, String type ) {
-        SQLiteDatabase db = this.getReadableDatabase();
-        Cursor res =  db.rawQuery( "SELECT " + COLUMN_CLASS + " FROM " + TABLE_NAME
-                + " WHERE " + COLUMN_TEXTURE + " = '" + text
-                + "' AND " + COLUMN_CROP_TYPE + " = '" + type + "'", null );
+        Cursor res = db.rawQuery("SELECT " + COLUMN_CROP_TYPE + " FROM " + TABLE_NAME
+                + " WHERE " + COLUMN_SEASON + " = '" + season + "'", null);
 
         String data = "";
         if (res.moveToFirst()) {
-            data = res.getString(res.getColumnIndex(COLUMN_CLASS));
+            data = res.getString(res.getColumnIndex(COLUMN_CROP_TYPE));
         }
         return data;
     }
