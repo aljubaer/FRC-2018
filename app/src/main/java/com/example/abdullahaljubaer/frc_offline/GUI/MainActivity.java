@@ -26,6 +26,8 @@ public class MainActivity extends AppCompatActivity {
     private NutrientRecommendationDBHelper nutrientRecommendationDBHelper = null;
     private CropGroupDBHelper cropGroupDBHelper = null;
 
+    private Crop mCrop;
+    private Texture mTexture;
 
     private TextView textViewCrop;
     private TextView textViewVariety;
@@ -51,6 +53,9 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_frc);
 
         // -----------------Database testing ---------------------
+
+        cropGroupDBHelper = new CropGroupDBHelper(this);
+        System.out.println( cropGroupDBHelper.numberOfRows() );
 
         cropClassDbHelper = new CropClassDBHelper(this);
         System.out.println( cropClassDbHelper.numberOfRows() );
@@ -81,6 +86,7 @@ public class MainActivity extends AppCompatActivity {
         editTextZn = findViewById(R.id.edtxt_Zn);
         editTextB = findViewById(R.id.edtxt_B);
 
+        calculate();
 
         // ----------------- Initializing Views ------------------
     }
@@ -107,21 +113,55 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void selectVar ( View view ) {
-        String crop = textViewCrop.getText().toString();
+        final String crop = textViewCrop.getText().toString();
         varietyList = readCursor(cropClassDbHelper.getAllVariety(crop), CropClassDBHelper.COLUMN_VARIETY);
         new CustomSearchableDialog().init(MainActivity.this, varietyList, mAlertDialog, textViewVariety);
+        textViewVariety.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+                String var = textViewVariety.getText().toString();
+                mCrop = new Crop(crop, var, cropGroupDBHelper.getCropGroup(crop));
+                mCrop.setDB(cropClassDbHelper, nutrientRecommendationDBHelper);
+            }
+        });
     }
 
     public void selectTexture ( View view ) {
         textureList = readCursor(textureClassDBHelper.getDistTexture(), TextureClassDBHelper.COLUMN_TEXTURE);
         new CustomSearchableDialog().init(MainActivity.this, textureList, mAlertDialog, textViewTexture);
+        textViewTexture.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+                System.out.println(textViewTexture.getText().toString());
+                mTexture = new Texture(textViewTexture.getText().toString(), mCrop.getCropType());
+                mTexture.setDB(textureClassDBHelper, stvidbHelper);
+            }
+        });
     }
 
-    double soilTextValue = 0.1;
+    private double soilTextValue = 0.1;
 
-    public void calculateNitrogen () {
-
-
+    public void calculate() {
 
         editTextN.addTextChangedListener(new TextWatcher() {
             @Override
@@ -138,13 +178,136 @@ public class MainActivity extends AppCompatActivity {
             public void afterTextChanged(Editable s) {
                 try {
                     soilTextValue = Double.parseDouble(editTextN.getText().toString());
+                    Nutrient nitrogen = new Nutrient("Nitrogen", "N");
+                    double val = nitrogen.calculateRequiredNutrient(mCrop, mTexture, soilTextValue);
+                    Toast.makeText(MainActivity.this,  String.valueOf(val), Toast.LENGTH_LONG).show();
                 } catch (NumberFormatException e){
                     Toast.makeText(MainActivity.this, "Invalid Input", Toast.LENGTH_LONG).show();
                 }
             }
         });
 
-        Nutrient nitrogen = new Nutrient("Nitrogen", "N");
+        editTextP.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+                try {
+                    soilTextValue = Double.parseDouble(editTextP.getText().toString());
+                    Nutrient nitrogen = new Nutrient("Phosphorus", "P");
+                    double val = nitrogen.calculateRequiredNutrient(mCrop, mTexture, soilTextValue);
+                    Toast.makeText(MainActivity.this,  String.valueOf(val), Toast.LENGTH_LONG).show();
+                } catch (NumberFormatException e){
+                    Toast.makeText(MainActivity.this, "Invalid Input", Toast.LENGTH_LONG).show();
+                }
+            }
+        });
+
+        editTextK.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+                try {
+                    soilTextValue = Double.parseDouble(editTextK.getText().toString());
+                    Nutrient nitrogen = new Nutrient("Potassium", "K");
+                    double val = nitrogen.calculateRequiredNutrient(mCrop, mTexture, soilTextValue);
+                    Toast.makeText(MainActivity.this,  String.valueOf(val), Toast.LENGTH_LONG).show();
+                } catch (NumberFormatException e){
+                    Toast.makeText(MainActivity.this, "Invalid Input", Toast.LENGTH_LONG).show();
+                }
+            }
+        });
+
+        editTextS.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+                try {
+                    soilTextValue = Double.parseDouble(editTextS.getText().toString());
+                    Nutrient nitrogen = new Nutrient("Sulphur", "S");
+                    double val = nitrogen.calculateRequiredNutrient(mCrop, mTexture, soilTextValue);
+                    Toast.makeText(MainActivity.this,  String.valueOf(val), Toast.LENGTH_LONG).show();
+                } catch (NumberFormatException e){
+                    Toast.makeText(MainActivity.this, "Invalid Input", Toast.LENGTH_LONG).show();
+                }
+            }
+        });
+
+        editTextZn.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+                try {
+                    soilTextValue = Double.parseDouble(editTextN.getText().toString());
+                    Nutrient nitrogen = new Nutrient("Zinc", "Zn");
+                    double val = nitrogen.calculateRequiredNutrient(mCrop, mTexture, soilTextValue);
+                    Toast.makeText(MainActivity.this,  String.valueOf(val), Toast.LENGTH_LONG).show();
+                } catch (NumberFormatException e){
+                    Toast.makeText(MainActivity.this, "Invalid Input", Toast.LENGTH_LONG).show();
+                }
+            }
+        });
+
+        editTextB.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+                try {
+                    soilTextValue = Double.parseDouble(editTextB.getText().toString());
+                    Nutrient nitrogen = new Nutrient("Boron", "B");
+                    double val = nitrogen.calculateRequiredNutrient(mCrop, mTexture, soilTextValue);
+                    Toast.makeText(MainActivity.this,  String.valueOf(val), Toast.LENGTH_LONG).show();
+                } catch (NumberFormatException e){
+                    Toast.makeText(MainActivity.this, "Invalid Input", Toast.LENGTH_LONG).show();
+                }
+            }
+        });
+
+
 
 
     }

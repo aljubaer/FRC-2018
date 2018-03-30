@@ -5,6 +5,9 @@ import android.content.res.AssetManager;
 import android.database.Cursor;
 import android.database.DatabaseUtils;
 import android.database.sqlite.SQLiteDatabase;
+
+import com.example.abdullahaljubaer.frc_offline.GUI.Interpretation;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
@@ -108,8 +111,29 @@ public class STVIDBHelper extends DBHelper {
     @Override
     public Cursor getData() {
         SQLiteDatabase db = this.getReadableDatabase();
-        Cursor res =  db.rawQuery( "select * from " + TABLE_NAME, null );
+        Cursor res =  db.rawQuery( "SELECT * FROM " + TABLE_NAME, null );
         return res;
+    }
+
+    public Interpretation getInterpretation (String cls, String nutrient, double val){
+        SQLiteDatabase db = getReadableDatabase();
+        Cursor res = db.rawQuery("SELECT * FROM " + TABLE_NAME
+                + " WHERE " + COLUMN_TEXTURE_CLASS + "= '" + cls + "'"
+                + " AND " + COLUMN_NUTRIENT + "= '" + nutrient + "'"
+                + " AND " + COLUMN_LOWER_LIMIT + "<= '" + val + "'"
+                + " AND " + COLUMN_UPPER_LIMIT + ">= '" + val + "'", null);
+
+        String d1 = "0", d2 = "0", d3 = "0", status = "";
+
+        if (res.moveToFirst()) {
+            status = res.getString(res.getColumnIndex(COLUMN_INTERPRETATION));
+            d1 = res.getString(res.getColumnIndex(COLUMN_LOWER_LIMIT));
+            d2 = res.getString(res.getColumnIndex(COLUMN_UPPER_LIMIT));
+            d3 = res.getString(res.getColumnIndex(COLUMN_INTERVAL));
+        }
+
+        return new Interpretation(status, Double.parseDouble(d1), Double.parseDouble(d2), Double.parseDouble(d3));
+
     }
 
 }

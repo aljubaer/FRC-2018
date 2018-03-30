@@ -14,15 +14,21 @@ public class Nutrient {
         this.symbol = symbol;
     }
 
-    public double calculateRequiredNutrient ( Crop crop, String status, double soilTestValue ) {
+    public double calculateRequiredNutrient ( Crop crop, Texture texture, double soilTestValue ) {
 
-        Interpretation recommendationInterpretation = crop.getInterpretation(symbol, status);
+        Interpretation testInterpretation = texture.getInterpretation(symbol, soilTestValue);
 
-        return calculateFr(0, 0, 0 , 0 , 0);
+        Interpretation recommendationInterpretation = crop.getInterpretation(symbol, testInterpretation.getStatus());
+
+        return calculateFr(recommendationInterpretation.getUpperLimit(), recommendationInterpretation.getInterval(), testInterpretation.getInterval(), soilTestValue , testInterpretation.getLowerLimit());
     }
 
     private double calculateFr (double Uf, double Ci, double Cs, double St, double Ls) {
-        return 0.0;
+
+
+
+        return Uf - ((Ci / Cs) * (St - Ls));
+
     }
 
 }

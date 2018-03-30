@@ -23,7 +23,7 @@ public class Crop {
 
     }
 
-    public void setDB (CropClassDBHelper cropClassDBHelper, NutrientRecommendationDBHelper recommendationDBHelper) {
+    public synchronized void setDB (CropClassDBHelper cropClassDBHelper, NutrientRecommendationDBHelper recommendationDBHelper) {
         this.cropClassDBHelper = cropClassDBHelper;
         this.recommendationDBHelper = recommendationDBHelper;
     }
@@ -32,9 +32,11 @@ public class Crop {
         return cropClassDBHelper.getClass(seasonName, varietyName);
     }
 
-    public Interpretation getInterpretation (String nutrientName, String status){
+    public synchronized Interpretation getInterpretation (String nutrientName, String status){
         return recommendationDBHelper.getInterpretation(seasonName, getCClass(), status, nutrientName);
     }
 
-
+    public String getCropType() {
+        return cropType;
+    }
 }

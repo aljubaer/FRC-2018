@@ -19,9 +19,9 @@ public class CropGroupDBHelper extends DBHelper {
 
     private Context context;
     public static final String TABLE_NAME = "crop_group";
-    public static final String COLUMN_GROUP = "group";
+    public static final String COLUMN_GROUP = "crop_group";
     public static final String COLUMN_SEASON = "season";
-    public static final String COLUMN_CROP_TYPE = "type";
+    public static final String COLUMN_CROP_TYPE = "crop_type";
 
     public CropGroupDBHelper(Context context) {
         super(context);

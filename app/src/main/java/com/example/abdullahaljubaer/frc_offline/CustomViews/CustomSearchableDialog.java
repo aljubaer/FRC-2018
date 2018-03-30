@@ -36,7 +36,7 @@ public class CustomSearchableDialog {
     
     public CustomSearchableDialog (){}
 
-    public void init(Context context, ArrayList<String> values, AlertDialog dialog, TextView v) {
+    public synchronized void init(Context context, ArrayList<String> values, AlertDialog dialog, TextView v) {
         this.dialog = dialog;
         this.context = context;
         this.values = values;

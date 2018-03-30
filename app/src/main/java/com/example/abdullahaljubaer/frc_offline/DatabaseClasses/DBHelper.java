@@ -12,7 +12,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 public abstract class DBHelper extends SQLiteOpenHelper {
 
     private static final String DATABASE_NAME = "crop_nutrient.db";
-    private static final Integer DATABASE_VERSION = 9;
+    private static final Integer DATABASE_VERSION = 13;
     private final Context context;
 
     public DBHelper(Context context) {

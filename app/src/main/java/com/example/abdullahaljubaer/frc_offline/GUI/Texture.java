@@ -1,5 +1,6 @@
 package com.example.abdullahaljubaer.frc_offline.GUI;
 
+import com.example.abdullahaljubaer.frc_offline.DatabaseClasses.STVIDBHelper;
 import com.example.abdullahaljubaer.frc_offline.DatabaseClasses.TextureClassDBHelper;
 
 /**
@@ -13,22 +14,26 @@ public class Texture {
     private String soilType;
     private String textureClass;
     private TextureClassDBHelper textureClassDBHelper;
+    private STVIDBHelper stvidbHelper;
 
     public Texture(String texture, String landType) {
         this.texture = texture;
         this.landType = landType;
+
     }
 
     private void setTextureClass () {
         this.textureClass = textureClassDBHelper.getClass(texture, landType);
     }
 
-    public void setDB (TextureClassDBHelper textureClassDBHelper) {
+    public void setDB (TextureClassDBHelper textureClassDBHelper, STVIDBHelper stvidbHelper) {
         this.textureClassDBHelper = textureClassDBHelper;
+        this.stvidbHelper = stvidbHelper;
+        setTextureClass();
     }
 
-    public Interpretation getInterpretation () {
-        return null;
+    public Interpretation getInterpretation (String nutrient, double val) {
+        return stvidbHelper.getInterpretation(textureClass, nutrient, val);
     }
 
 }
