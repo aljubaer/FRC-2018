@@ -13,7 +13,6 @@ import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
 
-import com.example.abdullahaljubaer.frc_offline.GUI.MainActivity;
 import com.example.abdullahaljubaer.frc_offline.R;
 
 import java.util.ArrayList;

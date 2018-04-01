@@ -1,17 +1,12 @@
 package com.example.abdullahaljubaer.frc_offline.DatabaseClasses;
 
 import android.content.Context;
-import android.content.res.AssetManager;
 import android.database.Cursor;
 import android.database.DatabaseUtils;
 import android.database.sqlite.SQLiteDatabase;
 
 import com.example.abdullahaljubaer.frc_offline.GUI.*;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
 
 /**
  * Created by ABDULLAH AL JUBAER on 23-03-18.
@@ -33,75 +28,6 @@ public class NutrientRecommendationDBHelper extends DBHelper {
     public NutrientRecommendationDBHelper(Context context) {
         super(context);
         this.context = context;
-    }
-
-    @Override
-    public synchronized void onCreate(SQLiteDatabase db) {
-
-        String queryCreateDB = String.format(
-                "CREATE TABLE IF NOT EXISTS %s " +
-                        "( %s text NOT NULL, %s text NOT NULL, %s text NOT NULL, %s text NOT NULL, " +
-                        "%s float NOT NULL, %s float NOT NULL, %s float NOT NULL)",
-                TABLE_NAME,
-                COLUMN_SEASON,
-                COLUMN_CLASS,
-                COLUMN_NUTRIENT,
-                COLUMN_INTERPRETATION,
-                COLUMN_LOWER_LIMIT,
-                COLUMN_UPPER_LIMIT,
-                COLUMN_INTERVAL
-        );
-
-        db.execSQL(queryCreateDB);
-
-        String mCSVFile = "soil_analysis_interpretation.csv";
-        AssetManager manager = context.getAssets();
-        InputStream inStream = null;
-        try {
-            inStream = manager.open(mCSVFile);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
-        BufferedReader buffer = new BufferedReader(new InputStreamReader(inStream));
-        String line = "";
-        String columns = COLUMN_SEASON + ", "
-                + COLUMN_CLASS + ", "
-                + COLUMN_NUTRIENT + ", "
-                + COLUMN_INTERPRETATION + ", "
-                + COLUMN_LOWER_LIMIT + ", "
-                + COLUMN_UPPER_LIMIT + ", "
-                + COLUMN_INTERVAL;
-        String str1 = "INSERT INTO " + TABLE_NAME + " (" + columns + ") values(";
-        String str2 = ");";
-
-        db.beginTransaction();
-        try {
-            while ((line = buffer.readLine()) != null) {
-                StringBuilder sb = new StringBuilder(str1);
-                String[] str = line.split(",");
-                sb.append("'" + str[0] + "', ");
-                sb.append("'" + str[1] + "', ");
-                sb.append("'" + str[2] + "', ");
-                sb.append("'" + str[3] + "', ");
-                sb.append("'" + str[4] + "', ");
-                sb.append("'" + str[5] + "', ");
-                sb.append("'" + str[6] + "' ");
-                sb.append(str2);
-                db.execSQL(sb.toString());
-            }
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        db.setTransactionSuccessful();
-        db.endTransaction();
-
-    }
-
-    @Override
-    public synchronized void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-        db.execSQL("DROP TABLE IF EXISTS " + TABLE_NAME);
-        onCreate(db);
     }
 
     @Override
