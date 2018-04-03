@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#DCEDC8"
+    >
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar"
+        />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="8"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:orientation="vertical"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="25dp"
+            android:paddingBottom="25dp"
+            android:layout_margin="15dp"
+            android:layout_marginBottom="50dp"
+            android:background="#AAAED581"
+            android:id="@+id/linearLayout">
+
+            <TextView
+                android:id="@+id/txt_cropname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Select your crop"
+                android:padding="15dp"
+                android:layout_marginBottom="0dp"
+                android:textSize="18sp"
+                android:onClick="selectCrop"
+                android:drawableRight="@drawable/ic_arrow_drop_down"
+                android:background="@drawable/back_round"
+                android:focusable="true"
+                />
+            <TextView
+                android:id="@+id/error_crop"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="15dp"
+                android:textSize="12sp"
+                android:textColor="#FF0000"
+                />
+
+            <TextView
+                android:id="@+id/txt_var"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Select var"
+                android:padding="15dp"
+                android:layout_marginBottom="0dp"
+                android:textSize="18sp"
+                android:onClick="selectVar"
+                android:drawableRight="@drawable/ic_arrow_drop_down"
+                android:background="@drawable/back_round"
+                android:focusable="true"
+                />
+            <TextView
+                android:id="@+id/error_var"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="15dp"
+                android:textSize="12sp"
+                android:textColor="#FF0000"
+                />
+
+            <TextView
+                android:id="@+id/txt_texture"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Texture"
+                android:padding="15dp"
+                android:textSize="18sp"
+                android:onClick="selectTexture"
+                android:drawableRight="@drawable/ic_arrow_drop_down"
+                android:background="@drawable/back_round"
+                android:focusable="true"
+                />
+
+            <TextView
+                android:id="@+id/error_texture"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="15dp"
+                android:textColor="#FF0000"
+                />
+
+
+        </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/imageButton2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="13dp"
+        android:background="@drawable/forward_button"
+        android:onClick="proceed"
+        android:padding="10dp"
+        android:src="@drawable/ic_chevron_right_black"
+        android:textSize="24sp" />
+
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignTop="@+id/imageButton2"
+        android:layout_weight="1"
+        android:background="@drawable/back_button"
+        android:onClick="goPrevious"
+        android:padding="10dp"
+        android:src="@drawable/ic_chevron_left"
+        android:textSize="24sp" />
+
+
+</RelativeLayout>

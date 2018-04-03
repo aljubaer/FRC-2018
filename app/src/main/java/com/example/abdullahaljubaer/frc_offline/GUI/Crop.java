@@ -1,19 +1,22 @@
 package com.example.abdullahaljubaer.frc_offline.GUI;
 
+import android.os.Parcel;
+import android.os.Parcelable;
+
 import com.example.abdullahaljubaer.frc_offline.DatabaseClasses.CropClassDBHelper;
 import com.example.abdullahaljubaer.frc_offline.DatabaseClasses.NutrientRecommendationDBHelper;
+
+import java.io.Serializable;
 
 /**
  * Created by ABDULLAH AL JUBAER on 25-03-18.
  */
 
-public class Crop {
+public class Crop implements Serializable, Parcelable {
 
     private String seasonName;
     private String varietyName;
     private String cropType;
-    private CropClassDBHelper cropClassDBHelper;
-    private NutrientRecommendationDBHelper recommendationDBHelper;
 
     public Crop (String seasonName, String varietyName, String cropType) {
 
@@ -23,20 +26,58 @@ public class Crop {
 
     }
 
-    public synchronized void setDB (CropClassDBHelper cropClassDBHelper, NutrientRecommendationDBHelper recommendationDBHelper) {
-        this.cropClassDBHelper = cropClassDBHelper;
-        this.recommendationDBHelper = recommendationDBHelper;
+    protected Crop(Parcel in) {
+        seasonName = in.readString();
+        varietyName = in.readString();
+        cropType = in.readString();
     }
 
-    private synchronized String getCClass () {
-        return cropClassDBHelper.getClass(seasonName, varietyName);
+    public static final Creator<Crop> CREATOR = new Creator<Crop>() {
+        @Override
+        public Crop createFromParcel(Parcel in) {
+            return new Crop(in);
+        }
+
+        @Override
+        public Crop[] newArray(int size) {
+            return new Crop[size];
+        }
+    };
+
+    private String getCClass () {
+        return MainActivity.cropClassDbHelper.getClass(seasonName, varietyName);
     }
 
-    public synchronized Interpretation getInterpretation (String nutrientName, String status){
-        return recommendationDBHelper.getInterpretation(seasonName, getCClass(), status, nutrientName);
+    public Interpretation getInterpretation (String nutrientName, String status){
+        return MainActivity.nutrientRecommendationDBHelper.getInterpretation(seasonName, getCClass(), status, nutrientName);
     }
 
     public String getCropType() {
         return cropType;
     }
+
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(Parcel parcel, int i) {
+        parcel.writeString(seasonName);
+        parcel.writeString(varietyName);
+        parcel.writeString(cropType);
+    }
+
+    public static final Parcelable.Creator<Crop> CROP_CREATOR = new Parcelable.Creator<Crop>(){
+
+        @Override
+        public Crop createFromParcel(Parcel parcel) {
+            return new Crop(parcel);
+        }
+
+        @Override
+        public Crop[] newArray(int i) {
+            return new Crop[i];
+        }
+    };
 }

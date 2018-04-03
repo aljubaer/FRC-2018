@@ -1,0 +1,552 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#DCEDC8"
+    >
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginBottom="15dp"
+            >
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/back_nutrient"
+                >
+
+                <TextView
+                    android:id="@+id/txt_rN"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Total N (%)"
+                    android:textAlignment="center"
+                    android:textSize="18sp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    />
+
+                <LinearLayout
+                    android:layout_below="@+id/txt_rN"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    >
+
+                    <EditText
+                        android:id="@+id/edtxt_N1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:hint="Value"
+                        android:maxLength="7"
+                        android:textSize="18sp"
+                        android:textAlignment="center"
+                        android:padding="10dp"
+                        android:inputType="numberDecimal"
+                        android:background="@drawable/back_white"
+                        />
+
+                    <RadioGroup
+                        android:id="@+id/radio_group"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp"
+                        android:orientation="horizontal"
+                        android:background="@drawable/back_white"
+                        android:layout_above="@+id/view_below" >
+
+                        <RadioButton
+                            android:id="@+id/radioNVL"
+                            android:layout_width="0dp"
+                            android:layout_weight="1.2"
+                            android:layout_height="wrap_content"
+                            android:text="Very Low" />
+
+                        <RadioButton
+                            android:id="@+id/radioNL"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:text="Low" />
+
+                        <RadioButton
+                            android:id="@+id/radioNO"
+                            android:layout_width="0dp"
+                            android:layout_weight="1.1"
+                            android:layout_height="wrap_content"
+                            android:text="Optimum" />
+
+                        <RadioButton
+                            android:id="@+id/radioNH"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:text="High" />
+
+                    </RadioGroup>
+                </LinearLayout>
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/back_nutrient"
+                >
+
+                <TextView
+                    android:id="@+id/txt_rP"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Available P (μg/g)"
+                    android:textAlignment="center"
+                    android:textSize="18sp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    />
+
+                <LinearLayout
+                    android:layout_below="@+id/txt_rP"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    >
+
+                    <EditText
+                        android:id="@+id/edtxt_P1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:hint="Value"
+                        android:maxLength="7"
+                        android:textSize="18sp"
+                        android:textAlignment="center"
+                        android:padding="10dp"
+                        android:inputType="numberDecimal"
+                        android:background="@drawable/back_white"
+                        />
+
+                    <RadioGroup
+                        android:id="@+id/radio_P"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp"
+                        android:orientation="horizontal"
+                        android:background="@drawable/back_white"
+                        android:layout_above="@+id/view_below" >
+
+                        <RadioButton
+                            android:id="@+id/radioPVL"
+                            android:layout_width="0dp"
+                            android:layout_weight="1.2"
+                            android:layout_height="wrap_content"
+                            android:text="Very Low" />
+
+                        <RadioButton
+                            android:id="@+id/radioPL"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:text="Low" />
+
+                        <RadioButton
+                            android:id="@+id/radioPO"
+                            android:layout_width="0dp"
+                            android:layout_weight="1.1"
+                            android:layout_height="wrap_content"
+                            android:text="Optimum" />
+
+                        <RadioButton
+                            android:id="@+id/radioPH"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:text="High" />
+
+                    </RadioGroup>
+                </LinearLayout>
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/back_nutrient"
+                >
+
+                <TextView
+                    android:id="@+id/txt_rK"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Exchangeable K (meq/100g)"
+                    android:textAlignment="center"
+                    android:textSize="18sp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    />
+
+                <LinearLayout
+                    android:layout_below="@+id/txt_rK"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    >
+
+                    <EditText
+                        android:id="@+id/edtxt_K1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:hint="Value"
+                        android:maxLength="7"
+                        android:textSize="18sp"
+                        android:textAlignment="center"
+                        android:padding="10dp"
+                        android:inputType="numberDecimal"
+                        android:background="@drawable/back_white"
+                        />
+
+                    <RadioGroup
+                        android:id="@+id/radio_K"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp"
+                        android:orientation="horizontal"
+                        android:background="@drawable/back_white"
+                        android:layout_above="@+id/view_below" >
+
+                        <RadioButton
+                            android:id="@+id/radioKVL"
+                            android:layout_width="0dp"
+                            android:layout_weight="1.2"
+                            android:layout_height="wrap_content"
+                            android:text="Very Low" />
+
+                        <RadioButton
+                            android:id="@+id/radioKL"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:text="Low" />
+
+                        <RadioButton
+                            android:id="@+id/radioKO"
+                            android:layout_width="0dp"
+                            android:layout_weight="1.1"
+                            android:layout_height="wrap_content"
+                            android:text="Optimum" />
+
+                        <RadioButton
+                            android:id="@+id/radioKH"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:text="High" />
+
+                    </RadioGroup>
+                </LinearLayout>
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/back_nutrient"
+                >
+
+                <TextView
+                    android:id="@+id/txt_rS"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Available S (μg/g)"
+                    android:textAlignment="center"
+                    android:textSize="18sp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    />
+
+                <LinearLayout
+                    android:layout_below="@+id/txt_rS"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    >
+
+                    <EditText
+                        android:id="@+id/edtxt_S1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:hint="Value"
+                        android:maxLength="7"
+                        android:textSize="18sp"
+                        android:textAlignment="center"
+                        android:padding="10dp"
+                        android:inputType="numberDecimal"
+                        android:background="@drawable/back_white"
+                        />
+
+                    <RadioGroup
+                        android:id="@+id/radio_S"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp"
+                        android:orientation="horizontal"
+                        android:background="@drawable/back_white"
+                        android:layout_above="@+id/view_below" >
+
+                        <RadioButton
+                            android:id="@+id/radioSVL"
+                            android:layout_width="0dp"
+                            android:layout_weight="1.2"
+                            android:layout_height="wrap_content"
+                            android:text="Very Low" />
+
+                        <RadioButton
+                            android:id="@+id/radioSL"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:text="Low" />
+
+                        <RadioButton
+                            android:id="@+id/radioSO"
+                            android:layout_width="0dp"
+                            android:layout_weight="1.1"
+                            android:layout_height="wrap_content"
+                            android:text="Optimum" />
+
+                        <RadioButton
+                            android:id="@+id/radioSH"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:text="High" />
+
+                    </RadioGroup>
+                </LinearLayout>
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/back_nutrient"
+                >
+
+                <TextView
+                    android:id="@+id/txt_rZn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Available Zn (μg/g)"
+                    android:textAlignment="center"
+                    android:textSize="18sp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    />
+
+                <LinearLayout
+                    android:layout_below="@+id/txt_rZn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    >
+
+                    <EditText
+                        android:id="@+id/edtxt_Zn1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:hint="Value"
+                        android:maxLength="7"
+                        android:textSize="18sp"
+                        android:textAlignment="center"
+                        android:padding="10dp"
+                        android:inputType="numberDecimal"
+                        android:background="@drawable/back_white"
+                        />
+
+                    <RadioGroup
+                        android:id="@+id/radio_Zn"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp"
+                        android:orientation="horizontal"
+                        android:background="@drawable/back_white"
+                        android:layout_above="@+id/view_below" >
+
+                        <RadioButton
+                            android:id="@+id/radioZnVL"
+                            android:layout_width="0dp"
+                            android:layout_weight="1.2"
+                            android:layout_height="wrap_content"
+                            android:text="Very Low" />
+
+                        <RadioButton
+                            android:id="@+id/radioZnL"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:text="Low" />
+
+                        <RadioButton
+                            android:id="@+id/radioZnO"
+                            android:layout_width="0dp"
+                            android:layout_weight="1.1"
+                            android:layout_height="wrap_content"
+                            android:text="Optimum" />
+
+                        <RadioButton
+                            android:id="@+id/radioZnH"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:text="High" />
+
+                    </RadioGroup>
+                </LinearLayout>
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/back_nutrient"
+                >
+
+                <TextView
+                    android:id="@+id/txt_rB"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Available B (μg/g)"
+                    android:textAlignment="center"
+                    android:textSize="18sp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    />
+
+                <LinearLayout
+                    android:layout_below="@+id/txt_rB"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    >
+
+                    <EditText
+                        android:id="@+id/edtxt_B1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:hint="Value"
+                        android:maxLength="7"
+                        android:textSize="18sp"
+                        android:textAlignment="center"
+                        android:padding="10dp"
+                        android:inputType="numberDecimal"
+                        android:background="@drawable/back_white"
+                        />
+
+                    <RadioGroup
+                        android:id="@+id/radio_B"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp"
+                        android:orientation="horizontal"
+                        android:background="@drawable/back_white"
+                        android:layout_above="@+id/view_below" >
+
+                        <RadioButton
+                            android:id="@+id/radioBVL"
+                            android:layout_width="0dp"
+                            android:layout_weight="1.2"
+                            android:layout_height="wrap_content"
+                            android:text="Very Low" />
+
+                        <RadioButton
+                            android:id="@+id/radioBL"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:text="Low" />
+
+                        <RadioButton
+                            android:id="@+id/radioBO"
+                            android:layout_width="0dp"
+                            android:layout_weight="1.1"
+                            android:layout_height="wrap_content"
+                            android:text="Optimum" />
+
+                        <RadioButton
+                            android:id="@+id/radioBH"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:text="High" />
+
+                    </RadioGroup>
+                </LinearLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="30dp"
+                >
+
+                <ImageButton
+                    android:id="@+id/imageButton3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:background="@drawable/forward_button"
+                    android:onClick="createRecommendation"
+                    android:padding="10dp"
+                    android:src="@drawable/ic_chevron_right_black"
+                    android:textSize="24sp" />
+
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:background="@drawable/back_button"
+                    android:onClick="goPrevious"
+                    android:padding="10dp"
+                    android:src="@drawable/ic_chevron_left"
+                    android:textSize="24sp" />
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+</RelativeLayout>

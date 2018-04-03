@@ -1,11 +1,16 @@
-package com.example.abdullahaljubaer.frc_offline;
+package com.example.abdullahaljubaer.frc_offline.GUI;
 
 import android.app.AlertDialog;
+import android.content.Context;
+import android.content.Intent;
 import android.database.Cursor;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -13,10 +18,9 @@ import android.widget.Toast;
 
 import com.example.abdullahaljubaer.frc_offline.CustomViews.*;
 import com.example.abdullahaljubaer.frc_offline.DatabaseClasses.*;
-import com.example.abdullahaljubaer.frc_offline.GUI.Crop;
-import com.example.abdullahaljubaer.frc_offline.GUI.Nutrient;
-import com.example.abdullahaljubaer.frc_offline.GUI.Texture;
+import com.example.abdullahaljubaer.frc_offline.R;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
@@ -24,11 +28,11 @@ import java.util.Map;
 
 public class MainActivity extends AppCompatActivity {
 
-    private CropClassDBHelper cropClassDbHelper = null;
-    private STVIDBHelper stvidbHelper = null;
-    private TextureClassDBHelper textureClassDBHelper = null;
-    private NutrientRecommendationDBHelper nutrientRecommendationDBHelper = null;
-    private CropGroupDBHelper cropGroupDBHelper = null;
+    public static CropClassDBHelper cropClassDbHelper = null;
+    public static STVIDBHelper stvidbHelper = null;
+    public static TextureClassDBHelper textureClassDBHelper = null;
+    public static NutrientRecommendationDBHelper nutrientRecommendationDBHelper = null;
+    public static CropGroupDBHelper cropGroupDBHelper = null;
 
     private Crop mCrop;
     private Texture mTexture;
@@ -83,8 +87,6 @@ public class MainActivity extends AppCompatActivity {
 
         // ----------------- Initializing Views ------------------
 
-        //System.out.println( nutrientRecommendationDBHelper.numberOfRows() );
-
 
         textViewCrop = findViewById(R.id.txt_cropname);
         textViewVariety = findViewById(R.id.txt_var);
@@ -101,6 +103,31 @@ public class MainActivity extends AppCompatActivity {
 
         // ----------------- Initializing Views ------------------
     }
+
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater menuInflater = getMenuInflater();
+        menuInflater.inflate(R.menu.tool_menus, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+
+        if (item.getItemId() == R.id.item_account){
+            Toast.makeText(getApplicationContext(), "Account selected", Toast.LENGTH_LONG).show();
+        }
+        else if (item.getItemId() == R.id.item_setting){
+            Toast.makeText(getApplicationContext(), "Settings selected", Toast.LENGTH_LONG).show();
+        }
+        else if (item.getItemId() == R.id.item_logout){
+            Toast.makeText(getApplicationContext(), "Logout selected", Toast.LENGTH_LONG).show();
+        }
+        return true;
+    }
+
+
 
     public ArrayList<String> readCursor( Cursor cursor, String column ) {
         ArrayList<String> arrayList = new ArrayList<>();
@@ -143,7 +170,6 @@ public class MainActivity extends AppCompatActivity {
                 String var = textViewVariety.getText().toString();
                 String gg = cropGroupDBHelper.getCropGroup(crop);
                 mCrop = new Crop(crop, var, gg);
-                mCrop.setDB(cropClassDbHelper, nutrientRecommendationDBHelper);
             }
         });
     }
@@ -346,6 +372,34 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+
+    public void createRecommendation (View view) {
+        String[] v = {"N", "P", "K", "S", "Zn", "B"};
+
+        Intent intent = new Intent(this, RecommendationActivity.class);
+
+        int len = 0;
+
+        try{
+            len = result.size();
+
+            for (int i = 0; i < len; i++){
+                intent.putExtra(v[i], result.get(v[i]));
+            }
+
+            startActivity(intent);
+
+        } catch (Exception e){
+            e.getMessage();
+        }
+
+    }
+
+    public void goPrevious (View view) {
+        Intent intent = new Intent(this, CropInputActivity.class);
+        startActivity(intent);
+
+    }
 
 
     // --------------------- Action listeners ----------------------

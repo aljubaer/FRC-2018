@@ -1,10 +1,16 @@
-package com.example.abdullahaljubaer.frc_offline;
+package com.example.abdullahaljubaer.frc_offline.GUI;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import com.example.abdullahaljubaer.frc_offline.R;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -32,6 +38,7 @@ public class RecommendationActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_recommendation);
+        System.out.println( MainActivity.nutrientRecommendationDBHelper.numberOfRows() );
 
         units.add("hector");
         units.add("decimal");
@@ -61,4 +68,27 @@ public class RecommendationActivity extends AppCompatActivity {
             txtB.setText(extras.getString(v[5]));
         }
     }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater menuInflater = getMenuInflater();
+        menuInflater.inflate(R.menu.tool_menus, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+
+        if (item.getItemId() == R.id.item_account){
+            Toast.makeText(getApplicationContext(), "Account selected", Toast.LENGTH_LONG).show();
+        }
+        else if (item.getItemId() == R.id.item_setting){
+            Toast.makeText(getApplicationContext(), "Settings selected", Toast.LENGTH_LONG).show();
+        }
+        else if (item.getItemId() == R.id.item_logout){
+            Toast.makeText(getApplicationContext(), "Logout selected", Toast.LENGTH_LONG).show();
+        }
+        return true;
+    }
+
 }

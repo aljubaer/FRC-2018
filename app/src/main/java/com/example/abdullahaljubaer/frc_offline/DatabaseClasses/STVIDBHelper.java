@@ -7,6 +7,8 @@ import android.database.sqlite.SQLiteDatabase;
 
 import com.example.abdullahaljubaer.frc_offline.GUI.Interpretation;
 
+import java.io.Serializable;
+
 
 /**
  * Created by ABDULLAH AL JUBAER on 23-03-18.
