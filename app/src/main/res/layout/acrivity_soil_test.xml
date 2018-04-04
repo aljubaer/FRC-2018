@@ -41,6 +41,7 @@
                     />
 
                 <LinearLayout
+                    android:id="@+id/lln"
                     android:layout_below="@+id/txt_rN"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -62,11 +63,11 @@
                         />
 
                     <RadioGroup
-                        android:id="@+id/radio_group"
+                        android:id="@+id/radio_n"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:paddingTop="10dp"
-                        android:paddingBottom="10dp"
+                        android:layout_height="40dp"
+                        android:paddingLeft="2dp"
+                        android:paddingRight="2dp"
                         android:orientation="horizontal"
                         android:background="@drawable/back_white"
                         android:layout_above="@+id/view_below" >
@@ -75,32 +76,55 @@
                             android:id="@+id/radioNVL"
                             android:layout_width="0dp"
                             android:layout_weight="1.2"
-                            android:layout_height="wrap_content"
-                            android:text="Very Low" />
+                            android:layout_height="match_parent"
+                            android:text="Very Low"
+                            android:button="@android:color/transparent"                            android:textAlignment="center"
+                            android:background="@drawable/back_radio"
+                            />
 
                         <RadioButton
                             android:id="@+id/radioNL"
                             android:layout_width="0dp"
                             android:layout_weight="1"
-                            android:layout_height="wrap_content"
-                            android:text="Low" />
+                            android:layout_height="match_parent"
+                            android:text="Low"
+                            android:button="@android:color/transparent"                            android:textAlignment="center"
+                            android:background="@drawable/back_radio"
+
+                            />
 
                         <RadioButton
                             android:id="@+id/radioNO"
                             android:layout_width="0dp"
                             android:layout_weight="1.1"
-                            android:layout_height="wrap_content"
-                            android:text="Optimum" />
+                            android:layout_height="match_parent"
+                            android:text="Optimum"
+                            android:button="@android:color/transparent"                            android:textAlignment="center"
+                            android:background="@drawable/back_radio"
+                            />
 
                         <RadioButton
                             android:id="@+id/radioNH"
                             android:layout_width="0dp"
                             android:layout_weight="1"
-                            android:layout_height="wrap_content"
-                            android:text="High" />
+                            android:text="High"
+                            android:layout_height="match_parent"
+                            android:button="@android:color/transparent"                            android:textAlignment="center"
+                            android:background="@drawable/back_radio"
+                            />
 
                     </RadioGroup>
                 </LinearLayout>
+
+                <TextView
+                    android:id="@+id/rn"
+                    android:layout_below="@+id/lln"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/back_white"
+                    android:textSize="18sp"
+                    />
+
             </RelativeLayout>
 
 
@@ -145,9 +169,7 @@
                     <RadioGroup
                         android:id="@+id/radio_P"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:paddingTop="10dp"
-                        android:paddingBottom="10dp"
+                        android:layout_height="40dp"
                         android:orientation="horizontal"
                         android:background="@drawable/back_white"
                         android:layout_above="@+id/view_below" >
@@ -156,33 +178,58 @@
                             android:id="@+id/radioPVL"
                             android:layout_width="0dp"
                             android:layout_weight="1.2"
-                            android:layout_height="wrap_content"
-                            android:text="Very Low" />
+                            android:text="Very Low"
+                            android:layout_height="match_parent"
+                            android:button="@android:color/transparent"                            android:textAlignment="center"
+                            android:background="@drawable/back_radio"
+
+                            />
 
                         <RadioButton
                             android:id="@+id/radioPL"
                             android:layout_width="0dp"
                             android:layout_weight="1"
-                            android:layout_height="wrap_content"
-                            android:text="Low" />
+                            android:text="Low"
+                            android:layout_height="match_parent"
+                            android:button="@android:color/transparent"                            android:textAlignment="center"
+                            android:background="@drawable/back_radio"
+
+                            />
 
                         <RadioButton
                             android:id="@+id/radioPO"
                             android:layout_width="0dp"
                             android:layout_weight="1.1"
-                            android:layout_height="wrap_content"
-                            android:text="Optimum" />
+                            android:text="Optimum"
+                            android:layout_height="match_parent"
+                            android:button="@android:color/transparent"                            android:textAlignment="center"
+                            android:background="@drawable/back_radio"
+                            />
 
                         <RadioButton
                             android:id="@+id/radioPH"
                             android:layout_width="0dp"
                             android:layout_weight="1"
-                            android:layout_height="wrap_content"
-                            android:text="High" />
+                            android:layout_height="match_parent"
+                            android:text="High"
+                            android:button="@android:color/transparent"                            android:textAlignment="center"
+                            android:background="@drawable/back_radio"
+                            />
 
                     </RadioGroup>
+
                 </LinearLayout>
+
             </RelativeLayout>
+
+
+            <TextView
+                android:id="@+id/rp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/back_white"
+                android:textSize="18sp"
+                />
 
 
             <RelativeLayout
@@ -226,9 +273,7 @@
                     <RadioGroup
                         android:id="@+id/radio_K"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:paddingTop="10dp"
-                        android:paddingBottom="10dp"
+                        android:layout_height="40dp"
                         android:orientation="horizontal"
                         android:background="@drawable/back_white"
                         android:layout_above="@+id/view_below" >
@@ -237,34 +282,54 @@
                             android:id="@+id/radioKVL"
                             android:layout_width="0dp"
                             android:layout_weight="1.2"
-                            android:layout_height="wrap_content"
-                            android:text="Very Low" />
+                            android:text="Very Low"
+                            android:layout_height="match_parent"
+                            android:button="@android:color/transparent"                            android:textAlignment="center"
+                            android:background="@drawable/back_radio"
+                            />
 
                         <RadioButton
                             android:id="@+id/radioKL"
                             android:layout_width="0dp"
                             android:layout_weight="1"
-                            android:layout_height="wrap_content"
-                            android:text="Low" />
+                            android:text="Low"
+                            android:layout_height="match_parent"
+                            android:button="@android:color/transparent"                            android:textAlignment="center"
+                            android:background="@drawable/back_radio"
+
+                            />
 
                         <RadioButton
                             android:id="@+id/radioKO"
                             android:layout_width="0dp"
                             android:layout_weight="1.1"
-                            android:layout_height="wrap_content"
-                            android:text="Optimum" />
+                            android:text="Optimum"
+                            android:layout_height="match_parent"
+                            android:button="@android:color/transparent"                            android:textAlignment="center"
+                            android:background="@drawable/back_radio"
+                            />
 
                         <RadioButton
                             android:id="@+id/radioKH"
                             android:layout_width="0dp"
                             android:layout_weight="1"
-                            android:layout_height="wrap_content"
-                            android:text="High" />
+                            android:text="High"
+                            android:layout_height="match_parent"
+                            android:button="@android:color/transparent"                            android:textAlignment="center"
+                            android:background="@drawable/back_radio"
+                            />
 
                     </RadioGroup>
                 </LinearLayout>
             </RelativeLayout>
 
+            <TextView
+                android:id="@+id/rk"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/back_white"
+                android:textSize="18sp"
+                />
 
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -307,9 +372,7 @@
                     <RadioGroup
                         android:id="@+id/radio_S"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:paddingTop="10dp"
-                        android:paddingBottom="10dp"
+                        android:layout_height="40dp"
                         android:orientation="horizontal"
                         android:background="@drawable/back_white"
                         android:layout_above="@+id/view_below" >
@@ -318,35 +381,54 @@
                             android:id="@+id/radioSVL"
                             android:layout_width="0dp"
                             android:layout_weight="1.2"
-                            android:layout_height="wrap_content"
-                            android:text="Very Low" />
+                            android:text="Very Low"
+                            android:layout_height="match_parent"
+                            android:button="@android:color/transparent"                            android:textAlignment="center"
+                            android:background="@drawable/back_radio"
+                            />
 
                         <RadioButton
                             android:id="@+id/radioSL"
                             android:layout_width="0dp"
                             android:layout_weight="1"
-                            android:layout_height="wrap_content"
-                            android:text="Low" />
+                            android:text="Low"
+                            android:layout_height="match_parent"
+                            android:button="@android:color/transparent"                            android:textAlignment="center"
+                            android:background="@drawable/back_radio"
+                            />
 
                         <RadioButton
                             android:id="@+id/radioSO"
                             android:layout_width="0dp"
                             android:layout_weight="1.1"
-                            android:layout_height="wrap_content"
-                            android:text="Optimum" />
+                            android:text="Optimum"
+                            android:layout_height="match_parent"
+                            android:button="@android:color/transparent"                            android:textAlignment="center"
+                            android:background="@drawable/back_radio"
+                            />
 
                         <RadioButton
                             android:id="@+id/radioSH"
                             android:layout_width="0dp"
                             android:layout_weight="1"
-                            android:layout_height="wrap_content"
-                            android:text="High" />
+                            android:text="High"
+                            android:layout_height="match_parent"
+                            android:button="@android:color/transparent"                            android:textAlignment="center"
+                            android:background="@drawable/back_radio"
+                            />
 
                     </RadioGroup>
                 </LinearLayout>
 
             </RelativeLayout>
 
+            <TextView
+                android:id="@+id/rs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/back_white"
+                android:textSize="18sp"
+                />
 
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -389,9 +471,7 @@
                     <RadioGroup
                         android:id="@+id/radio_Zn"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:paddingTop="10dp"
-                        android:paddingBottom="10dp"
+                        android:layout_height="40dp"
                         android:orientation="horizontal"
                         android:background="@drawable/back_white"
                         android:layout_above="@+id/view_below" >
@@ -400,33 +480,54 @@
                             android:id="@+id/radioZnVL"
                             android:layout_width="0dp"
                             android:layout_weight="1.2"
-                            android:layout_height="wrap_content"
-                            android:text="Very Low" />
+                            android:text="Very Low"
+                            android:layout_height="match_parent"
+                            android:button="@android:color/transparent"                            android:textAlignment="center"
+                            android:background="@drawable/back_radio"
+                            />
 
                         <RadioButton
                             android:id="@+id/radioZnL"
                             android:layout_width="0dp"
                             android:layout_weight="1"
-                            android:layout_height="wrap_content"
-                            android:text="Low" />
+                            android:text="Low"
+                            android:layout_height="match_parent"
+                            android:button="@android:color/transparent"                            android:textAlignment="center"
+                            android:background="@drawable/back_radio"
+                            />
 
                         <RadioButton
                             android:id="@+id/radioZnO"
                             android:layout_width="0dp"
                             android:layout_weight="1.1"
-                            android:layout_height="wrap_content"
-                            android:text="Optimum" />
+                            android:text="Optimum"
+                            android:layout_height="match_parent"
+                            android:button="@android:color/transparent"                            android:textAlignment="center"
+                            android:background="@drawable/back_radio"
+                            />
 
                         <RadioButton
                             android:id="@+id/radioZnH"
                             android:layout_width="0dp"
                             android:layout_weight="1"
-                            android:layout_height="wrap_content"
-                            android:text="High" />
+                            android:text="High"
+                            android:layout_height="match_parent"
+                            android:button="@android:color/transparent"                            android:textAlignment="center"
+                            android:background="@drawable/back_radio"
+                            />
 
                     </RadioGroup>
                 </LinearLayout>
             </RelativeLayout>
+
+
+            <TextView
+                android:id="@+id/rzn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/back_white"
+                android:textSize="18sp"
+                />
 
 
             <RelativeLayout
@@ -470,9 +571,7 @@
                     <RadioGroup
                         android:id="@+id/radio_B"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:paddingTop="10dp"
-                        android:paddingBottom="10dp"
+                        android:layout_height="40dp"
                         android:orientation="horizontal"
                         android:background="@drawable/back_white"
                         android:layout_above="@+id/view_below" >
@@ -481,67 +580,54 @@
                             android:id="@+id/radioBVL"
                             android:layout_width="0dp"
                             android:layout_weight="1.2"
-                            android:layout_height="wrap_content"
-                            android:text="Very Low" />
+                            android:text="Very Low"
+                            android:layout_height="match_parent"
+                            android:button="@android:color/transparent"                            android:textAlignment="center"
+                            android:background="@drawable/back_radio"
+                            />
 
                         <RadioButton
                             android:id="@+id/radioBL"
                             android:layout_width="0dp"
                             android:layout_weight="1"
-                            android:layout_height="wrap_content"
-                            android:text="Low" />
+                            android:text="Low"
+                            android:layout_height="match_parent"
+                            android:button="@android:color/transparent"                            android:textAlignment="center"
+                            android:background="@drawable/back_radio"
+                            />
 
                         <RadioButton
                             android:id="@+id/radioBO"
                             android:layout_width="0dp"
                             android:layout_weight="1.1"
-                            android:layout_height="wrap_content"
-                            android:text="Optimum" />
+                            android:text="Optimum"
+                            android:layout_height="match_parent"
+                            android:button="@android:color/transparent"                            android:textAlignment="center"
+                            android:background="@drawable/back_radio"
+                            />
 
                         <RadioButton
                             android:id="@+id/radioBH"
                             android:layout_width="0dp"
                             android:layout_weight="1"
-                            android:layout_height="wrap_content"
-                            android:text="High" />
+                            android:text="High"
+                            android:layout_height="match_parent"
+                            android:button="@android:color/transparent"                            android:textAlignment="center"
+                            android:background="@drawable/back_radio"
+                            />
 
                     </RadioGroup>
                 </LinearLayout>
             </RelativeLayout>
 
-            <RelativeLayout
+            <TextView
+                android:id="@+id/rb"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="30dp"
-                >
-
-                <ImageButton
-                    android:id="@+id/imageButton3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentEnd="true"
-                    android:layout_alignParentRight="true"
-                    android:layout_alignParentTop="true"
-                    android:background="@drawable/forward_button"
-                    android:onClick="createRecommendation"
-                    android:padding="10dp"
-                    android:src="@drawable/ic_chevron_right_black"
-                    android:textSize="24sp" />
-
-                <ImageButton
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentStart="true"
-                    android:layout_alignParentTop="true"
-                    android:background="@drawable/back_button"
-                    android:onClick="goPrevious"
-                    android:padding="10dp"
-                    android:src="@drawable/ic_chevron_left"
-                    android:textSize="24sp" />
-
-            </RelativeLayout>
+                android:background="@drawable/back_white"
+                android:padding="10dp"
+                android:textSize="18sp"
+                />
 
 
         </LinearLayout>

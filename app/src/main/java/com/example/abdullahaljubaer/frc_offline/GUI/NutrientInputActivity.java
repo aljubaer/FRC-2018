@@ -11,6 +11,8 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.RadioGroup;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.abdullahaljubaer.frc_offline.R;
@@ -34,6 +36,22 @@ public class NutrientInputActivity extends AppCompatActivity {
     private EditText editTextZn;
     private EditText editTextB;
 
+    private RadioGroup radioGroupN;
+    private RadioGroup radioGroupP;
+    private RadioGroup radioGroupK;
+    private RadioGroup radioGroupS;
+    private RadioGroup radioGroupZn;
+    private RadioGroup radioGroupB;
+
+    private TextView txtResN;
+    private TextView txtResP;
+    private TextView txtResK;
+    private TextView txtResS;
+    private TextView txtResZn;
+    private TextView txtResB;
+
+
+
     private Map<String, String> result = new HashMap<>();
 
     @Override
@@ -47,6 +65,20 @@ public class NutrientInputActivity extends AppCompatActivity {
         editTextS = findViewById(R.id.edtxt_S1);
         editTextZn = findViewById(R.id.edtxt_Zn1);
         editTextB = findViewById(R.id.edtxt_B1);
+
+        radioGroupN = findViewById(R.id.radio_n);
+        radioGroupP = findViewById(R.id.radio_P);
+        radioGroupK = findViewById(R.id.radio_K);
+        radioGroupS = findViewById(R.id.radio_S);
+        radioGroupZn = findViewById(R.id.radio_Zn);
+        radioGroupB = findViewById(R.id.radio_B);
+
+        txtResN = findViewById(R.id.rn);
+        txtResP = findViewById(R.id.rp);
+        txtResK = findViewById(R.id.rk);
+        txtResS = findViewById(R.id.rs);
+        txtResZn = findViewById(R.id.rzn);
+        txtResB = findViewById(R.id.rb);
 
         Bundle extras = getIntent().getExtras();
 
@@ -84,8 +116,10 @@ public class NutrientInputActivity extends AppCompatActivity {
     }
 
     private double soilTextValue = 0.1;
-
+    String r = "";
     public void calculate() {
+
+
 
         editTextN.addTextChangedListener(new TextWatcher() {
             @Override
@@ -101,20 +135,36 @@ public class NutrientInputActivity extends AppCompatActivity {
             @Override
             public void afterTextChanged(Editable s) {
                 double val = 0.0;
+                String res1, res2;
                 try {
                     soilTextValue = Double.parseDouble(editTextN.getText().toString());
                     Nutrient nitrogen = new Nutrient("Nitrogen", "N");
                     val = nitrogen.calculateRequiredNutrient(mCrop, mTexture, soilTextValue);
-                    if (val == Double.NaN) editTextN.setError("Invalid Input");
+                    if (val == -1) {
+                        res1 = "Invalid Input";
+                        res2 = res1;
+                    }
+                    else {
+
+                        res1 = String.format("%.3f (kg/ha)", val);
+                        res2 = String.format("%.3f (kg/ha)", val*(100/46));
+                    }
                     //double x = val * 1.0;
                     result.put("N", String.valueOf(val));
-                    Toast.makeText(getApplicationContext(), String.valueOf(val), Toast.LENGTH_LONG).show();
+                    //Toast.makeText(getApplicationContext(), String.valueOf(val), Toast.LENGTH_LONG).show();
+                    String rr = String.format("%15s: %s\n%15s: %s\n%15s: %s\n",
+                            "Interpretation", nitrogen.getStatus(),
+                            "Req. Nitrogen", res1,
+                            "Req. Urea", res2);
+                    Toast.makeText(getApplicationContext(), rr, Toast.LENGTH_LONG).show();
+                    txtResN.setText(rr);
                 } catch (NumberFormatException e) {
                     //Toast.makeText(getApplicationContext(), "Invalid Input", Toast.LENGTH_LONG).show();
                     editTextN.setError("Invalid Input");
                 }
             }
         });
+
 
         editTextP.addTextChangedListener(new TextWatcher() {
             @Override

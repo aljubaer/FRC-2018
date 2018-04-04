@@ -10,12 +10,18 @@
         layout="@layout/toolbar"
         />
 
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="8"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        >
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="8"
-            android:layout_centerHorizontal="true"
-            android:layout_centerVertical="true"
             android:orientation="vertical"
             android:paddingLeft="10dp"
             android:paddingRight="10dp"
@@ -94,33 +100,41 @@
 
         </LinearLayout>
 
-    <ImageButton
-        android:id="@+id/imageButton2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_marginBottom="13dp"
-        android:background="@drawable/forward_button"
-        android:onClick="proceed"
-        android:padding="10dp"
-        android:src="@drawable/ic_chevron_right_black"
-        android:textSize="24sp" />
+    </ScrollView>
 
-    <ImageButton
-        android:id="@+id/imageButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignTop="@+id/imageButton2"
-        android:layout_weight="1"
-        android:background="@drawable/back_button"
-        android:onClick="goPrevious"
-        android:padding="10dp"
-        android:src="@drawable/ic_chevron_left"
-        android:textSize="24sp" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
+        <ImageButton
+            android:id="@+id/imageButton2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="13dp"
+            android:background="@drawable/forward_button"
+            android:onClick="proceed"
+            android:padding="10dp"
+            android:src="@drawable/ic_chevron_right_black"
+            android:textSize="24sp" />
+
+        <ImageButton
+            android:id="@+id/imageButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_weight="1"
+            android:background="@drawable/back_button"
+            android:onClick="goPrevious"
+            android:padding="10dp"
+            android:src="@drawable/ic_chevron_left"
+            android:textSize="24sp" />
+
+
+    </RelativeLayout>
 
 </RelativeLayout>
