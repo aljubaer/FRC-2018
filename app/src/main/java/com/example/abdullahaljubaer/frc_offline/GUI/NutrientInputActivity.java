@@ -1,20 +1,27 @@
 package com.example.abdullahaljubaer.frc_offline.GUI;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.RadioGroup;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.abdullahaljubaer.frc_offline.CustomViews.ResultAlertDialog;
 import com.example.abdullahaljubaer.frc_offline.R;
 
 import java.util.HashMap;
@@ -50,6 +57,9 @@ public class NutrientInputActivity extends AppCompatActivity {
     private TextView txtResZn;
     private TextView txtResB;
 
+    private AlertDialog dialog = null;
+    private RelativeLayout mainLayout;
+
 
 
     private Map<String, String> result = new HashMap<>();
@@ -58,6 +68,8 @@ public class NutrientInputActivity extends AppCompatActivity {
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.acrivity_soil_test);
+
+        mainLayout = findViewById(R.id.soil);
 
         editTextN = findViewById(R.id.edtxt_N1);
         editTextP = findViewById(R.id.edtxt_P1);
@@ -328,6 +340,13 @@ public class NutrientInputActivity extends AppCompatActivity {
             e.getMessage();
         }
 
+    }
 
+    public void showDetails(View view) {
+        LayoutInflater inflater = (LayoutInflater)getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        View v = inflater.inflate(R.layout.result_view, mainLayout, false);
+
+        LinearLayout linearLayout = v.findViewById(R.id.final_result);
+        new ResultAlertDialog(this, linearLayout, dialog);
     }
 }

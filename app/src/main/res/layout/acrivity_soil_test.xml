@@ -3,6 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#DCEDC8"
+    android:id="@+id/soil"
     >
 
 
@@ -123,6 +124,7 @@
                     android:layout_height="wrap_content"
                     android:background="@drawable/back_white"
                     android:textSize="18sp"
+                    android:onClick="showDetails"
                     />
 
             </RelativeLayout>

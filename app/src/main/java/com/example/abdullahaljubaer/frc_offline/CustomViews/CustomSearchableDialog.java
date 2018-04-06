@@ -31,8 +31,7 @@ public class CustomSearchableDialog {
     private String selectedText = "";
     private TextView textView = null;
     public ArrayList<String> a = null;
-    public int flag;
-    
+
     public CustomSearchableDialog (){}
 
     public synchronized void init(Context context, ArrayList<String> values, AlertDialog dialog, TextView v) {
@@ -40,7 +39,6 @@ public class CustomSearchableDialog {
         this.context = context;
         this.values = values;
         this.textView = v;
-        this.flag = flag;
         createView();
     }
 

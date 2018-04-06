@@ -23,10 +23,10 @@ public class CustomAlertAdapter extends BaseAdapter {
 
     private LayoutInflater mInflater = null;
 
-    public CustomAlertAdapter(Activity activty, ArrayList<String> list) {
-        this.ctx=activty;
-        mInflater = activty.getLayoutInflater();
-        this.list =list;
+    public CustomAlertAdapter(Activity activity, ArrayList<String> list) {
+        this.ctx = activity;
+        mInflater = activity.getLayoutInflater();
+        this.list = list;
     }
 
     @Override
@@ -34,22 +34,14 @@ public class CustomAlertAdapter extends BaseAdapter {
         return list.size();
     }
 
-
     @Override
-
     public Object getItem(int arg0) {
-
         return null;
-
     }
 
-
     @Override
-
     public long getItemId(int arg0) {
-
         return 0;
-
     }
 
 
@@ -68,8 +60,8 @@ public class CustomAlertAdapter extends BaseAdapter {
             holder = (ViewHolder) convertView.getTag();
         }
 
-        String datavalue= list.get(position);
-        holder.titlename.setText(datavalue);
+        String dataValue= list.get(position);
+        holder.titlename.setText(dataValue);
         return convertView;
     }
     private static class ViewHolder {
