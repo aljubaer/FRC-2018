@@ -7,10 +7,13 @@
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        android:padding="10dp"
+        android:layout_height="match_parent"
+        android:scrollbars="vertical"
+        android:layout_margin="5dp"
+        android:padding="5dp"
         >
+
+
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -27,9 +30,10 @@
                 />
 
             <TextView
+                android:id="@+id/st"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="18sp"
+                android:textSize="18dp"
                 android:text="St = 0.1                                         Interpretation = Low                                      Uf = 120                                                            Ci = 0.09                                                         Ls = 0.091"
                 />
 
@@ -40,9 +44,10 @@
                 >
 
                 <TextView
+                    android:id="@+id/frl"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:textSize="18sp"
+                    android:textSize="16dp"
                     android:textAlignment="center"
                     android:gravity="center"
                     android:text="N(kg/ha)=120 - "
@@ -55,9 +60,10 @@
                     >
 
                     <TextView
+                        android:id="@+id/frmt"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:textSize="18sp"
+                        android:textSize="18dp"
                         android:textAlignment="center"
                         android:text="40"
                         />
@@ -69,9 +75,10 @@
                         />
 
                     <TextView
+                        android:id="@+id/frmb"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:textSize="18sp"
+                        android:textSize="18dp"
                         android:textAlignment="center"
                         android:text="0.09"
                         />
@@ -79,9 +86,10 @@
                 </LinearLayout>
 
                 <TextView
+                    android:id="@+id/frr"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:textSize="18sp"
+                    android:textSize="18dp"
                     android:textAlignment="center"
                     android:gravity="center"
                     android:text=" X(0.1 - 0.091)"
@@ -90,26 +98,30 @@
             </LinearLayout>
 
             <TextView
+                android:id="@+id/frnf"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="18sp"
-                android:text="                = 116"
+                android:paddingLeft="64dp"
+                android:textSize="16dp"
+                android:text=" = 116"
                 />
 
 
             <TextView
+                android:id="@+id/comb"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:textSize="18sp"
+                android:textSize="18dp"
                 android:text="As, Nitrogen composition of Urea = 40%"
                 />
 
             <TextView
+                android:id="@+id/freq"
                 android:layout_marginTop="10dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="18sp"
+                android:textSize="18dp"
                 android:text="Req. Urea = 116 X (100/40) = 252.2 (kg/ha)"
                 />
 
@@ -123,10 +135,11 @@
                 />
 
             <TextView
+                android:id="@+id/moa"
                 android:layout_marginTop="5dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="18sp"
+                android:textSize="18dp"
                 android:text="Lorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsum"
                 />
 

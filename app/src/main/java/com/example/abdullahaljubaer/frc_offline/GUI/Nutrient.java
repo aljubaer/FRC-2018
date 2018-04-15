@@ -10,6 +10,9 @@ public class Nutrient {
     private String symbol;
     private String status;
 
+    private Interpretation testInterpretation;
+    private Interpretation recommendationInterpretation;
+
     public Nutrient (String nutrientName, String symbol) {
         this.nutrientName = nutrientName;
         this.symbol = symbol;
@@ -17,14 +20,11 @@ public class Nutrient {
 
     public double calculateRequiredNutrient ( Crop crop, Texture texture, double soilTestValue ) {
 
-        Interpretation testInterpretation
-                = texture.getInterpretation(symbol, soilTestValue);
+        testInterpretation = texture.getInterpretation(symbol, soilTestValue);
 
         this.status = testInterpretation.getStatus();
 
-        Interpretation recommendationInterpretation
-                = crop.getInterpretation(symbol,
-                testInterpretation.getStatus());
+        recommendationInterpretation = crop.getInterpretation(symbol, testInterpretation.getStatus());
 
         return calculateFr(recommendationInterpretation.getUpperLimit(),
                 recommendationInterpretation.getInterval(),
@@ -48,8 +48,20 @@ public class Nutrient {
 
     }
 
+    public String getName() {
+        return nutrientName;
+    }
+
     public String getStatus () {
         return this.status;
+    }
+
+    public Interpretation getTestInterpretation() {
+        return testInterpretation;
+    }
+
+    public Interpretation getRecommendationInterpretation() {
+        return recommendationInterpretation;
     }
 
 }

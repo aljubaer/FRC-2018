@@ -60,7 +60,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_frc);
+        setContentView(R.layout.activity_fullscreen);
 
         // -----------------Database testing ---------------------
 
@@ -87,7 +87,7 @@ public class MainActivity extends AppCompatActivity {
 
         // ----------------- Initializing Views ------------------
 
-
+        /*
         textViewCrop = findViewById(R.id.txt_cropname);
         textViewVariety = findViewById(R.id.txt_var);
         textViewTexture = findViewById(R.id.txt_texture);
@@ -99,12 +99,14 @@ public class MainActivity extends AppCompatActivity {
         editTextZn = findViewById(R.id.edtxt_Zn);
         editTextB = findViewById(R.id.edtxt_B);
 
-        calculate();
+        */
+
+        //calculate();
 
         // ----------------- Initializing Views ------------------
     }
 
-
+    /*
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater menuInflater = getMenuInflater();
@@ -127,7 +129,7 @@ public class MainActivity extends AppCompatActivity {
         return true;
     }
 
-
+    */
 
     public ArrayList<String> readCursor( Cursor cursor, String column ) {
         ArrayList<String> arrayList = new ArrayList<>();
@@ -142,7 +144,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     // --------------------- Action listeners ----------------------
-
+    /*
     public void selectCrop ( View view ){
         ArrayList<String> cropSeason;
         cropSeason = readCursor(cropClassDbHelper.getAllCropSeason(), CropClassDBHelper.COLUMN_SEASON);
@@ -394,8 +396,9 @@ public class MainActivity extends AppCompatActivity {
         }
 
     }
+    */
 
-    public void goPrevious (View view) {
+    public void start (View view) {
         Intent intent = new Intent(this, CropInputActivity.class);
         startActivity(intent);
 

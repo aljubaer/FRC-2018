@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/mBackGround"
@@ -430,7 +431,7 @@
                     android:layout_marginStart="15dp"
                     android:layout_weight="1"
                     android:background="@drawable/back_button"
-                    android:onClick="goPrevious"
+                    android:onClick="start"
                     android:padding="10dp"
                     android:src="@drawable/ic_chevron_left"
                     android:textSize="24sp" />

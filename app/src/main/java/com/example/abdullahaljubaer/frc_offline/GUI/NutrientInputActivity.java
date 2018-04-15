@@ -21,8 +21,11 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.abdullahaljubaer.frc_offline.CustomViews.DropDownAnim;
+import com.example.abdullahaljubaer.frc_offline.CustomViews.GuideAlertDialog;
 import com.example.abdullahaljubaer.frc_offline.CustomViews.ResultAlertDialog;
 import com.example.abdullahaljubaer.frc_offline.R;
+import com.example.abdullahaljubaer.frc_offline.Results.ResultProducer;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -59,8 +62,9 @@ public class NutrientInputActivity extends AppCompatActivity {
 
     private AlertDialog dialog = null;
     private RelativeLayout mainLayout;
+    private ResultProducer producer;
 
-
+    private Map<String, ResultProducer> resultMap = new HashMap<>();
 
     private Map<String, String> result = new HashMap<>();
 
@@ -70,6 +74,12 @@ public class NutrientInputActivity extends AppCompatActivity {
         setContentView(R.layout.acrivity_soil_test);
 
         mainLayout = findViewById(R.id.soil);
+
+        LayoutInflater inflater = (LayoutInflater)getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        View v = inflater.inflate(R.layout.dialog_guide, mainLayout, false);
+
+        new GuideAlertDialog(this, v, dialog);
+
 
         editTextN = findViewById(R.id.edtxt_N1);
         editTextP = findViewById(R.id.edtxt_P1);
@@ -102,6 +112,8 @@ public class NutrientInputActivity extends AppCompatActivity {
             //mCrop = (Crop) getIntent().getSerializableExtra("crop");
             //mTexture = (Texture) getIntent().getSerializableExtra("texture");
         }
+
+        DropDownAnim.collapse(txtResN);
 
         calculate();
 
@@ -152,27 +164,40 @@ public class NutrientInputActivity extends AppCompatActivity {
                     soilTextValue = Double.parseDouble(editTextN.getText().toString());
                     Nutrient nitrogen = new Nutrient("Nitrogen", "N");
                     val = nitrogen.calculateRequiredNutrient(mCrop, mTexture, soilTextValue);
+                    Interpretation ti = nitrogen.getTestInterpretation();
+                    Interpretation ri = nitrogen.getRecommendationInterpretation();
+
+                    String c = "As, Nitrogen composition in Urea 46%";
+
+                    resultMap.put("N", new ResultProducer(soilTextValue, ri.getStatus(), ri.getUpperLimit(),
+                            ti.getInterval(), ri.getInterval(), ti.getLowerLimit(), val, c));
+                    resultMap.get("N").setFrFinal("Urea", val, 46.0, val*(100.0/46.0));
+
                     if (val == -1) {
-                        res1 = "Invalid Input";
-                        res2 = res1;
+                        throw new NumberFormatException();
+                        //res1 = "Invalid Input. Please provide value within the range.";
+                        //res2 = res1;
+                        //DropDownAnim.collapse(txtResN);
                     }
                     else {
 
                         res1 = String.format("%.3f (kg/ha)", val);
-                        res2 = String.format("%.3f (kg/ha)", val*(100/46));
+                        res2 = String.format("%.3f (kg/ha)", val*(100.0/46.0));
+
+                        DropDownAnim.expand(txtResN);
+
                     }
                     //double x = val * 1.0;
                     result.put("N", String.valueOf(val));
                     //Toast.makeText(getApplicationContext(), String.valueOf(val), Toast.LENGTH_LONG).show();
-                    String rr = String.format("%15s: %s\n%15s: %s\n%15s: %s\n",
-                            "Interpretation", nitrogen.getStatus(),
-                            "Req. Nitrogen", res1,
+                    String rr = String.format("%15s: %s",
                             "Req. Urea", res2);
                     Toast.makeText(getApplicationContext(), rr, Toast.LENGTH_LONG).show();
                     txtResN.setText(rr);
                 } catch (NumberFormatException e) {
                     //Toast.makeText(getApplicationContext(), "Invalid Input", Toast.LENGTH_LONG).show();
-                    editTextN.setError("Invalid Input");
+                    editTextN.setError("Invalid Input. Please provide value within the range.");
+                    //DropDownAnim.collapse(txtResN);
                 }
             }
         });
@@ -202,6 +227,7 @@ public class NutrientInputActivity extends AppCompatActivity {
                 } catch (NumberFormatException e) {
                     //Toast.makeText(getApplicationContext(), "Invalid Input", Toast.LENGTH_LONG).show();
                     editTextP.setError("Invalid Input");
+
                 }
             }
         });
@@ -285,7 +311,7 @@ public class NutrientInputActivity extends AppCompatActivity {
                     Toast.makeText(getApplicationContext(), String.valueOf(val), Toast.LENGTH_LONG).show();
                 } catch (NumberFormatException e) {
                     //Toast.makeText(getApplicationContext(), "Invalid Input", Toast.LENGTH_LONG).show();
-                    editTextZn.setError("Invalid Input");
+                    editTextZn.setError("Invalid Input. Please provide value within the range.");
                 }
             }
         });
@@ -346,7 +372,7 @@ public class NutrientInputActivity extends AppCompatActivity {
         LayoutInflater inflater = (LayoutInflater)getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         View v = inflater.inflate(R.layout.result_view, mainLayout, false);
 
-        LinearLayout linearLayout = v.findViewById(R.id.final_result);
-        new ResultAlertDialog(this, linearLayout, dialog);
+        //LinearLayout linearLayout = v.findViewById(R.id.final_result);
+        new ResultAlertDialog(this, v, dialog, resultMap.get("N"));
     }
 }

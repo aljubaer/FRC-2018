@@ -23,6 +23,15 @@
             android:layout_marginBottom="15dp"
             >
 
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/crop_details"
+                android:textSize="20dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="10dp"
+                />
+
 
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -39,6 +48,10 @@
                     android:textSize="18sp"
                     android:layout_marginTop="10dp"
                     android:layout_marginBottom="10dp"
+                    android:gravity="center"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:drawableRight="@drawable/ic_arrow_drop_down"
                     />
 
                 <LinearLayout
@@ -122,9 +135,28 @@
                     android:layout_below="@+id/lln"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/back_white"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginRight="3dp"
+                    android:background="#F1F8E9"
                     android:textSize="18sp"
+                    />
+
+
+                <TextView
+                    android:id="@+id/dn"
+                    android:layout_below="@+id/rn"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginRight="3dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#F1F8E9"
+                    android:textAlignment="center"
+                    android:textSize="12sp"
+                    android:textIsSelectable="true"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp"
                     android:onClick="showDetails"
+                    android:text="@string/see_details"
                     />
 
             </RelativeLayout>
