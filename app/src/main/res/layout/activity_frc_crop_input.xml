@@ -94,17 +94,42 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:paddingLeft="15dp"
+                android:textSize="12sp"
                 android:textColor="#FF0000"
                 />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+
+                <Button
+                    android:id="@+id/button2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:onClick="proceed"
+                    android:text="Proceed"
+                    android:background="@drawable/back_nutrient"
+                    />
+
+
+            </RelativeLayout>
+
 
 
         </LinearLayout>
 
     </ScrollView>
-
+    <!--
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true">
 
         <ImageButton
             android:id="@+id/imageButton2"
@@ -136,5 +161,5 @@
 
 
     </RelativeLayout>
-
+    -->
 </RelativeLayout>
