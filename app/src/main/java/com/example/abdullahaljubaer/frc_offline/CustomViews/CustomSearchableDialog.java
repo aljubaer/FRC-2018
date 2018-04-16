@@ -16,6 +16,7 @@ import android.widget.TextView;
 import com.example.abdullahaljubaer.frc_offline.R;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
 /**
  * Created by ABDULLAH AL JUBAER on 12-02-18.
@@ -34,7 +35,7 @@ public class CustomSearchableDialog {
 
     public CustomSearchableDialog (){}
 
-    public synchronized void init(Context context, ArrayList<String> values, AlertDialog dialog, TextView v) {
+    public void init(Context context, ArrayList<String> values, AlertDialog dialog, TextView v) {
         this.dialog = dialog;
         this.context = context;
         this.values = values;
@@ -51,8 +52,8 @@ public class CustomSearchableDialog {
         editText.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_search, 0, 0, 0);
         editText.setPadding(10,10,10,10);
         editText.setTextSize(30);
-        currentValueList = values;
-
+        currentValueList = new ArrayList<>();
+        currentValueList = (ArrayList<String>) values.clone();
         LinearLayout layout = new LinearLayout(context);
         layout.setOrientation(LinearLayout.VERTICAL);
         layout.addView(editText);
@@ -86,6 +87,14 @@ public class CustomSearchableDialog {
                 editText.setCompoundDrawablesWithIntrinsicBounds(0, 0, 0, 0);
                 textLength = editText.getText().length();
                 currentValueList.clear();
+                for (String ss: values) {
+                    if (textLength <= ss.length()) {
+                        if(ss.toLowerCase().contains(editText.getText().toString().toLowerCase().trim())) {
+                            currentValueList.add(ss);
+                        }
+                    }
+                }
+                /*
                 for (int i = 0; i < values.size(); i++) {
                     if (textLength <= values.get(i).length()) {
                         if(values.get(i).toLowerCase().contains(editText.getText().toString().toLowerCase().trim())) {
@@ -93,6 +102,7 @@ public class CustomSearchableDialog {
                         }
                     }
                 }
+                */
                 listView.setAdapter(new CustomAlertAdapter((Activity) context, currentValueList));
             }
         });

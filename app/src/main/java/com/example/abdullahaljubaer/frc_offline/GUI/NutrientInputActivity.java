@@ -16,6 +16,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.LinearLayout;
+import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
@@ -38,6 +39,8 @@ public class NutrientInputActivity extends AppCompatActivity {
 
     private Crop mCrop;
     private Texture mTexture;
+
+    private TextView txtTop;
 
     private EditText editTextN;
     private EditText editTextP;
@@ -115,6 +118,13 @@ public class NutrientInputActivity extends AppCompatActivity {
 
         DropDownAnim.collapse(txtResN);
 
+        txtTop = findViewById(R.id.txt_top);
+        txtTop.setText("Crop season: " + mCrop.getSeasonName()
+                + "\nVariety: " + mCrop.getVarietyName()
+                + "\nYield goal: -"
+                + "\nTexture: " + mTexture.getTexture()
+                + "\nLand type: " + mTexture.getLandType());
+
         calculate();
 
     }
@@ -183,6 +193,29 @@ public class NutrientInputActivity extends AppCompatActivity {
 
                         res1 = String.format("%.3f (kg/ha)", val);
                         res2 = String.format("%.3f (kg/ha)", val*(100.0/46.0));
+
+                        RadioButton rb;
+
+                        switch (ri.getStatus()) {
+                            case "Very Low":
+                                rb = findViewById(R.id.radioNVL);
+                                rb.setChecked(true);
+                                break;
+                            case "Low":
+                                rb = findViewById(R.id.radioNL);
+                                rb.setChecked(true);
+                                break;
+                            case "Medium":
+                                rb = findViewById(R.id.radioNM);
+                                rb.setChecked(true);
+                                break;
+                            case "Optimum":
+                                rb = findViewById(R.id.radioNO);
+                                rb.setChecked(true);
+                                break;
+                        }
+
+
 
                         DropDownAnim.expand(txtResN);
 
@@ -375,4 +408,57 @@ public class NutrientInputActivity extends AppCompatActivity {
         //LinearLayout linearLayout = v.findViewById(R.id.final_result);
         new ResultAlertDialog(this, v, dialog, resultMap.get("N"));
     }
+
+    public void onClickRN (View view){
+        int selectedId = radioGroupN.getCheckedRadioButtonId();
+
+        RadioButton radioButtonN = findViewById(selectedId);
+
+        double val = 0.0;
+        String res1, res2;
+        try {
+            //soilTextValue = Double.parseDouble(editTextN.getText().toString());
+            Nutrient nitrogen = new Nutrient("Nitrogen", "N");
+            String status = radioButtonN.getText().toString();
+            val = nitrogen.calculateRequiredNutrient(mCrop, status);
+            //Interpretation ti = nitrogen.getTestInterpretation();
+            //Interpretation ri = nitrogen.getRecommendationInterpretation();
+
+            /*
+            String c = "As, Nitrogen composition in Urea 46%";
+
+            resultMap.put("N", new ResultProducer(soilTextValue, ri.getStatus(), ri.getUpperLimit(),
+                    ti.getInterval(), ri.getInterval(), ti.getLowerLimit(), val, c));
+            resultMap.get("N").setFrFinal("Urea", val, 46.0, val*(100.0/46.0));
+            */
+
+            if (val == -1) {
+                throw new NumberFormatException();
+                //res1 = "Invalid Input. Please provide value within the range.";
+                //res2 = res1;
+                //DropDownAnim.collapse(txtResN);
+            }
+            else {
+
+                res1 = String.format("%.3f (kg/ha)", val);
+                res2 = String.format("%.3f (kg/ha)", val*(100.0/46.0));
+
+                DropDownAnim.expand(txtResN);
+
+            }
+            //double x = val * 1.0;
+            result.put("N", String.valueOf(val));
+            //Toast.makeText(getApplicationContext(), String.valueOf(val), Toast.LENGTH_LONG).show();
+            String rr = String.format("%15s: %s",
+                    "Req. Urea", res2);
+            Toast.makeText(getApplicationContext(), rr, Toast.LENGTH_LONG).show();
+            txtResN.setText(rr);
+        } catch (NumberFormatException e) {
+            Toast.makeText(getApplicationContext(), "Invalid Input", Toast.LENGTH_LONG).show();
+            editTextN.setError("Invalid Input. Please provide value within the range.");
+            //DropDownAnim.collapse(txtResN);
+        }
+
+    }
+
 }

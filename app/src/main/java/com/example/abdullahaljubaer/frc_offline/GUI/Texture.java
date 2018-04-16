@@ -87,4 +87,13 @@ public class Texture implements Serializable, Parcelable {
 
 
     };
+
+
+    public String getTexture() {
+        return texture;
+    }
+
+    public String getLandType() {
+        return landType;
+    }
 }

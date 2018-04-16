@@ -80,4 +80,12 @@ public class Crop implements Serializable, Parcelable {
             return new Crop[i];
         }
     };
+
+    public String getSeasonName() {
+        return seasonName;
+    }
+
+    public String getVarietyName() {
+        return varietyName;
+    }
 }
