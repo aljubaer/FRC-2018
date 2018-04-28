@@ -16,9 +16,9 @@ public class DropDownAnim extends Animation {
 
         // Older versions of android (pre API 21) cancel animations for views with a height of 0.
         v.getLayoutParams().height = 1;
+        //if (v.getVisibility() == View.VISIBLE)return;
         v.setVisibility(View.VISIBLE);
-        Animation a = new Animation()
-        {
+        Animation a = new Animation() {
             @Override
             protected void applyTransformation(float interpolatedTime, Transformation t) {
                 v.getLayoutParams().height = interpolatedTime == 1
@@ -40,9 +40,8 @@ public class DropDownAnim extends Animation {
 
     public static void collapse(final View v) {
         final int initialHeight = v.getMeasuredHeight();
-
-        Animation a = new Animation()
-        {
+        //if (v.getVisibility() == View.GONE)return;
+        Animation a = new Animation() {
             @Override
             protected void applyTransformation(float interpolatedTime, Transformation t) {
                 if(interpolatedTime == 1){

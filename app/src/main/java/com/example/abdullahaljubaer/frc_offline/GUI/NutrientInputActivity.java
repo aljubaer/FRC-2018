@@ -13,15 +13,16 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.EditText;
-import android.widget.LinearLayout;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.abdullahaljubaer.frc_offline.BusinessClasses.Crop;
+import com.example.abdullahaljubaer.frc_offline.BusinessClasses.Nutrient;
+import com.example.abdullahaljubaer.frc_offline.BusinessClasses.Texture;
 import com.example.abdullahaljubaer.frc_offline.CustomViews.DropDownAnim;
 import com.example.abdullahaljubaer.frc_offline.CustomViews.GuideAlertDialog;
 import com.example.abdullahaljubaer.frc_offline.CustomViews.ResultAlertDialog;
@@ -116,7 +117,7 @@ public class NutrientInputActivity extends AppCompatActivity {
             //mTexture = (Texture) getIntent().getSerializableExtra("texture");
         }
 
-        DropDownAnim.collapse(txtResN);
+        //DropDownAnim.collapse(txtResN);
 
         txtTop = findViewById(R.id.txt_top);
         txtTop.setText("Crop season: " + mCrop.getSeasonName()
@@ -124,6 +125,8 @@ public class NutrientInputActivity extends AppCompatActivity {
                 + "\nYield goal: -"
                 + "\nTexture: " + mTexture.getTexture()
                 + "\nLand type: " + mTexture.getLandType());
+
+
 
         calculate();
 

@@ -1,10 +1,11 @@
-package com.example.abdullahaljubaer.frc_offline.GUI;
+package com.example.abdullahaljubaer.frc_offline.BusinessClasses;
 
 import android.os.Parcel;
 import android.os.Parcelable;
 
 import com.example.abdullahaljubaer.frc_offline.DatabaseClasses.STVIDBHelper;
 import com.example.abdullahaljubaer.frc_offline.DatabaseClasses.TextureClassDBHelper;
+import com.example.abdullahaljubaer.frc_offline.GUI.Interpretation;
 
 import java.io.Serializable;
 

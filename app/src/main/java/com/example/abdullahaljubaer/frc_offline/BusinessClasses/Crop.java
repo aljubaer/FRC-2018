@@ -1,10 +1,10 @@
-package com.example.abdullahaljubaer.frc_offline.GUI;
+package com.example.abdullahaljubaer.frc_offline.BusinessClasses;
 
 import android.os.Parcel;
 import android.os.Parcelable;
 
-import com.example.abdullahaljubaer.frc_offline.DatabaseClasses.CropClassDBHelper;
-import com.example.abdullahaljubaer.frc_offline.DatabaseClasses.NutrientRecommendationDBHelper;
+import com.example.abdullahaljubaer.frc_offline.GUI.Interpretation;
+import com.example.abdullahaljubaer.frc_offline.GUI.MainActivity;
 
 import java.io.Serializable;
 

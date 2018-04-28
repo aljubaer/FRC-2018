@@ -4,7 +4,6 @@ import android.app.AlertDialog;
 import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
-import android.os.Parcelable;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.text.Editable;
@@ -16,12 +15,13 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.abdullahaljubaer.frc_offline.BusinessClasses.Crop;
+import com.example.abdullahaljubaer.frc_offline.BusinessClasses.Texture;
 import com.example.abdullahaljubaer.frc_offline.CustomViews.CustomSearchableDialog;
 import com.example.abdullahaljubaer.frc_offline.DatabaseClasses.CropClassDBHelper;
 import com.example.abdullahaljubaer.frc_offline.DatabaseClasses.TextureClassDBHelper;
 import com.example.abdullahaljubaer.frc_offline.R;
 
-import java.io.Serializable;
 import java.util.ArrayList;
 
 
@@ -188,7 +188,7 @@ public class CropInputActivity extends AppCompatActivity {
         if (mCrop == null) textErrorVar.setText(errV);
         if (mTexture == null) textErrorTexture.setText(errT);
         else {
-            Intent intent = new Intent(this, NutrientInputActivity.class);
+            Intent intent = new Intent(this, NutrientInputActivityCopy.class);
 
             //intent.putExtra("crop", (Serializable) mCrop);
             //intent.putExtra("texture", (Serializable) mTexture);

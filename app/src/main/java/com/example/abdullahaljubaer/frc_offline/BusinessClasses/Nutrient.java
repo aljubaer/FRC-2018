@@ -1,4 +1,6 @@
-package com.example.abdullahaljubaer.frc_offline.GUI;
+package com.example.abdullahaljubaer.frc_offline.BusinessClasses;
+
+import com.example.abdullahaljubaer.frc_offline.GUI.Interpretation;
 
 /**
  * Created by ABDULLAH AL JUBAER on 25-03-18.
@@ -18,7 +20,7 @@ public class Nutrient {
         this.symbol = symbol;
     }
 
-    public double calculateRequiredNutrient ( Crop crop, Texture texture, double soilTestValue ) {
+    public double calculateRequiredNutrient (Crop crop, Texture texture, double soilTestValue ) {
 
         testInterpretation = texture.getInterpretation(symbol, soilTestValue);
 

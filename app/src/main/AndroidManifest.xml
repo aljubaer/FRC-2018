@@ -21,6 +21,7 @@
         <activity android:name=".GUI.RecommendationActivity"></activity>
         <activity android:name=".GUI.CropInputActivity"></activity>
         <activity android:name=".GUI.NutrientInputActivity"></activity>
+        <activity android:name=".GUI.NutrientInputActivityCopy"></activity>
     </application>
 
 </manifest>
