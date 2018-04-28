@@ -47,13 +47,7 @@ public class NutrientInputActivityCopy extends AppCompatActivity {
 
     private TextInputLayout[] inputLayout;
     private LinearLayout[] linearLayoutsDC;
-
-    private EditText editTextN;
-    private EditText editTextP;
-    private EditText editTextK;
-    private EditText editTextS;
-    private EditText editTextZn;
-    private EditText editTextB;
+    private EditText[] editTexts;
 
     private RadioGroup[] radioGroupF;
 
@@ -71,6 +65,7 @@ public class NutrientInputActivityCopy extends AppCompatActivity {
 
     private String[] frr = new String[]{"Urea", "TSP", "MoP", "Gypsum", "Zinc Sulphate Mono", "Boric Acid"};
     private double[] cmp = new double[6];
+    private double[] requiredNutrient = new double[6];
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
@@ -108,13 +103,12 @@ public class NutrientInputActivityCopy extends AppCompatActivity {
                 findViewById(R.id.radio_k), findViewById(R.id.radio_s),
                 findViewById(R.id.radio_zn), findViewById(R.id.radio_b)
         };
-
-        editTextN = findViewById(R.id.edtxt_N1);
-        editTextP = findViewById(R.id.edtxt_P1);
-        editTextK = findViewById(R.id.edtxt_K1);
-        editTextS = findViewById(R.id.edtxt_S1);
-        editTextZn = findViewById(R.id.edtxt_Zn1);
-        editTextB = findViewById(R.id.edtxt_B1);
+        
+        editTexts = new EditText[]{
+                findViewById(R.id.edtxt_N1), findViewById(R.id.edtxt_P1),
+                findViewById(R.id.edtxt_K1), findViewById(R.id.edtxt_S1),
+                findViewById(R.id.edtxt_Zn1), findViewById(R.id.edtxt_B1)
+        };
 
         txtRes = new TextView[]{
                 findViewById(R.id.rn), findViewById(R.id.rp),
@@ -176,7 +170,7 @@ public class NutrientInputActivityCopy extends AppCompatActivity {
 
 
 
-        editTextN.addTextChangedListener(new TextWatcher() {
+        editTexts[0].addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
 
@@ -192,9 +186,10 @@ public class NutrientInputActivityCopy extends AppCompatActivity {
                 double val = 0.0;
                 String res1, res2;
                 try {
-                    soilTextValue = Double.parseDouble(editTextN.getText().toString());
+                    soilTextValue = Double.parseDouble(editTexts[0].getText().toString());
                     Nutrient nitrogen = new Nutrient("Nitrogen", "N");
                     val = nitrogen.calculateRequiredNutrient(mCrop, mTexture, soilTextValue);
+                    requiredNutrient[0] = val;
                     Interpretation ti = nitrogen.getTestInterpretation();
                     Interpretation ri = nitrogen.getRecommendationInterpretation();
 
@@ -250,15 +245,15 @@ public class NutrientInputActivityCopy extends AppCompatActivity {
                     txtRes[0].setText(rr);
                 } catch (NumberFormatException e) {
                     //Toast.makeText(getApplicationContext(), "Invalid Input", Toast.LENGTH_LONG).show();
-                    if (!editTextN.getText().toString().equals(""))
-                        editTextN.setError("Invalid Input. Please provide value within the range.");
+                    if (!editTexts[0].getText().toString().equals(""))
+                        editTexts[0].setError("Invalid Input. Please provide value within the range.");
                     //DropDownAnim.collapse(txtResN);
                 }
             }
         });
 
 
-        editTextP.addTextChangedListener(new TextWatcher() {
+        editTexts[1].addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
 
@@ -274,9 +269,10 @@ public class NutrientInputActivityCopy extends AppCompatActivity {
                 double val = 0.0;
                 String res1, res2;
                 try {
-                    soilTextValue = Double.parseDouble(editTextP.getText().toString());
+                    soilTextValue = Double.parseDouble(editTexts[1].getText().toString());
                     Nutrient phosphorus = new Nutrient("Phosphorus", "P");
                     val = phosphorus.calculateRequiredNutrient(mCrop, mTexture, soilTextValue);
+                    requiredNutrient[1] = val;
                     Interpretation ti = phosphorus.getTestInterpretation();
                     Interpretation ri = phosphorus.getRecommendationInterpretation();
 
@@ -340,14 +336,14 @@ public class NutrientInputActivityCopy extends AppCompatActivity {
                     txtRes[1].setText(rr);
                 } catch (NumberFormatException e) {
                     //Toast.makeText(getApplicationContext(), "Invalid Input", Toast.LENGTH_LONG).show();
-                    if (!editTextP.getText().toString().equals(""))
-                        editTextP.setError("Invalid Input. Please provide value within the range.");
+                    if (!editTexts[1].getText().toString().equals(""))
+                        editTexts[1].setError("Invalid Input. Please provide value within the range.");
                     //DropDownAnim.collapse(txtResN);
                 }
             }
         });
 
-        editTextK.addTextChangedListener(new TextWatcher() {
+        editTexts[2].addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
 
@@ -363,9 +359,10 @@ public class NutrientInputActivityCopy extends AppCompatActivity {
                 double val = 0.0;
                 String res1, res2;
                 try {
-                    soilTextValue = Double.parseDouble(editTextK.getText().toString());
+                    soilTextValue = Double.parseDouble(editTexts[2].getText().toString());
                     Nutrient potassium = new Nutrient("Potassium", "K");
                     val = potassium.calculateRequiredNutrient(mCrop, mTexture, soilTextValue);
+                    requiredNutrient[2] = val;
                     Interpretation ti = potassium.getTestInterpretation();
                     Interpretation ri = potassium.getRecommendationInterpretation();
 
@@ -428,14 +425,14 @@ public class NutrientInputActivityCopy extends AppCompatActivity {
                     txtRes[2].setText(rr);
                 } catch (NumberFormatException e) {
                     //Toast.makeText(getApplicationContext(), "Invalid Input", Toast.LENGTH_LONG).show();
-                    if (!editTextK.getText().toString().equals(""))
-                        editTextK.setError("Invalid Input. Please provide value within the range.");
+                    if (!editTexts[2].getText().toString().equals(""))
+                        editTexts[2].setError("Invalid Input. Please provide value within the range.");
                     //DropDownAnim.collapse(txtResN);
                 }
             }
         });
 
-        editTextS.addTextChangedListener(new TextWatcher() {
+        editTexts[3].addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
 
@@ -451,9 +448,10 @@ public class NutrientInputActivityCopy extends AppCompatActivity {
                 double val = 0.0;
                 String res1, res2;
                 try {
-                    soilTextValue = Double.parseDouble(editTextS.getText().toString());
+                    soilTextValue = Double.parseDouble(editTexts[3].getText().toString());
                     Nutrient sulphur = new Nutrient("Sulphur", "S");
                     val = sulphur.calculateRequiredNutrient(mCrop, mTexture, soilTextValue);
+                    requiredNutrient[3] = val;
                     Interpretation ti = sulphur.getTestInterpretation();
                     Interpretation ri = sulphur.getRecommendationInterpretation();
 
@@ -516,14 +514,14 @@ public class NutrientInputActivityCopy extends AppCompatActivity {
                     txtRes[3].setText(rr);
                 } catch (NumberFormatException e) {
                     //Toast.makeText(getApplicationContext(), "Invalid Input", Toast.LENGTH_LONG).show();
-                    if (!editTextS.getText().toString().equals(""))
-                        editTextS.setError("Invalid Input. Please provide value within the range.");
+                    if (!editTexts[3].getText().toString().equals(""))
+                        editTexts[3].setError("Invalid Input. Please provide value within the range.");
                     //DropDownAnim.collapse(txtResN);
                 }
             }
         });
 
-        editTextZn.addTextChangedListener(new TextWatcher() {
+        editTexts[4].addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
 
@@ -539,9 +537,10 @@ public class NutrientInputActivityCopy extends AppCompatActivity {
                 double val = 0.0;
                 String res1, res2;
                 try {
-                    soilTextValue = Double.parseDouble(editTextZn.getText().toString());
+                    soilTextValue = Double.parseDouble(editTexts[4].getText().toString());
                     Nutrient zinc = new Nutrient("Zinc", "Zn");
                     val = zinc.calculateRequiredNutrient(mCrop, mTexture, soilTextValue);
+                    requiredNutrient[4] = val;
                     Interpretation ti = zinc.getTestInterpretation();
                     Interpretation ri = zinc.getRecommendationInterpretation();
 
@@ -604,14 +603,14 @@ public class NutrientInputActivityCopy extends AppCompatActivity {
                     txtRes[4].setText(rr);
                 } catch (NumberFormatException e) {
                     //Toast.makeText(getApplicationContext(), "Invalid Input", Toast.LENGTH_LONG).show();
-                    if (!editTextZn.getText().toString().equals(""))
-                        editTextZn.setError("Invalid Input. Please provide value within the range.");
+                    if (!editTexts[4].getText().toString().equals(""))
+                        editTexts[4].setError("Invalid Input. Please provide value within the range.");
                     //DropDownAnim.collapse(txtResN);
                 }
             }
         });
 
-        editTextB.addTextChangedListener(new TextWatcher() {
+        editTexts[5].addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
 
@@ -627,9 +626,10 @@ public class NutrientInputActivityCopy extends AppCompatActivity {
                 double val = 0.0;
                 String res1, res2;
                 try {
-                    soilTextValue = Double.parseDouble(editTextB.getText().toString());
+                    soilTextValue = Double.parseDouble(editTexts[5].getText().toString());
                     Nutrient boron = new Nutrient("Boron", "B");
                     val = boron.calculateRequiredNutrient(mCrop, mTexture, soilTextValue);
+                    requiredNutrient[5] = val;
                     Interpretation ti = boron.getTestInterpretation();
                     Interpretation ri = boron.getRecommendationInterpretation();
 
@@ -692,8 +692,8 @@ public class NutrientInputActivityCopy extends AppCompatActivity {
                     txtRes[5].setText(rr);
                 } catch (NumberFormatException e) {
                     //Toast.makeText(getApplicationContext(), "Invalid Input", Toast.LENGTH_LONG).show();
-                    if (!editTextB.getText().toString().equals(""))
-                        editTextB.setError("Invalid Input. Please provide value within the range.");
+                    if (!editTexts[5].getText().toString().equals(""))
+                        editTexts[5].setError("Invalid Input. Please provide value within the range.");
                     //DropDownAnim.collapse(txtResN);
                 }
             }
@@ -722,6 +722,8 @@ public class NutrientInputActivityCopy extends AppCompatActivity {
         }
 
     }
+
+    // -------------------- Details view ---------------------- //
 
     public void showDetails(View view) {
         LayoutInflater inflater = (LayoutInflater)getSystemService(Context.LAYOUT_INFLATER_SERVICE);
@@ -754,6 +756,13 @@ public class NutrientInputActivityCopy extends AppCompatActivity {
 
     }
 
+
+    // --------------------------- Details view ---------------------- //
+
+
+    // ------------------------ Status Based Calculation --------------------- //
+
+
     public void onClickRN (View view){
         int selectedId = radioGroups[0].getCheckedRadioButtonId();
 
@@ -762,10 +771,12 @@ public class NutrientInputActivityCopy extends AppCompatActivity {
         double val = 0.0;
         String res1, res2;
         try {
-            //soilTextValue = Double.parseDouble(editTextN.getText().toString());
+            //soilTextValue = Double.parseDouble(editTexts[0].getText().toString());
+            editTexts[0].getText().clear();
             Nutrient nitrogen = new Nutrient("Nitrogen", "N");
             String status = radioButton.getText().toString();
             val = nitrogen.calculateRequiredNutrient(mCrop, status);
+            requiredNutrient[0] = val;
             //Interpretation ti = nitrogen.getTestInterpretation();
             //Interpretation ri = nitrogen.getRecommendationInterpretation();
 
@@ -800,7 +811,7 @@ public class NutrientInputActivityCopy extends AppCompatActivity {
             txtRes[0].setText(rr);
         } catch (NumberFormatException e) {
             Toast.makeText(getApplicationContext(), "Invalid Input", Toast.LENGTH_LONG).show();
-            editTextN.setError("Invalid Input. Please provide value within the range.");
+            editTexts[0].setError("Invalid Input. Please provide value within the range.");
             //DropDownAnim.collapse(txtResN);
         }
 
@@ -815,10 +826,12 @@ public class NutrientInputActivityCopy extends AppCompatActivity {
         double val = 0.0;
         String res1, res2;
         try {
-            //soilTextValue = Double.parseDouble(editTextN.getText().toString());
+            //soilTextValue = Double.parseDouble(editTexts[0].getText().toString());
+            editTexts[1].getText().clear();
             Nutrient phosphorus = new Nutrient("Phosphorus", "P");
             String status = radioButton.getText().toString();
             val = phosphorus.calculateRequiredNutrient(mCrop, status);
+            requiredNutrient[1] = val;
             //Interpretation ti = nitrogen.getTestInterpretation();
             //Interpretation ri = nitrogen.getRecommendationInterpretation();
 
@@ -855,7 +868,7 @@ public class NutrientInputActivityCopy extends AppCompatActivity {
             txtRes[1].setText(rr);
         } catch (NumberFormatException e) {
             Toast.makeText(getApplicationContext(), "Invalid Input", Toast.LENGTH_LONG).show();
-            editTextP.setError("Invalid Input. Please provide value within the range.");
+            editTexts[1].setError("Invalid Input. Please provide value within the range.");
             //DropDownAnim.collapse(txtResN);
         }
 
@@ -874,18 +887,59 @@ public class NutrientInputActivityCopy extends AppCompatActivity {
     public void onClickFP (View view){
         int rid = radioGroupF[1].getCheckedRadioButtonId();
 
-        String c;
+        String c, res1 = "", res2 = "";
+
+        double val = requiredNutrient[1];
 
         if (rid == R.id.radiofp1){
             c = "As, Phosphorus composition in TSP 20%";
             cmp[1] = 20.0;
             frr[1] = "TSP";
             //resultMap.get("P").setFrFinal("TSP", val, 20.0, val*(100.0/20.0));
+
+            if (val == -1) {
+                throw new NumberFormatException();
+            }
+            else {
+                res1 = String.format("%.3f (kg/ha)", val);
+                res2 = String.format("%.3f (kg/ha)", val*(100.0/cmp[1]));
+
+                RadioButton rb;
+                DropDownAnim.expand(txtRes[1]);
+
+            }
+            //double x = val * 1.0;
+            result.put("P", String.valueOf(val));
+            //Toast.makeText(getApplicationContext(), String.valueOf(val), Toast.LENGTH_LONG).show();
+            String rr = String.format("%15s: %s",
+                    "Req. " + frr[1], res2);
+            //Toast.makeText(getApplicationContext(), rr, Toast.LENGTH_LONG).show();
+            txtRes[1].setText(rr);
         }
         else if (rid == R.id.radiofp2){
             c = "As, Phosphorus composition in DAP 20%";
             cmp[1] = 20.0; frr[1] = "DAP";
             //resultMap.get("P").setFrFinal("DAP", val, 20.0, val*(100.0/20.0));
+
+            if (val == -1) {
+                throw new NumberFormatException();
+            }
+            else {
+                res1 = String.format("%.3f (kg/ha)", val);
+                res2 = String.format("%.3f (kg/ha)", val*(100.0/cmp[1]));
+
+                RadioButton rb;
+                DropDownAnim.expand(txtRes[1]);
+
+            }
+            //double x = val * 1.0;
+            result.put("P", String.valueOf(val));
+            //Toast.makeText(getApplicationContext(), String.valueOf(val), Toast.LENGTH_LONG).show();
+            String rr = String.format("%15s: %s",
+                    "Req. " + frr[1], res2);
+            //Toast.makeText(getApplicationContext(), rr, Toast.LENGTH_LONG).show();
+            txtRes[1].setText(rr);
+
         }
 
         expandOne(1);
@@ -909,6 +963,7 @@ public class NutrientInputActivityCopy extends AppCompatActivity {
         expandOne(3);
 
     }
+
 
     public void onClickFZn (View view){
         int selectedId = radioGroupF[4].getCheckedRadioButtonId();

@@ -1,0 +1,217 @@
+texture_class,nutrient,interpretation,lower_limit,upper_limit,interval
+C,N,Very Low,0.001,0.09,0.089
+C,N,Low,0.091,0.18,0.089
+C,N,Medium,0.181,0.27,0.089
+C,N,Optimum,0.271,0.36,0.089
+C,N,High,0.361,0.45,0.089
+C,N,Very High,0.45,100,99.55
+C,P,Very Low,0.1,6,5.9
+C,P,Low,6.1,12,5.9
+C,P,Medium,12.1,18,5.9
+C,P,Optimum,18.1,24,5.9
+C,P,High,24.1,30,5.9
+C,P,Very High,30.1,100,69.9
+C,S,Very Low,0.1,9,8.9
+C,S,Low,9.1,18,8.9
+C,S,Medium,18.1,27,8.9
+C,S,Optimum,27.1,36,8.9
+C,S,High,36.1,45,8.9
+C,S,Very High,45.1,100,54.9
+C,K,Very Low,0.001,0.075,0.074
+C,K,Low,0.076,0.15,0.074
+C,K,Medium,0.151,0.225,0.074
+C,K,Optimum,0.226,0.3,0.074
+C,K,High,0.301,0.375,0.074
+C,K,Very High,0.376,100,99.624
+C,Ca,Very Low,0.01,1.5,1.49
+C,Ca,Low,1.51,3,1.49
+C,Ca,Medium,3.01,4.5,1.49
+C,Ca,Optimum,4.51,6,1.49
+C,Ca,High,6.01,7.5,1.49
+C,Ca,Very High,7.6,100,92.4
+C,Mg,Very Low,0.001,0.375,0.374
+C,Mg,Low,0.376,0.75,0.374
+C,Mg,Medium,0.751,1.125,0.374
+C,Mg,Optimum,1.126,1.5,0.374
+C,Mg,High,1.501,1.875,0.374
+C,Mg,Very High,1.876,100,98.124
+C,Cu,Very Low,0.001,0.15,0.149
+C,Cu,Low,0.151,0.3,0.149
+C,Cu,Medium,0.301,0.45,0.149
+C,Cu,Optimum,0.451,0.6,0.149
+C,Cu,High,0.601,0.75,0.149
+C,Cu,Very High,0.751,100,99.249
+C,Zn,Very Low,0.001,0.45,0.449
+C,Zn,Low,0.46,0.9,0.44
+C,Zn,Medium,0.901,1.35,0.449
+C,Zn,Optimum,1.351,1.8,0.449
+C,Zn,High,1.801,2.225,0.424
+C,Zn,Very High,2.226,100,97.774
+C,Fe,Very Low,0.1,3,2.9
+C,Fe,Low,3.1,6,2.9
+C,Fe,Medium,6.1,9,2.9
+C,Fe,Optimum,9.1,12,2.9
+C,Fe,High,12.1,15,2.9
+C,Fe,Very High,15.1,100,84.9
+C,Mn,Very Low,0.001,0.75,0.749
+C,Mn,Low,0.751,1.5,0.749
+C,Mn,Medium,1.501,2.25,0.749
+C,Mn,Optimum,2.251,3,0.749
+C,Mn,High,3.001,3.75,0.749
+C,Mn,Very High,3.751,100,96.249
+C,B,Very Low,0.001,0.15,0.149
+C,B,Low,0.151,0.3,0.149
+C,B,Medium,0.301,0.45,0.149
+C,B,Optimum,0.451,0.6,0.149
+C,B,High,0.601,0.75,0.149
+C,B,Very High,0.751,100,99.249
+C,Mo,Very Low,0.001,0.075,0.074
+C,Mo,Low,0.076,0.15,0.074
+C,Mo,Medium,0.151,0.225,0.074
+C,Mo,Optimum,0.226,0.3,0.074
+C,Mo,High,0.301,0.375,0.074
+C,Mo,Very High,0.376,100,99.624
+B,N,Very Low,0.001,0.075,0.074
+B,N,Low,0.076,0.15,0.074
+B,N,Medium,0.151,0.225,0.074
+B,N,Optimum,0.226,0.3,0.074
+B,N,High,0.301,0.375,0.074
+B,N,Very High,0.376,100,99.624
+B,P,Very Low,0.1,6,5.9
+B,P,Low,6.1,12,5.9
+B,P,Medium,12.1,18,5.9
+B,P,Optimum,18.1,24,5.9
+B,P,High,24.1,30,5.9
+B,P,Very High,30.1,100,69.9
+B,S,Very Low,0.1,6,5.9
+B,S,Low,6.1,12,5.9
+B,S,Medium,12.1,18,5.9
+B,S,Optimum,18.1,24,5.9
+B,S,High,24.1,30,5.9
+B,S,Very High,30.1,100,69.9
+B,K,Very Low,0.001,0.06,0.059
+B,K,Low,0.061,0.12,0.059
+B,K,Medium,0.121,0.18,0.059
+B,K,Optimum,0.181,0.24,0.059
+B,K,High,0.241,0.3,0.059
+B,K,Very High,0.301,100,99.699
+B,Ca,Very Low,0.01,1.5,1.49
+B,Ca,Low,1.51,3,1.49
+B,Ca,Medium,3.01,4.5,1.49
+B,Ca,Optimum,4.51,6,1.49
+B,Ca,High,6.01,7.5,1.49
+B,Ca,Very High,7.6,100,92.4
+B,Mg,Very Low,0.001,0.375,0.374
+B,Mg,Low,0.376,0.75,0.374
+B,Mg,Medium,0.751,1.125,0.374
+B,Mg,Optimum,1.126,1.5,0.374
+B,Mg,High,1.501,1.875,0.374
+B,Mg,Very High,1.876,100,98.124
+B,Cu,Very Low,0.001,0.15,0.149
+B,Cu,Low,0.151,0.3,0.149
+B,Cu,Medium,0.301,0.45,0.149
+B,Cu,Optimum,0.451,0.6,0.149
+B,Cu,High,0.601,0.75,0.149
+B,Cu,Very High,0.751,100,99.249
+B,Zn,Very Low,0.001,0.375,0.374
+B,Zn,Low,0.376,0.75,0.374
+B,Zn,Medium,0.751,1.125,0.374
+B,Zn,Optimum,1.126,1.5,0.374
+B,Zn,High,1.501,1.875,0.374
+B,Zn,Very High,1.876,100,98.124
+B,Fe,Very Low,0.01,2.25,2.24
+B,Fe,Low,2.26,4.5,2.24
+B,Fe,Medium,4.51,6.75,2.24
+B,Fe,Optimum,6.76,9,2.24
+B,Fe,High,9.01,11.25,2.24
+B,Fe,Very High,11.26,100,88.74
+B,Mn,Very Low,0.001,0.75,0.749
+B,Mn,Low,0.751,1.5,0.749
+B,Mn,Medium,1.501,2.25,0.749
+B,Mn,Optimum,2.251,3,0.749
+B,Mn,High,3.001,3.75,0.749
+B,Mn,Very High,3.751,100,96.249
+B,B,Very Low,0.001,0.12,0.119
+B,B,Low,0.121,0.24,0.119
+B,B,Medium,0.241,0.36,0.119
+B,B,Optimum,0.361,0.48,0.119
+B,B,High,0.481,0.6,0.119
+B,B,Very High,0.601,100,99.399
+B,Mo,Very Low,0.001,0.045,0.044
+B,Mo,Low,0.046,0.09,0.044
+B,Mo,Medium,0.091,0.135,0.044
+B,Mo,Optimum,0.136,0.18,0.044
+B,Mo,High,0.181,0.225,0.044
+B,Mo,Very High,0.226,100,99.774
+A,N,Very Low,0.001,0.09,0.089
+A,N,Low,0.091,0.18,0.089
+A,N,Medium,0.181,0.27,0.089
+A,N,Optimum,0.271,0.36,0.089
+A,N,High,0.361,0.45,0.089
+A,N,Very High,0.45,100,99.55
+A,P,Very Low,0.01,7.5,7.49
+A,P,Low,7.51,15,7.49
+A,P,Medium,15.01,22.5,7.49
+A,P,Optimum,22.51,30,7.49
+A,P,High,30.01,37.5,7.49
+A,P,Very High,37.51,100,62.49
+A,S,Very Low,0.01,7.5,7.49
+A,S,Low,7.51,15,7.49
+A,S,Medium,15.01,22.5,7.49
+A,S,Optimum,22.51,30,7.49
+A,S,High,30.01,37.5,7.49
+A,S,Very High,37.51,100,62.49
+A,K,Very Low,0.001,0.09,0.089
+A,K,Low,0.091,0.18,0.089
+A,K,Medium,0.181,0.27,0.089
+A,K,Optimum,0.271,0.36,0.089
+A,K,High,0.361,0.45,0.089
+A,K,Very High,0.45,100,99.55
+A,Ca,Very Low,0.01,1.5,1.49
+A,Ca,Low,1.51,3,1.49
+A,Ca,Medium,3.01,4.5,1.49
+A,Ca,Optimum,4.51,6,1.49
+A,Ca,High,6.01,7.5,1.49
+A,Ca,Very High,7.6,100,92.4
+A,Mg,Very Low,0.001,0.375,0.374
+A,Mg,Low,0.376,0.75,0.374
+A,Mg,Medium,0.751,1.125,0.374
+A,Mg,Optimum,1.126,1.5,0.374
+A,Mg,High,1.501,1.875,0.374
+A,Mg,Very High,1.876,100,98.124
+A,Cu,Very Low,0.001,0.15,0.149
+A,Cu,Low,0.151,0.3,0.149
+A,Cu,Medium,0.301,0.45,0.149
+A,Cu,Optimum,0.451,0.6,0.149
+A,Cu,High,0.601,0.75,0.149
+A,Cu,Very High,0.751,100,99.249
+A,Zn,Very Low,0.001,0.45,0.449
+A,Zn,Low,0.46,0.9,0.44
+A,Zn,Medium,0.901,1.35,0.449
+A,Zn,Optimum,1.351,1.8,0.449
+A,Zn,High,1.801,2.225,0.424
+A,Zn,Very High,2.226,100,97.774
+A,Fe,Very Low,0.1,3,2.9
+A,Fe,Low,3.1,6,2.9
+A,Fe,Medium,6.1,9,2.9
+A,Fe,Optimum,9.1,12,2.9
+A,Fe,High,12.1,15,2.9
+A,Fe,Very High,15.1,100,84.9
+A,Mn,Very Low,0.001,0.75,0.749
+A,Mn,Low,0.751,1.5,0.749
+A,Mn,Medium,1.501,2.25,0.749
+A,Mn,Optimum,2.251,3,0.749
+A,Mn,High,3.001,3.75,0.749
+A,Mn,Very High,3.751,100,96.249
+A,B,Very Low,0.001,0.15,0.149
+A,B,Low,0.151,0.3,0.149
+A,B,Medium,0.301,0.45,0.149
+A,B,Optimum,0.451,0.6,0.149
+A,B,High,0.601,0.75,0.149
+A,B,Very High,0.751,100,99.249
+A,Mo,Very Low,0.001,0.075,0.074
+A,Mo,Low,0.076,0.15,0.074
+A,Mo,Medium,0.151,0.225,0.074
+A,Mo,Optimum,0.226,0.3,0.074
+A,Mo,High,0.301,0.375,0.074
+A,Mo,Very High,0.376,100,99.624
