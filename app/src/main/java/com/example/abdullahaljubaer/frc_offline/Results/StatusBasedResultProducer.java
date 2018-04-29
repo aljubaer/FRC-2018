@@ -6,6 +6,7 @@ package com.example.abdullahaljubaer.frc_offline.Results;
 
 public class StatusBasedResultProducer {
 
+    private String symbol;
     private String nutrient;
     private String fertilizer;
     private String interpretation;
@@ -15,10 +16,11 @@ public class StatusBasedResultProducer {
     private double fertilizerQuantity = 0.0;
 
     public StatusBasedResultProducer(
-            String nutrient, String fertilizer,
+            String symbol, String nutrient, String fertilizer,
             String interpretation, double uf,
             double composition, double fertilizerQuantity) {
 
+        this.symbol = symbol;
         this.nutrient = nutrient;
         this.fertilizer = fertilizer;
         this.interpretation = interpretation;
@@ -27,22 +29,44 @@ public class StatusBasedResultProducer {
         this.fertilizerQuantity = fertilizerQuantity;
     }
 
-    public String getInterpretation() {
-        return "Interpretation = " + interpretation + "\n";
+    public String getNutrient() {
+        return nutrient;
     }
 
-    public String getUf() {
-        return "Uf = " + uf;
+    public String getInterpretation() {
+        return interpretation;
+    }
+
+    public double getUf() {
+        return uf;
+    }
+
+    public double getNutrientQuantity() {
+        return nutrientQuantity;
+    }
+
+    public double getFertilizerQuantity() {
+        return fertilizerQuantity;
     }
 
     public String getNutrientCalc (){
-        return "N(kg/ha) = " + uf;
+        return symbol + "(kg/ha)=" + uf + "-";
+    }
+
+    public void setFertilizer(String fertilizer) {
+        this.fertilizer = fertilizer;
+    }
+
+    public void setComposition(double composition) {
+        this.composition = composition;
+    }
+
+    public void setFertilizerQuantity(double fertilizerQuantity) {
+        this.fertilizerQuantity = fertilizerQuantity;
     }
 
     public String getComposition(){
-
         return String.format("%s composition of %s = %.2f%", nutrient, fertilizer, composition);
-
     }
 
     public String getFertilizer () {

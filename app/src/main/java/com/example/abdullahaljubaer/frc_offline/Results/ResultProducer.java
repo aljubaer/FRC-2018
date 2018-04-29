@@ -146,4 +146,8 @@ public class ResultProducer {
     public String getComp() {
         return comp;
     }
+
+    public void setComp (String c){
+        this.comp = c;
+    }
 }
