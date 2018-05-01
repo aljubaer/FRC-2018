@@ -31,14 +31,13 @@ public class Nutrient {
         return calculateFr(recommendationInterpretation.getUpperLimit(),
                 recommendationInterpretation.getInterval(),
                 testInterpretation.getInterval(),
-                soilTestValue ,
+                soilTestValue,
                 testInterpretation.getLowerLimit());
     }
 
     public double calculateRequiredNutrient ( Crop crop, String status ) {
         this.status = status;
-        Interpretation recommendationInterpretation
-                = crop.getInterpretation(symbol, status);
+        recommendationInterpretation = crop.getInterpretation(symbol, status);
         return recommendationInterpretation.getUpperLimit();
     }
 
@@ -66,4 +65,7 @@ public class Nutrient {
         return recommendationInterpretation;
     }
 
+    public String getSymbol() {
+        return symbol;
+    }
 }

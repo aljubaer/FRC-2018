@@ -24,12 +24,17 @@ import android.widget.Toast;
 
 import com.example.abdullahaljubaer.frc_offline.BusinessClasses.Crop;
 import com.example.abdullahaljubaer.frc_offline.BusinessClasses.Nutrient;
+import com.example.abdullahaljubaer.frc_offline.BusinessClasses.Recommendator;
 import com.example.abdullahaljubaer.frc_offline.BusinessClasses.Texture;
 import com.example.abdullahaljubaer.frc_offline.CustomViews.DropDownAnim;
 import com.example.abdullahaljubaer.frc_offline.CustomViews.GuideAlertDialog;
 import com.example.abdullahaljubaer.frc_offline.CustomViews.ResultAlertDialog;
+import com.example.abdullahaljubaer.frc_offline.CustomViews.ResultDialog;
 import com.example.abdullahaljubaer.frc_offline.R;
+import com.example.abdullahaljubaer.frc_offline.Results.IResultProducer;
 import com.example.abdullahaljubaer.frc_offline.Results.ResultProducer;
+import com.example.abdullahaljubaer.frc_offline.Results.StatusBasedResultProducer;
+import com.example.abdullahaljubaer.frc_offline.Results.TestBasedResultProducer;
 
 import java.util.Arrays;
 import java.util.HashMap;
@@ -52,19 +57,23 @@ public class NutrientInputActivityCopy extends AppCompatActivity {
     private RadioGroup[] radioGroupF;
     private RadioGroup[] radioGroups;
     private TextView[] txtRes;
-    private Boolean[] isCalculated;
+    private Boolean[] isCalculated, isChecked;
 
     private AlertDialog dialog = null;
     private ScrollView mainLayout;
     private ResultProducer producer;
 
     private Map<String, ResultProducer> resultMap = new HashMap<>();
-
+    private Map<String, IResultProducer> mResults = new HashMap<>();
     private Map<String, String> result = new HashMap<>();
 
     private String[] frr = new String[]{"Urea", "TSP", "MoP", "Gypsum", "Zinc Sulphate Mono", "Boric Acid"};
     private double[] cmp = new double[6];
     private double[] requiredNutrient = new double[6];
+    private Interpretation[] ti = new Interpretation[6];
+    private Interpretation[] ri = new Interpretation[6];
+    private Nutrient[] nutrients = new Nutrient[6];
+    private int[] last = new int[6];
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
@@ -117,6 +126,8 @@ public class NutrientInputActivityCopy extends AppCompatActivity {
 
         isCalculated = new Boolean[6];
         Arrays.fill(isCalculated, false);
+        isChecked = new Boolean[6];
+        Arrays.fill(isChecked, false);
 
         Bundle extras = getIntent().getExtras();
 
@@ -177,9 +188,6 @@ public class NutrientInputActivityCopy extends AppCompatActivity {
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {}
-
-
-
             @Override
             public void afterTextChanged(Editable s) {
                 double val = 0.0;
@@ -187,31 +195,36 @@ public class NutrientInputActivityCopy extends AppCompatActivity {
                 try {
                     soilTextValue = Double.parseDouble(editTexts[0].getText().toString());
                     Nutrient nitrogen = new Nutrient("Nitrogen", "N");
+                    nutrients[0] = nitrogen;
                     val = nitrogen.calculateRequiredNutrient(mCrop, mTexture, soilTextValue);
                     requiredNutrient[0] = val;
-                    Interpretation ti = nitrogen.getTestInterpretation();
-                    Interpretation ri = nitrogen.getRecommendationInterpretation();
+
+                    ti[0] = nitrogen.getTestInterpretation();
+                    ri[0] = nitrogen.getRecommendationInterpretation();
 
                     String c = "As, Nitrogen composition in Urea 46%";
+                    int rid = radioGroupF[0].getCheckedRadioButtonId();
 
-                    resultMap.put("N", new ResultProducer(soilTextValue, ri.getStatus(), ri.getUpperLimit(),
-                            ti.getInterval(), ri.getInterval(), ti.getLowerLimit(), val, c));
-                    resultMap.get("N").setFrFinal("Urea", val, 46.0, val*(100.0/46.0));
+                    if (rid == R.id.radiofn1){
+                        c = "As, Nitrogen composition in Urea 46%";
+                        cmp[0] = 46.0;
+                        frr[0] = "Urea";
+                    }
+                    else if (rid == R.id.radiofn2){
+                        c = "As, Nitrogen composition in Urea 46%";
+                        cmp[0] = 46.0;
+                        frr[0] = "Guti Urea";
+                    }
 
                     if (val == -1) {
                         throw new NumberFormatException();
-                        //res1 = "Invalid Input. Please provide value within the range.";
-                        //res2 = res1;
-                        //DropDownAnim.collapse(txtResN);
                     }
                     else {
                         if (!isCalculated[0]) isCalculated[0] = true;
-                        res1 = String.format("%.3f (kg/ha)", val);
-                        res2 = String.format("%.3f (kg/ha)", val*(100.0/46.0));
-
+                        last[0] = 1;
+                        prepareResult(soilTextValue, val, c, 0, "N");
                         RadioButton rb;
-
-                        switch (ri.getStatus()) {
+                        switch (ri[0].getStatus()) {
                             case "Very Low":
                                 rb = findViewById(R.id.radioNVL);
                                 rb.setChecked(true);
@@ -229,24 +242,10 @@ public class NutrientInputActivityCopy extends AppCompatActivity {
                                 rb.setChecked(true);
                                 break;
                         }
-
-
-
-                        DropDownAnim.expand(txtRes[0]);
-
                     }
-                    //double x = val * 1.0;
-                    result.put("N", String.valueOf(val));
-                    //Toast.makeText(getApplicationContext(), String.valueOf(val), Toast.LENGTH_LONG).show();
-                    String rr = String.format("%15s: %s",
-                            "Req. Urea", res2);
-                    //Toast.makeText(getApplicationContext(), rr, Toast.LENGTH_LONG).show();
-                    txtRes[0].setText(rr);
                 } catch (NumberFormatException e) {
-                    //Toast.makeText(getApplicationContext(), "Invalid Input", Toast.LENGTH_LONG).show();
                     if (!editTexts[0].getText().toString().equals(""))
                         editTexts[0].setError("Invalid Input. Please provide value within the range.");
-                    //DropDownAnim.collapse(txtResN);
                 }
             }
         });
@@ -254,26 +253,20 @@ public class NutrientInputActivityCopy extends AppCompatActivity {
 
         editTexts[1].addTextChangedListener(new TextWatcher() {
             @Override
-            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-
-            }
-
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
             @Override
-            public void onTextChanged(CharSequence s, int start, int before, int count) {
-
-            }
-
+            public void onTextChanged(CharSequence s, int start, int before, int count) {}
             @Override
             public void afterTextChanged(Editable s) {
                 double val = 0.0;
-                String res1, res2;
                 try {
                     soilTextValue = Double.parseDouble(editTexts[1].getText().toString());
                     Nutrient phosphorus = new Nutrient("Phosphorus", "P");
+                    nutrients[1] = phosphorus;
                     val = phosphorus.calculateRequiredNutrient(mCrop, mTexture, soilTextValue);
                     requiredNutrient[1] = val;
-                    Interpretation ti = phosphorus.getTestInterpretation();
-                    Interpretation ri = phosphorus.getRecommendationInterpretation();
+                    ti[1] = phosphorus.getTestInterpretation();
+                    ri[1] = phosphorus.getRecommendationInterpretation();
 
                     int rid = radioGroupF[1].getCheckedRadioButtonId();
                     RadioButton rbt = findViewById(rid);
@@ -284,16 +277,11 @@ public class NutrientInputActivityCopy extends AppCompatActivity {
                         c = "As, Phosphorus composition in TSP 20%";
                         cmp[1] = 20.0;
                         frr[1] = "TSP";
-                        resultMap.put("P", new ResultProducer(soilTextValue, ri.getStatus(), ri.getUpperLimit(),
-                                ti.getInterval(), ri.getInterval(), ti.getLowerLimit(), val, c));
-                        resultMap.get("P").setFrFinal("TSP", val, 20.0, val*(100.0/20.0));
                     }
                     else if (rid == R.id.radiofp2){
                         c = "As, Phosphorus composition in DAP 20%";
-                        cmp[1] = 20.0; frr[1] = "DAP";
-                        resultMap.put("P", new ResultProducer(soilTextValue, ri.getStatus(), ri.getUpperLimit(),
-                                ti.getInterval(), ri.getInterval(), ti.getLowerLimit(), val, c));
-                        resultMap.get("P").setFrFinal("DAP", val, 20.0, val*(100.0/20.0));
+                        cmp[1] = 20.0;
+                        frr[1] = "DAP";
                     }
 
                     if (val == -1) {
@@ -301,12 +289,12 @@ public class NutrientInputActivityCopy extends AppCompatActivity {
                     }
                     else {
                         if (!isCalculated[1]) isCalculated[1] = true;
-                        res1 = String.format("%.3f (kg/ha)", val);
-                        res2 = String.format("%.3f (kg/ha)", val*(100.0/cmp[1]));
+                        last[1] = 1;
+                        prepareResult(soilTextValue, val, c, 1, phosphorus.getSymbol());
 
                         RadioButton rb;
 
-                        switch (ri.getStatus()) {
+                        switch (ri[1].getStatus()) {
                             case "Very Low":
                                 rb = findViewById(R.id.radioPVL);
                                 rb.setChecked(true);
@@ -324,78 +312,55 @@ public class NutrientInputActivityCopy extends AppCompatActivity {
                                 rb.setChecked(true);
                                 break;
                         }
-                        DropDownAnim.expand(txtRes[1]);
-
                     }
-                    //double x = val * 1.0;
-                    result.put("P", String.valueOf(val));
-                    //Toast.makeText(getApplicationContext(), String.valueOf(val), Toast.LENGTH_LONG).show();
-                    String rr = String.format("%15s: %s",
-                            "Req. " + frr[1], res2);
-                    //Toast.makeText(getApplicationContext(), rr, Toast.LENGTH_LONG).show();
-                    txtRes[1].setText(rr);
                 } catch (NumberFormatException e) {
-                    //Toast.makeText(getApplicationContext(), "Invalid Input", Toast.LENGTH_LONG).show();
                     if (!editTexts[1].getText().toString().equals(""))
                         editTexts[1].setError("Invalid Input. Please provide value within the range.");
-                    //DropDownAnim.collapse(txtResN);
                 }
             }
         });
 
         editTexts[2].addTextChangedListener(new TextWatcher() {
             @Override
-            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-
-            }
-
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
             @Override
-            public void onTextChanged(CharSequence s, int start, int before, int count) {
-
-            }
-
+            public void onTextChanged(CharSequence s, int start, int before, int count) {}
             @Override
             public void afterTextChanged(Editable s) {
                 double val = 0.0;
-                String res1, res2;
                 try {
                     soilTextValue = Double.parseDouble(editTexts[2].getText().toString());
                     Nutrient potassium = new Nutrient("Potassium", "K");
                     val = potassium.calculateRequiredNutrient(mCrop, mTexture, soilTextValue);
                     requiredNutrient[2] = val;
-                    Interpretation ti = potassium.getTestInterpretation();
-                    Interpretation ri = potassium.getRecommendationInterpretation();
+                    ti[2] = potassium.getTestInterpretation();
+                    ri[2] = potassium.getRecommendationInterpretation();
 
                     int rid = radioGroupF[2].getCheckedRadioButtonId();
                     RadioButton rbt = findViewById(rid);
 
                     String c = "";
 
-                    if (rid == R.id.radiofk1){
+                    if (rid == R.id.radiofp1){
                         c = "As, Potassium composition in MoP 50%";
                         cmp[2]= 50.0; frr[2] = "MoP";
-                        resultMap.put("K", new ResultProducer(soilTextValue, ri.getStatus(), ri.getUpperLimit(),
-                                ti.getInterval(), ri.getInterval(), ti.getLowerLimit(), val, c));
-                        resultMap.get("K").setFrFinal("MoP", val, cmp[2], val*(100.0/cmp[2]));
                     }
                     else if (rid == R.id.radiofp2){
                         c = "As, Potassium composition in SoP 42%";
                         cmp[2] = 42.0; frr[2] = "SoP";
-                        resultMap.put("K", new ResultProducer(soilTextValue, ri.getStatus(), ri.getUpperLimit(),
-                                ti.getInterval(), ri.getInterval(), ti.getLowerLimit(), val, c));
-                        resultMap.get("K").setFrFinal("SoP", val, cmp[2], val*(100.0/cmp[2]));
                     }
 
                     if (val == -1) {
                         throw new NumberFormatException();
                     }
                     else {
-                        res1 = String.format("%.3f (kg/ha)", val);
-                        res2 = String.format("%.3f (kg/ha)", val*(100.0/cmp[2]));
+                        if (!isCalculated[2]) isCalculated[2] = true;
+                        last[2] = 1;
+                        prepareResult(soilTextValue, val, c, 2, potassium.getSymbol());
 
                         RadioButton rb;
 
-                        switch (ri.getStatus()) {
+                        switch (ri[2].getStatus()) {
                             case "Very Low":
                                 rb = findViewById(R.id.radioKVL);
                                 rb.setChecked(true);
@@ -413,78 +378,54 @@ public class NutrientInputActivityCopy extends AppCompatActivity {
                                 rb.setChecked(true);
                                 break;
                         }
-                        DropDownAnim.expand(txtRes[2]);
-
                     }
-                    //double x = val * 1.0;
-                    result.put("K", String.valueOf(val));
-                    //Toast.makeText(getApplicationContext(), String.valueOf(val), Toast.LENGTH_LONG).show();
-                    String rr = String.format("%15s: %s",
-                            "Req. " + frr[2], res2);
-                    //Toast.makeText(getApplicationContext(), rr, Toast.LENGTH_LONG).show();
-                    txtRes[2].setText(rr);
                 } catch (NumberFormatException e) {
-                    //Toast.makeText(getApplicationContext(), "Invalid Input", Toast.LENGTH_LONG).show();
                     if (!editTexts[2].getText().toString().equals(""))
                         editTexts[2].setError("Invalid Input. Please provide value within the range.");
-                    //DropDownAnim.collapse(txtResN);
                 }
             }
         });
-
         editTexts[3].addTextChangedListener(new TextWatcher() {
             @Override
-            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-
-            }
-
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
             @Override
-            public void onTextChanged(CharSequence s, int start, int before, int count) {
-
-            }
-
+            public void onTextChanged(CharSequence s, int start, int before, int count) {}
             @Override
             public void afterTextChanged(Editable s) {
                 double val = 0.0;
-                String res1, res2;
                 try {
                     soilTextValue = Double.parseDouble(editTexts[3].getText().toString());
                     Nutrient sulphur = new Nutrient("Sulphur", "S");
                     val = sulphur.calculateRequiredNutrient(mCrop, mTexture, soilTextValue);
                     requiredNutrient[3] = val;
-                    Interpretation ti = sulphur.getTestInterpretation();
-                    Interpretation ri = sulphur.getRecommendationInterpretation();
+                    ti[3] = sulphur.getTestInterpretation();
+                    ri[3] = sulphur.getRecommendationInterpretation();
 
                     int rid = radioGroupF[3].getCheckedRadioButtonId();
                     RadioButton rbt = findViewById(rid);
 
                     String c = "";
 
-                    if (rid == R.id.radiofs1){
+                    if (rid == R.id.radiofp1){
                         cmp[3]= 18.0; frr[3] = "Gypsum";
                         c = "As, Sulphur composition in " + frr[3] + " " + cmp[3] + "%";
-                        resultMap.put("S", new ResultProducer(soilTextValue, ri.getStatus(), ri.getUpperLimit(),
-                                ti.getInterval(), ri.getInterval(), ti.getLowerLimit(), val, c));
-                        resultMap.get("S").setFrFinal(frr[3], val, cmp[3], val*(100.0/cmp[3]));
                     }
-                    else if (rid == R.id.radiofs2){
+                    else if (rid == R.id.radiofp2){
                         cmp[3] = 23.5; frr[3] = "Ammonium Sulphate";
                         c = "As, Sulphur composition in " + frr[3] + " " + cmp[3] + "%";
-                        resultMap.put("S", new ResultProducer(soilTextValue, ri.getStatus(), ri.getUpperLimit(),
-                                ti.getInterval(), ri.getInterval(), ti.getLowerLimit(), val, c));
-                        resultMap.get("S").setFrFinal(frr[3], val, cmp[3], val*(100.0/cmp[3]));
                     }
 
                     if (val == -1) {
                         throw new NumberFormatException();
                     }
                     else {
-                        res1 = String.format("%.3f (kg/ha)", val);
-                        res2 = String.format("%.3f (kg/ha)", val*(100.0/cmp[3]));
+                        if (!isCalculated[3]) isCalculated[3] = true;
+                        last[3] = 1;
+                        prepareResult(soilTextValue, val, c, 3, sulphur.getSymbol());
 
                         RadioButton rb;
 
-                        switch (ri.getStatus()) {
+                        switch (ri[3].getStatus()) {
                             case "Very Low":
                                 rb = findViewById(R.id.radioSVL);
                                 rb.setChecked(true);
@@ -502,21 +443,14 @@ public class NutrientInputActivityCopy extends AppCompatActivity {
                                 rb.setChecked(true);
                                 break;
                         }
-                        DropDownAnim.expand(txtRes[3]);
+                        //DropDownAnim.expand(txtRes[1]);
 
                     }
-                    //double x = val * 1.0;
-                    result.put("S", String.valueOf(val));
-                    //Toast.makeText(getApplicationContext(), String.valueOf(val), Toast.LENGTH_LONG).show();
-                    String rr = String.format("%15s: %s",
-                            "Req. " + frr[3], res2);
-                    //Toast.makeText(getApplicationContext(), rr, Toast.LENGTH_LONG).show();
-                    txtRes[3].setText(rr);
+
                 } catch (NumberFormatException e) {
                     //Toast.makeText(getApplicationContext(), "Invalid Input", Toast.LENGTH_LONG).show();
                     if (!editTexts[3].getText().toString().equals(""))
                         editTexts[3].setError("Invalid Input. Please provide value within the range.");
-                    //DropDownAnim.collapse(txtResN);
                 }
             }
         });
@@ -534,46 +468,42 @@ public class NutrientInputActivityCopy extends AppCompatActivity {
 
             @Override
             public void afterTextChanged(Editable s) {
+
                 double val = 0.0;
-                String res1, res2;
                 try {
                     soilTextValue = Double.parseDouble(editTexts[4].getText().toString());
                     Nutrient zinc = new Nutrient("Zinc", "Zn");
                     val = zinc.calculateRequiredNutrient(mCrop, mTexture, soilTextValue);
                     requiredNutrient[4] = val;
-                    Interpretation ti = zinc.getTestInterpretation();
-                    Interpretation ri = zinc.getRecommendationInterpretation();
+                    ti[4] = zinc.getTestInterpretation();
+                    ri[4] = zinc.getRecommendationInterpretation();
+
 
                     int rid = radioGroupF[4].getCheckedRadioButtonId();
                     RadioButton rbt = findViewById(rid);
 
                     String c = "";
 
-                    if (rid == R.id.radiofzn1){
+                    if (rid == R.id.radiofp1){
                         cmp[4] = 36.0; frr[4] = "Zinc Sulphate Mono";
                         c = "As, Zinc composition in " + frr[4] + " " + cmp[4] + "%";
-                        resultMap.put("Zn", new ResultProducer(soilTextValue, ri.getStatus(), ri.getUpperLimit(),
-                                ti.getInterval(), ri.getInterval(), ti.getLowerLimit(), val, c));
-                        resultMap.get("Zn").setFrFinal(frr[4], val, cmp[4], val*(100.0/cmp[4]));
                     }
-                    else if (rid == R.id.radiofzn2){
+                    else if (rid == R.id.radiofp2){
                         cmp[4] = 23.0; frr[4] = "Zinc Sulphate Hepta";
                         c = "As, Zinc composition in " + frr[4] + " " + cmp[4] + "%";
-                        resultMap.put("Zn", new ResultProducer(soilTextValue, ri.getStatus(), ri.getUpperLimit(),
-                                ti.getInterval(), ri.getInterval(), ti.getLowerLimit(), val, c));
-                        resultMap.get("Zn").setFrFinal(frr[4], val, cmp[4], val*(100.0/cmp[4]));
                     }
 
                     if (val == -1) {
                         throw new NumberFormatException();
                     }
                     else {
-                        res1 = String.format("%.3f (kg/ha)", val);
-                        res2 = String.format("%.3f (kg/ha)", val*(100.0/cmp[4]));
+                        if (!isCalculated[4]) isCalculated[4] = true;
+                        last[4] = 1;
+                        prepareResult(soilTextValue, val, c, 4, zinc.getSymbol());
 
                         RadioButton rb;
 
-                        switch (ri.getStatus()) {
+                        switch (ri[4].getStatus()) {
                             case "Very Low":
                                 rb = findViewById(R.id.radioZnVL);
                                 rb.setChecked(true);
@@ -591,21 +521,14 @@ public class NutrientInputActivityCopy extends AppCompatActivity {
                                 rb.setChecked(true);
                                 break;
                         }
-                        DropDownAnim.expand(txtRes[4]);
+                        //DropDownAnim.expand(txtRes[1]);
 
                     }
-                    //double x = val * 1.0;
-                    result.put("Zn", String.valueOf(val));
-                    //Toast.makeText(getApplicationContext(), String.valueOf(val), Toast.LENGTH_LONG).show();
-                    String rr = String.format("%15s: %s",
-                            "Req. " + frr[4], res2);
-                    //Toast.makeText(getApplicationContext(), rr, Toast.LENGTH_LONG).show();
-                    txtRes[4].setText(rr);
+
                 } catch (NumberFormatException e) {
                     //Toast.makeText(getApplicationContext(), "Invalid Input", Toast.LENGTH_LONG).show();
                     if (!editTexts[4].getText().toString().equals(""))
                         editTexts[4].setError("Invalid Input. Please provide value within the range.");
-                    //DropDownAnim.collapse(txtResN);
                 }
             }
         });
@@ -624,45 +547,40 @@ public class NutrientInputActivityCopy extends AppCompatActivity {
             @Override
             public void afterTextChanged(Editable s) {
                 double val = 0.0;
-                String res1, res2;
                 try {
                     soilTextValue = Double.parseDouble(editTexts[5].getText().toString());
                     Nutrient boron = new Nutrient("Boron", "B");
                     val = boron.calculateRequiredNutrient(mCrop, mTexture, soilTextValue);
                     requiredNutrient[5] = val;
-                    Interpretation ti = boron.getTestInterpretation();
-                    Interpretation ri = boron.getRecommendationInterpretation();
+                    ti[5] = boron.getTestInterpretation();
+                    ri[5] = boron.getRecommendationInterpretation();
+
 
                     int rid = radioGroupF[5].getCheckedRadioButtonId();
                     RadioButton rbt = findViewById(rid);
 
                     String c = "";
 
-                    if (rid == R.id.radiofb1){
+                    if (rid == R.id.radiofp1){
                         cmp[5] = 17.0; frr[5] = "Boric Acid";
                         c = "As, Boron composition in " + frr[5] + " " + cmp[5] + "%";
-                        resultMap.put("B", new ResultProducer(soilTextValue, ri.getStatus(), ri.getUpperLimit(),
-                                ti.getInterval(), ri.getInterval(), ti.getLowerLimit(), val, c));
-                        resultMap.get("B").setFrFinal(frr[5], val, cmp[5], val*(100.0/cmp[5]));
                     }
-                    else if (rid == R.id.radiofb2){
+                    else if (rid == R.id.radiofp2){
                         cmp[5] = 20.0; frr[5] = "Solubor";
                         c = "As, Boron composition in " + frr[5] + " " + cmp[5] + "%";
-                        resultMap.put("B", new ResultProducer(soilTextValue, ri.getStatus(), ri.getUpperLimit(),
-                                ti.getInterval(), ri.getInterval(), ti.getLowerLimit(), val, c));
-                        resultMap.get("B").setFrFinal(frr[5], val, cmp[5], val*(100.0/cmp[5]));
                     }
 
                     if (val == -1) {
                         throw new NumberFormatException();
                     }
                     else {
-                        res1 = String.format("%.3f (kg/ha)", val);
-                        res2 = String.format("%.3f (kg/ha)", val*(100.0/cmp[5]));
+                        if (!isCalculated[5]) isCalculated[5] = true;
+                        last[5] = 1;
+                        prepareResult(soilTextValue, val, c, 5, boron.getSymbol());
 
                         RadioButton rb;
 
-                        switch (ri.getStatus()) {
+                        switch (ri[5].getStatus()) {
                             case "Very Low":
                                 rb = findViewById(R.id.radioBVL);
                                 rb.setChecked(true);
@@ -680,21 +598,11 @@ public class NutrientInputActivityCopy extends AppCompatActivity {
                                 rb.setChecked(true);
                                 break;
                         }
-                        DropDownAnim.expand(txtRes[5]);
-
                     }
-                    //double x = val * 1.0;
-                    result.put("B", String.valueOf(val));
-                    //Toast.makeText(getApplicationContext(), String.valueOf(val), Toast.LENGTH_LONG).show();
-                    String rr = String.format("%15s: %s",
-                            "Req. " + frr[5], res2);
-                    //Toast.makeText(getApplicationContext(), rr, Toast.LENGTH_LONG).show();
-                    txtRes[5].setText(rr);
                 } catch (NumberFormatException e) {
                     //Toast.makeText(getApplicationContext(), "Invalid Input", Toast.LENGTH_LONG).show();
                     if (!editTexts[5].getText().toString().equals(""))
                         editTexts[5].setError("Invalid Input. Please provide value within the range.");
-                    //DropDownAnim.collapse(txtResN);
                 }
             }
         });
@@ -732,28 +640,70 @@ public class NutrientInputActivityCopy extends AppCompatActivity {
         //LinearLayout linearLayout = v.findViewById(R.id.final_result);
 
         switch (view.getId()){
-            case R.id.dn:
-                new ResultAlertDialog(this, v, dialog, resultMap.get("N"));
+            case R.id.dn: {
+                if (last[0] == 1) {
+                    v = inflater.inflate(R.layout.result_view, mainLayout, false);
+                    new ResultDialog(this, v, dialog, (TestBasedResultProducer) mResults.get("N"));
+                } else if (last[0] == 2) {
+                    v = inflater.inflate(R.layout.result_view1, mainLayout, false);
+                    new ResultDialog(this, v, dialog, (StatusBasedResultProducer) mResults.get("N"));
+                }
                 break;
-            case R.id.dp:
-                new ResultAlertDialog(this, v, dialog, resultMap.get("P"));
+            }
+            case R.id.dp: {
+                if (last[1] == 1) {
+                    v = inflater.inflate(R.layout.result_view, mainLayout, false);
+                    new ResultDialog(this, v, dialog, (TestBasedResultProducer) mResults.get("P"));
+                } else if (last[1] == 2) {
+                    v = inflater.inflate(R.layout.result_view1, mainLayout, false);
+                    new ResultDialog(this, v, dialog, (StatusBasedResultProducer) mResults.get("P"));
+                }
                 break;
-            case R.id.dk:
-                new ResultAlertDialog(this, v, dialog, resultMap.get("K"));
+            }
+            case R.id.dk: {
+                if (last[2] == 1) {
+                    v = inflater.inflate(R.layout.result_view, mainLayout, false);
+                    new ResultDialog(this, v, dialog, (TestBasedResultProducer) mResults.get("K"));
+                } else if (last[2] == 2) {
+                    v = inflater.inflate(R.layout.result_view1, mainLayout, false);
+                    new ResultDialog(this, v, dialog, (StatusBasedResultProducer) mResults.get("K"));
+                }
                 break;
+            }
             case R.id.ds:
-                new ResultAlertDialog(this, v, dialog, resultMap.get("S"));
+            {
+                if (last[3] == 1) {
+                    v = inflater.inflate(R.layout.result_view, mainLayout, false);
+                    new ResultDialog(this, v, dialog, (TestBasedResultProducer) mResults.get("S"));
+                } else if (last[3] == 2) {
+                    v = inflater.inflate(R.layout.result_view1, mainLayout, false);
+                    new ResultDialog(this, v, dialog, (StatusBasedResultProducer) mResults.get("S"));
+                }
                 break;
+            }
             case R.id.dzn:
-                new ResultAlertDialog(this, v, dialog, resultMap.get("Zn"));
+            {
+                if (last[4] == 1) {
+                    v = inflater.inflate(R.layout.result_view, mainLayout, false);
+                    new ResultDialog(this, v, dialog, (TestBasedResultProducer) mResults.get("Zn"));
+                } else if (last[4] == 2) {
+                    v = inflater.inflate(R.layout.result_view1, mainLayout, false);
+                    new ResultDialog(this, v, dialog, (StatusBasedResultProducer) mResults.get("Zn"));
+                }
                 break;
+            }
             case R.id.db:
-                new ResultAlertDialog(this, v, dialog, resultMap.get("B"));
+            {
+                if (last[5] == 1) {
+                    v = inflater.inflate(R.layout.result_view, mainLayout, false);
+                    new ResultDialog(this, v, dialog, (TestBasedResultProducer) mResults.get("B"));
+                } else if (last[5] == 2) {
+                    v = inflater.inflate(R.layout.result_view1, mainLayout, false);
+                    new ResultDialog(this, v, dialog, (StatusBasedResultProducer) mResults.get("B"));
+                }
                 break;
-
+            }
         }
-
-
     }
 
 
@@ -765,423 +715,440 @@ public class NutrientInputActivityCopy extends AppCompatActivity {
 
     public void onClickRN (View view){
         int selectedId = radioGroups[0].getCheckedRadioButtonId();
-
+        if (!isChecked[0])isChecked[0] = true;
         RadioButton radioButton = findViewById(selectedId);
 
         double val = 0.0;
         String res1, res2;
-        try {
-            //soilTextValue = Double.parseDouble(editTexts[0].getText().toString());
-            editTexts[0].getText().clear();
-            Nutrient nitrogen = new Nutrient("Nitrogen", "N");
-            String status = radioButton.getText().toString();
-            val = nitrogen.calculateRequiredNutrient(mCrop, status);
-            requiredNutrient[0] = val;
-            //Interpretation ti = nitrogen.getTestInterpretation();
-            //Interpretation ri = nitrogen.getRecommendationInterpretation();
 
-            /*
-            String c = "As, Nitrogen composition in Urea 46%";
+        editTexts[0].getText().clear();
+        Nutrient nitrogen = new Nutrient("Nitrogen", "N");
+        String status = radioButton.getText().toString();
+        val = nitrogen.calculateRequiredNutrient(mCrop, status);
+        requiredNutrient[0] = val;
+        ri[0] = nitrogen.getRecommendationInterpretation();
 
-            resultMap.put("N", new ResultProducer(soilTextValue, ri.getStatus(), ri.getUpperLimit(),
-                    ti.getInterval(), ri.getInterval(), ti.getLowerLimit(), val, c));
-            resultMap.get("N").setFrFinal("Urea", val, 46.0, val*(100.0/46.0));
-            */
+        String c = "As, Nitrogen composition in Urea 46%";
+        int rid = radioGroupF[0].getCheckedRadioButtonId();
 
-            if (val == -1) {
-                throw new NumberFormatException();
-                //res1 = "Invalid Input. Please provide value within the range.";
-                //res2 = res1;
-                //DropDownAnim.collapse(txtResN);
-            }
-            else {
-
-                res1 = String.format("%.3f (kg/ha)", val);
-                res2 = String.format("%.3f (kg/ha)", val*(100.0/46.0));
-
-                DropDownAnim.expand(txtRes[0]);
-
-            }
-            //double x = val * 1.0;
-            result.put("N", String.valueOf(val));
-            //Toast.makeText(getApplicationContext(), String.valueOf(val), Toast.LENGTH_LONG).show();
-            String rr = String.format("%15s: %s",
-                    "Req. Urea", res2);
-            //Toast.makeText(getApplicationContext(), rr, Toast.LENGTH_LONG).show();
-            txtRes[0].setText(rr);
-        } catch (NumberFormatException e) {
-            Toast.makeText(getApplicationContext(), "Invalid Input", Toast.LENGTH_LONG).show();
-            editTexts[0].setError("Invalid Input. Please provide value within the range.");
-            //DropDownAnim.collapse(txtResN);
+        if (rid == R.id.radiofn1){
+            c = "As, Nitrogen composition in Urea 46%";
+            cmp[0] = 46.0;
+            frr[0] = "Urea";
         }
-
+        else if (rid == R.id.radiofn2){
+            c = "As, Nitrogen composition in Urea 46%";
+            cmp[0] = 46.0;
+            frr[0] = "Guti Urea";
+        }
+        prepareResult(val, c, 0, "N");
     }
 
 
     public void onClickRP (View view){
         int selectedId = radioGroups[1].getCheckedRadioButtonId();
-
+        if (!isChecked[1])isChecked[1] = true;
         RadioButton radioButton = findViewById(selectedId);
 
         double val = 0.0;
         String res1, res2;
-        try {
-            //soilTextValue = Double.parseDouble(editTexts[0].getText().toString());
-            editTexts[1].getText().clear();
-            Nutrient phosphorus = new Nutrient("Phosphorus", "P");
-            String status = radioButton.getText().toString();
-            val = phosphorus.calculateRequiredNutrient(mCrop, status);
-            requiredNutrient[1] = val;
-            //Interpretation ti = nitrogen.getTestInterpretation();
-            //Interpretation ri = nitrogen.getRecommendationInterpretation();
 
-            /*
-            String c = "As, Nitrogen composition in Urea 46%";
+        editTexts[1].getText().clear();
+        Nutrient phosphorus = new Nutrient("Phosphorus", "P");
+        String status = radioButton.getText().toString();
+        val = phosphorus.calculateRequiredNutrient(mCrop, status);
+        requiredNutrient[1] = val;
+        ri[1] = phosphorus.getRecommendationInterpretation();
 
-            resultMap.put("N", new ResultProducer(soilTextValue, ri.getStatus(), ri.getUpperLimit(),
-                    ti.getInterval(), ri.getInterval(), ti.getLowerLimit(), val, c));
-            resultMap.get("N").setFrFinal("Urea", val, 46.0, val*(100.0/46.0));
-            */
-            String c;
+        int rid = radioGroupF[1].getCheckedRadioButtonId();
+        RadioButton rbt = findViewById(rid);
 
+        String c = "";
 
-            if (val == -1) {
-                throw new NumberFormatException();
-                //res1 = "Invalid Input. Please provide value within the range.";
-                //res2 = res1;
-                //DropDownAnim.collapse(txtResN);
-            }
-            else {
-
-                res1 = String.format("%.3f (kg/ha)", val);
-                res2 = String.format("%.3f (kg/ha)", val*(100.0/cmp[1]));
-
-                DropDownAnim.expand(txtRes[1]);
-
-            }
-            //double x = val * 1.0;
-            result.put("P", String.valueOf(val));
-            //Toast.makeText(getApplicationContext(), String.valueOf(val), Toast.LENGTH_LONG).show();
-            String rr = String.format("%15s: %s",
-                    "Req. " + frr[1], res2);
-            //Toast.makeText(getApplicationContext(), rr, Toast.LENGTH_LONG).show();
-            txtRes[1].setText(rr);
-        } catch (NumberFormatException e) {
-            Toast.makeText(getApplicationContext(), "Invalid Input", Toast.LENGTH_LONG).show();
-            editTexts[1].setError("Invalid Input. Please provide value within the range.");
-            //DropDownAnim.collapse(txtResN);
+        if (rid == R.id.radiofp1){
+            c = "As, Phosphorus composition in TSP 20%";
+            cmp[1] = 20.0;
+            frr[1] = "TSP";
         }
+        else if (rid == R.id.radiofp2){
+            c = "As, Phosphorus composition in DAP 20%";
+            cmp[1] = 20.0;
+            frr[1] = "DAP";
+        }
+        prepareResult(val, c, 1, "P");
 
     }
 
 
     public void onClickRK (View view){
         int selectedId = radioGroups[2].getCheckedRadioButtonId();
-
+        if (!isChecked[2])isChecked[2] = true;
         RadioButton radioButton = findViewById(selectedId);
 
         double val = 0.0;
         String res1, res2;
-        try {
-            //soilTextValue = Double.parseDouble(editTexts[0].getText().toString());
-            editTexts[2].getText().clear();
-            Nutrient phosphorus = new Nutrient("Potassium", "K");
-            String status = radioButton.getText().toString();
-            val = phosphorus.calculateRequiredNutrient(mCrop, status);
-            requiredNutrient[2] = val;
-            //Interpretation ti = nitrogen.getTestInterpretation();
-            //Interpretation ri = nitrogen.getRecommendationInterpretation();
 
-            /*
-            String c = "As, Nitrogen composition in Urea 46%";
+        editTexts[2].getText().clear();
+        Nutrient potassium = new Nutrient("Potassium", "K");
+        String status = radioButton.getText().toString();
+        val = potassium.calculateRequiredNutrient(mCrop, status);
+        requiredNutrient[2] = val;
+        ri[2] = potassium.getRecommendationInterpretation();
 
-            resultMap.put("N", new ResultProducer(soilTextValue, ri.getStatus(), ri.getUpperLimit(),
-                    ti.getInterval(), ri.getInterval(), ti.getLowerLimit(), val, c));
-            resultMap.get("N").setFrFinal("Urea", val, 46.0, val*(100.0/46.0));
-            */
-            String c;
+        int rid = radioGroupF[2].getCheckedRadioButtonId();
+        RadioButton rbt = findViewById(rid);
 
+        String c = "";
 
-            if (val == -1) {
-                throw new NumberFormatException();
-                //res1 = "Invalid Input. Please provide value within the range.";
-                //res2 = res1;
-                //DropDownAnim.collapse(txtResN);
-            }
-            else {
-
-                res1 = String.format("%.3f (kg/ha)", val);
-                res2 = String.format("%.3f (kg/ha)", val*(100.0/cmp[2]));
-
-                DropDownAnim.expand(txtRes[2]);
-
-            }
-            //double x = val * 1.0;
-            result.put("K", String.valueOf(val));
-            //Toast.makeText(getApplicationContext(), String.valueOf(val), Toast.LENGTH_LONG).show();
-            String rr = String.format("%15s: %s",
-                    "Req. " + frr[2], res2);
-            //Toast.makeText(getApplicationContext(), rr, Toast.LENGTH_LONG).show();
-            txtRes[2].setText(rr);
-        } catch (NumberFormatException e) {
-            Toast.makeText(getApplicationContext(), "Invalid Input", Toast.LENGTH_LONG).show();
-            editTexts[2].setError("Invalid Input. Please provide value within the range.");
-            //DropDownAnim.collapse(txtResN);
+        if (rid == R.id.radiofp1){
+            c = "As, Potassium composition in MoP 50%";
+            cmp[2]= 50.0;
+            frr[2] = "MoP";
         }
+        else if (rid == R.id.radiofp2){
+            c = "As, Potassium composition in SoP 42%";
+            cmp[2] = 42.0;
+            frr[2] = "SoP";
+        }
+
+        prepareResult(val, c, 2, "K");
 
     }
 
 
     public void onClickRS (View view){
-        int selectedId = radioGroups[3].getCheckedRadioButtonId();
 
+        int selectedId = radioGroups[3].getCheckedRadioButtonId();
+        if (!isChecked[3])isChecked[3] = true;
         RadioButton radioButton = findViewById(selectedId);
 
         double val = 0.0;
-        String res1, res2;
-        try {
-            //soilTextValue = Double.parseDouble(editTexts[0].getText().toString());
-            editTexts[3].getText().clear();
-            Nutrient phosphorus = new Nutrient("Sulphur", "S");
-            String status = radioButton.getText().toString();
-            val = phosphorus.calculateRequiredNutrient(mCrop, status);
-            requiredNutrient[3] = val;
-            //Interpretation ti = nitrogen.getTestInterpretation();
-            //Interpretation ri = nitrogen.getRecommendationInterpretation();
 
-            /*
-            String c = "As, Nitrogen composition in Urea 46%";
+        editTexts[3].getText().clear();
+        Nutrient sulphur = new Nutrient("Sulphur", "S");
+        String status = radioButton.getText().toString();
+        val = sulphur.calculateRequiredNutrient(mCrop, status);
+        requiredNutrient[3] = val;
+        ri[3] = sulphur.getRecommendationInterpretation();
 
-            resultMap.put("N", new ResultProducer(soilTextValue, ri.getStatus(), ri.getUpperLimit(),
-                    ti.getInterval(), ri.getInterval(), ti.getLowerLimit(), val, c));
-            resultMap.get("N").setFrFinal("Urea", val, 46.0, val*(100.0/46.0));
-            */
-            String c;
+        int rid = radioGroupF[3].getCheckedRadioButtonId();
+        RadioButton rbt = findViewById(rid);
 
+        String c = "";
 
-            if (val == -1) {
-                throw new NumberFormatException();
-                //res1 = "Invalid Input. Please provide value within the range.";
-                //res2 = res1;
-                //DropDownAnim.collapse(txtResN);
-            }
-            else {
-
-                res1 = String.format("%.3f (kg/ha)", val);
-                res2 = String.format("%.3f (kg/ha)", val*(100.0/cmp[3]));
-
-                DropDownAnim.expand(txtRes[3]);
-
-            }
-            //double x = val * 1.0;
-            result.put("K", String.valueOf(val));
-            //Toast.makeText(getApplicationContext(), String.valueOf(val), Toast.LENGTH_LONG).show();
-            String rr = String.format("%15s: %s",
-                    "Req. " + frr[3], res2);
-            //Toast.makeText(getApplicationContext(), rr, Toast.LENGTH_LONG).show();
-            txtRes[3].setText(rr);
-        } catch (NumberFormatException e) {
-            Toast.makeText(getApplicationContext(), "Invalid Input", Toast.LENGTH_LONG).show();
-            editTexts[3].setError("Invalid Input. Please provide value within the range.");
-            //DropDownAnim.collapse(txtResN);
+        if (rid == R.id.radiofp1){
+            cmp[3]= 18.0; frr[3] = "Gypsum";
+            c = "As, Sulphur composition in " + frr[3] + " " + cmp[3] + "%";
         }
+        else if (rid == R.id.radiofp2){
+            cmp[3] = 23.5; frr[3] = "Ammonium Sulphate";
+            c = "As, Sulphur composition in " + frr[3] + " " + cmp[3] + "%";
+        }
+
+        prepareResult(val, c, 3, "S");
 
     }
 
 
     public void onClickRZn (View view){
-        int selectedId = radioGroups[4].getCheckedRadioButtonId();
 
+        int selectedId = radioGroups[4].getCheckedRadioButtonId();
+        if (!isChecked[4])isChecked[4] = true;
         RadioButton radioButton = findViewById(selectedId);
 
         double val = 0.0;
-        String res1, res2;
-        try {
-            //soilTextValue = Double.parseDouble(editTexts[0].getText().toString());
-            editTexts[4].getText().clear();
-            Nutrient zinc = new Nutrient("Zinc", "Zn");
-            String status = radioButton.getText().toString();
-            val = zinc.calculateRequiredNutrient(mCrop, status);
-            requiredNutrient[4] = val;
-            //Interpretation ti = nitrogen.getTestInterpretation();
-            //Interpretation ri = nitrogen.getRecommendationInterpretation();
 
-            /*
-            String c = "As, Nitrogen composition in Urea 46%";
+        editTexts[4].getText().clear();
+        Nutrient zinc = new Nutrient("Zinc", "Zn");
+        String status = radioButton.getText().toString();
+        val = zinc.calculateRequiredNutrient(mCrop, status);
+        requiredNutrient[4] = val;
+        ri[4] = zinc.getRecommendationInterpretation();
 
-            resultMap.put("N", new ResultProducer(soilTextValue, ri.getStatus(), ri.getUpperLimit(),
-                    ti.getInterval(), ri.getInterval(), ti.getLowerLimit(), val, c));
-            resultMap.get("N").setFrFinal("Urea", val, 46.0, val*(100.0/46.0));
-            */
-            String c;
+        int rid = radioGroupF[4].getCheckedRadioButtonId();
+        RadioButton rbt = findViewById(rid);
 
+        String c = "";
 
-            if (val == -1) {
-                throw new NumberFormatException();
-                //res1 = "Invalid Input. Please provide value within the range.";
-                //res2 = res1;
-                //DropDownAnim.collapse(txtResN);
-            }
-            else {
-
-                res1 = String.format("%.3f (kg/ha)", val);
-                res2 = String.format("%.3f (kg/ha)", val*(100.0/cmp[4]));
-
-                DropDownAnim.expand(txtRes[4]);
-
-            }
-            //double x = val * 1.0;
-            result.put("Zn", String.valueOf(val));
-            //Toast.makeText(getApplicationContext(), String.valueOf(val), Toast.LENGTH_LONG).show();
-            String rr = String.format("%15s: %s",
-                    "Req. " + frr[4], res2);
-            //Toast.makeText(getApplicationContext(), rr, Toast.LENGTH_LONG).show();
-            txtRes[4].setText(rr);
-        } catch (NumberFormatException e) {
-            Toast.makeText(getApplicationContext(), "Invalid Input", Toast.LENGTH_LONG).show();
-            editTexts[4].setError("Invalid Input. Please provide value within the range.");
-            //DropDownAnim.collapse(txtResN);
+        if (rid == R.id.radiofp1){
+            cmp[4] = 36.0; frr[4] = "Zinc Sulphate Mono";
+            c = "As, Zinc composition in " + frr[4] + " " + cmp[4] + "%";
         }
+        else if (rid == R.id.radiofp2){
+            cmp[4] = 23.0; frr[4] = "Zinc Sulphate Hepta";
+            c = "As, Zinc composition in " + frr[4] + " " + cmp[4] + "%";
+        }
+
+        prepareResult(val, c, 4, "Zn");
 
     }
 
 
     public void onClickRB (View view){
-        int selectedId = radioGroups[5].getCheckedRadioButtonId();
 
+        int selectedId = radioGroups[5].getCheckedRadioButtonId();
+        if (!isChecked[5])isChecked[5] = true;
         RadioButton radioButton = findViewById(selectedId);
 
         double val = 0.0;
-        String res1, res2;
-        try {
-            //soilTextValue = Double.parseDouble(editTexts[0].getText().toString());
-            editTexts[5].getText().clear();
-            Nutrient boron = new Nutrient("Boron", "B");
-            String status = radioButton.getText().toString();
-            val = boron.calculateRequiredNutrient(mCrop, status);
-            requiredNutrient[5] = val;
-            //Interpretation ti = nitrogen.getTestInterpretation();
-            //Interpretation ri = nitrogen.getRecommendationInterpretation();
 
-            /*
-            String c = "As, Nitrogen composition in Urea 46%";
+        editTexts[5].getText().clear();
+        Nutrient boron = new Nutrient("Boron", "B");
+        String status = radioButton.getText().toString();
+        val = boron.calculateRequiredNutrient(mCrop, status);
+        requiredNutrient[5] = val;
+        ri[5] = boron.getRecommendationInterpretation();
 
-            resultMap.put("N", new ResultProducer(soilTextValue, ri.getStatus(), ri.getUpperLimit(),
-                    ti.getInterval(), ri.getInterval(), ti.getLowerLimit(), val, c));
-            resultMap.get("N").setFrFinal("Urea", val, 46.0, val*(100.0/46.0));
-            */
-            String c;
+        int rid = radioGroupF[5].getCheckedRadioButtonId();
+        RadioButton rbt = findViewById(rid);
 
+        String c = "";
 
-            if (val == -1) {
-                throw new NumberFormatException();
-                //res1 = "Invalid Input. Please provide value within the range.";
-                //res2 = res1;
-                //DropDownAnim.collapse(txtResN);
-            }
-            else {
-
-                res1 = String.format("%.3f (kg/ha)", val);
-                res2 = String.format("%.3f (kg/ha)", val*(100.0/cmp[5]));
-
-                DropDownAnim.expand(txtRes[5]);
-
-            }
-            //double x = val * 1.0;
-            result.put("B", String.valueOf(val));
-            //Toast.makeText(getApplicationContext(), String.valueOf(val), Toast.LENGTH_LONG).show();
-            String rr = String.format("%15s: %s",
-                    "Req. " + frr[5], res2);
-            //Toast.makeText(getApplicationContext(), rr, Toast.LENGTH_LONG).show();
-            txtRes[5].setText(rr);
-        } catch (NumberFormatException e) {
-            Toast.makeText(getApplicationContext(), "Invalid Input", Toast.LENGTH_LONG).show();
-            editTexts[5].setError("Invalid Input. Please provide value within the range.");
-            //DropDownAnim.collapse(txtResN);
+        if (rid == R.id.radiofp1){
+            cmp[5] = 17.0; frr[5] = "Boric Acid";
+            c = "As, Boron composition in " + frr[5] + " " + cmp[5] + "%";
         }
+        else if (rid == R.id.radiofp2){
+            cmp[5] = 20.0; frr[5] = "Solubor";
+            c = "As, Boron composition in " + frr[5] + " " + cmp[5] + "%";
+        }
+        prepareResult(val, c, 5, "B");
 
     }
 
 
 
     public void onClickFN (View view){
-        int selectedId = radioGroupF[0].getCheckedRadioButtonId();
+        int rid = radioGroupF[0].getCheckedRadioButtonId();
+        String c;
+        if ( !isCalculated[0] && !isChecked[0])expandOne(0);
+        if (isCalculated[0] || isChecked[0]){
 
-        RadioButton radioButton = findViewById(selectedId);
+            double val = requiredNutrient[0];
 
-        expandOne(0);
+            try{
+                if (val == -1) {
+                    throw new NumberFormatException();
+                }
 
+                if ( rid == R.id.radiofn1 ){
+                    c = "As, Nitrogen composition in Urea 46%";
+                    cmp[0] = 46.0;
+                    frr[0] = "Urea";
+                }
+
+                else {
+                    c = "As, Nitrogen composition in Urea 46%";
+                    cmp[0] = 46.0; frr[0] = "Guti Urea";
+                }
+                if (last[0] == 1) {
+                    double soilT = Double.parseDouble(editTexts[0].getText().toString());
+                    prepareResult(soilT, val, c, 0, "N");
+                }
+                else {
+                    prepareResult(val, c, 0, "N");
+                }
+
+            }catch (NumberFormatException e){
+                if (!editTexts[0].getText().toString().equals(""))
+                    editTexts[0].setError("Invalid Input. Please provide value within the range.");
+            }
+        }
     }
 
     public void onClickFP (View view){
         int rid = radioGroupF[1].getCheckedRadioButtonId();
-
-        if (!isCalculated[1])return;
-
         String c;
+        if ( !isCalculated[1] && !isChecked[1])expandOne(1);
+        if (isCalculated[1] || isChecked[1]){
 
-        double val = requiredNutrient[1];
+            double val = requiredNutrient[1];
 
-        try{
-            if (val == -1) {
-                throw new NumberFormatException();
+            try{
+                if (val == -1) {
+                    throw new NumberFormatException();
+                }
+
+                if ( rid == R.id.radiofp1 ){
+                    c = "As, Phosphorus composition in TSP 20%";
+                    cmp[1] = 20.0;
+                    frr[1] = "TSP";
+                }
+
+                else {
+                    c = "As, Phosphorus composition in DAP 20%";
+                    cmp[1] = 20.0;
+                    frr[1] = "DAP";
+                }
+
+                if (last[1] == 1) {
+                    double soilT = Double.parseDouble(editTexts[1].getText().toString());
+                    prepareResult(soilT, val, c, 1, "P");
+                }
+                else {
+                    prepareResult(val, c, 1, "P");
+                }
+
+            }catch (NumberFormatException e){
+                if (!editTexts[1].getText().toString().equals(""))
+                    editTexts[1].setError("Invalid Input. Please provide value within the range.");
             }
-
-            if ( rid == R.id.radiofp1 ){
-                c = "As, Phosphorus composition in TSP 20%";
-                cmp[1] = 20.0;
-                frr[1] = "TSP";
-            }
-
-            else {
-                c = "As, Phosphorus composition in DAP 20%";
-                cmp[1] = 20.0;
-                frr[1] = "DAP";
-            }
-
-            prepareResult(val, c, 1, "P");
-
-        }catch (NumberFormatException e){
-            if (!editTexts[1].getText().toString().equals(""))
-                editTexts[1].setError("Invalid Input. Please provide value within the range.");
         }
     }
 
     public void onClickFK (View view){
-        int selectedId = radioGroupF[2].getCheckedRadioButtonId();
+        int rid = radioGroupF[2].getCheckedRadioButtonId();
+        String c;
+        if ( !isCalculated[2] && !isChecked[2])expandOne(2);
+        if (isCalculated[2] || isChecked[2]){
 
-        RadioButton radioButton = findViewById(selectedId);
+            double val = requiredNutrient[2];
 
-        expandOne(2);
+            try{
+                if (val == -1) {
+                    throw new NumberFormatException();
+                }
+
+                if ( rid == R.id.radiofk1 ){
+                    c = "As, Potassium composition in MoP 50%";
+                    cmp[2]= 50.0; frr[2] = "MoP";
+                }
+
+                else {
+                    c = "As, Potassium composition in SoP 42%";
+                    cmp[2] = 42.0; frr[2] = "SoP";
+                }
+                if (last[1] == 1) {
+                    double soilT = Double.parseDouble(editTexts[2].getText().toString());
+                    prepareResult(soilT, val, c, 2, "K");
+                }
+                else {
+                    prepareResult(val, c, 2, "K");
+                }
+
+            }catch (NumberFormatException e){
+                if (!editTexts[2].getText().toString().equals(""))
+                    editTexts[2].setError("Invalid Input. Please provide value within the range.");
+            }
+        }
 
     }
 
     public void onClickFS (View view){
-        int selectedId = radioGroupF[3].getCheckedRadioButtonId();
+        int rid = radioGroupF[3].getCheckedRadioButtonId();
+        String c;
+        if ( !isCalculated[3] && !isChecked[3])expandOne(3);
+        if (isCalculated[3] || isChecked[3]){
 
-        RadioButton radioButton = findViewById(selectedId);
+            double val = requiredNutrient[3];
 
-        expandOne(3);
+            try{
+                if (val == -1) {
+                    throw new NumberFormatException();
+                }
+
+                if ( rid == R.id.radiofs1 ){
+                    cmp[3]= 18.0; frr[3] = "Gypsum";
+                    c = "As, Sulphur composition in " + frr[3] + " " + cmp[3] + "%";
+                }
+
+                else {
+                    cmp[3] = 23.5; frr[3] = "Ammonium Sulphate";
+                    c = "As, Sulphur composition in " + frr[3] + " " + cmp[3] + "%";
+                }
+
+                if (last[3] == 1) {
+                    double soilT = Double.parseDouble(editTexts[3].getText().toString());
+                    prepareResult(soilT, val, c, 3, "S");
+                }
+                else {
+                    prepareResult(val, c, 3, "S");
+                }
+
+            }catch (NumberFormatException e){
+                if (!editTexts[3].getText().toString().equals(""))
+                    editTexts[3].setError("Invalid Input. Please provide value within the range.");
+            }
+        }
 
     }
 
 
     public void onClickFZn (View view){
-        int selectedId = radioGroupF[4].getCheckedRadioButtonId();
+        int rid = radioGroupF[4].getCheckedRadioButtonId();
+        String c;
+        if ( !isCalculated[4] && !isChecked[4])expandOne(4);
+        if ( isCalculated[4] || isChecked[4] ){
 
-        RadioButton radioButton = findViewById(selectedId);
+            double val = requiredNutrient[4];
 
-        expandOne(4);
+            try{
+                if (val == -1) {
+                    throw new NumberFormatException();
+                }
+
+                if ( rid == R.id.radiofzn1 ){
+                    cmp[4] = 36.0; frr[4] = "Zinc Sulphate Mono";
+                    c = "As, Zinc composition in " + frr[4] + " " + cmp[4] + "%";
+                }
+
+                else {
+                    cmp[4] = 23.0; frr[4] = "Zinc Sulphate Hepta";
+                    c = "As, Zinc composition in " + frr[4] + " " + cmp[4] + "%";
+                }
+
+                if (last[4] == 1) {
+                    double soilT = Double.parseDouble(editTexts[4].getText().toString());
+                    prepareResult(soilT, val, c, 4, "Zn");
+                }
+                else {
+                    prepareResult(val, c, 4, "Zn");
+                }
+
+            }catch (NumberFormatException e){
+                if (!editTexts[4].getText().toString().equals(""))
+                    editTexts[4].setError("Invalid Input. Please provide value within the range.");
+            }
+        }
 
     }
 
     public void onClickFB (View view){
-        int selectedId = radioGroupF[5].getCheckedRadioButtonId();
+        int rid = radioGroupF[5].getCheckedRadioButtonId();
+        String c;
+        if ( !isCalculated[5] && !isChecked[5])expandOne(5);
+        if (isCalculated[5] || isChecked[5]){
 
-        RadioButton radioButton = findViewById(selectedId);
+            double val = requiredNutrient[5];
 
-        expandOne(5);
+            try{
+                if (val == -1) {
+                    throw new NumberFormatException();
+                }
 
+                if ( rid == R.id.radiofb1 ){
+                    cmp[5] = 17.0; frr[5] = "Boric Acid";
+                    c = "As, Boron composition in " + frr[5] + " " + cmp[5] + "%";
+                }
+
+                else {
+                    cmp[5] = 20.0; frr[5] = "Solubor";
+                    c = "As, Boron composition in " + frr[5] + " " + cmp[5] + "%";
+                }
+
+                if (last[5] == 1) {
+                    double soilT = Double.parseDouble(editTexts[5].getText().toString());
+                    prepareResult(soilT, val, c, 5, "B");
+                }
+                else {
+                    prepareResult(val, c, 5, "B");
+                }
+
+            }catch (NumberFormatException e){
+                if (!editTexts[5].getText().toString().equals(""))
+                    editTexts[5].setError("Invalid Input. Please provide value within the range.");
+            }
+        }
     }
 
     private void collapseAll(){
@@ -1226,8 +1193,13 @@ public class NutrientInputActivityCopy extends AppCompatActivity {
             collapseOne(5);
     }
 
-    private void prepareResult (double val, String c, int i, String symbol) {
-        String res = String.format("%.3f (kg/ha)", val*(100.0/cmp[i]));
+    private void prepareResult ( double val, String c, int i, String symbol ){
+        double fq = 0.0;
+        last[i] = 2;
+        if (frr[i].equals("Guti Urea"))
+            fq = val*(100.0/cmp[i])*.7;
+        else fq = val*(100.0/cmp[i]);
+        String res = String.format("%.3f (kg/ha)", fq);
 
         DropDownAnim.expand(txtRes[i]);
 
@@ -1235,7 +1207,27 @@ public class NutrientInputActivityCopy extends AppCompatActivity {
         String rr = String.format("%15s: %s", "Req. " + frr[i], res);
         txtRes[i].setText(rr);
 
-        expandOne(i);
+        mResults.put(symbol, new StatusBasedResultProducer(symbol, nutrients[i].getName(), frr[i],
+                ri[i].getStatus(), ri[i].getUpperLimit(), cmp[i], fq, val));
     }
 
+    private void prepareResult (double soilTextValue, double val, String c, int i, String symbol) {
+        last[i] = 1;
+        double fq = 0.0;
+        if (frr[i].equals("Guti Urea"))
+            fq = val*(100.0/cmp[i])*.7;
+        else fq = val*(100.0/cmp[i]);
+        String res = String.format("%.3f (kg/ha)", fq);
+
+        DropDownAnim.expand(txtRes[i]);
+
+        result.put(symbol, String.valueOf(val));
+        String rr = String.format("%15s: %s", "Req. " + frr[i], res);
+        txtRes[i].setText(rr);
+
+        mResults.put(symbol, new TestBasedResultProducer(symbol, nutrients[i].getName(), frr[i],
+                soilTextValue, ti[i].getStatus(), ri[i].getUpperLimit(),
+                ri[i].getInterval(), ti[i].getInterval(),
+                ti[i].getLowerLimit(), cmp[i], fq, val));
+    }
 }

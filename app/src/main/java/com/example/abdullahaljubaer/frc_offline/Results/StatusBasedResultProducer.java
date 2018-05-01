@@ -4,7 +4,7 @@ package com.example.abdullahaljubaer.frc_offline.Results;
  * Created by ABDULLAH AL JUBAER on 20-04-18.
  */
 
-public class StatusBasedResultProducer {
+public class StatusBasedResultProducer implements IResultProducer {
 
     private String symbol;
     private String nutrient;
@@ -18,7 +18,7 @@ public class StatusBasedResultProducer {
     public StatusBasedResultProducer(
             String symbol, String nutrient, String fertilizer,
             String interpretation, double uf,
-            double composition, double fertilizerQuantity) {
+            double composition, double fertilizerQuantity, double nutrientQuantity) {
 
         this.symbol = symbol;
         this.nutrient = nutrient;
@@ -27,6 +27,7 @@ public class StatusBasedResultProducer {
         this.uf = uf;
         this.composition = composition;
         this.fertilizerQuantity = fertilizerQuantity;
+        this.nutrientQuantity = nutrientQuantity;
     }
 
     public String getNutrient() {
@@ -50,7 +51,7 @@ public class StatusBasedResultProducer {
     }
 
     public String getNutrientCalc (){
-        return symbol + "(kg/ha)=" + uf + "-";
+        return symbol + "(kg/ha)=" + uf;
     }
 
     public void setFertilizer(String fertilizer) {
@@ -66,10 +67,13 @@ public class StatusBasedResultProducer {
     }
 
     public String getComposition(){
-        return String.format("%s composition of %s = %.2f%", nutrient, fertilizer, composition);
+        return String.format("%s composition of %s = %.2f%s", nutrient, fertilizer, composition, "%");
     }
 
     public String getFertilizer () {
+        if (fertilizer.equals("Guti Urea"))
+            return String.format("Req. %s = %.3f X (%.2f/%.2f) X 0.7\n%10s= %.3f", fertilizer, nutrientQuantity,
+                    100.0, composition, " ", fertilizerQuantity);
         return String.format("Req. %s = %.3fX(%.2f/%.2f)\n%10s= %.3f", fertilizer, nutrientQuantity,
                 100.0, composition, " ", fertilizerQuantity);
     }

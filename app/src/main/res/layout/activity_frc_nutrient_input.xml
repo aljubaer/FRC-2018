@@ -88,7 +88,7 @@
                 >
 
                 <RadioButton
-                    android:id="@+id/radiof11"
+                    android:id="@+id/radiofn1"
                     android:layout_width="0dp"
                     android:layout_weight="1"
                     android:layout_height="match_parent"
@@ -103,7 +103,7 @@
                     android:layout_height="match_parent"/>
 
                 <RadioButton
-                    android:id="@+id/radiof12"
+                    android:id="@+id/radiofn2"
                     android:layout_width="0dp"
                     android:layout_weight="1"
                     android:layout_height="match_parent"
@@ -554,7 +554,7 @@
                 android:layout_height="40dp"
                 android:orientation="horizontal"
                 android:background="@drawable/back_white"
-                android:onClick="onClickRN"
+                android:onClick="onClickRK"
                 >
 
                 <RadioButton
@@ -564,7 +564,7 @@
                     android:layout_height="match_parent"
                     android:text="Very Low"
                     android:padding="5dp"
-                    android:onClick="onClickRN"
+                    android:onClick="onClickRK"
                     android:button="@android:color/transparent"                            android:textAlignment="center"
                     android:background="@drawable/back_radio"
                     />
@@ -576,7 +576,7 @@
                     android:layout_height="match_parent"
                     android:padding="5dp"
                     android:text="Low"
-                    android:onClick="onClickRN"
+                    android:onClick="onClickRK"
                     android:button="@android:color/transparent"                            android:textAlignment="center"
                     android:background="@drawable/back_radio"
 
@@ -589,7 +589,7 @@
                     android:layout_height="match_parent"
                     android:padding="5dp"
                     android:text="Medium"
-                    android:onClick="onClickRN"
+                    android:onClick="onClickRK"
                     android:button="@android:color/transparent"                            android:textAlignment="center"
                     android:background="@drawable/back_radio"
                     />
@@ -600,7 +600,7 @@
                     android:layout_weight="1"
                     android:text="Optimum"
                     android:padding="5dp"
-                    android:onClick="onClickRN"
+                    android:onClick="onClickRK"
                     android:layout_height="match_parent"
                     android:button="@android:color/transparent"                            android:textAlignment="center"
                     android:background="@drawable/back_radio"
@@ -766,7 +766,7 @@
                     android:layout_height="match_parent"
                     android:text="Very Low"
                     android:padding="5dp"
-                    android:onClick="onClickRN"
+                    android:onClick="onClickRS"
                     android:button="@android:color/transparent"                            android:textAlignment="center"
                     android:background="@drawable/back_radio"
                     />
@@ -778,7 +778,7 @@
                     android:layout_height="match_parent"
                     android:padding="5dp"
                     android:text="Low"
-                    android:onClick="onClickRN"
+                    android:onClick="onClickRS"
                     android:button="@android:color/transparent"                            android:textAlignment="center"
                     android:background="@drawable/back_radio"
 
@@ -791,7 +791,7 @@
                     android:layout_height="match_parent"
                     android:padding="5dp"
                     android:text="Medium"
-                    android:onClick="onClickRN"
+                    android:onClick="onClickRS"
                     android:button="@android:color/transparent"                            android:textAlignment="center"
                     android:background="@drawable/back_radio"
                     />
@@ -802,7 +802,7 @@
                     android:layout_weight="1"
                     android:text="Optimum"
                     android:padding="5dp"
-                    android:onClick="onClickRN"
+                    android:onClick="onClickRS"
                     android:layout_height="match_parent"
                     android:button="@android:color/transparent"                            android:textAlignment="center"
                     android:background="@drawable/back_radio"
@@ -957,7 +957,7 @@
                 android:layout_height="40dp"
                 android:orientation="horizontal"
                 android:background="@drawable/back_white"
-                android:onClick="onClickRN"
+                android:onClick="onClickRZn"
                 >
 
                 <RadioButton
@@ -967,7 +967,7 @@
                     android:layout_height="match_parent"
                     android:text="Very Low"
                     android:padding="5dp"
-                    android:onClick="onClickRN"
+                    android:onClick="onClickRZn"
                     android:button="@android:color/transparent"                            android:textAlignment="center"
                     android:background="@drawable/back_radio"
                     />
@@ -979,7 +979,7 @@
                     android:layout_height="match_parent"
                     android:padding="5dp"
                     android:text="Low"
-                    android:onClick="onClickRN"
+                    android:onClick="onClickRZn"
                     android:button="@android:color/transparent"                            android:textAlignment="center"
                     android:background="@drawable/back_radio"
 
@@ -992,7 +992,7 @@
                     android:layout_height="match_parent"
                     android:padding="5dp"
                     android:text="Medium"
-                    android:onClick="onClickRN"
+                    android:onClick="onClickRZn"
                     android:button="@android:color/transparent"                            android:textAlignment="center"
                     android:background="@drawable/back_radio"
                     />
@@ -1003,7 +1003,7 @@
                     android:layout_weight="1"
                     android:text="Optimum"
                     android:padding="5dp"
-                    android:onClick="onClickRN"
+                    android:onClick="onClickRZn"
                     android:layout_height="match_parent"
                     android:button="@android:color/transparent"                            android:textAlignment="center"
                     android:background="@drawable/back_radio"
@@ -1158,7 +1158,7 @@
                 android:layout_height="40dp"
                 android:orientation="horizontal"
                 android:background="@drawable/back_white"
-                android:onClick="onClickRN"
+                android:onClick="onClickRB"
                 >
 
                 <RadioButton
@@ -1168,7 +1168,7 @@
                     android:layout_height="match_parent"
                     android:text="Very Low"
                     android:padding="5dp"
-                    android:onClick="onClickRN"
+                    android:onClick="onClickRB"
                     android:button="@android:color/transparent"                            android:textAlignment="center"
                     android:background="@drawable/back_radio"
                     />
@@ -1180,7 +1180,7 @@
                     android:layout_height="match_parent"
                     android:padding="5dp"
                     android:text="Low"
-                    android:onClick="onClickRN"
+                    android:onClick="onClickRB"
                     android:button="@android:color/transparent"                            android:textAlignment="center"
                     android:background="@drawable/back_radio"
 
@@ -1193,7 +1193,7 @@
                     android:layout_height="match_parent"
                     android:padding="5dp"
                     android:text="Medium"
-                    android:onClick="onClickRN"
+                    android:onClick="onClickRB"
                     android:button="@android:color/transparent"                            android:textAlignment="center"
                     android:background="@drawable/back_radio"
                     />
@@ -1204,7 +1204,7 @@
                     android:layout_weight="1"
                     android:text="Optimum"
                     android:padding="5dp"
-                    android:onClick="onClickRN"
+                    android:onClick="onClickRB"
                     android:layout_height="match_parent"
                     android:button="@android:color/transparent"                            android:textAlignment="center"
                     android:background="@drawable/back_radio"

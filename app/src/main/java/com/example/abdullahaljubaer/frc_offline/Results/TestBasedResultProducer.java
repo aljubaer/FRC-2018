@@ -4,7 +4,7 @@ package com.example.abdullahaljubaer.frc_offline.Results;
  * Created by ABDULLAH AL JUBAER on 21-04-18.
  */
 
-public class TestBasedResultProducer extends StatusBasedResultProducer {
+public class TestBasedResultProducer extends StatusBasedResultProducer implements IResultProducer {
 
     private double st;
     private double cs;
@@ -16,8 +16,8 @@ public class TestBasedResultProducer extends StatusBasedResultProducer {
             double st, String interpretation,
             double uf, double cs,
             double ci, double ls,
-            double composition, double fertilizerQuantity) {
-        super(symbol, nutrient, fertilizer, interpretation, uf, composition, fertilizerQuantity);
+            double composition, double fertilizerQuantity, double nutrientQuantity) {
+        super(symbol, nutrient, fertilizer, interpretation, uf, composition, fertilizerQuantity, nutrientQuantity);
 
         this.st = st;
         this.cs = cs;
