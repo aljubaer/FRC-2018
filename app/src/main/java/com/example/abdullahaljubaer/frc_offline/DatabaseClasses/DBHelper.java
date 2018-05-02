@@ -18,7 +18,7 @@ import java.io.InputStreamReader;
 public class DBHelper extends SQLiteOpenHelper {
 
     public static final String DATABASE_NAME = "frc.db";
-    public static final Integer DATABASE_VERSION = 4;
+    public static final Integer DATABASE_VERSION = 5;
     public final Context context;
 
     public DBHelper(Context context) {

@@ -37,6 +37,7 @@ import com.example.abdullahaljubaer.frc_offline.Results.TestBasedResultProducer;
 
 import java.util.Arrays;
 import java.util.HashMap;
+import java.util.IllegalFormatException;
 import java.util.Map;
 
 /**
@@ -223,6 +224,7 @@ public class NutrientInputActivityCopy extends AppCompatActivity {
                         last[0] = 1;
                         prepareResult(soilTextValue, val, c, 0, "N");
                         RadioButton rb;
+                        RadioGroup rg = findViewById(R.id.radio_n);
                         switch (ri[0].getStatus()) {
                             case "Very Low":
                                 rb = findViewById(R.id.radioNVL);
@@ -240,11 +242,25 @@ public class NutrientInputActivityCopy extends AppCompatActivity {
                                 rb = findViewById(R.id.radioNO);
                                 rb.setChecked(true);
                                 break;
+                            case "High":
+                                if (!editTexts[0].getText().toString().equals(""))
+                                    editTexts[0].setError("Input value too high. Does not required any dose.");
+                                rb = findViewById(rg.getCheckedRadioButtonId());
+                                rb.setChecked(false);
+                                break;
+                            case "Very High":
+                                if (!editTexts[0].getText().toString().equals(""))
+                                    editTexts[0].setError("Input value too high. Does not required any dose.");
+                                rb = findViewById(rg.getCheckedRadioButtonId());
+                                rb.setChecked(false);
+                                break;
                         }
                     }
                 } catch (NumberFormatException e) {
                     if (!editTexts[0].getText().toString().equals(""))
                         editTexts[0].setError("Invalid Input. Please provide value within the range.");
+                } catch (NullPointerException ne) {
+
                 }
             }
         });
@@ -292,7 +308,7 @@ public class NutrientInputActivityCopy extends AppCompatActivity {
                         prepareResult(soilTextValue, val, c, 1, phosphorus.getSymbol());
 
                         RadioButton rb;
-
+                        RadioGroup rg = findViewById(R.id.radio_p);
                         switch (ri[1].getStatus()) {
                             case "Very Low":
                                 rb = findViewById(R.id.radioPVL);
@@ -310,11 +326,25 @@ public class NutrientInputActivityCopy extends AppCompatActivity {
                                 rb = findViewById(R.id.radioPO);
                                 rb.setChecked(true);
                                 break;
+                            case "High":
+                                if (!editTexts[0].getText().toString().equals(""))
+                                    editTexts[0].setError("Input value too high. Does not required any dose.");
+                                rb = findViewById(rg.getCheckedRadioButtonId());
+                                rb.setChecked(false);
+                                break;
+                            case "Very High":
+                                if (!editTexts[0].getText().toString().equals(""))
+                                    editTexts[0].setError("Input value too high. Does not required any dose.");
+                                rb = findViewById(rg.getCheckedRadioButtonId());
+                                rb.setChecked(false);
+                                break;
                         }
                     }
                 } catch (NumberFormatException e) {
-                    if (!editTexts[1].getText().toString().equals(""))
-                        editTexts[1].setError("Invalid Input. Please provide value within the range.");
+                    if (!editTexts[0].getText().toString().equals(""))
+                        editTexts[0].setError("Invalid Input. Please provide value within the range.");
+                } catch (NullPointerException ne) {
+
                 }
             }
         });
@@ -359,7 +389,7 @@ public class NutrientInputActivityCopy extends AppCompatActivity {
                         prepareResult(soilTextValue, val, c, 2, potassium.getSymbol());
 
                         RadioButton rb;
-
+                        RadioGroup rg = findViewById(R.id.radio_k);
                         switch (ri[2].getStatus()) {
                             case "Very Low":
                                 rb = findViewById(R.id.radioKVL);
@@ -377,11 +407,25 @@ public class NutrientInputActivityCopy extends AppCompatActivity {
                                 rb = findViewById(R.id.radioKO);
                                 rb.setChecked(true);
                                 break;
+                            case "High":
+                                if (!editTexts[0].getText().toString().equals(""))
+                                    editTexts[0].setError("Input value too high. Does not required any dose.");
+                                rb = findViewById(rg.getCheckedRadioButtonId());
+                                rb.setChecked(false);
+                                break;
+                            case "Very High":
+                                if (!editTexts[0].getText().toString().equals(""))
+                                    editTexts[0].setError("Input value too high. Does not required any dose.");
+                                rb = findViewById(rg.getCheckedRadioButtonId());
+                                rb.setChecked(false);
+                                break;
                         }
                     }
                 } catch (NumberFormatException e) {
                     if (!editTexts[2].getText().toString().equals(""))
                         editTexts[2].setError("Invalid Input. Please provide value within the range.");
+                } catch (NullPointerException ne) {
+
                 }
             }
         });
@@ -425,7 +469,7 @@ public class NutrientInputActivityCopy extends AppCompatActivity {
                         prepareResult(soilTextValue, val, c, 3, sulphur.getSymbol());
 
                         RadioButton rb;
-
+                        RadioGroup rg = findViewById(R.id.radio_s);
                         switch (ri[3].getStatus()) {
                             case "Very Low":
                                 rb = findViewById(R.id.radioSVL);
@@ -443,15 +487,27 @@ public class NutrientInputActivityCopy extends AppCompatActivity {
                                 rb = findViewById(R.id.radioSO);
                                 rb.setChecked(true);
                                 break;
+                            case "High":
+                                if (!editTexts[0].getText().toString().equals(""))
+                                    editTexts[0].setError("Input value too high. Does not required any dose.");
+                                rb = findViewById(rg.getCheckedRadioButtonId());
+                                rb.setChecked(false);
+                                break;
+                            case "Very High":
+                                if (!editTexts[0].getText().toString().equals(""))
+                                    editTexts[0].setError("Input value too high. Does not required any dose.");
+                                rb = findViewById(rg.getCheckedRadioButtonId());
+                                rb.setChecked(false);
+                                break;
                         }
-                        //DropDownAnim.expand(txtRes[1]);
-
                     }
 
                 } catch (NumberFormatException e) {
                     //Toast.makeText(getApplicationContext(), "Invalid Input", Toast.LENGTH_LONG).show();
                     if (!editTexts[3].getText().toString().equals(""))
                         editTexts[3].setError("Invalid Input. Please provide value within the range.");
+                } catch (NullPointerException ne) {
+
                 }
             }
         });
@@ -504,7 +560,7 @@ public class NutrientInputActivityCopy extends AppCompatActivity {
                         prepareResult(soilTextValue, val, c, 4, zinc.getSymbol());
 
                         RadioButton rb;
-
+                        RadioGroup rg = findViewById(R.id.radio_zn);
                         switch (ri[4].getStatus()) {
                             case "Very Low":
                                 rb = findViewById(R.id.radioZnVL);
@@ -522,6 +578,18 @@ public class NutrientInputActivityCopy extends AppCompatActivity {
                                 rb = findViewById(R.id.radioZnO);
                                 rb.setChecked(true);
                                 break;
+                            case "High":
+                                if (!editTexts[0].getText().toString().equals(""))
+                                    editTexts[0].setError("Input value too high. Does not required any dose.");
+                                rb = findViewById(rg.getCheckedRadioButtonId());
+                                rb.setChecked(false);
+                                break;
+                            case "Very High":
+                                if (!editTexts[0].getText().toString().equals(""))
+                                    editTexts[0].setError("Input value too high. Does not required any dose.");
+                                rb = findViewById(rg.getCheckedRadioButtonId());
+                                rb.setChecked(false);
+                                break;
                         }
                         //DropDownAnim.expand(txtRes[1]);
 
@@ -531,6 +599,8 @@ public class NutrientInputActivityCopy extends AppCompatActivity {
                     //Toast.makeText(getApplicationContext(), "Invalid Input", Toast.LENGTH_LONG).show();
                     if (!editTexts[4].getText().toString().equals(""))
                         editTexts[4].setError("Invalid Input. Please provide value within the range.");
+                } catch (NullPointerException ne) {
+
                 }
             }
         });
@@ -582,7 +652,7 @@ public class NutrientInputActivityCopy extends AppCompatActivity {
                         prepareResult(soilTextValue, val, c, 5, boron.getSymbol());
 
                         RadioButton rb;
-
+                        RadioGroup rg = findViewById(R.id.radio_b);
                         switch (ri[5].getStatus()) {
                             case "Very Low":
                                 rb = findViewById(R.id.radioBVL);
@@ -600,12 +670,26 @@ public class NutrientInputActivityCopy extends AppCompatActivity {
                                 rb = findViewById(R.id.radioBO);
                                 rb.setChecked(true);
                                 break;
+                            case "High":
+                                if (!editTexts[0].getText().toString().equals(""))
+                                    editTexts[0].setError("Input value too high. Does not required any dose.");
+                                rb = findViewById(rg.getCheckedRadioButtonId());
+                                rb.setChecked(false);
+                                break;
+                            case "Very High":
+                                if (!editTexts[0].getText().toString().equals(""))
+                                    editTexts[0].setError("Input value too high. Does not required any dose.");
+                                rb = findViewById(rg.getCheckedRadioButtonId());
+                                rb.setChecked(false);
+                                break;
                         }
                     }
                 } catch (NumberFormatException e) {
                     //Toast.makeText(getApplicationContext(), "Invalid Input", Toast.LENGTH_LONG).show();
                     if (!editTexts[5].getText().toString().equals(""))
                         editTexts[5].setError("Invalid Input. Please provide value within the range.");
+                } catch (NullPointerException ne) {
+
                 }
             }
         });

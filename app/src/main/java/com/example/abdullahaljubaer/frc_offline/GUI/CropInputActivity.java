@@ -69,6 +69,17 @@ public class CropInputActivity extends AppCompatActivity {
     }
 
     @Override
+    protected void onRestart() {
+        super.onRestart();
+        textViewCrop.setText("Crop season");
+        textViewVariety.setText("Crop variety");
+        textViewTexture.setText("Texture");
+        isChecked = false;
+        mCrop = null;
+        mTexture = null;
+    }
+
+    @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater menuInflater = getMenuInflater();
         menuInflater.inflate(R.menu.tool_menus, menu);
@@ -174,7 +185,6 @@ public class CropInputActivity extends AppCompatActivity {
 
             @Override
             public void afterTextChanged(Editable s) {
-                System.out.println(textViewTexture.getText().toString());
                 mTexture = new Texture(textViewTexture.getText().toString(), mCrop.getCropType());
                 mTexture.setDB(MainActivity.textureClassDBHelper, MainActivity.stvidbHelper);
                 textErrorTexture.setText("");
