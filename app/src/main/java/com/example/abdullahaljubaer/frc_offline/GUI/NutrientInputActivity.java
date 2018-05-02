@@ -21,6 +21,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.abdullahaljubaer.frc_offline.BusinessClasses.Crop;
+import com.example.abdullahaljubaer.frc_offline.BusinessClasses.Interpretation;
 import com.example.abdullahaljubaer.frc_offline.BusinessClasses.Nutrient;
 import com.example.abdullahaljubaer.frc_offline.BusinessClasses.Texture;
 import com.example.abdullahaljubaer.frc_offline.CustomViews.DropDownAnim;

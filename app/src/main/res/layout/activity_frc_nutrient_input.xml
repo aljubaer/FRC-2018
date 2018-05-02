@@ -44,7 +44,6 @@
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="wrap_content"
-                android:text="@string/crop_details"
                 android:textSize="15sp"
                 android:paddingTop="5dp"
                 android:paddingBottom="10dp"
@@ -682,7 +681,7 @@
                 android:layout_height="wrap_content"
                 android:background="#8BC34A"
                 android:textColor="#000"
-                android:text="Select Gypsum/Ammonium Sulphate for Phosphorus"
+                android:text="Select Gypsum/Ammonium Sulphate for Sulphur"
                 android:padding="10dp"
                 />
 
@@ -1084,7 +1083,7 @@
                 android:layout_height="wrap_content"
                 android:background="#8BC34A"
                 android:textColor="#000"
-                android:text="Select TSP/DAP for Phosphorus"
+                android:text="Select Boric Acid/Solubor for Boron"
                 android:padding="10dp"
                 />
 

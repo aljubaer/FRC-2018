@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">FRC-Offline</string>
+    <string name="app_name">FRG-2012</string>
     <item name="databaseVersion" format="integer" type="string">1</item>
     <string name="see_details"><u>See details</u></string>
     <string name="close"><u>Close</u></string>
@@ -16,7 +16,7 @@
     <string name="title_activity_fullscreen">FullscreenActivity</string>
     <string name="dummy_button">Dummy Button</string>
     <string name="dummy_content">DUMMY\nCONTENT</string>
-    <string name="full_name"><b>Fertilizer Recommendation Calculator</b></string>
+    <string name="full_name"><b>Fertilizer Recommendation Guide - 2012</b></string>
     <string name="description">
         Fertilizer Recommendation Calculator provides guidelines for achieving high yield goal based
         fertilizer recommendation for different crops. If soil test values of a field are available,

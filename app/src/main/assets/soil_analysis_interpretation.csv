@@ -14,15 +14,15 @@ Wheat (Irrigated),1,S,Optimum,0,5,5
 Wheat (Irrigated),1,S,Medium,6,10,5
 Wheat (Irrigated),1,S,Low,11,15,5
 Wheat (Irrigated),1,S,Very Low,16,20,5
-Wheat (Irrigated),1,Mg,Optimum,-1,-1,-1
+Wheat (Irrigated),1,Mg,Optimum,0,0,0
 Wheat (Irrigated),1,Mg,Medium,0,3,3
 Wheat (Irrigated),1,Mg,Low,4,6,3
 Wheat (Irrigated),1,Mg,Very Low,7,9,3
-Wheat (Irrigated),1,Zn,Optimum,-1,-1,-1
+Wheat (Irrigated),1,Zn,Optimum,0,0,0
 Wheat (Irrigated),1,Zn,Medium,0,1.3,1.3
 Wheat (Irrigated),1,Zn,Low,1.4,2.6,1.3
 Wheat (Irrigated),1,Zn,Very Low,2.7,3.9,1.3
-Wheat (Irrigated),1,B,Optimum,-1,-1,-1
+Wheat (Irrigated),1,B,Optimum,0,0,0
 Wheat (Irrigated),1,B,Medium,0,0.5,0.5
 Wheat (Irrigated),1,B,Low,0.6,1,0.5
 Wheat (Irrigated),1,B,Very Low,1.1,1.5,0.5
@@ -42,15 +42,15 @@ Wheat (Rainfed),1,S,Optimum,0,2.5,2.5
 Wheat (Rainfed),1,S,Medium,2.6,5,2.5
 Wheat (Rainfed),1,S,Low,5.1,7.5,2.5
 Wheat (Rainfed),1,S,Very Low,7.6,10,2.5
-Wheat (Rainfed),1,Mg,Optimum,-1,-1,-1
-Wheat (Rainfed),1,Mg,Medium,-1,-1,-1
+Wheat (Rainfed),1,Mg,Optimum,0,0,0
+Wheat (Rainfed),1,Mg,Medium,0,0,0
 Wheat (Rainfed),1,Mg,Low,0,3,3
 Wheat (Rainfed),1,Mg,Very Low,4,6,3
-Wheat (Rainfed),1,Zn,Optimum,-1,-1,-1
-Wheat (Rainfed),1,Zn,Medium,-1,-1,-1
+Wheat (Rainfed),1,Zn,Optimum,0,0,0
+Wheat (Rainfed),1,Zn,Medium,0,0,0
 Wheat (Rainfed),1,Zn,Low,0,1,1
 Wheat (Rainfed),1,Zn,Very Low,1.1,2,1
-Wheat (Rainfed),1,B,Optimum,-1,-1,-1
+Wheat (Rainfed),1,B,Optimum,0,0,0
 Wheat (Rainfed),1,B,Medium,0,0.4,0.4
 Wheat (Rainfed),1,B,Low,0.5,0.8,0.4
 Wheat (Rainfed),1,B,Very Low,0.9,1.2,0.4
@@ -70,7 +70,7 @@ Boro rice,1,S,Optimum,0,6,6
 Boro rice,1,S,Medium,7,12,6
 Boro rice,1,S,Low,13,18,6
 Boro rice,1,S,Very Low,19,24,6
-Boro rice,1,Zn,Optimum,-1,-1,-1
+Boro rice,1,Zn,Optimum,0,0,0
 Boro rice,1,Zn,Medium,0,1.3,1.3
 Boro rice,1,Zn,Low,1.4,2.6,1.3
 Boro rice,1,Zn,Very Low,2.7,3.9,1.3
@@ -90,7 +90,7 @@ Boro rice,2,S,Optimum,0,5,5
 Boro rice,2,S,Medium,6,10,5
 Boro rice,2,S,Low,11,15,5
 Boro rice,2,S,Very Low,16,20,5
-Boro rice,2,Zn,Optimum,-1,-1,-1
+Boro rice,2,Zn,Optimum,0,0,0
 Boro rice,2,Zn,Medium,0,1,1
 Boro rice,2,Zn,Low,1.1,2,1
 Boro rice,2,Zn,Very Low,2.1,3,1
@@ -110,7 +110,7 @@ Boro rice,3,S,Optimum,0,5,5
 Boro rice,3,S,Medium,6,10,5
 Boro rice,3,S,Low,11,15,5
 Boro rice,3,S,Very Low,16,20,5
-Boro rice,3,Zn,Optimum,-1,-1,-1
+Boro rice,3,Zn,Optimum,0,0,0
 Boro rice,3,Zn,Medium,0,0.7,0.7
 Boro rice,3,Zn,Low,0.8,1.4,0.7
 Boro rice,3,Zn,Very Low,1.5,2.1,0.7
@@ -130,7 +130,7 @@ Boro rice,4,S,Optimum,0,3,3
 Boro rice,4,S,Medium,4,6,3
 Boro rice,4,S,Low,7,9,3
 Boro rice,4,S,Very Low,10,12,3
-Boro rice,4,Zn,Optimum,-1,-1,-1
+Boro rice,4,Zn,Optimum,0,0,0
 Boro rice,4,Zn,Medium,0,0.6,0.6
 Boro rice,4,Zn,Low,0.7,1.2,0.6
 Boro rice,4,Zn,Very Low,1.3,1.8,0.6
@@ -150,7 +150,7 @@ T. Aus rice,1,S,Optimum,0,3,3
 T. Aus rice,1,S,Medium,4,6,3
 T. Aus rice,1,S,Low,7,9,3
 T. Aus rice,1,S,Very Low,10,12,3
-T. Aus rice,1,Zn,Optimum,-1,-1,-1
+T. Aus rice,1,Zn,Optimum,0,0,0
 T. Aus rice,1,Zn,Medium,0,0.6,0.6
 T. Aus rice,1,Zn,Low,0.7,1.2,0.6
 T. Aus rice,1,Zn,Very Low,1.3,1.8,0.6
@@ -170,7 +170,7 @@ T. Aus rice,2,S,Optimum,0,3,3
 T. Aus rice,2,S,Medium,4,6,3
 T. Aus rice,2,S,Low,7,9,3
 T. Aus rice,2,S,Very Low,10,12,3
-T. Aus rice,2,Zn,Optimum,-1,-1,-1
+T. Aus rice,2,Zn,Optimum,0,0,0
 T. Aus rice,2,Zn,Medium,0,0.6,0.6
 T. Aus rice,2,Zn,Low,0.7,1.2,0.6
 T. Aus rice,2,Zn,Very Low,1.3,1.8,0.6
@@ -190,7 +190,7 @@ B. Aus rice,1,S,Optimum,0,3,3
 B. Aus rice,1,S,Medium,4,6,3
 B. Aus rice,1,S,Low,7,9,3
 B. Aus rice,1,S,Very Low,10,12,3
-B. Aus rice,1,Zn,Optimum,-1,-1,-1
+B. Aus rice,1,Zn,Optimum,0,0,0
 B. Aus rice,1,Zn,Medium,0,0.6,0.6
 B. Aus rice,1,Zn,Low,0.7,1.2,0.6
 B. Aus rice,1,Zn,Very Low,1.3,1.8,0.6
@@ -210,7 +210,7 @@ B. Aus rice,2,S,Optimum,0,2,2
 B. Aus rice,2,S,Medium,3,4,2
 B. Aus rice,2,S,Low,5,6,2
 B. Aus rice,2,S,Very Low,7,8,2
-B. Aus rice,2,Zn,Optimum,-1,-1,-1
+B. Aus rice,2,Zn,Optimum,0,0,0
 B. Aus rice,2,Zn,Medium,0,0.5,0.5
 B. Aus rice,2,Zn,Low,0.6,1,0.5
 B. Aus rice,2,Zn,Very Low,1.1,1.5,0.5
@@ -230,7 +230,7 @@ T. Aman rice,1,S,Optimum,0,4,4
 T. Aman rice,1,S,Medium,5,8,4
 T. Aman rice,1,S,Low,9,12,4
 T. Aman rice,1,S,Very Low,13,16,4
-T. Aman rice,1,Zn,Optimum,-1,-1,-1
+T. Aman rice,1,Zn,Optimum,0,0,0
 T. Aman rice,1,Zn,Medium,0,0.7,0.7
 T. Aman rice,1,Zn,Low,0.8,1.4,0.7
 T. Aman rice,1,Zn,Very Low,1.5,2.1,0.7
@@ -250,7 +250,7 @@ T. Aman rice,2,S,Optimum,0,3,3
 T. Aman rice,2,S,Medium,4,6,3
 T. Aman rice,2,S,Low,7,9,3
 T. Aman rice,2,S,Very Low,10,12,3
-T. Aman rice,2,Zn,Optimum,-1,-1,-1
+T. Aman rice,2,Zn,Optimum,0,0,0
 T. Aman rice,2,Zn,Medium,0,0.6,0.6
 T. Aman rice,2,Zn,Low,0.7,1.2,0.6
 T. Aman rice,2,Zn,Very Low,1.3,1.8,0.6
@@ -270,7 +270,7 @@ T. Aman rice,3,S,Optimum,0,3,3
 T. Aman rice,3,S,Medium,4,6,3
 T. Aman rice,3,S,Low,7,9,3
 T. Aman rice,3,S,Very Low,10,12,3
-T. Aman rice,3,Zn,Optimum,-1,-1,-1
+T. Aman rice,3,Zn,Optimum,0,0,0
 T. Aman rice,3,Zn,Medium,0,0.5,0.5
 T. Aman rice,3,Zn,Low,0.6,1,0.5
 T. Aman rice,3,Zn,Very Low,1.1,1.5,0.5
@@ -290,7 +290,7 @@ T. Aman rice,4,S,Optimum,0,3,3
 T. Aman rice,4,S,Medium,4,6,3
 T. Aman rice,4,S,Low,7,9,3
 T. Aman rice,4,S,Very Low,10,12,3
-T. Aman rice,4,Zn,Optimum,-1,-1,-1
+T. Aman rice,4,Zn,Optimum,0,0,0
 T. Aman rice,4,Zn,Medium,0,0.5,0.5
 T. Aman rice,4,Zn,Low,0.6,1,0.5
 T. Aman rice,4,Zn,Very Low,1.1,1.5,0.5
@@ -310,7 +310,7 @@ T. Aman rice,5,S,Optimum,0,3,3
 T. Aman rice,5,S,Medium,4,6,3
 T. Aman rice,5,S,Low,7,9,3
 T. Aman rice,5,S,Very Low,10,12,3
-T. Aman rice,5,Zn,Optimum,-1,-1,-1
+T. Aman rice,5,Zn,Optimum,0,0,0
 T. Aman rice,5,Zn,Medium,0,0.5,0.5
 T. Aman rice,5,Zn,Low,0.6,1,0.5
 T. Aman rice,5,Zn,Very Low,1.1,1.5,0.5
@@ -330,7 +330,7 @@ Aromatic rice,1,S,Optimum,0,3,3
 Aromatic rice,1,S,Medium,4,6,3
 Aromatic rice,1,S,Low,7,9,3
 Aromatic rice,1,S,Very Low,10,12,3
-Aromatic rice,1,Zn,Optimum,-1,-1,-1
+Aromatic rice,1,Zn,Optimum,0,0,0
 Aromatic rice,1,Zn,Medium,0,0.5,0.5
 Aromatic rice,1,Zn,Low,0.6,1,0.5
 Aromatic rice,1,Zn,Very Low,1.1,1.5,0.5
@@ -350,7 +350,7 @@ T. Aman rice,6,S,Optimum,0,2,2
 T. Aman rice,6,S,Medium,3,4,2
 T. Aman rice,6,S,Low,5,6,2
 T. Aman rice,6,S,Very Low,7,8,2
-T. Aman rice,6,Zn,Optimum,-1,-1,-1
+T. Aman rice,6,Zn,Optimum,0,0,0
 T. Aman rice,6,Zn,Medium,0,0.5,0.5
 T. Aman rice,6,Zn,Low,0.6,1,0.5
 T. Aman rice,6,Zn,Very Low,1.1,1.5,0.5
@@ -374,11 +374,11 @@ Maize (Hybrid maize),1,Mg,Optimum,0,5,5
 Maize (Hybrid maize),1,Mg,Medium,6,10,5
 Maize (Hybrid maize),1,Mg,Low,11,15,5
 Maize (Hybrid maize),1,Mg,Very Low,16,20,5
-Maize (Hybrid maize),1,Zn,Optimum,-1,-1,-1
+Maize (Hybrid maize),1,Zn,Optimum,0,0,0
 Maize (Hybrid maize),1,Zn,Medium,0,2,2
 Maize (Hybrid maize),1,Zn,Low,2.1,4,2
 Maize (Hybrid maize),1,Zn,Very Low,4.1,6,2
-Maize (Hybrid maize),1,B,Optimum,-1,-1,-1
+Maize (Hybrid maize),1,B,Optimum,0,0,0
 Maize (Hybrid maize),1,B,Medium,0,0.7,0.7
 Maize (Hybrid maize),1,B,Low,0.8,1.4,0.7
 Maize (Hybrid maize),1,B,Very Low,1.5,2.1,0.7
@@ -398,15 +398,15 @@ Maize,1,S,Optimum,0,10,10
 Maize,1,S,Medium,11,20,10
 Maize,1,S,Low,21,30,10
 Maize,1,S,Very Low,31,40,10
-Maize,1,Mg,Optimum,-1,-1,-1
+Maize,1,Mg,Optimum,0,0,0
 Maize,1,Mg,Medium,0,4,4
 Maize,1,Mg,Low,5,8,4
 Maize,1,Mg,Very Low,9,12,4
-Maize,1,Zn,Optimum,-1,-1,-1
+Maize,1,Zn,Optimum,0,0,0
 Maize,1,Zn,Medium,0,1.4,1.4
 Maize,1,Zn,Low,1.5,2.8,1.4
 Maize,1,Zn,Very Low,2.9,4.2,1.4
-Maize,1,B,Optimum,-1,-1,-1
+Maize,1,B,Optimum,0,0,0
 Maize,1,B,Medium,0,0.7,0.7
 Maize,1,B,Low,0.8,1.4,0.7
 Maize,1,B,Very Low,1.5,2.1,0.7
@@ -426,15 +426,127 @@ Maize,2,S,Optimum,0,10,10
 Maize,2,S,Medium,11,20,10
 Maize,2,S,Low,21,30,10
 Maize,2,S,Very Low,31,40,10
-Maize,2,Mg,Optimum,-1,-1,-1
+Maize,2,Mg,Optimum,0,0,0
 Maize,2,Mg,Medium,0,3,3
 Maize,2,Mg,Low,4,6,3
 Maize,2,Mg,Very Low,7,9,3
-Maize,2,Zn,Optimum,-1,-1,-1
+Maize,2,Zn,Optimum,0,0,0
 Maize,2,Zn,Medium,0,1.4,1.4
 Maize,2,Zn,Low,1.5,2.8,1.4
 Maize,2,Zn,Very Low,2.9,4.2,1.4
-Maize,2,B,Optimum,-1,-1,-1
+Maize,2,B,Optimum,0,0,0
 Maize,2,B,Medium,0,0.7,0.7
 Maize,2,B,Low,0.8,1.4,0.7
 Maize,2,B,Very Low,1.5,2.1,0.7
+Mustard,1,N,Optimum,0,40,40
+Mustard,1,N,Medium,41,80,40
+Mustard,1,N,Low,81,120,40
+Mustard,1,N,Very Low,121,160,40
+Mustard,1,P,Optimum,0,12,12
+Mustard,1,P,Medium,13,24,12
+Mustard,1,P,Low,25,36,12
+Mustard,1,P,Very Low,49,48,12
+Mustard,1,K,Optimum,0,30,30
+Mustard,1,K,Medium,31,60,30
+Mustard,1,K,Low,61,90,30
+Mustard,1,K,Very Low,91,120,30
+Mustard,1,S,Optimum,0,9,9
+Mustard,1,S,Medium,10,18,9
+Mustard,1,S,Low,19,27,9
+Mustard,1,S,Very Low,28,36,9
+Mustard,1,Mg,Optimum,0,0,0
+Mustard,1,Mg,Medium,0,3,3
+Mustard,1,Mg,Low,4,6,3
+Mustard,1,Mg,Very Low,7,9,3
+Mustard,1,Zn,Optimum,0,0,0
+Mustard,1,Zn,Medium,0,1.4,1.4
+Mustard,1,Zn,Low,1.5,2.8,1.4
+Mustard,1,Zn,Very Low,2.9,4.2,1.4
+Mustard,1,B,Optimum,0,0,0
+Mustard,1,B,Medium,0,0.5,0.5
+Mustard,1,B,Low,0.6,1,0.5
+Mustard,1,B,Very Low,1.1,1.5,0.5
+Mustard,2,N,Optimum,0,30,30
+Mustard,2,N,Medium,31,60,30
+Mustard,2,N,Low,61,90,30
+Mustard,2,N,Very Low,91,120,30,
+Mustard,2,P,Optimum,0,9,9
+Mustard,2,P,Medium,10,18,9
+Mustard,2,P,Low,19,27,9
+Mustard,2,P,Very Low,28,36,9
+Mustard,2,K,Optimum,0,20,20
+Mustard,2,K,Medium,21,40,20
+Mustard,2,K,Low,41,60,20
+Mustard,2,K,Very Low,61,80,20
+Mustard,2,S,Optimum,0,5,5
+Mustard,2,S,Medium,6,10,5
+Mustard,2,S,Low,11,15,5
+Mustard,2,S,Very Low,16,20,5
+Mustard,2,Mg,Optimum,0,0,0
+Mustard,2,Mg,Medium,0,2.5,2.5
+Mustard,2,Mg,Low,2.6,5,2.5
+Mustard,2,Mg,Very Low,5.1,7.5,2.5
+Mustard,2,Zn,Optimum,0,0,0
+Mustard,2,Zn,Medium,0,1,1
+Mustard,2,Zn,Low,1.1,2,1
+Mustard,2,Zn,Very Low,2.1,3,1
+Mustard,2,B,Optimum,0,0,0
+Mustard,2,B,Medium,0,0.5,0.5
+Mustard,2,B,Low,0.6,1,0.5
+Mustard,2,B,Very Low,1.1,1.5,0.5
+Potato,1,N,Optimum,0,45,45
+Potato,1,N,Medium,46,90,45
+Potato,1,N,Low,91,135,45
+Potato,1,N,Very Low,136,180,45
+Potato,1,P,Optimum,0,10,10
+Potato,1,P,Medium,11,20,10
+Potato,1,P,Low,21,30,10
+Potato,1,P,Very Low,31,40,10
+Potato,1,K,Optimum,0,45,45
+Potato,1,K,Medium,46,90,45
+Potato,1,K,Low,91,135,45
+Potato,1,K,Very Low,136,180,45
+Potato,1,S,Optimum,0,5,5
+Potato,1,S,Medium,6,10,5
+Potato,1,S,Low,11,15,5
+Potato,1,S,Very Low,16,20,5
+Potato,1,Mg,Optimum,0,0,0
+Potato,1,Mg,Medium,0,5,5
+Potato,1,Mg,Low,6,10,5
+Potato,1,Mg,Very Low,11,15,5
+Potato,1,Zn,Optimum,0,0,0
+Potato,1,Zn,Medium,0,2,2
+Potato,1,Zn,Low,3,4,2
+Potato,1,Zn,Very Low,5,6,2
+Potato,1,B,Optimum,0,0,0
+Potato,1,B,Medium,0,0.5,0.5
+Potato,1,B,Low,0.6,1,0.5
+Potato,1,B,Very Low,1.1,1.5,0.5
+Sweet potato,1,N,Optimum,0,35,35
+Sweet potato,1,N,Medium,36,70,35
+Sweet potato,1,N,Low,71,105,35
+Sweet potato,1,N,Very Low,106,140,35
+Sweet potato,1,P,Optimum,0,15,15
+Sweet potato,1,P,Medium,10,30,15
+Sweet potato,1,P,Low,31,45,15
+Sweet potato,1,P,Very Low,46,60,15
+Sweet potato,1,K,Optimum,0,35,35
+Sweet potato,1,K,Medium,36,70,35
+Sweet potato,1,K,Low,71,105,35
+Sweet potato,1,K,Very Low,106,140,35
+Sweet potato,1,S,Optimum,0,5,5
+Sweet potato,1,S,Medium,6,10,5
+Sweet potato,1,S,Low,11,15,5
+Sweet potato,1,S,Very Low,16,20,5
+Sweet potato,1,Mg,Optimum,0,0,0
+Sweet potato,1,Mg,Medium,0,4,4
+Sweet potato,1,Mg,Low,5,8,4
+Sweet potato,1,Mg,Very Low,9,12,4
+Sweet potato,1,Zn,Optimum,0,0,0
+Sweet potato,1,Zn,Medium,0,1,1
+Sweet potato,1,Zn,Low,1.1,2,1
+Sweet potato,1,Zn,Very Low,2.1,3,1
+Sweet potato,1,B,Optimum,0,0,0
+Sweet potato,1,B,Medium,0,0.5,0.5
+Sweet potato,1,B,Low,0.6,1,0.5
+Sweet potato,1,B,Very Low,1.1,1.5,0.5

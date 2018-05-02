@@ -23,12 +23,11 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.abdullahaljubaer.frc_offline.BusinessClasses.Crop;
+import com.example.abdullahaljubaer.frc_offline.BusinessClasses.Interpretation;
 import com.example.abdullahaljubaer.frc_offline.BusinessClasses.Nutrient;
-import com.example.abdullahaljubaer.frc_offline.BusinessClasses.Recommendator;
 import com.example.abdullahaljubaer.frc_offline.BusinessClasses.Texture;
 import com.example.abdullahaljubaer.frc_offline.CustomViews.DropDownAnim;
 import com.example.abdullahaljubaer.frc_offline.CustomViews.GuideAlertDialog;
-import com.example.abdullahaljubaer.frc_offline.CustomViews.ResultAlertDialog;
 import com.example.abdullahaljubaer.frc_offline.CustomViews.ResultDialog;
 import com.example.abdullahaljubaer.frc_offline.R;
 import com.example.abdullahaljubaer.frc_offline.Results.IResultProducer;
@@ -331,6 +330,7 @@ public class NutrientInputActivityCopy extends AppCompatActivity {
                 try {
                     soilTextValue = Double.parseDouble(editTexts[2].getText().toString());
                     Nutrient potassium = new Nutrient("Potassium", "K");
+                    nutrients[2] = potassium;
                     val = potassium.calculateRequiredNutrient(mCrop, mTexture, soilTextValue);
                     requiredNutrient[2] = val;
                     ti[2] = potassium.getTestInterpretation();
@@ -341,11 +341,11 @@ public class NutrientInputActivityCopy extends AppCompatActivity {
 
                     String c = "";
 
-                    if (rid == R.id.radiofp1){
+                    if (rid == R.id.radiofk1){
                         c = "As, Potassium composition in MoP 50%";
                         cmp[2]= 50.0; frr[2] = "MoP";
                     }
-                    else if (rid == R.id.radiofp2){
+                    else if (rid == R.id.radiofk2){
                         c = "As, Potassium composition in SoP 42%";
                         cmp[2] = 42.0; frr[2] = "SoP";
                     }
@@ -396,6 +396,7 @@ public class NutrientInputActivityCopy extends AppCompatActivity {
                 try {
                     soilTextValue = Double.parseDouble(editTexts[3].getText().toString());
                     Nutrient sulphur = new Nutrient("Sulphur", "S");
+                    nutrients[3] = sulphur;
                     val = sulphur.calculateRequiredNutrient(mCrop, mTexture, soilTextValue);
                     requiredNutrient[3] = val;
                     ti[3] = sulphur.getTestInterpretation();
@@ -406,11 +407,11 @@ public class NutrientInputActivityCopy extends AppCompatActivity {
 
                     String c = "";
 
-                    if (rid == R.id.radiofp1){
+                    if (rid == R.id.radiofs1){
                         cmp[3]= 18.0; frr[3] = "Gypsum";
                         c = "As, Sulphur composition in " + frr[3] + " " + cmp[3] + "%";
                     }
-                    else if (rid == R.id.radiofp2){
+                    else if (rid == R.id.radiofs2){
                         cmp[3] = 23.5; frr[3] = "Ammonium Sulphate";
                         c = "As, Sulphur composition in " + frr[3] + " " + cmp[3] + "%";
                     }
@@ -473,6 +474,7 @@ public class NutrientInputActivityCopy extends AppCompatActivity {
                 try {
                     soilTextValue = Double.parseDouble(editTexts[4].getText().toString());
                     Nutrient zinc = new Nutrient("Zinc", "Zn");
+                    nutrients[4] = zinc;
                     val = zinc.calculateRequiredNutrient(mCrop, mTexture, soilTextValue);
                     requiredNutrient[4] = val;
                     ti[4] = zinc.getTestInterpretation();
@@ -484,11 +486,11 @@ public class NutrientInputActivityCopy extends AppCompatActivity {
 
                     String c = "";
 
-                    if (rid == R.id.radiofp1){
+                    if (rid == R.id.radiofzn1){
                         cmp[4] = 36.0; frr[4] = "Zinc Sulphate Mono";
                         c = "As, Zinc composition in " + frr[4] + " " + cmp[4] + "%";
                     }
-                    else if (rid == R.id.radiofp2){
+                    else if (rid == R.id.radiofzn2){
                         cmp[4] = 23.0; frr[4] = "Zinc Sulphate Hepta";
                         c = "As, Zinc composition in " + frr[4] + " " + cmp[4] + "%";
                     }
@@ -550,6 +552,7 @@ public class NutrientInputActivityCopy extends AppCompatActivity {
                 try {
                     soilTextValue = Double.parseDouble(editTexts[5].getText().toString());
                     Nutrient boron = new Nutrient("Boron", "B");
+                    nutrients[5] = boron;
                     val = boron.calculateRequiredNutrient(mCrop, mTexture, soilTextValue);
                     requiredNutrient[5] = val;
                     ti[5] = boron.getTestInterpretation();
@@ -561,11 +564,11 @@ public class NutrientInputActivityCopy extends AppCompatActivity {
 
                     String c = "";
 
-                    if (rid == R.id.radiofp1){
+                    if (rid == R.id.radiofb1){
                         cmp[5] = 17.0; frr[5] = "Boric Acid";
                         c = "As, Boron composition in " + frr[5] + " " + cmp[5] + "%";
                     }
-                    else if (rid == R.id.radiofp2){
+                    else if (rid == R.id.radiofb2){
                         cmp[5] = 20.0; frr[5] = "Solubor";
                         c = "As, Boron composition in " + frr[5] + " " + cmp[5] + "%";
                     }
@@ -635,9 +638,7 @@ public class NutrientInputActivityCopy extends AppCompatActivity {
 
     public void showDetails(View view) {
         LayoutInflater inflater = (LayoutInflater)getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        View v = inflater.inflate(R.layout.result_view, mainLayout, false);
-
-        //LinearLayout linearLayout = v.findViewById(R.id.final_result);
+        View v;
 
         switch (view.getId()){
             case R.id.dn: {
@@ -723,6 +724,7 @@ public class NutrientInputActivityCopy extends AppCompatActivity {
 
         editTexts[0].getText().clear();
         Nutrient nitrogen = new Nutrient("Nitrogen", "N");
+        nutrients[0] = nitrogen;
         String status = radioButton.getText().toString();
         val = nitrogen.calculateRequiredNutrient(mCrop, status);
         requiredNutrient[0] = val;
@@ -755,6 +757,7 @@ public class NutrientInputActivityCopy extends AppCompatActivity {
 
         editTexts[1].getText().clear();
         Nutrient phosphorus = new Nutrient("Phosphorus", "P");
+        nutrients[1] = phosphorus;
         String status = radioButton.getText().toString();
         val = phosphorus.calculateRequiredNutrient(mCrop, status);
         requiredNutrient[1] = val;
@@ -790,6 +793,7 @@ public class NutrientInputActivityCopy extends AppCompatActivity {
 
         editTexts[2].getText().clear();
         Nutrient potassium = new Nutrient("Potassium", "K");
+        nutrients[2] = potassium;
         String status = radioButton.getText().toString();
         val = potassium.calculateRequiredNutrient(mCrop, status);
         requiredNutrient[2] = val;
@@ -800,12 +804,12 @@ public class NutrientInputActivityCopy extends AppCompatActivity {
 
         String c = "";
 
-        if (rid == R.id.radiofp1){
+        if (rid == R.id.radiofk1){
             c = "As, Potassium composition in MoP 50%";
             cmp[2]= 50.0;
             frr[2] = "MoP";
         }
-        else if (rid == R.id.radiofp2){
+        else if (rid == R.id.radiofk2){
             c = "As, Potassium composition in SoP 42%";
             cmp[2] = 42.0;
             frr[2] = "SoP";
@@ -826,6 +830,7 @@ public class NutrientInputActivityCopy extends AppCompatActivity {
 
         editTexts[3].getText().clear();
         Nutrient sulphur = new Nutrient("Sulphur", "S");
+        nutrients[3] = sulphur;
         String status = radioButton.getText().toString();
         val = sulphur.calculateRequiredNutrient(mCrop, status);
         requiredNutrient[3] = val;
@@ -836,11 +841,11 @@ public class NutrientInputActivityCopy extends AppCompatActivity {
 
         String c = "";
 
-        if (rid == R.id.radiofp1){
+        if (rid == R.id.radiofs1){
             cmp[3]= 18.0; frr[3] = "Gypsum";
             c = "As, Sulphur composition in " + frr[3] + " " + cmp[3] + "%";
         }
-        else if (rid == R.id.radiofp2){
+        else if (rid == R.id.radiofs2){
             cmp[3] = 23.5; frr[3] = "Ammonium Sulphate";
             c = "As, Sulphur composition in " + frr[3] + " " + cmp[3] + "%";
         }
@@ -860,6 +865,7 @@ public class NutrientInputActivityCopy extends AppCompatActivity {
 
         editTexts[4].getText().clear();
         Nutrient zinc = new Nutrient("Zinc", "Zn");
+        nutrients[4] = zinc;
         String status = radioButton.getText().toString();
         val = zinc.calculateRequiredNutrient(mCrop, status);
         requiredNutrient[4] = val;
@@ -870,11 +876,11 @@ public class NutrientInputActivityCopy extends AppCompatActivity {
 
         String c = "";
 
-        if (rid == R.id.radiofp1){
+        if (rid == R.id.radiofzn1){
             cmp[4] = 36.0; frr[4] = "Zinc Sulphate Mono";
             c = "As, Zinc composition in " + frr[4] + " " + cmp[4] + "%";
         }
-        else if (rid == R.id.radiofp2){
+        else if (rid == R.id.radiofzn2){
             cmp[4] = 23.0; frr[4] = "Zinc Sulphate Hepta";
             c = "As, Zinc composition in " + frr[4] + " " + cmp[4] + "%";
         }
@@ -894,6 +900,7 @@ public class NutrientInputActivityCopy extends AppCompatActivity {
 
         editTexts[5].getText().clear();
         Nutrient boron = new Nutrient("Boron", "B");
+        nutrients[5] = boron;
         String status = radioButton.getText().toString();
         val = boron.calculateRequiredNutrient(mCrop, status);
         requiredNutrient[5] = val;
@@ -904,11 +911,11 @@ public class NutrientInputActivityCopy extends AppCompatActivity {
 
         String c = "";
 
-        if (rid == R.id.radiofp1){
+        if (rid == R.id.radiofb1){
             cmp[5] = 17.0; frr[5] = "Boric Acid";
             c = "As, Boron composition in " + frr[5] + " " + cmp[5] + "%";
         }
-        else if (rid == R.id.radiofp2){
+        else if (rid == R.id.radiofb2){
             cmp[5] = 20.0; frr[5] = "Solubor";
             c = "As, Boron composition in " + frr[5] + " " + cmp[5] + "%";
         }
@@ -921,7 +928,8 @@ public class NutrientInputActivityCopy extends AppCompatActivity {
     public void onClickFN (View view){
         int rid = radioGroupF[0].getCheckedRadioButtonId();
         String c;
-        if ( !isCalculated[0] && !isChecked[0])expandOne(0);
+        //if ( !isCalculated[0] && !isChecked[0])expandOne(0);
+        expandOne(0);
         if (isCalculated[0] || isChecked[0]){
 
             double val = requiredNutrient[0];
@@ -959,7 +967,8 @@ public class NutrientInputActivityCopy extends AppCompatActivity {
     public void onClickFP (View view){
         int rid = radioGroupF[1].getCheckedRadioButtonId();
         String c;
-        if ( !isCalculated[1] && !isChecked[1])expandOne(1);
+        //if ( !isCalculated[1] && !isChecked[1])expandOne(1);
+        expandOne(1);
         if (isCalculated[1] || isChecked[1]){
 
             double val = requiredNutrient[1];
@@ -999,7 +1008,8 @@ public class NutrientInputActivityCopy extends AppCompatActivity {
     public void onClickFK (View view){
         int rid = radioGroupF[2].getCheckedRadioButtonId();
         String c;
-        if ( !isCalculated[2] && !isChecked[2])expandOne(2);
+        //if ( !isCalculated[2] && !isChecked[2])expandOne(2);
+        expandOne(2);
         if (isCalculated[2] || isChecked[2]){
 
             double val = requiredNutrient[2];
@@ -1037,7 +1047,8 @@ public class NutrientInputActivityCopy extends AppCompatActivity {
     public void onClickFS (View view){
         int rid = radioGroupF[3].getCheckedRadioButtonId();
         String c;
-        if ( !isCalculated[3] && !isChecked[3])expandOne(3);
+        //if ( !isCalculated[3] && !isChecked[3])expandOne(3);
+        expandOne(3);
         if (isCalculated[3] || isChecked[3]){
 
             double val = requiredNutrient[3];
@@ -1077,7 +1088,8 @@ public class NutrientInputActivityCopy extends AppCompatActivity {
     public void onClickFZn (View view){
         int rid = radioGroupF[4].getCheckedRadioButtonId();
         String c;
-        if ( !isCalculated[4] && !isChecked[4])expandOne(4);
+        //if ( !isCalculated[4] && !isChecked[4])expandOne(4);
+        expandOne(4);
         if ( isCalculated[4] || isChecked[4] ){
 
             double val = requiredNutrient[4];
@@ -1116,7 +1128,8 @@ public class NutrientInputActivityCopy extends AppCompatActivity {
     public void onClickFB (View view){
         int rid = radioGroupF[5].getCheckedRadioButtonId();
         String c;
-        if ( !isCalculated[5] && !isChecked[5])expandOne(5);
+        //if ( !isCalculated[5] && !isChecked[5])expandOne(5);
+        expandOne(5);
         if (isCalculated[5] || isChecked[5]){
 
             double val = requiredNutrient[5];

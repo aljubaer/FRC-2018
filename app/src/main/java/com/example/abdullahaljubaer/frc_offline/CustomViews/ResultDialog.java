@@ -80,11 +80,11 @@ public class ResultDialog {
 
     private void init () {
         txtInitT.setText(producer.getTopLabel());
-        txtFrL.setText(producer.getNutrientCalc() + "-");
+        txtFrL.setText(producer.getNutrientCalc() + " - ");
         txtFrMT.setText(String.valueOf(producer.getCi()));
         txtFrMB.setText(String.valueOf(producer.getCs()));
         txtFrR.setText(producer.getFrRight());
-        txtNRes.setText(String.format("%10s%.3f", " ", producer.getNutrientQuantity()));
+        txtNRes.setText(String.format("%10s%.3f", "=", producer.getNutrientQuantity()));
         txtComb.setText(producer.getComposition());
         txtFReq.setText(producer.getFertilizer());
     }

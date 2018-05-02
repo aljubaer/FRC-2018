@@ -94,15 +94,6 @@ public class CustomSearchableDialog {
                         }
                     }
                 }
-                /*
-                for (int i = 0; i < values.size(); i++) {
-                    if (textLength <= values.get(i).length()) {
-                        if(values.get(i).toLowerCase().contains(editText.getText().toString().toLowerCase().trim())) {
-                            currentValueList.add(values.get(i));
-                        }
-                    }
-                }
-                */
                 listView.setAdapter(new CustomAlertAdapter((Activity) context, currentValueList));
             }
         });

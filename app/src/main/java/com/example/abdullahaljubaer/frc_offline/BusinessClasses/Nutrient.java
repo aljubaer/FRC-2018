@@ -1,7 +1,5 @@
 package com.example.abdullahaljubaer.frc_offline.BusinessClasses;
 
-import com.example.abdullahaljubaer.frc_offline.GUI.Interpretation;
-
 /**
  * Created by ABDULLAH AL JUBAER on 25-03-18.
  */
@@ -38,6 +36,7 @@ public class Nutrient {
     public double calculateRequiredNutrient ( Crop crop, String status ) {
         this.status = status;
         recommendationInterpretation = crop.getInterpretation(symbol, status);
+        if (recommendationInterpretation.getInterval() < .000001)return 0.0;
         return recommendationInterpretation.getUpperLimit();
     }
 

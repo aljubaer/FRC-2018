@@ -51,7 +51,7 @@ public class StatusBasedResultProducer implements IResultProducer {
     }
 
     public String getNutrientCalc (){
-        return symbol + "(kg/ha)=" + uf;
+        return symbol + "(kg/ha) = " + uf;
     }
 
     public void setFertilizer(String fertilizer) {
@@ -74,7 +74,7 @@ public class StatusBasedResultProducer implements IResultProducer {
         if (fertilizer.equals("Guti Urea"))
             return String.format("Req. %s = %.3f X (%.2f/%.2f) X 0.7\n%10s= %.3f", fertilizer, nutrientQuantity,
                     100.0, composition, " ", fertilizerQuantity);
-        return String.format("Req. %s = %.3fX(%.2f/%.2f)\n%10s= %.3f", fertilizer, nutrientQuantity,
+        return String.format("Req. %s = %.3f X (%.2f/%.2f)\n%10s = %.3f", fertilizer, nutrientQuantity,
                 100.0, composition, " ", fertilizerQuantity);
     }
 }
