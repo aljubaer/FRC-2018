@@ -31,9 +31,22 @@ public class CropGroupDBHelper extends DBHelper {
     }
 
     @Override
-    public Cursor getData() {
+    public Cursor getData () {
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor res =  db.rawQuery( "SELECT * FROM " + TABLE_NAME, null );
+        return res;
+    }
+
+    public Cursor getAllGroup () {
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor res = db.rawQuery("SELECT DISTINCT " + COLUMN_GROUP + " FROM " + TABLE_NAME, null);
+        return res;
+    }
+
+    public Cursor getSeason (String group) {
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor res = db.rawQuery("SELECT DISTINCT " + COLUMN_SEASON + " FROM " + TABLE_NAME +
+                " WHERE " + COLUMN_GROUP + " = '" + group + "'", null);
         return res;
     }
 

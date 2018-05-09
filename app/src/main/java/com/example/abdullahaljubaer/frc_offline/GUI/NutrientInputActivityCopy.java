@@ -14,6 +14,7 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.RadioButton;
@@ -57,6 +58,7 @@ public class NutrientInputActivityCopy extends AppCompatActivity {
     private RadioGroup[] radioGroupF;
     private RadioGroup[] radioGroups;
     private TextView[] txtRes;
+    private Button btnRecommendation;
     private Boolean[] isCalculated, isChecked;
 
     private AlertDialog dialog = null;
@@ -74,6 +76,7 @@ public class NutrientInputActivityCopy extends AppCompatActivity {
     private Interpretation[] ri = new Interpretation[6];
     private Nutrient[] nutrients = new Nutrient[6];
     private int[] last = new int[6];
+    private double[] fq = new double[6];
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
@@ -123,6 +126,8 @@ public class NutrientInputActivityCopy extends AppCompatActivity {
                 findViewById(R.id.rk), findViewById(R.id.rs),
                 findViewById(R.id.rzn), findViewById(R.id.rb),
         };
+
+        btnRecommendation = findViewById(R.id.btn_recomm);
 
         isCalculated = new Boolean[6];
         Arrays.fill(isCalculated, false);
@@ -180,8 +185,6 @@ public class NutrientInputActivityCopy extends AppCompatActivity {
     private double soilTextValue = 0.1;
     String r = "";
     public void calculate() {
-
-
 
         editTexts[0].addTextChangedListener(new TextWatcher() {
             @Override
@@ -264,7 +267,6 @@ public class NutrientInputActivityCopy extends AppCompatActivity {
                 }
             }
         });
-
 
         editTexts[1].addTextChangedListener(new TextWatcher() {
             @Override
@@ -429,6 +431,7 @@ public class NutrientInputActivityCopy extends AppCompatActivity {
                 }
             }
         });
+
         editTexts[3].addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
@@ -693,7 +696,6 @@ public class NutrientInputActivityCopy extends AppCompatActivity {
                 }
             }
         });
-
     }
 
     public void createRecommendation(View view) {
@@ -791,7 +793,6 @@ public class NutrientInputActivityCopy extends AppCompatActivity {
         }
     }
 
-
     // --------------------------- Details view ---------------------- //
 
 
@@ -830,7 +831,6 @@ public class NutrientInputActivityCopy extends AppCompatActivity {
         prepareResult(val, c, 0, "N");
     }
 
-
     public void onClickRP (View view){
         int selectedId = radioGroups[1].getCheckedRadioButtonId();
         if (!isChecked[1])isChecked[1] = true;
@@ -865,7 +865,6 @@ public class NutrientInputActivityCopy extends AppCompatActivity {
         prepareResult(val, c, 1, "P");
 
     }
-
 
     public void onClickRK (View view){
         int selectedId = radioGroups[2].getCheckedRadioButtonId();
@@ -903,7 +902,6 @@ public class NutrientInputActivityCopy extends AppCompatActivity {
 
     }
 
-
     public void onClickRS (View view){
 
         int selectedId = radioGroups[3].getCheckedRadioButtonId();
@@ -937,7 +935,6 @@ public class NutrientInputActivityCopy extends AppCompatActivity {
         prepareResult(val, c, 3, "S");
 
     }
-
 
     public void onClickRZn (View view){
 
@@ -973,7 +970,6 @@ public class NutrientInputActivityCopy extends AppCompatActivity {
 
     }
 
-
     public void onClickRB (View view){
 
         int selectedId = radioGroups[5].getCheckedRadioButtonId();
@@ -1006,8 +1002,6 @@ public class NutrientInputActivityCopy extends AppCompatActivity {
         prepareResult(val, c, 5, "B");
 
     }
-
-
 
     public void onClickFN (View view){
         int rid = radioGroupF[0].getCheckedRadioButtonId();
@@ -1168,7 +1162,6 @@ public class NutrientInputActivityCopy extends AppCompatActivity {
 
     }
 
-
     public void onClickFZn (View view){
         int rid = radioGroupF[4].getCheckedRadioButtonId();
         String c;
@@ -1291,12 +1284,12 @@ public class NutrientInputActivityCopy extends AppCompatActivity {
     }
 
     private void prepareResult ( double val, String c, int i, String symbol ){
-        double fq = 0.0;
+        fq[i] = 0.0;
         last[i] = 2;
         if (frr[i].equals("Guti Urea"))
-            fq = val*(100.0/cmp[i])*.7;
-        else fq = val*(100.0/cmp[i]);
-        String res = String.format("%.3f (kg/ha)", fq);
+            fq[i] = val*(100.0/cmp[i])*.7;
+        else fq[i] = val*(100.0/cmp[i]);
+        String res = String.format("%.3f (kg/ha)", fq[i]);
 
         DropDownAnim.expand(txtRes[i]);
 
@@ -1305,16 +1298,16 @@ public class NutrientInputActivityCopy extends AppCompatActivity {
         txtRes[i].setText(rr);
 
         mResults.put(symbol, new StatusBasedResultProducer(symbol, nutrients[i].getName(), frr[i],
-                ri[i].getStatus(), ri[i].getUpperLimit(), cmp[i], fq, val));
+                ri[i].getStatus(), ri[i].getUpperLimit(), cmp[i], fq[i], val));
     }
 
     private void prepareResult (double soilTextValue, double val, String c, int i, String symbol) {
         last[i] = 1;
-        double fq = 0.0;
+        fq[i] = 0.0;
         if (frr[i].equals("Guti Urea"))
-            fq = val*(100.0/cmp[i])*.7;
-        else fq = val*(100.0/cmp[i]);
-        String res = String.format("%.3f (kg/ha)", fq);
+            fq[i] = val*(100.0/cmp[i])*.7;
+        else fq[i] = val*(100.0/cmp[i]);
+        String res = String.format("%.3f (kg/ha)", fq[i]);
 
         DropDownAnim.expand(txtRes[i]);
 
@@ -1325,6 +1318,17 @@ public class NutrientInputActivityCopy extends AppCompatActivity {
         mResults.put(symbol, new TestBasedResultProducer(symbol, nutrients[i].getName(), frr[i],
                 soilTextValue, ti[i].getStatus(), ri[i].getUpperLimit(),
                 ri[i].getInterval(), ti[i].getInterval(),
-                ti[i].getLowerLimit(), cmp[i], fq, val));
+                ti[i].getLowerLimit(), cmp[i], fq[i], val));
+    }
+
+    public void freq (View view) {
+
+        Intent intent = new Intent(this, RecommendationActivity.class);
+
+        intent.putExtra("fertilizer", frr);
+        intent.putExtra("amg", fq);
+
+        startActivity(intent);
+
     }
 }

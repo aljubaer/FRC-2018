@@ -1,552 +1,3840 @@
-Wheat (Irrigated),1,N,Optimum,0,40,40
-Wheat (Irrigated),1,N,Medium,41,80,40
-Wheat (Irrigated),1,N,Low,81,120,40
-Wheat (Irrigated),1,N,Very Low,121,160,40
-Wheat (Irrigated),1,P,Optimum,0,10,10
-Wheat (Irrigated),1,P,Medium,11,20,10
-Wheat (Irrigated),1,P,Low,21,30,10
-Wheat (Irrigated),1,P,Very Low,31,40,10
-Wheat (Irrigated),1,K,Optimum,0,30,30
-Wheat (Irrigated),1,K,Medium,31,60,30
-Wheat (Irrigated),1,K,Low,61,90,30
-Wheat (Irrigated),1,K,Very Low,91,120,30
-Wheat (Irrigated),1,S,Optimum,0,5,5
-Wheat (Irrigated),1,S,Medium,6,10,5
-Wheat (Irrigated),1,S,Low,11,15,5
-Wheat (Irrigated),1,S,Very Low,16,20,5
-Wheat (Irrigated),1,Mg,Optimum,0,0,0
-Wheat (Irrigated),1,Mg,Medium,0,3,3
-Wheat (Irrigated),1,Mg,Low,4,6,3
-Wheat (Irrigated),1,Mg,Very Low,7,9,3
-Wheat (Irrigated),1,Zn,Optimum,0,0,0
-Wheat (Irrigated),1,Zn,Medium,0,1.3,1.3
-Wheat (Irrigated),1,Zn,Low,1.4,2.6,1.3
-Wheat (Irrigated),1,Zn,Very Low,2.7,3.9,1.3
-Wheat (Irrigated),1,B,Optimum,0,0,0
-Wheat (Irrigated),1,B,Medium,0,0.5,0.5
-Wheat (Irrigated),1,B,Low,0.6,1,0.5
-Wheat (Irrigated),1,B,Very Low,1.1,1.5,0.5
-Wheat (Rainfed),1,N,Optimum,0,15,15
-Wheat (Rainfed),1,N,Medium,16,30,15
-Wheat (Rainfed),1,N,Low,31,45,15
-Wheat (Rainfed),1,N,Very Low,46,60,15
-Wheat (Rainfed),1,P,Optimum,0,5,5
-Wheat (Rainfed),1,P,Medium,6,10,5
-Wheat (Rainfed),1,P,Low,11,15,5
-Wheat (Rainfed),1,P,Very Low,16,20,5
-Wheat (Rainfed),1,K,Optimum,0,12,12
-Wheat (Rainfed),1,K,Medium,13,24,12
-Wheat (Rainfed),1,K,Low,25,36,12
-Wheat (Rainfed),1,K,Very Low,37,48,12
-Wheat (Rainfed),1,S,Optimum,0,2.5,2.5
-Wheat (Rainfed),1,S,Medium,2.6,5,2.5
-Wheat (Rainfed),1,S,Low,5.1,7.5,2.5
-Wheat (Rainfed),1,S,Very Low,7.6,10,2.5
-Wheat (Rainfed),1,Mg,Optimum,0,0,0
-Wheat (Rainfed),1,Mg,Medium,0,0,0
-Wheat (Rainfed),1,Mg,Low,0,3,3
-Wheat (Rainfed),1,Mg,Very Low,4,6,3
-Wheat (Rainfed),1,Zn,Optimum,0,0,0
-Wheat (Rainfed),1,Zn,Medium,0,0,0
-Wheat (Rainfed),1,Zn,Low,0,1,1
-Wheat (Rainfed),1,Zn,Very Low,1.1,2,1
-Wheat (Rainfed),1,B,Optimum,0,0,0
-Wheat (Rainfed),1,B,Medium,0,0.4,0.4
-Wheat (Rainfed),1,B,Low,0.5,0.8,0.4
-Wheat (Rainfed),1,B,Very Low,0.9,1.2,0.4
-Boro rice,1,N,Optimum,0,50,50
-Boro rice,1,N,Medium,51,100,50
-Boro rice,1,N,Low,101,150,50
-Boro rice,1,N,Very Low,151,200,50
+Boro rice,1,N,Very Low,0,240,60
+Boro rice,1,N,Low,0,180,60
+Boro rice,1,N,Medium,0,120,60
+Boro rice,1,N,Optimum,0,60,60
+Boro rice,1,P,Very Low,0,32,8
+Boro rice,1,P,Low,0,24,8
+Boro rice,1,P,Medium,0,16,8
 Boro rice,1,P,Optimum,0,8,8
-Boro rice,1,P,Medium,9,16,8
-Boro rice,1,P,Low,17,24,8
-Boro rice,1,P,Very Low,25,32,8
-Boro rice,1,K,Optimum,0,33,33
-Boro rice,1,K,Medium,34,66,33
-Boro rice,1,K,Low,67,99,33
-Boro rice,1,K,Very Low,100,132,33
+Boro rice,1,K,Very Low,0,152,38
+Boro rice,1,K,Low,0,114,38
+Boro rice,1,K,Medium,0,76,38
+Boro rice,1,K,Optimum,0,38,38
+Boro rice,1,S,Very Low,0,24,6
+Boro rice,1,S,Low,0,18,6
+Boro rice,1,S,Medium,0,12,6
 Boro rice,1,S,Optimum,0,6,6
-Boro rice,1,S,Medium,7,12,6
-Boro rice,1,S,Low,13,18,6
-Boro rice,1,S,Very Low,19,24,6
-Boro rice,1,Zn,Optimum,0,0,0
+Boro rice,1,Zn,Very Low,0,3.9,1.3
+Boro rice,1,Zn,Low,0,2.6,1.3
 Boro rice,1,Zn,Medium,0,1.3,1.3
-Boro rice,1,Zn,Low,1.4,2.6,1.3
-Boro rice,1,Zn,Very Low,2.7,3.9,1.3
-Boro rice,2,N,Optimum,0,45,45
-Boro rice,2,N,Medium,46,90,45
-Boro rice,2,N,Low,91,135,45
-Boro rice,2,N,Very Low,136,180,45
+Boro rice,1,Zn,Optimum,0,,1.3
+Boro rice,1,B,Very Low,0,0,0
+Boro rice,1,B,Low,0,0,0
+Boro rice,1,B,Medium,0,0,0
+Boro rice,1,B,Optimum,0,,0
+Boro rice,1,Mo,Very Low,0,0,0
+Boro rice,1,Mo,Low,0,0,0
+Boro rice,1,Mo,Medium,0,0,0
+Boro rice,1,Mo,Optimum,0,,0
+Boro rice,1,Mg,Very Low,0,0,0
+Boro rice,1,Mg,Low,0,0,0
+Boro rice,1,Mg,Medium,0,0,0
+Boro rice,1,Mg,Optimum,0,,0
+Boro rice,2,N,Very Low,0,192,48
+Boro rice,2,N,Low,0,144,48
+Boro rice,2,N,Medium,0,96,48
+Boro rice,2,N,Optimum,0,48,48
+Boro rice,2,P,Very Low,0,28,7
+Boro rice,2,P,Low,0,21,7
+Boro rice,2,P,Medium,0,14,7
 Boro rice,2,P,Optimum,0,7,7
-Boro rice,2,P,Medium,8,14,7
-Boro rice,2,P,Low,15,21,7
-Boro rice,2,P,Very Low,22,28,7
+Boro rice,2,K,Very Low,0,120,30
+Boro rice,2,K,Low,0,90,30
+Boro rice,2,K,Medium,0,60,30
 Boro rice,2,K,Optimum,0,30,30
-Boro rice,2,K,Medium,31,60,30
-Boro rice,2,K,Low,61,90,30
-Boro rice,2,K,Very Low,91,120,30
+Boro rice,2,S,Very Low,0,20,5
+Boro rice,2,S,Low,0,15,5
+Boro rice,2,S,Medium,0,10,5
 Boro rice,2,S,Optimum,0,5,5
-Boro rice,2,S,Medium,6,10,5
-Boro rice,2,S,Low,11,15,5
-Boro rice,2,S,Very Low,16,20,5
-Boro rice,2,Zn,Optimum,0,0,0
+Boro rice,2,Zn,Very Low,0,3,1
+Boro rice,2,Zn,Low,0,2,1
 Boro rice,2,Zn,Medium,0,1,1
-Boro rice,2,Zn,Low,1.1,2,1
-Boro rice,2,Zn,Very Low,2.1,3,1
+Boro rice,2,Zn,Optimum,0,,1
+Boro rice,2,B,Very Low,0,0,0
+Boro rice,2,B,Low,0,0,0
+Boro rice,2,B,Medium,0,0,0
+Boro rice,2,B,Optimum,0,,0
+Boro rice,2,Mo,Very Low,0,0,0
+Boro rice,2,Mo,Low,0,0,0
+Boro rice,2,Mo,Medium,0,0,0
+Boro rice,2,Mo,Optimum,0,,0
+Boro rice,2,Mg,Very Low,0,0,0
+Boro rice,2,Mg,Low,0,0,0
+Boro rice,2,Mg,Medium,0,0,0
+Boro rice,2,Mg,Optimum,0,,0
+Boro rice,3,N,Very Low,0,160,40
+Boro rice,3,N,Low,0,120,40
+Boro rice,3,N,Medium,0,80,40
 Boro rice,3,N,Optimum,0,40,40
-Boro rice,3,N,Medium,41,80,40
-Boro rice,3,N,Low,81,120,40
-Boro rice,3,N,Very Low,121,160,40
-Boro rice,3,P,Optimum,0,7,7
-Boro rice,3,P,Medium,8,14,7
-Boro rice,3,P,Low,15,21,7
-Boro rice,3,P,Very Low,22,28,7
-Boro rice,3,K,Optimum,0,30,30
-Boro rice,3,K,Medium,31,60,30
-Boro rice,3,K,Low,61,90,30
-Boro rice,3,K,Very Low,91,120,30
-Boro rice,3,S,Optimum,0,5,5
-Boro rice,3,S,Medium,6,10,5
-Boro rice,3,S,Low,11,15,5
-Boro rice,3,S,Very Low,16,20,5
-Boro rice,3,Zn,Optimum,0,0,0
-Boro rice,3,Zn,Medium,0,0.7,0.7
-Boro rice,3,Zn,Low,0.8,1.4,0.7
-Boro rice,3,Zn,Very Low,1.5,2.1,0.7
+Boro rice,3,P,Very Low,0,24,6
+Boro rice,3,P,Low,0,18,6
+Boro rice,3,P,Medium,0,12,6
+Boro rice,3,P,Optimum,0,6,6
+Boro rice,3,K,Very Low,0,100,25
+Boro rice,3,K,Low,0,75,25
+Boro rice,3,K,Medium,0,50,25
+Boro rice,3,K,Optimum,0,25,25
+Boro rice,3,S,Very Low,0,16,4
+Boro rice,3,S,Low,0,12,4
+Boro rice,3,S,Medium,0,8,4
+Boro rice,3,S,Optimum,0,4,4
+Boro rice,3,Zn,Very Low,0,2.4,0.8
+Boro rice,3,Zn,Low,0,1.6,0.8
+Boro rice,3,Zn,Medium,0,0.8,0.8
+Boro rice,3,Zn,Optimum,0,,0.8
+Boro rice,3,B,Very Low,0,0,0
+Boro rice,3,B,Low,0,0,0
+Boro rice,3,B,Medium,0,0,0
+Boro rice,3,B,Optimum,0,,0
+Boro rice,3,Mo,Very Low,0,0,0
+Boro rice,3,Mo,Low,0,0,0
+Boro rice,3,Mo,Medium,0,0,0
+Boro rice,3,Mo,Optimum,0,,0
+Boro rice,3,Mg,Very Low,0,0,0
+Boro rice,3,Mg,Low,0,0,0
+Boro rice,3,Mg,Medium,0,0,0
+Boro rice,3,Mg,Optimum,0,,0
+Boro rice,4,N,Very Low,0,92,23
+Boro rice,4,N,Low,0,69,23
+Boro rice,4,N,Medium,0,46,23
 Boro rice,4,N,Optimum,0,23,23
-Boro rice,4,N,Medium,24,46,23
-Boro rice,4,N,Low,47,69,23
-Boro rice,4,N,Very Low,70,92,23
+Boro rice,4,P,Very Low,0,16,4
+Boro rice,4,P,Low,0,12,4
+Boro rice,4,P,Medium,0,8,4
 Boro rice,4,P,Optimum,0,4,4
-Boro rice,4,P,Medium,5,8,4
-Boro rice,4,P,Low,9,12,4
-Boro rice,4,P,Very Low,13,16,4
+Boro rice,4,K,Very Low,0,56,14
+Boro rice,4,K,Low,0,42,14
+Boro rice,4,K,Medium,0,28,14
 Boro rice,4,K,Optimum,0,14,14
-Boro rice,4,K,Medium,15,28,14
-Boro rice,4,K,Low,29,42,14
-Boro rice,4,K,Very Low,43,56,14
+Boro rice,4,S,Very Low,0,12,3
+Boro rice,4,S,Low,0,9,3
+Boro rice,4,S,Medium,0,6,3
 Boro rice,4,S,Optimum,0,3,3
-Boro rice,4,S,Medium,4,6,3
-Boro rice,4,S,Low,7,9,3
-Boro rice,4,S,Very Low,10,12,3
-Boro rice,4,Zn,Optimum,0,0,0
+Boro rice,4,Zn,Very Low,0,1.8,0.6
+Boro rice,4,Zn,Low,0,1.2,0.6
 Boro rice,4,Zn,Medium,0,0.6,0.6
-Boro rice,4,Zn,Low,0.7,1.2,0.6
-Boro rice,4,Zn,Very Low,1.3,1.8,0.6
-T. Aus rice,1,N,Optimum,0,25,25
-T. Aus rice,1,N,Medium,26,50,25
-T. Aus rice,1,N,Low,51,75,25
-T. Aus rice,1,N,Very Low,76,100,25
-T. Aus rice,1,P,Optimum,0,5,5
-T. Aus rice,1,P,Medium,6,10,5
-T. Aus rice,1,P,Low,11,15,5
-T. Aus rice,1,P,Very Low,16,20,5
-T. Aus rice,1,K,Optimum,0,15,15
-T. Aus rice,1,K,Medium,16,30,15
-T. Aus rice,1,K,Low,31,45,15
-T. Aus rice,1,K,Very Low,46,60,15
+Boro rice,4,Zn,Optimum,0,,0.6
+Boro rice,4,B,Very Low,0,0,0
+Boro rice,4,B,Low,0,0,0
+Boro rice,4,B,Medium,0,0,0
+Boro rice,4,B,Optimum,0,,0
+Boro rice,4,Mo,Very Low,0,0,0
+Boro rice,4,Mo,Low,0,0,0
+Boro rice,4,Mo,Medium,0,0,0
+Boro rice,4,Mo,Optimum,0,,0
+Boro rice,4,Mg,Very Low,0,0,0
+Boro rice,4,Mg,Low,0,0,0
+Boro rice,4,Mg,Medium,0,0,0
+Boro rice,4,Mg,Optimum,0,,0
+T. Aus rice,1,N,Very Low,0,128,32
+T. Aus rice,1,N,Low,0,96,32
+T. Aus rice,1,N,Medium,0,64,32
+T. Aus rice,1,N,Optimum,0,32,32
+T. Aus rice,1,P,Very Low,0,16,4
+T. Aus rice,1,P,Low,0,12,4
+T. Aus rice,1,P,Medium,0,8,4
+T. Aus rice,1,P,Optimum,0,4,4
+T. Aus rice,1,K,Very Low,0,80,20
+T. Aus rice,1,K,Low,0,60,20
+T. Aus rice,1,K,Medium,0,40,20
+T. Aus rice,1,K,Optimum,0,20,20
+T. Aus rice,1,S,Very Low,0,12,3
+T. Aus rice,1,S,Low,0,9,3
+T. Aus rice,1,S,Medium,0,6,3
 T. Aus rice,1,S,Optimum,0,3,3
-T. Aus rice,1,S,Medium,4,6,3
-T. Aus rice,1,S,Low,7,9,3
-T. Aus rice,1,S,Very Low,10,12,3
-T. Aus rice,1,Zn,Optimum,0,0,0
-T. Aus rice,1,Zn,Medium,0,0.6,0.6
-T. Aus rice,1,Zn,Low,0.7,1.2,0.6
-T. Aus rice,1,Zn,Very Low,1.3,1.8,0.6
-T. Aus rice,2,N,Optimum,0,17,17
-T. Aus rice,2,N,Medium,18,34,17
-T. Aus rice,2,N,Low,35,51,17
-T. Aus rice,2,N,Very Low,52,68,17
+T. Aus rice,1,Zn,Very Low,0,2.1,0.7
+T. Aus rice,1,Zn,Low,0,1.4,0.7
+T. Aus rice,1,Zn,Medium,0,0.7,0.7
+T. Aus rice,1,Zn,Optimum,0,,0.7
+T. Aus rice,1,B,Very Low,0,0,0
+T. Aus rice,1,B,Low,0,0,0
+T. Aus rice,1,B,Medium,0,0,0
+T. Aus rice,1,B,Optimum,0,,0
+T. Aus rice,1,Mo,Very Low,0,0,0
+T. Aus rice,1,Mo,Low,0,0,0
+T. Aus rice,1,Mo,Medium,0,0,0
+T. Aus rice,1,Mo,Optimum,0,,0
+T. Aus rice,1,Mg,Very Low,0,0,0
+T. Aus rice,1,Mg,Low,0,0,0
+T. Aus rice,1,Mg,Medium,0,0,0
+T. Aus rice,1,Mg,Optimum,0,,0
+T. Aus rice,2,N,Very Low,0,88,22
+T. Aus rice,2,N,Low,0,66,22
+T. Aus rice,2,N,Medium,0,44,22
+T. Aus rice,2,N,Optimum,0,22,22
+T. Aus rice,2,P,Very Low,0,16,4
+T. Aus rice,2,P,Low,0,12,4
+T. Aus rice,2,P,Medium,0,8,4
 T. Aus rice,2,P,Optimum,0,4,4
-T. Aus rice,2,P,Medium,5,8,4
-T. Aus rice,2,P,Low,9,12,4
-T. Aus rice,2,P,Very Low,13,16,4
-T. Aus rice,2,K,Optimum,0,11,11
-T. Aus rice,2,K,Medium,12,22,11
-T. Aus rice,2,K,Low,23,33,11
-T. Aus rice,2,K,Very Low,34,44,11
+T. Aus rice,2,K,Very Low,0,60,15
+T. Aus rice,2,K,Low,0,45,15
+T. Aus rice,2,K,Medium,0,30,15
+T. Aus rice,2,K,Optimum,0,15,15
+T. Aus rice,2,S,Very Low,0,12,3
+T. Aus rice,2,S,Low,0,9,3
+T. Aus rice,2,S,Medium,0,6,3
 T. Aus rice,2,S,Optimum,0,3,3
-T. Aus rice,2,S,Medium,4,6,3
-T. Aus rice,2,S,Low,7,9,3
-T. Aus rice,2,S,Very Low,10,12,3
-T. Aus rice,2,Zn,Optimum,0,0,0
+T. Aus rice,2,Zn,Very Low,0,1.8,0.6
+T. Aus rice,2,Zn,Low,0,1.2,0.6
 T. Aus rice,2,Zn,Medium,0,0.6,0.6
-T. Aus rice,2,Zn,Low,0.7,1.2,0.6
-T. Aus rice,2,Zn,Very Low,1.3,1.8,0.6
+T. Aus rice,2,Zn,Optimum,0,,0.6
+T. Aus rice,2,B,Very Low,0,0,0
+T. Aus rice,2,B,Low,0,0,0
+T. Aus rice,2,B,Medium,0,0,0
+T. Aus rice,2,B,Optimum,0,,0
+T. Aus rice,2,Mo,Very Low,0,0,0
+T. Aus rice,2,Mo,Low,0,0,0
+T. Aus rice,2,Mo,Medium,0,0,0
+T. Aus rice,2,Mo,Optimum,0,,0
+T. Aus rice,2,Mg,Very Low,0,0,0
+T. Aus rice,2,Mg,Low,0,0,0
+T. Aus rice,2,Mg,Medium,0,0,0
+T. Aus rice,2,Mg,Optimum,0,,0
+B. Aus rice,1,N,Very Low,0,68,17
+B. Aus rice,1,N,Low,0,51,17
+B. Aus rice,1,N,Medium,0,34,17
 B. Aus rice,1,N,Optimum,0,17,17
-B. Aus rice,1,N,Medium,18,34,17
-B. Aus rice,1,N,Low,35,51,17
-B. Aus rice,1,N,Very Low,52,68,17
+B. Aus rice,1,P,Very Low,0,16,4
+B. Aus rice,1,P,Low,0,12,4
+B. Aus rice,1,P,Medium,0,8,4
 B. Aus rice,1,P,Optimum,0,4,4
-B. Aus rice,1,P,Medium,5,8,4
-B. Aus rice,1,P,Low,9,12,4
-B. Aus rice,1,P,Very Low,13,16,4
+B. Aus rice,1,K,Very Low,0,44,11
+B. Aus rice,1,K,Low,0,33,11
+B. Aus rice,1,K,Medium,0,22,11
 B. Aus rice,1,K,Optimum,0,11,11
-B. Aus rice,1,K,Medium,12,22,11
-B. Aus rice,1,K,Low,23,33,11
-B. Aus rice,1,K,Very Low,34,44,11
+B. Aus rice,1,S,Very Low,0,12,3
+B. Aus rice,1,S,Low,0,9,3
+B. Aus rice,1,S,Medium,0,6,3
 B. Aus rice,1,S,Optimum,0,3,3
-B. Aus rice,1,S,Medium,4,6,3
-B. Aus rice,1,S,Low,7,9,3
-B. Aus rice,1,S,Very Low,10,12,3
-B. Aus rice,1,Zn,Optimum,0,0,0
+B. Aus rice,1,Zn,Very Low,0,1.8,0.6
+B. Aus rice,1,Zn,Low,0,1.2,0.6
 B. Aus rice,1,Zn,Medium,0,0.6,0.6
-B. Aus rice,1,Zn,Low,0.7,1.2,0.6
-B. Aus rice,1,Zn,Very Low,1.3,1.8,0.6
+B. Aus rice,1,Zn,Optimum,0,,0.6
+B. Aus rice,1,B,Very Low,0,0,0
+B. Aus rice,1,B,Low,0,0,0
+B. Aus rice,1,B,Medium,0,0,0
+B. Aus rice,1,B,Optimum,0,,0
+B. Aus rice,1,Mo,Very Low,0,0,0
+B. Aus rice,1,Mo,Low,0,0,0
+B. Aus rice,1,Mo,Medium,0,0,0
+B. Aus rice,1,Mo,Optimum,0,,0
+B. Aus rice,1,Mg,Very Low,0,0,0
+B. Aus rice,1,Mg,Low,0,0,0
+B. Aus rice,1,Mg,Medium,0,0,0
+B. Aus rice,1,Mg,Optimum,0,,0
+B. Aus rice,2,N,Very Low,0,40,10
+B. Aus rice,2,N,Low,0,30,10
+B. Aus rice,2,N,Medium,0,20,10
 B. Aus rice,2,N,Optimum,0,10,10
-B. Aus rice,2,N,Medium,11,20,10
-B. Aus rice,2,N,Low,21,30,10
-B. Aus rice,2,N,Very Low,31,40,10
+B. Aus rice,2,P,Very Low,0,12,3
+B. Aus rice,2,P,Low,0,9,3
+B. Aus rice,2,P,Medium,0,6,3
 B. Aus rice,2,P,Optimum,0,3,3
-B. Aus rice,2,P,Medium,4,6,3
-B. Aus rice,2,P,Low,7,9,3
-B. Aus rice,2,P,Very Low,10,12,3
+B. Aus rice,2,K,Very Low,0,32,8
+B. Aus rice,2,K,Low,0,24,8
+B. Aus rice,2,K,Medium,0,16,8
 B. Aus rice,2,K,Optimum,0,8,8
-B. Aus rice,2,K,Medium,9,16,8
-B. Aus rice,2,K,Low,17,24,8
-B. Aus rice,2,K,Very Low,25,32,8
+B. Aus rice,2,S,Very Low,0,8,2
+B. Aus rice,2,S,Low,0,6,2
+B. Aus rice,2,S,Medium,0,4,2
 B. Aus rice,2,S,Optimum,0,2,2
-B. Aus rice,2,S,Medium,3,4,2
-B. Aus rice,2,S,Low,5,6,2
-B. Aus rice,2,S,Very Low,7,8,2
-B. Aus rice,2,Zn,Optimum,0,0,0
+B. Aus rice,2,Zn,Very Low,0,1.5,0.5
+B. Aus rice,2,Zn,Low,0,1,0.5
 B. Aus rice,2,Zn,Medium,0,0.5,0.5
-B. Aus rice,2,Zn,Low,0.6,1,0.5
-B. Aus rice,2,Zn,Very Low,1.1,1.5,0.5
+B. Aus rice,2,Zn,Optimum,0,,0.5
+B. Aus rice,2,B,Very Low,0,0,0
+B. Aus rice,2,B,Low,0,0,0
+B. Aus rice,2,B,Medium,0,0,0
+B. Aus rice,2,B,Optimum,0,,0
+B. Aus rice,2,Mo,Very Low,0,0,0
+B. Aus rice,2,Mo,Low,0,0,0
+B. Aus rice,2,Mo,Medium,0,0,0
+B. Aus rice,2,Mo,Optimum,0,,0
+B. Aus rice,2,Mg,Very Low,0,0,0
+B. Aus rice,2,Mg,Low,0,0,0
+B. Aus rice,2,Mg,Medium,0,0,0
+B. Aus rice,2,Mg,Optimum,0,,0
+T. Aman rice,1,N,Very Low,0,120,30
+T. Aman rice,1,N,Low,0,90,30
+T. Aman rice,1,N,Medium,0,60,30
 T. Aman rice,1,N,Optimum,0,30,30
-T. Aman rice,1,N,Medium,31,60,30
-T. Aman rice,1,N,Low,61,90,30
-T. Aman rice,1,N,Very Low,91,120,30
+T. Aman rice,1,P,Very Low,0,20,5
+T. Aman rice,1,P,Low,0,15,5
+T. Aman rice,1,P,Medium,0,10,5
 T. Aman rice,1,P,Optimum,0,5,5
-T. Aman rice,1,P,Medium,6,10,5
-T. Aman rice,1,P,Low,11,15,5
-T. Aman rice,1,P,Very Low,16,20,5
-T. Aman rice,1,K,Optimum,0,20,20
-T. Aman rice,1,K,Medium,21,40,20
-T. Aman rice,1,K,Low,41,60,20
-T. Aman rice,1,K,Very Low,61,80,20
+T. Aman rice,1,K,Very Low,0,100,25
+T. Aman rice,1,K,Low,0,75,25
+T. Aman rice,1,K,Medium,0,50,25
+T. Aman rice,1,K,Optimum,0,25,25
+T. Aman rice,1,S,Very Low,0,16,4
+T. Aman rice,1,S,Low,0,12,4
+T. Aman rice,1,S,Medium,0,8,4
 T. Aman rice,1,S,Optimum,0,4,4
-T. Aman rice,1,S,Medium,5,8,4
-T. Aman rice,1,S,Low,9,12,4
-T. Aman rice,1,S,Very Low,13,16,4
-T. Aman rice,1,Zn,Optimum,0,0,0
-T. Aman rice,1,Zn,Medium,0,0.7,0.7
-T. Aman rice,1,Zn,Low,0.8,1.4,0.7
-T. Aman rice,1,Zn,Very Low,1.5,2.1,0.7
-T. Aman rice,2,N,Optimum,0,20,20
-T. Aman rice,2,N,Medium,21,40,20
-T. Aman rice,2,N,Low,41,60,20
-T. Aman rice,2,N,Very Low,61,80,20
+T. Aman rice,1,Zn,Very Low,0,2.4,0.8
+T. Aman rice,1,Zn,Low,0,1.6,0.8
+T. Aman rice,1,Zn,Medium,0,0.8,0.8
+T. Aman rice,1,Zn,Optimum,0,,0.8
+T. Aman rice,1,B,Very Low,0,0,0
+T. Aman rice,1,B,Low,0,0,0
+T. Aman rice,1,B,Medium,0,0,0
+T. Aman rice,1,B,Optimum,0,,0
+T. Aman rice,1,Mo,Very Low,0,0,0
+T. Aman rice,1,Mo,Low,0,0,0
+T. Aman rice,1,Mo,Medium,0,0,0
+T. Aman rice,1,Mo,Optimum,0,,0
+T. Aman rice,1,Mg,Very Low,0,0,0
+T. Aman rice,1,Mg,Low,0,0,0
+T. Aman rice,1,Mg,Medium,0,0,0
+T. Aman rice,1,Mg,Optimum,0,,0
+T. Aman rice,2,N,Very Low,0,96,24
+T. Aman rice,2,N,Low,0,72,24
+T. Aman rice,2,N,Medium,0,48,24
+T. Aman rice,2,N,Optimum,0,24,24
+T. Aman rice,2,P,Very Low,0,16,4
+T. Aman rice,2,P,Low,0,12,4
+T. Aman rice,2,P,Medium,0,8,4
 T. Aman rice,2,P,Optimum,0,4,4
-T. Aman rice,2,P,Medium,5,8,4
-T. Aman rice,2,P,Low,9,12,4
-T. Aman rice,2,P,Very Low,13,16,4
+T. Aman rice,2,K,Very Low,0,80,20
+T. Aman rice,2,K,Low,0,60,20
+T. Aman rice,2,K,Medium,0,40,20
 T. Aman rice,2,K,Optimum,0,20,20
-T. Aman rice,2,K,Medium,21,40,20
-T. Aman rice,2,K,Low,41,60,20
-T. Aman rice,2,K,Very Low,61,80,20
+T. Aman rice,2,S,Very Low,0,12,3
+T. Aman rice,2,S,Low,0,9,3
+T. Aman rice,2,S,Medium,0,6,3
 T. Aman rice,2,S,Optimum,0,3,3
-T. Aman rice,2,S,Medium,4,6,3
-T. Aman rice,2,S,Low,7,9,3
-T. Aman rice,2,S,Very Low,10,12,3
-T. Aman rice,2,Zn,Optimum,0,0,0
-T. Aman rice,2,Zn,Medium,0,0.6,0.6
-T. Aman rice,2,Zn,Low,0.7,1.2,0.6
-T. Aman rice,2,Zn,Very Low,1.3,1.8,0.6
-T. Aman rice,3,N,Optimum,0,13,13
-T. Aman rice,3,N,Medium,14,26,13
-T. Aman rice,3,N,Low,27,39,13
-T. Aman rice,3,N,Very Low,40,52,13
+T. Aman rice,2,Zn,Very Low,0,2.1,0.7
+T. Aman rice,2,Zn,Low,0,1.4,0.7
+T. Aman rice,2,Zn,Medium,0,0.7,0.7
+T. Aman rice,2,Zn,Optimum,0,,0.7
+T. Aman rice,2,B,Very Low,0,0,0
+T. Aman rice,2,B,Low,0,0,0
+T. Aman rice,2,B,Medium,0,0,0
+T. Aman rice,2,B,Optimum,0,,0
+T. Aman rice,2,Mo,Very Low,0,0,0
+T. Aman rice,2,Mo,Low,0,0,0
+T. Aman rice,2,Mo,Medium,0,0,0
+T. Aman rice,2,Mo,Optimum,0,,0
+T. Aman rice,2,Mg,Very Low,0,0,0
+T. Aman rice,2,Mg,Low,0,0,0
+T. Aman rice,2,Mg,Medium,0,0,0
+T. Aman rice,2,Mg,Optimum,0,,0
+T. Aman rice,3,N,Very Low,0,72,18
+T. Aman rice,3,N,Low,0,54,18
+T. Aman rice,3,N,Medium,0,36,18
+T. Aman rice,3,N,Optimum,0,18,18
+T. Aman rice,3,P,Very Low,0,12,3
+T. Aman rice,3,P,Low,0,9,3
+T. Aman rice,3,P,Medium,0,6,3
 T. Aman rice,3,P,Optimum,0,3,3
-T. Aman rice,3,P,Medium,4,6,3
-T. Aman rice,3,P,Low,7,9,3
-T. Aman rice,3,P,Very Low,10,12,3
+T. Aman rice,3,K,Very Low,0,60,15
+T. Aman rice,3,K,Low,0,45,15
+T. Aman rice,3,K,Medium,0,30,15
 T. Aman rice,3,K,Optimum,0,15,15
-T. Aman rice,3,K,Medium,16,30,15
-T. Aman rice,3,K,Low,31,45,15
-T. Aman rice,3,K,Very Low,46,60,15
+T. Aman rice,3,S,Very Low,0,12,3
+T. Aman rice,3,S,Low,0,9,3
+T. Aman rice,3,S,Medium,0,6,3
 T. Aman rice,3,S,Optimum,0,3,3
-T. Aman rice,3,S,Medium,4,6,3
-T. Aman rice,3,S,Low,7,9,3
-T. Aman rice,3,S,Very Low,10,12,3
-T. Aman rice,3,Zn,Optimum,0,0,0
-T. Aman rice,3,Zn,Medium,0,0.5,0.5
-T. Aman rice,3,Zn,Low,0.6,1,0.5
-T. Aman rice,3,Zn,Very Low,1.1,1.5,0.5
+T. Aman rice,3,Zn,Very Low,0,1.8,0.6
+T. Aman rice,3,Zn,Low,0,1.2,0.6
+T. Aman rice,3,Zn,Medium,0,0.6,0.6
+T. Aman rice,3,Zn,Optimum,0,,0.6
+T. Aman rice,3,B,Very Low,0,0,0
+T. Aman rice,3,B,Low,0,0,0
+T. Aman rice,3,B,Medium,0,0,0
+T. Aman rice,3,B,Optimum,0,,0
+T. Aman rice,3,Mo,Very Low,0,0,0
+T. Aman rice,3,Mo,Low,0,0,0
+T. Aman rice,3,Mo,Medium,0,0,0
+T. Aman rice,3,Mo,Optimum,0,,0
+T. Aman rice,3,Mg,Very Low,0,0,0
+T. Aman rice,3,Mg,Low,0,0,0
+T. Aman rice,3,Mg,Medium,0,0,0
+T. Aman rice,3,Mg,Optimum,0,,0
+T. Aman rice,4,N,Very Low,0,52,13
+T. Aman rice,4,N,Low,0,39,13
+T. Aman rice,4,N,Medium,0,26,13
 T. Aman rice,4,N,Optimum,0,13,13
-T. Aman rice,4,N,Medium,14,26,13
-T. Aman rice,4,N,Low,27,39,13
-T. Aman rice,4,N,Very Low,40,52,13
+T. Aman rice,4,P,Very Low,0,12,3
+T. Aman rice,4,P,Low,0,9,3
+T. Aman rice,4,P,Medium,0,6,3
 T. Aman rice,4,P,Optimum,0,3,3
-T. Aman rice,4,P,Medium,4,6,3
-T. Aman rice,4,P,Low,7,9,3
-T. Aman rice,4,P,Very Low,10,12,3
+T. Aman rice,4,K,Very Low,0,48,12
+T. Aman rice,4,K,Low,0,36,12
+T. Aman rice,4,K,Medium,0,24,12
 T. Aman rice,4,K,Optimum,0,12,12
-T. Aman rice,4,K,Medium,13,24,12
-T. Aman rice,4,K,Low,25,36,12
-T. Aman rice,4,K,Very Low,37,48,12
+T. Aman rice,4,S,Very Low,0,12,3
+T. Aman rice,4,S,Low,0,9,3
+T. Aman rice,4,S,Medium,0,6,3
 T. Aman rice,4,S,Optimum,0,3,3
-T. Aman rice,4,S,Medium,4,6,3
-T. Aman rice,4,S,Low,7,9,3
-T. Aman rice,4,S,Very Low,10,12,3
-T. Aman rice,4,Zn,Optimum,0,0,0
+T. Aman rice,4,Zn,Very Low,0,1.5,0.5
+T. Aman rice,4,Zn,Low,0,1,0.5
 T. Aman rice,4,Zn,Medium,0,0.5,0.5
-T. Aman rice,4,Zn,Low,0.6,1,0.5
-T. Aman rice,4,Zn,Very Low,1.1,1.5,0.5
-T. Aman rice,5,N,Optimum,0,15,15
-T. Aman rice,5,N,Medium,16,30,15
-T. Aman rice,5,N,Low,31,45,15
-T. Aman rice,5,N,Very Low,46,60,15
+T. Aman rice,4,Zn,Optimum,0,,0.5
+T. Aman rice,4,B,Very Low,0,0,0
+T. Aman rice,4,B,Low,0,0,0
+T. Aman rice,4,B,Medium,0,0,0
+T. Aman rice,4,B,Optimum,0,,0
+T. Aman rice,4,Mo,Very Low,0,0,0
+T. Aman rice,4,Mo,Low,0,0,0
+T. Aman rice,4,Mo,Medium,0,0,0
+T. Aman rice,4,Mo,Optimum,0,,0
+T. Aman rice,4,Mg,Very Low,0,0,0
+T. Aman rice,4,Mg,Low,0,0,0
+T. Aman rice,4,Mg,Medium,0,0,0
+T. Aman rice,4,Mg,Optimum,0,,0
+T. Aman rice,5,N,Very Low,0,52,13
+T. Aman rice,5,N,Low,0,39,13
+T. Aman rice,5,N,Medium,0,26,13
+T. Aman rice,5,N,Optimum,0,13,13
+T. Aman rice,5,P,Very Low,0,12,3
+T. Aman rice,5,P,Low,0,9,3
+T. Aman rice,5,P,Medium,0,6,3
 T. Aman rice,5,P,Optimum,0,3,3
-T. Aman rice,5,P,Medium,4,6,3
-T. Aman rice,5,P,Low,7,9,3
-T. Aman rice,5,P,Very Low,10,12,3
-T. Aman rice,5,K,Optimum,0,11,11
-T. Aman rice,5,K,Medium,12,22,11
-T. Aman rice,5,K,Low,23,33,11
-T. Aman rice,5,K,Very Low,34,44,11
+T. Aman rice,5,K,Very Low,0,48,12
+T. Aman rice,5,K,Low,0,36,12
+T. Aman rice,5,K,Medium,0,24,12
+T. Aman rice,5,K,Optimum,0,12,12
+T. Aman rice,5,S,Very Low,0,12,3
+T. Aman rice,5,S,Low,0,9,3
+T. Aman rice,5,S,Medium,0,6,3
 T. Aman rice,5,S,Optimum,0,3,3
-T. Aman rice,5,S,Medium,4,6,3
-T. Aman rice,5,S,Low,7,9,3
-T. Aman rice,5,S,Very Low,10,12,3
-T. Aman rice,5,Zn,Optimum,0,0,0
+T. Aman rice,5,Zn,Very Low,0,1.5,0.5
+T. Aman rice,5,Zn,Low,0,1,0.5
 T. Aman rice,5,Zn,Medium,0,0.5,0.5
-T. Aman rice,5,Zn,Low,0.6,1,0.5
-T. Aman rice,5,Zn,Very Low,1.1,1.5,0.5
-Aromatic rice,1,N,Optimum,0,13,13
-Aromatic rice,1,N,Medium,14,26,13
-Aromatic rice,1,N,Low,27,39,13
-Aromatic rice,1,N,Very Low,40,52,13
-Aromatic rice,1,P,Optimum,0,3,3
-Aromatic rice,1,P,Medium,4,6,3
-Aromatic rice,1,P,Low,7,9,3
-Aromatic rice,1,P,Very Low,10,12,3
-Aromatic rice,1,K,Optimum,0,12,12
-Aromatic rice,1,K,Medium,13,24,12
-Aromatic rice,1,K,Low,25,36,12
-Aromatic rice,1,K,Very Low,37,48,12
-Aromatic rice,1,S,Optimum,0,3,3
-Aromatic rice,1,S,Medium,4,6,3
-Aromatic rice,1,S,Low,7,9,3
-Aromatic rice,1,S,Very Low,10,12,3
-Aromatic rice,1,Zn,Optimum,0,0,0
-Aromatic rice,1,Zn,Medium,0,0.5,0.5
-Aromatic rice,1,Zn,Low,0.6,1,0.5
-Aromatic rice,1,Zn,Very Low,1.1,1.5,0.5
-T. Aman rice,6,N,Optimum,0,10,10
-T. Aman rice,6,N,Medium,11,20,10
-T. Aman rice,6,N,Low,21,30,10
-T. Aman rice,6,N,Very Low,31,40,10
+T. Aman rice,5,Zn,Optimum,0,,0.5
+T. Aman rice,5,B,Very Low,0,0,0
+T. Aman rice,5,B,Low,0,0,0
+T. Aman rice,5,B,Medium,0,0,0
+T. Aman rice,5,B,Optimum,0,,0
+T. Aman rice,5,Mo,Very Low,0,0,0
+T. Aman rice,5,Mo,Low,0,0,0
+T. Aman rice,5,Mo,Medium,0,0,0
+T. Aman rice,5,Mo,Optimum,0,,0
+T. Aman rice,5,Mg,Very Low,0,0,0
+T. Aman rice,5,Mg,Low,0,0,0
+T. Aman rice,5,Mg,Medium,0,0,0
+T. Aman rice,5,Mg,Optimum,0,,0
+Aromatic rice,5,N,Very Low,0,52,13
+Aromatic rice,5,N,Low,0,39,13
+Aromatic rice,5,N,Medium,0,26,13
+Aromatic rice,5,N,Optimum,0,13,13
+Aromatic rice,5,P,Very Low,0,12,3
+Aromatic rice,5,P,Low,0,9,3
+Aromatic rice,5,P,Medium,0,6,3
+Aromatic rice,5,P,Optimum,0,3,3
+Aromatic rice,5,K,Very Low,0,48,12
+Aromatic rice,5,K,Low,0,36,12
+Aromatic rice,5,K,Medium,0,24,12
+Aromatic rice,5,K,Optimum,0,12,12
+Aromatic rice,5,S,Very Low,0,12,3
+Aromatic rice,5,S,Low,0,9,3
+Aromatic rice,5,S,Medium,0,6,3
+Aromatic rice,5,S,Optimum,0,3,3
+Aromatic rice,5,Zn,Very Low,0,1.5,0.5
+Aromatic rice,5,Zn,Low,0,1,0.5
+Aromatic rice,5,Zn,Medium,0,0.5,0.5
+Aromatic rice,5,Zn,Optimum,0,,0.5
+Aromatic rice,5,B,Very Low,0,0,0
+Aromatic rice,5,B,Low,0,0,0
+Aromatic rice,5,B,Medium,0,0,0
+Aromatic rice,5,B,Optimum,0,,0
+Aromatic rice,5,Mo,Very Low,0,0,0
+Aromatic rice,5,Mo,Low,0,0,0
+Aromatic rice,5,Mo,Medium,0,0,0
+Aromatic rice,5,Mo,Optimum,0,,0
+Aromatic rice,5,Mg,Very Low,0,0,0
+Aromatic rice,5,Mg,Low,0,0,0
+Aromatic rice,5,Mg,Medium,0,0,0
+Aromatic rice,5,Mg,Optimum,0,,0
+T. Aman rice,6,N,Very Low,0,60,15
+T. Aman rice,6,N,Low,0,45,15
+T. Aman rice,6,N,Medium,0,30,15
+T. Aman rice,6,N,Optimum,0,15,15
+T. Aman rice,6,P,Very Low,0,12,3
+T. Aman rice,6,P,Low,0,9,3
+T. Aman rice,6,P,Medium,0,6,3
 T. Aman rice,6,P,Optimum,0,3,3
-T. Aman rice,6,P,Medium,4,6,3
-T. Aman rice,6,P,Low,7,9,3
-T. Aman rice,6,P,Very Low,10,12,3
-T. Aman rice,6,K,Optimum,0,8,8
-T. Aman rice,6,K,Medium,9,16,8
-T. Aman rice,6,K,Low,17,24,8
-T. Aman rice,6,K,Very Low,25,32,8
-T. Aman rice,6,S,Optimum,0,2,2
-T. Aman rice,6,S,Medium,3,4,2
-T. Aman rice,6,S,Low,5,6,2
-T. Aman rice,6,S,Very Low,7,8,2
-T. Aman rice,6,Zn,Optimum,0,0,0
+T. Aman rice,6,K,Very Low,0,44,11
+T. Aman rice,6,K,Low,0,33,11
+T. Aman rice,6,K,Medium,0,22,11
+T. Aman rice,6,K,Optimum,0,11,11
+T. Aman rice,6,S,Very Low,0,12,3
+T. Aman rice,6,S,Low,0,9,3
+T. Aman rice,6,S,Medium,0,6,3
+T. Aman rice,6,S,Optimum,0,3,3
+T. Aman rice,6,Zn,Very Low,0,1.5,0.5
+T. Aman rice,6,Zn,Low,0,1,0.5
 T. Aman rice,6,Zn,Medium,0,0.5,0.5
-T. Aman rice,6,Zn,Low,0.6,1,0.5
-T. Aman rice,6,Zn,Very Low,1.1,1.5,0.5
-Maize (Hybrid maize),1,N,Optimum,0,85,85
-Maize (Hybrid maize),1,N,Medium,86,170,85
-Maize (Hybrid maize),1,N,Low,171,255,85
-Maize (Hybrid maize),1,N,Very Low,256,340,85
-Maize (Hybrid maize),1,P,Optimum,0,25,25
-Maize (Hybrid maize),1,P,Medium,26,50,25
-Maize (Hybrid maize),1,P,Low,51,75,25
-Maize (Hybrid maize),1,P,Very Low,76,100,25
-Maize (Hybrid maize),1,K,Optimum,0,40,40
-Maize (Hybrid maize),1,K,Medium,41,80,80
-Maize (Hybrid maize),1,K,Low,81,120,120
-Maize (Hybrid maize),1,K,Very Low,121,160,160
-Maize (Hybrid maize),1,S,Optimum,0,18,18
-Maize (Hybrid maize),1,S,Medium,19,36,18
-Maize (Hybrid maize),1,S,Low,37,52,16
-Maize (Hybrid maize),1,S,Very Low,53,72,20
-Maize (Hybrid maize),1,Mg,Optimum,0,5,5
-Maize (Hybrid maize),1,Mg,Medium,6,10,5
-Maize (Hybrid maize),1,Mg,Low,11,15,5
-Maize (Hybrid maize),1,Mg,Very Low,16,20,5
-Maize (Hybrid maize),1,Zn,Optimum,0,0,0
-Maize (Hybrid maize),1,Zn,Medium,0,2,2
-Maize (Hybrid maize),1,Zn,Low,2.1,4,2
-Maize (Hybrid maize),1,Zn,Very Low,4.1,6,2
-Maize (Hybrid maize),1,B,Optimum,0,0,0
-Maize (Hybrid maize),1,B,Medium,0,0.7,0.7
-Maize (Hybrid maize),1,B,Low,0.8,1.4,0.7
-Maize (Hybrid maize),1,B,Very Low,1.5,2.1,0.7
-Maize,1,N,Optimum,0,50,50
-Maize,1,N,Medium,51,100,50
-Maize,1,N,Low,101,150,50
-Maize,1,N,Very Low,151,200,50
-Maize,1,P,Optimum,0,16,16
-Maize,1,P,Medium,17,32,16
-Maize,1,P,Low,33,48,16
-Maize,1,P,Very Low,49,64,16
-Maize,1,K,Optimum,0,32,32
-Maize,1,K,Medium,33,64,32
-Maize,1,K,Low,65,96,32
-Maize,1,K,Very Low,97,128,32
-Maize,1,S,Optimum,0,10,10
-Maize,1,S,Medium,11,20,10
-Maize,1,S,Low,21,30,10
-Maize,1,S,Very Low,31,40,10
-Maize,1,Mg,Optimum,0,0,0
-Maize,1,Mg,Medium,0,4,4
-Maize,1,Mg,Low,5,8,4
-Maize,1,Mg,Very Low,9,12,4
-Maize,1,Zn,Optimum,0,0,0
+T. Aman rice,6,Zn,Optimum,0,,0.5
+T. Aman rice,6,B,Very Low,0,0,0
+T. Aman rice,6,B,Low,0,0,0
+T. Aman rice,6,B,Medium,0,0,0
+T. Aman rice,6,B,Optimum,0,,0
+T. Aman rice,6,Mo,Very Low,0,0,0
+T. Aman rice,6,Mo,Low,0,0,0
+T. Aman rice,6,Mo,Medium,0,0,0
+T. Aman rice,6,Mo,Optimum,0,,0
+T. Aman rice,6,Mg,Very Low,0,0,0
+T. Aman rice,6,Mg,Low,0,0,0
+T. Aman rice,6,Mg,Medium,0,0,0
+T. Aman rice,6,Mg,Optimum,0,,0
+B. Aman rice,1,N,Very Low,0,48,12
+B. Aman rice,1,N,Low,0,36,12
+B. Aman rice,1,N,Medium,0,24,12
+B. Aman rice,1,N,Optimum,0,12,12
+B. Aman rice,1,P,Very Low,0,12,3
+B. Aman rice,1,P,Low,0,9,3
+B. Aman rice,1,P,Medium,0,6,3
+B. Aman rice,1,P,Optimum,0,3,3
+B. Aman rice,1,K,Very Low,0,40,10
+B. Aman rice,1,K,Low,0,30,10
+B. Aman rice,1,K,Medium,0,20,10
+B. Aman rice,1,K,Optimum,0,10,10
+B. Aman rice,1,S,Very Low,0,8,2
+B. Aman rice,1,S,Low,0,6,2
+B. Aman rice,1,S,Medium,0,4,2
+B. Aman rice,1,S,Optimum,0,2,2
+B. Aman rice,1,Zn,Very Low,0,1.5,0.5
+B. Aman rice,1,Zn,Low,0,1,0.5
+B. Aman rice,1,Zn,Medium,0,0.5,0.5
+B. Aman rice,1,Zn,Optimum,0,,0.5
+B. Aman rice,1,B,Very Low,0,0,0
+B. Aman rice,1,B,Low,0,0,0
+B. Aman rice,1,B,Medium,0,0,0
+B. Aman rice,1,B,Optimum,0,,0
+B. Aman rice,1,Mo,Very Low,0,0,0
+B. Aman rice,1,Mo,Low,0,0,0
+B. Aman rice,1,Mo,Medium,0,0,0
+B. Aman rice,1,Mo,Optimum,0,,0
+B. Aman rice,1,Mg,Very Low,0,0,0
+B. Aman rice,1,Mg,Low,0,0,0
+B. Aman rice,1,Mg,Medium,0,0,0
+B. Aman rice,1,Mg,Optimum,0,,0
+Wheat Irrigated,1,N,Very Low,0,160,40
+Wheat Irrigated,1,N,Low,0,120,40
+Wheat Irrigated,1,N,Medium,0,80,40
+Wheat Irrigated,1,N,Optimum,0,40,40
+Wheat Irrigated,1,P,Very Low,0,32,8
+Wheat Irrigated,1,P,Low,0,24,8
+Wheat Irrigated,1,P,Medium,0,16,8
+Wheat Irrigated,1,P,Optimum,0,8,8
+Wheat Irrigated,1,K,Very Low,0,120,30
+Wheat Irrigated,1,K,Low,0,90,30
+Wheat Irrigated,1,K,Medium,0,60,30
+Wheat Irrigated,1,K,Optimum,0,30,30
+Wheat Irrigated,1,S,Very Low,0,20,5
+Wheat Irrigated,1,S,Low,0,15,5
+Wheat Irrigated,1,S,Medium,0,10,5
+Wheat Irrigated,1,S,Optimum,0,5,5
+Wheat Irrigated,1,Zn,Very Low,0,3.9,1.3
+Wheat Irrigated,1,Zn,Low,0,2.6,1.3
+Wheat Irrigated,1,Zn,Medium,0,1.3,1.3
+Wheat Irrigated,1,Zn,Optimum,0,,1.3
+Wheat Irrigated,1,B,Very Low,0,2.1,0.7
+Wheat Irrigated,1,B,Low,0,1.4,0.7
+Wheat Irrigated,1,B,Medium,0,0.7,0.7
+Wheat Irrigated,1,B,Optimum,0,,0.7
+Wheat Irrigated,1,Mo,Very Low,0,0,0
+Wheat Irrigated,1,Mo,Low,0,0,0
+Wheat Irrigated,1,Mo,Medium,0,0,0
+Wheat Irrigated,1,Mo,Optimum,0,,0
+Wheat Irrigated,1,Mg,Very Low,0,12,4
+Wheat Irrigated,1,Mg,Low,0,8,4
+Wheat Irrigated,1,Mg,Medium,0,4,4
+Wheat Irrigated,1,Mg,Optimum,0,,4
+Wheat Rainfed,1,N,Very Low,0,60,15
+Wheat Rainfed,1,N,Low,0,45,15
+Wheat Rainfed,1,N,Medium,0,30,15
+Wheat Rainfed,1,N,Optimum,0,15,15
+Wheat Rainfed,1,P,Very Low,0,20,5
+Wheat Rainfed,1,P,Low,0,15,5
+Wheat Rainfed,1,P,Medium,0,10,5
+Wheat Rainfed,1,P,Optimum,0,5,5
+Wheat Rainfed,1,K,Very Low,0,48,12
+Wheat Rainfed,1,K,Low,0,36,12
+Wheat Rainfed,1,K,Medium,0,24,12
+Wheat Rainfed,1,K,Optimum,0,12,12
+Wheat Rainfed,1,S,Very Low,0,10,2.5
+Wheat Rainfed,1,S,Low,0,7.5,2.5
+Wheat Rainfed,1,S,Medium,0,5,2.5
+Wheat Rainfed,1,S,Optimum,0,2.5,2.5
+Wheat Rainfed,1,Zn,Very Low,0,3,1.5
+Wheat Rainfed,1,Zn,Low,0,1.5,1.5
+Wheat Rainfed,1,Zn,Medium,0,,1.5
+Wheat Rainfed,1,Zn,Optimum,0,,1.5
+Wheat Rainfed,1,B,Very Low,0,1.5,0.5
+Wheat Rainfed,1,B,Low,0,1,0.5
+Wheat Rainfed,1,B,Medium,0,0.5,0.5
+Wheat Rainfed,1,B,Optimum,0,,0.5
+Wheat Rainfed,1,Mo,Very Low,0,0,0
+Wheat Rainfed,1,Mo,Low,0,0,0
+Wheat Rainfed,1,Mo,Medium,0,0,0
+Wheat Rainfed,1,Mo,Optimum,0,,0
+Wheat Rainfed,1,Mg,Very Low,0,8,4
+Wheat Rainfed,1,Mg,Low,0,4,4
+Wheat Rainfed,1,Mg,Medium,0,,4
+Wheat Rainfed,1,Mg,Optimum,0,,4
+Maize Hybrid,1,N,Very Low,0,300,75
+Maize Hybrid,1,N,Low,0,225,75
+Maize Hybrid,1,N,Medium,0,150,75
+Maize Hybrid,1,N,Optimum,0,75,75
+Maize Hybrid,1,P,Very Low,0,80,20
+Maize Hybrid,1,P,Low,0,60,20
+Maize Hybrid,1,P,Medium,0,40,20
+Maize Hybrid,1,P,Optimum,0,20,20
+Maize Hybrid,1,K,Very Low,0,160,40
+Maize Hybrid,1,K,Low,0,120,40
+Maize Hybrid,1,K,Medium,0,80,40
+Maize Hybrid,1,K,Optimum,0,40,40
+Maize Hybrid,1,S,Very Low,0,60,15
+Maize Hybrid,1,S,Low,0,45,15
+Maize Hybrid,1,S,Medium,0,30,15
+Maize Hybrid,1,S,Optimum,0,15,15
+Maize Hybrid,1,Zn,Very Low,0,6,2
+Maize Hybrid,1,Zn,Low,0,4,2
+Maize Hybrid,1,Zn,Medium,0,2,2
+Maize Hybrid,1,Zn,Optimum,0,,2
+Maize Hybrid,1,B,Very Low,0,2.4,0.8
+Maize Hybrid,1,B,Low,0,1.6,0.8
+Maize Hybrid,1,B,Medium,0,0.8,0.8
+Maize Hybrid,1,B,Optimum,0,,0.8
+Maize Hybrid,1,Mo,Very Low,0,0,0
+Maize Hybrid,1,Mo,Low,0,0,0
+Maize Hybrid,1,Mo,Medium,0,0,0
+Maize Hybrid,1,Mo,Optimum,0,,0
+Maize Hybrid,1,Mg,Very Low,0,20,5
+Maize Hybrid,1,Mg,Low,0,15,5
+Maize Hybrid,1,Mg,Medium,0,10,5
+Maize Hybrid,1,Mg,Optimum,0,5,5
+Maize,1,N,Very Low,0,180,45
+Maize,1,N,Low,0,135,45
+Maize,1,N,Medium,0,90,45
+Maize,1,N,Optimum,0,45,45
+Maize,1,P,Very Low,0,48,12
+Maize,1,P,Low,0,36,12
+Maize,1,P,Medium,0,24,12
+Maize,1,P,Optimum,0,12,12
+Maize,1,K,Very Low,0,96,24
+Maize,1,K,Low,0,72,24
+Maize,1,K,Medium,0,48,24
+Maize,1,K,Optimum,0,24,24
+Maize,1,S,Very Low,0,36,9
+Maize,1,S,Low,0,27,9
+Maize,1,S,Medium,0,18,9
+Maize,1,S,Optimum,0,9,9
+Maize,1,Zn,Very Low,0,4.2,1.4
+Maize,1,Zn,Low,0,2.8,1.4
 Maize,1,Zn,Medium,0,1.4,1.4
-Maize,1,Zn,Low,1.5,2.8,1.4
-Maize,1,Zn,Very Low,2.9,4.2,1.4
-Maize,1,B,Optimum,0,0,0
+Maize,1,Zn,Optimum,0,,1.4
+Maize,1,B,Very Low,0,2.1,0.7
+Maize,1,B,Low,0,1.4,0.7
 Maize,1,B,Medium,0,0.7,0.7
-Maize,1,B,Low,0.8,1.4,0.7
-Maize,1,B,Very Low,1.5,2.1,0.7
+Maize,1,B,Optimum,0,,0.7
+Maize,1,Mo,Very Low,0,0,0
+Maize,1,Mo,Low,0,0,0
+Maize,1,Mo,Medium,0,0,0
+Maize,1,Mo,Optimum,0,,0
+Maize,1,Mg,Very Low,0,15,5
+Maize,1,Mg,Low,0,10,5
+Maize,1,Mg,Medium,0,5,5
+Maize,1,Mg,Optimum,0,,5
+Maize,2,N,Very Low,0,160,40
+Maize,2,N,Low,0,120,40
+Maize,2,N,Medium,0,80,40
 Maize,2,N,Optimum,0,40,40
-Maize,2,N,Medium,41,80,40
-Maize,2,N,Low,81,120,40
-Maize,2,N,Very Low,121,160,40
+Maize,2,P,Very Low,0,48,12
+Maize,2,P,Low,0,36,12
+Maize,2,P,Medium,0,24,12
 Maize,2,P,Optimum,0,12,12
-Maize,2,P,Medium,13,24,12
-Maize,2,P,Low,25,36,12
-Maize,2,P,Very Low,49,48,12
+Maize,2,K,Very Low,0,100,25
+Maize,2,K,Low,0,75,25
+Maize,2,K,Medium,0,50,25
 Maize,2,K,Optimum,0,25,25
-Maize,2,K,Medium,26,50,25
-Maize,2,K,Low,51,75,25
-Maize,2,K,Very Low,76,100,25
+Maize,2,S,Very Low,0,40,10
+Maize,2,S,Low,0,30,10
+Maize,2,S,Medium,0,20,10
 Maize,2,S,Optimum,0,10,10
-Maize,2,S,Medium,11,20,10
-Maize,2,S,Low,21,30,10
-Maize,2,S,Very Low,31,40,10
-Maize,2,Mg,Optimum,0,0,0
-Maize,2,Mg,Medium,0,3,3
-Maize,2,Mg,Low,4,6,3
-Maize,2,Mg,Very Low,7,9,3
-Maize,2,Zn,Optimum,0,0,0
+Maize,2,Zn,Very Low,0,4.2,1.4
+Maize,2,Zn,Low,0,2.8,1.4
 Maize,2,Zn,Medium,0,1.4,1.4
-Maize,2,Zn,Low,1.5,2.8,1.4
-Maize,2,Zn,Very Low,2.9,4.2,1.4
-Maize,2,B,Optimum,0,0,0
+Maize,2,Zn,Optimum,0,,1.4
+Maize,2,B,Very Low,0,2.1,0.7
+Maize,2,B,Low,0,1.4,0.7
 Maize,2,B,Medium,0,0.7,0.7
-Maize,2,B,Low,0.8,1.4,0.7
-Maize,2,B,Very Low,1.5,2.1,0.7
+Maize,2,B,Optimum,0,,0.7
+Maize,2,Mo,Very Low,0,0,0
+Maize,2,Mo,Low,0,0,0
+Maize,2,Mo,Medium,0,0,0
+Maize,2,Mo,Optimum,0,,0
+Maize,2,Mg,Very Low,0,9,3
+Maize,2,Mg,Low,0,6,3
+Maize,2,Mg,Medium,0,3,3
+Maize,2,Mg,Optimum,0,,3
+Barly,1,N,Very Low,0,80,20
+Barly,1,N,Low,0,60,20
+Barly,1,N,Medium,0,40,20
+Barly,1,N,Optimum,0,20,20
+Barly,1,P,Very Low,0,28,7
+Barly,1,P,Low,0,21,7
+Barly,1,P,Medium,0,14,7
+Barly,1,P,Optimum,0,7,7
+Barly,1,K,Very Low,0,60,15
+Barly,1,K,Low,0,45,15
+Barly,1,K,Medium,0,30,15
+Barly,1,K,Optimum,0,15,15
+Barly,1,S,Very Low,0,12,3
+Barly,1,S,Low,0,9,3
+Barly,1,S,Medium,0,6,3
+Barly,1,S,Optimum,0,3,3
+Barly,1,Zn,Very Low,0,3,1
+Barly,1,Zn,Low,0,2,1
+Barly,1,Zn,Medium,0,1,1
+Barly,1,Zn,Optimum,0,,1
+Barly,1,B,Very Low,0,0,0
+Barly,1,B,Low,0,0,0
+Barly,1,B,Medium,0,0,0
+Barly,1,B,Optimum,0,,0
+Barly,1,Mo,Very Low,0,0,0
+Barly,1,Mo,Low,0,0,0
+Barly,1,Mo,Medium,0,0,0
+Barly,1,Mo,Optimum,0,,0
+Barly,1,Mg,Very Low,0,0,0
+Barly,1,Mg,Low,0,0,0
+Barly,1,Mg,Medium,0,0,0
+Barly,1,Mg,Optimum,0,,0
+Proso Millet,1,N,Very Low,0,80,20
+Proso Millet,1,N,Low,0,60,20
+Proso Millet,1,N,Medium,0,40,20
+Proso Millet,1,N,Optimum,0,20,20
+Proso Millet,1,P,Very Low,0,28,7
+Proso Millet,1,P,Low,0,21,7
+Proso Millet,1,P,Medium,0,14,7
+Proso Millet,1,P,Optimum,0,7,7
+Proso Millet,1,K,Very Low,0,60,15
+Proso Millet,1,K,Low,0,45,15
+Proso Millet,1,K,Medium,0,30,15
+Proso Millet,1,K,Optimum,0,15,15
+Proso Millet,1,S,Very Low,0,12,3
+Proso Millet,1,S,Low,0,9,3
+Proso Millet,1,S,Medium,0,6,3
+Proso Millet,1,S,Optimum,0,3,3
+Proso Millet,1,Zn,Very Low,0,3,1
+Proso Millet,1,Zn,Low,0,2,1
+Proso Millet,1,Zn,Medium,0,1,1
+Proso Millet,1,Zn,Optimum,0,,1
+Proso Millet,1,B,Very Low,0,0,0
+Proso Millet,1,B,Low,0,0,0
+Proso Millet,1,B,Medium,0,0,0
+Proso Millet,1,B,Optimum,0,,0
+Proso Millet,1,Mo,Very Low,0,0,0
+Proso Millet,1,Mo,Low,0,0,0
+Proso Millet,1,Mo,Medium,0,0,0
+Proso Millet,1,Mo,Optimum,0,,0
+Proso Millet,1,Mg,Very Low,0,0,0
+Proso Millet,1,Mg,Low,0,0,0
+Proso Millet,1,Mg,Medium,0,0,0
+Proso Millet,1,Mg,Optimum,0,,0
+Foxtail Millet,1,N,Very Low,0,80,20
+Foxtail Millet,1,N,Low,0,60,20
+Foxtail Millet,1,N,Medium,0,40,20
+Foxtail Millet,1,N,Optimum,0,20,20
+Foxtail Millet,1,P,Very Low,0,32,8
+Foxtail Millet,1,P,Low,0,24,8
+Foxtail Millet,1,P,Medium,0,16,8
+Foxtail Millet,1,P,Optimum,0,8,8
+Foxtail Millet,1,K,Very Low,0,56,14
+Foxtail Millet,1,K,Low,0,42,14
+Foxtail Millet,1,K,Medium,0,28,14
+Foxtail Millet,1,K,Optimum,0,14,14
+Foxtail Millet,1,S,Very Low,0,12,3
+Foxtail Millet,1,S,Low,0,9,3
+Foxtail Millet,1,S,Medium,0,6,3
+Foxtail Millet,1,S,Optimum,0,3,3
+Foxtail Millet,1,Zn,Very Low,0,3,1
+Foxtail Millet,1,Zn,Low,0,2,1
+Foxtail Millet,1,Zn,Medium,0,1,1
+Foxtail Millet,1,Zn,Optimum,0,,1
+Foxtail Millet,1,B,Very Low,0,0,0
+Foxtail Millet,1,B,Low,0,0,0
+Foxtail Millet,1,B,Medium,0,0,0
+Foxtail Millet,1,B,Optimum,0,,0
+Foxtail Millet,1,Mo,Very Low,0,0,0
+Foxtail Millet,1,Mo,Low,0,0,0
+Foxtail Millet,1,Mo,Medium,0,0,0
+Foxtail Millet,1,Mo,Optimum,0,,0
+Foxtail Millet,1,Mg,Very Low,0,0,0
+Foxtail Millet,1,Mg,Low,0,0,0
+Foxtail Millet,1,Mg,Medium,0,0,0
+Foxtail Millet,1,Mg,Optimum,0,,0
+Jute,1,N,Very Low,0,100,25
+Jute,1,N,Low,0,75,25
+Jute,1,N,Medium,0,50,25
+Jute,1,N,Optimum,0,25,25
+Jute,1,P,Very Low,0,16,4
+Jute,1,P,Low,0,12,4
+Jute,1,P,Medium,0,8,4
+Jute,1,P,Optimum,0,4,4
+Jute,1,K,Very Low,0,80,20
+Jute,1,K,Low,0,60,20
+Jute,1,K,Medium,0,40,20
+Jute,1,K,Optimum,0,20,20
+Jute,1,S,Very Low,0,20,5
+Jute,1,S,Low,0,15,5
+Jute,1,S,Medium,0,10,5
+Jute,1,S,Optimum,0,5,5
+Jute,1,Zn,Very Low,0,4.5,1.5
+Jute,1,Zn,Low,0,3,1.5
+Jute,1,Zn,Medium,0,1.5,1.5
+Jute,1,Zn,Optimum,0,,1.5
+Jute,1,B,Very Low,0,0,0
+Jute,1,B,Low,0,0,0
+Jute,1,B,Medium,0,0,0
+Jute,1,B,Optimum,0,,0
+Jute,1,Mo,Very Low,0,0,0
+Jute,1,Mo,Low,0,0,0
+Jute,1,Mo,Medium,0,0,0
+Jute,1,Mo,Optimum,0,,0
+Jute,1,Mg,Very Low,0,0,0
+Jute,1,Mg,Low,0,0,0
+Jute,1,Mg,Medium,0,0,0
+Jute,1,Mg,Optimum,0,,0
+Jute,2,N,Very Low,0,120,30
+Jute,2,N,Low,0,90,30
+Jute,2,N,Medium,0,60,30
+Jute,2,N,Optimum,0,30,30
+Jute,2,P,Very Low,0,20,5
+Jute,2,P,Low,0,15,5
+Jute,2,P,Medium,0,10,5
+Jute,2,P,Optimum,0,5,5
+Jute,2,K,Very Low,0,100,25
+Jute,2,K,Low,0,75,25
+Jute,2,K,Medium,0,50,25
+Jute,2,K,Optimum,0,25,25
+Jute,2,S,Very Low,0,32,8
+Jute,2,S,Low,0,24,8
+Jute,2,S,Medium,0,16,8
+Jute,2,S,Optimum,0,8,8
+Jute,2,Zn,Very Low,0,6,2
+Jute,2,Zn,Low,0,4,2
+Jute,2,Zn,Medium,0,2,2
+Jute,2,Zn,Optimum,0,,2
+Jute,2,B,Very Low,0,0,0
+Jute,2,B,Low,0,0,0
+Jute,2,B,Medium,0,0,0
+Jute,2,B,Optimum,0,,0
+Jute,2,Mo,Very Low,0,0,0
+Jute,2,Mo,Low,0,0,0
+Jute,2,Mo,Medium,0,0,0
+Jute,2,Mo,Optimum,0,,0
+Jute,2,Mg,Very Low,0,0,0
+Jute,2,Mg,Low,0,0,0
+Jute,2,Mg,Medium,0,0,0
+Jute,2,Mg,Optimum,0,,0
+Kenaf,1,N,Very Low,0,120,30
+Kenaf,1,N,Low,0,90,30
+Kenaf,1,N,Medium,0,60,30
+Kenaf,1,N,Optimum,0,30,30
+Kenaf,1,P,Very Low,0,20,5
+Kenaf,1,P,Low,0,15,5
+Kenaf,1,P,Medium,0,10,5
+Kenaf,1,P,Optimum,0,5,5
+Kenaf,1,K,Very Low,0,80,20
+Kenaf,1,K,Low,0,60,20
+Kenaf,1,K,Medium,0,40,20
+Kenaf,1,K,Optimum,0,20,20
+Kenaf,1,S,Very Low,0,32,8
+Kenaf,1,S,Low,0,24,8
+Kenaf,1,S,Medium,0,16,8
+Kenaf,1,S,Optimum,0,8,8
+Kenaf,1,Zn,Very Low,0,0,0
+Kenaf,1,Zn,Low,0,0,0
+Kenaf,1,Zn,Medium,0,0,0
+Kenaf,1,Zn,Optimum,0,,0
+Kenaf,1,B,Very Low,0,0,0
+Kenaf,1,B,Low,0,0,0
+Kenaf,1,B,Medium,0,0,0
+Kenaf,1,B,Optimum,0,,0
+Kenaf,1,Mo,Very Low,0,0,0
+Kenaf,1,Mo,Low,0,0,0
+Kenaf,1,Mo,Medium,0,0,0
+Kenaf,1,Mo,Optimum,0,,0
+Kenaf,1,Mg,Very Low,0,0,0
+Kenaf,1,Mg,Low,0,0,0
+Kenaf,1,Mg,Medium,0,0,0
+Kenaf,1,Mg,Optimum,0,,0
+Mesta,1,N,Very Low,0,120,30
+Mesta,1,N,Low,0,90,30
+Mesta,1,N,Medium,0,60,30
+Mesta,1,N,Optimum,0,30,30
+Mesta,1,P,Very Low,0,20,5
+Mesta,1,P,Low,0,15,5
+Mesta,1,P,Medium,0,10,5
+Mesta,1,P,Optimum,0,5,5
+Mesta,1,K,Very Low,0,80,20
+Mesta,1,K,Low,0,60,20
+Mesta,1,K,Medium,0,40,20
+Mesta,1,K,Optimum,0,20,20
+Mesta,1,S,Very Low,0,32,8
+Mesta,1,S,Low,0,24,8
+Mesta,1,S,Medium,0,16,8
+Mesta,1,S,Optimum,0,8,8
+Mesta,1,Zn,Very Low,0,0,0
+Mesta,1,Zn,Low,0,0,0
+Mesta,1,Zn,Medium,0,0,0
+Mesta,1,Zn,Optimum,0,,0
+Mesta,1,B,Very Low,0,0,0
+Mesta,1,B,Low,0,0,0
+Mesta,1,B,Medium,0,0,0
+Mesta,1,B,Optimum,0,,0
+Mesta,1,Mo,Very Low,0,0,0
+Mesta,1,Mo,Low,0,0,0
+Mesta,1,Mo,Medium,0,0,0
+Mesta,1,Mo,Optimum,0,,0
+Mesta,1,Mg,Very Low,0,0,0
+Mesta,1,Mg,Low,0,0,0
+Mesta,1,Mg,Medium,0,0,0
+Mesta,1,Mg,Optimum,0,,0
+Jute seed,1,N,Very Low,0,140,35
+Jute seed,1,N,Low,0,105,35
+Jute seed,1,N,Medium,0,70,35
+Jute seed,1,N,Optimum,0,35,35
+Jute seed,1,P,Very Low,0,32,8
+Jute seed,1,P,Low,0,24,8
+Jute seed,1,P,Medium,0,16,8
+Jute seed,1,P,Optimum,0,8,8
+Jute seed,1,K,Very Low,0,48,12
+Jute seed,1,K,Low,0,36,12
+Jute seed,1,K,Medium,0,24,12
+Jute seed,1,K,Optimum,0,12,12
+Jute seed,1,S,Very Low,0,20,5
+Jute seed,1,S,Low,0,15,5
+Jute seed,1,S,Medium,0,10,5
+Jute seed,1,S,Optimum,0,5,5
+Jute seed,1,Zn,Very Low,0,6,2
+Jute seed,1,Zn,Low,0,4,2
+Jute seed,1,Zn,Medium,0,2,2
+Jute seed,1,Zn,Optimum,0,,2
+Jute seed,1,B,Very Low,0,3,1
+Jute seed,1,B,Low,0,2,1
+Jute seed,1,B,Medium,0,1,1
+Jute seed,1,B,Optimum,0,,1
+Jute seed,1,Mo,Very Low,0,0,0
+Jute seed,1,Mo,Low,0,0,0
+Jute seed,1,Mo,Medium,0,0,0
+Jute seed,1,Mo,Optimum,0,,0
+Jute seed,1,Mg,Very Low,0,0,0
+Jute seed,1,Mg,Low,0,0,0
+Jute seed,1,Mg,Medium,0,0,0
+Jute seed,1,Mg,Optimum,0,,0
+Jute seed,2,N,Very Low,0,168,42
+Jute seed,2,N,Low,0,126,42
+Jute seed,2,N,Medium,0,84,42
+Jute seed,2,N,Optimum,0,42,42
+Jute seed,2,P,Very Low,0,40,10
+Jute seed,2,P,Low,0,30,10
+Jute seed,2,P,Medium,0,20,10
+Jute seed,2,P,Optimum,0,10,10
+Jute seed,2,K,Very Low,0,52,13
+Jute seed,2,K,Low,0,39,13
+Jute seed,2,K,Medium,0,26,13
+Jute seed,2,K,Optimum,0,13,13
+Jute seed,2,S,Very Low,0,24,6
+Jute seed,2,S,Low,0,18,6
+Jute seed,2,S,Medium,0,12,6
+Jute seed,2,S,Optimum,0,6,6
+Jute seed,2,Zn,Very Low,0,6,2
+Jute seed,2,Zn,Low,0,4,2
+Jute seed,2,Zn,Medium,0,2,2
+Jute seed,2,Zn,Optimum,0,,2
+Jute seed,2,B,Very Low,0,3,1
+Jute seed,2,B,Low,0,2,1
+Jute seed,2,B,Medium,0,1,1
+Jute seed,2,B,Optimum,0,,1
+Jute seed,2,Mo,Very Low,0,0,0
+Jute seed,2,Mo,Low,0,0,0
+Jute seed,2,Mo,Medium,0,0,0
+Jute seed,2,Mo,Optimum,0,,0
+Jute seed,2,Mg,Very Low,0,0,0
+Jute seed,2,Mg,Low,0,0,0
+Jute seed,2,Mg,Medium,0,0,0
+Jute seed,2,Mg,Optimum,0,,0
+Kenaf Seed,1,N,Very Low,0,120,30
+Kenaf Seed,1,N,Low,0,90,30
+Kenaf Seed,1,N,Medium,0,60,30
+Kenaf Seed,1,N,Optimum,0,30,30
+Kenaf Seed,1,P,Very Low,0,24,6
+Kenaf Seed,1,P,Low,0,18,6
+Kenaf Seed,1,P,Medium,0,12,6
+Kenaf Seed,1,P,Optimum,0,6,6
+Kenaf Seed,1,K,Very Low,0,40,10
+Kenaf Seed,1,K,Low,0,30,10
+Kenaf Seed,1,K,Medium,0,20,10
+Kenaf Seed,1,K,Optimum,0,10,10
+Kenaf Seed,1,S,Very Low,0,16,4
+Kenaf Seed,1,S,Low,0,12,4
+Kenaf Seed,1,S,Medium,0,8,4
+Kenaf Seed,1,S,Optimum,0,4,4
+Kenaf Seed,1,Zn,Very Low,0,6,2
+Kenaf Seed,1,Zn,Low,0,4,2
+Kenaf Seed,1,Zn,Medium,0,2,2
+Kenaf Seed,1,Zn,Optimum,0,,2
+Kenaf Seed,1,B,Very Low,0,3,1
+Kenaf Seed,1,B,Low,0,2,1
+Kenaf Seed,1,B,Medium,0,1,1
+Kenaf Seed,1,B,Optimum,0,,1
+Kenaf Seed,1,Mo,Very Low,0,0,0
+Kenaf Seed,1,Mo,Low,0,0,0
+Kenaf Seed,1,Mo,Medium,0,0,0
+Kenaf Seed,1,Mo,Optimum,0,,0
+Kenaf Seed,1,Mg,Very Low,0,0,0
+Kenaf Seed,1,Mg,Low,0,0,0
+Kenaf Seed,1,Mg,Medium,0,0,0
+Kenaf Seed,1,Mg,Optimum,0,,0
+Mesta Seed,1,N,Very Low,0,108,27
+Mesta Seed,1,N,Low,0,81,27
+Mesta Seed,1,N,Medium,0,54,27
+Mesta Seed,1,N,Optimum,0,27,27
+Mesta Seed,1,P,Very Low,0,24,6
+Mesta Seed,1,P,Low,0,18,6
+Mesta Seed,1,P,Medium,0,12,6
+Mesta Seed,1,P,Optimum,0,6,6
+Mesta Seed,1,K,Very Low,0,60,15
+Mesta Seed,1,K,Low,0,45,15
+Mesta Seed,1,K,Medium,0,30,15
+Mesta Seed,1,K,Optimum,0,15,15
+Mesta Seed,1,S,Very Low,0,14,3.5
+Mesta Seed,1,S,Low,0,10.5,3.5
+Mesta Seed,1,S,Medium,0,7,3.5
+Mesta Seed,1,S,Optimum,0,3.5,3.5
+Mesta Seed,1,Zn,Very Low,0,6,2
+Mesta Seed,1,Zn,Low,0,4,2
+Mesta Seed,1,Zn,Medium,0,2,2
+Mesta Seed,1,Zn,Optimum,0,,2
+Mesta Seed,1,B,Very Low,0,3,1
+Mesta Seed,1,B,Low,0,2,1
+Mesta Seed,1,B,Medium,0,1,1
+Mesta Seed,1,B,Optimum,0,,1
+Mesta Seed,1,Mo,Very Low,0,0,0
+Mesta Seed,1,Mo,Low,0,0,0
+Mesta Seed,1,Mo,Medium,0,0,0
+Mesta Seed,1,Mo,Optimum,0,,0
+Mesta Seed,1,Mg,Very Low,0,0,0
+Mesta Seed,1,Mg,Low,0,0,0
+Mesta Seed,1,Mg,Medium,0,0,0
+Mesta Seed,1,Mg,Optimum,0,,0
+Cotton,1,N,Very Low,0,120,30
+Cotton,1,N,Low,0,90,30
+Cotton,1,N,Medium,0,60,30
+Cotton,1,N,Optimum,0,30,30
+Cotton,1,P,Very Low,0,48,12
+Cotton,1,P,Low,0,36,12
+Cotton,1,P,Medium,0,24,12
+Cotton,1,P,Optimum,0,12,12
+Cotton,1,K,Very Low,0,100,25
+Cotton,1,K,Low,0,75,25
+Cotton,1,K,Medium,0,50,25
+Cotton,1,K,Optimum,0,25,25
+Cotton,1,S,Very Low,0,24,6
+Cotton,1,S,Low,0,18,6
+Cotton,1,S,Medium,0,12,6
+Cotton,1,S,Optimum,0,6,6
+Cotton,1,Zn,Very Low,0,4.5,1.5
+Cotton,1,Zn,Low,0,3,1.5
+Cotton,1,Zn,Medium,0,1.5,1.5
+Cotton,1,Zn,Optimum,0,,1.5
+Cotton,1,B,Very Low,0,1.5,0.5
+Cotton,1,B,Low,0,1,0.5
+Cotton,1,B,Medium,0,0.5,0.5
+Cotton,1,B,Optimum,0,,0.5
+Cotton,1,Mo,Very Low,0,0,0
+Cotton,1,Mo,Low,0,0,0
+Cotton,1,Mo,Medium,0,0,0
+Cotton,1,Mo,Optimum,0,,0
+Cotton,1,Mg,Very Low,0,0,0
+Cotton,1,Mg,Low,0,0,0
+Cotton,1,Mg,Medium,0,0,0
+Cotton,1,Mg,Optimum,0,,0
+Cotton,2,N,Very Low,0,160,40
+Cotton,2,N,Low,0,120,40
+Cotton,2,N,Medium,0,80,40
+Cotton,2,N,Optimum,0,40,40
+Cotton,2,P,Very Low,0,60,15
+Cotton,2,P,Low,0,45,15
+Cotton,2,P,Medium,0,30,15
+Cotton,2,P,Optimum,0,15,15
+Cotton,2,K,Very Low,0,180,45
+Cotton,2,K,Low,0,135,45
+Cotton,2,K,Medium,0,90,45
+Cotton,2,K,Optimum,0,45,45
+Cotton,2,S,Very Low,0,32,8
+Cotton,2,S,Low,0,24,8
+Cotton,2,S,Medium,0,16,8
+Cotton,2,S,Optimum,0,8,8
+Cotton,2,Zn,Very Low,0,6,2
+Cotton,2,Zn,Low,0,4,2
+Cotton,2,Zn,Medium,0,2,2
+Cotton,2,Zn,Optimum,0,,2
+Cotton,2,B,Very Low,0,3,1
+Cotton,2,B,Low,0,2,1
+Cotton,2,B,Medium,0,1,1
+Cotton,2,B,Optimum,0,,1
+Cotton,2,Mo,Very Low,0,0,0
+Cotton,2,Mo,Low,0,0,0
+Cotton,2,Mo,Medium,0,0,0
+Cotton,2,Mo,Optimum,0,,0
+Cotton,2,Mg,Very Low,0,20,5
+Cotton,2,Mg,Low,0,15,5
+Cotton,2,Mg,Medium,0,10,5
+Cotton,2,Mg,Optimum,0,5,5
+Cotton,3,N,Very Low,0,180,45
+Cotton,3,N,Low,0,135,45
+Cotton,3,N,Medium,0,90,45
+Cotton,3,N,Optimum,0,45,45
+Cotton,3,P,Very Low,0,60,15
+Cotton,3,P,Low,0,45,15
+Cotton,3,P,Medium,0,30,15
+Cotton,3,P,Optimum,0,15,15
+Cotton,3,K,Very Low,0,200,50
+Cotton,3,K,Low,0,150,50
+Cotton,3,K,Medium,0,100,50
+Cotton,3,K,Optimum,0,50,50
+Cotton,3,S,Very Low,0,32,8
+Cotton,3,S,Low,0,24,8
+Cotton,3,S,Medium,0,16,8
+Cotton,3,S,Optimum,0,8,8
+Cotton,3,Zn,Very Low,0,6,2
+Cotton,3,Zn,Low,0,4,2
+Cotton,3,Zn,Medium,0,2,2
+Cotton,3,Zn,Optimum,0,,2
+Cotton,3,B,Very Low,0,3,1
+Cotton,3,B,Low,0,2,1
+Cotton,3,B,Medium,0,1,1
+Cotton,3,B,Optimum,0,,1
+Cotton,3,Mo,Very Low,0,0,0
+Cotton,3,Mo,Low,0,0,0
+Cotton,3,Mo,Medium,0,0,0
+Cotton,3,Mo,Optimum,0,,0
+Cotton,3,Mg,Very Low,0,20,5
+Cotton,3,Mg,Low,0,15,5
+Cotton,3,Mg,Medium,0,10,5
+Cotton,3,Mg,Optimum,0,5,5
+Lentil,1,N,Very Low,0,28,7
+Lentil,1,N,Low,0,21,7
+Lentil,1,N,Medium,0,14,7
+Lentil,1,N,Optimum,0,7,7
+Lentil,1,P,Very Low,0,24,6
+Lentil,1,P,Low,0,18,6
+Lentil,1,P,Medium,0,12,6
+Lentil,1,P,Optimum,0,6,6
+Lentil,1,K,Very Low,0,28,7
+Lentil,1,K,Low,0,21,7
+Lentil,1,K,Medium,0,14,7
+Lentil,1,K,Optimum,0,7,7
+Lentil,1,S,Very Low,0,12,3
+Lentil,1,S,Low,0,9,3
+Lentil,1,S,Medium,0,6,3
+Lentil,1,S,Optimum,0,3,3
+Lentil,1,Zn,Very Low,0,3,1
+Lentil,1,Zn,Low,0,2,1
+Lentil,1,Zn,Medium,0,1,1
+Lentil,1,Zn,Optimum,0,,1
+Lentil,1,B,Very Low,0,1.8,0.6
+Lentil,1,B,Low,0,1.2,0.6
+Lentil,1,B,Medium,0,0.6,0.6
+Lentil,1,B,Optimum,0,,0.6
+Lentil,1,Mo,Very Low,0,1.2,0.4
+Lentil,1,Mo,Low,0,0.8,0.4
+Lentil,1,Mo,Medium,0,0.4,0.4
+Lentil,1,Mo,Optimum,0,,0.4
+Lentil,1,Mg,Very Low,0,0,0
+Lentil,1,Mg,Low,0,0,0
+Lentil,1,Mg,Medium,0,0,0
+Lentil,1,Mg,Optimum,0,,0
+Chickpea,1,N,Very Low,0,36,9
+Chickpea,1,N,Low,0,27,9
+Chickpea,1,N,Medium,0,18,9
+Chickpea,1,N,Optimum,0,9,9
+Chickpea,1,P,Very Low,0,24,6
+Chickpea,1,P,Low,0,18,6
+Chickpea,1,P,Medium,0,12,6
+Chickpea,1,P,Optimum,0,6,6
+Chickpea,1,K,Very Low,0,32,8
+Chickpea,1,K,Low,0,24,8
+Chickpea,1,K,Medium,0,16,8
+Chickpea,1,K,Optimum,0,8,8
+Chickpea,1,S,Very Low,0,16,4
+Chickpea,1,S,Low,0,12,4
+Chickpea,1,S,Medium,0,8,4
+Chickpea,1,S,Optimum,0,4,4
+Chickpea,1,Zn,Very Low,0,3,1
+Chickpea,1,Zn,Low,0,2,1
+Chickpea,1,Zn,Medium,0,1,1
+Chickpea,1,Zn,Optimum,0,,1
+Chickpea,1,B,Very Low,0,1.8,0.6
+Chickpea,1,B,Low,0,1.2,0.6
+Chickpea,1,B,Medium,0,0.6,0.6
+Chickpea,1,B,Optimum,0,,0.6
+Chickpea,1,Mo,Very Low,0,1.2,0.4
+Chickpea,1,Mo,Low,0,0.8,0.4
+Chickpea,1,Mo,Medium,0,0.4,0.4
+Chickpea,1,Mo,Optimum,0,,0.4
+Chickpea,1,Mg,Very Low,0,0,0
+Chickpea,1,Mg,Low,0,0,0
+Chickpea,1,Mg,Medium,0,0,0
+Chickpea,1,Mg,Optimum,0,,0
+Chickpea,2,N,Very Low,0,32,8
+Chickpea,2,N,Low,0,24,8
+Chickpea,2,N,Medium,0,16,8
+Chickpea,2,N,Optimum,0,8,8
+Chickpea,2,P,Very Low,0,28,7
+Chickpea,2,P,Low,0,21,7
+Chickpea,2,P,Medium,0,14,7
+Chickpea,2,P,Optimum,0,7,7
+Chickpea,2,K,Very Low,0,48,12
+Chickpea,2,K,Low,0,36,12
+Chickpea,2,K,Medium,0,24,12
+Chickpea,2,K,Optimum,0,12,12
+Chickpea,2,S,Very Low,0,24,6
+Chickpea,2,S,Low,0,18,6
+Chickpea,2,S,Medium,0,12,6
+Chickpea,2,S,Optimum,0,6,6
+Chickpea,2,Zn,Very Low,0,3,1
+Chickpea,2,Zn,Low,0,2,1
+Chickpea,2,Zn,Medium,0,1,1
+Chickpea,2,Zn,Optimum,0,,1
+Chickpea,2,B,Very Low,0,1.5,0.5
+Chickpea,2,B,Low,0,1,0.5
+Chickpea,2,B,Medium,0,0.5,0.5
+Chickpea,2,B,Optimum,0,,0.5
+Chickpea,2,Mo,Very Low,0,0.6,0.2
+Chickpea,2,Mo,Low,0,0.4,0.2
+Chickpea,2,Mo,Medium,0,0.2,0.2
+Chickpea,2,Mo,Optimum,0,,0.2
+Chickpea,2,Mg,Very Low,0,0,0
+Chickpea,2,Mg,Low,0,0,0
+Chickpea,2,Mg,Medium,0,0,0
+Chickpea,2,Mg,Optimum,0,,0
+Mungbean,1,N,Very Low,0,24,6
+Mungbean,1,N,Low,0,18,6
+Mungbean,1,N,Medium,0,12,6
+Mungbean,1,N,Optimum,0,6,6
+Mungbean,1,P,Very Low,0,36,9
+Mungbean,1,P,Low,0,27,9
+Mungbean,1,P,Medium,0,18,9
+Mungbean,1,P,Optimum,0,9,9
+Mungbean,1,K,Very Low,0,32,8
+Mungbean,1,K,Low,0,24,8
+Mungbean,1,K,Medium,0,16,8
+Mungbean,1,K,Optimum,0,8,8
+Mungbean,1,S,Very Low,0,16,4
+Mungbean,1,S,Low,0,12,4
+Mungbean,1,S,Medium,0,8,4
+Mungbean,1,S,Optimum,0,4,4
+Mungbean,1,Zn,Very Low,0,3,1
+Mungbean,1,Zn,Low,0,2,1
+Mungbean,1,Zn,Medium,0,1,1
+Mungbean,1,Zn,Optimum,0,,1
+Mungbean,1,B,Very Low,0,1.8,0.6
+Mungbean,1,B,Low,0,1.2,0.6
+Mungbean,1,B,Medium,0,0.6,0.6
+Mungbean,1,B,Optimum,0,,0.6
+Mungbean,1,Mo,Very Low,0,1.2,0.4
+Mungbean,1,Mo,Low,0,0.8,0.4
+Mungbean,1,Mo,Medium,0,0.4,0.4
+Mungbean,1,Mo,Optimum,0,,0.4
+Mungbean,1,Mg,Very Low,0,0,0
+Mungbean,1,Mg,Low,0,0,0
+Mungbean,1,Mg,Medium,0,0,0
+Mungbean,1,Mg,Optimum,0,,0
+Blackgram,1,N,Very Low,0,24,6
+Blackgram,1,N,Low,0,18,6
+Blackgram,1,N,Medium,0,12,6
+Blackgram,1,N,Optimum,0,6,6
+Blackgram,1,P,Very Low,0,20,5
+Blackgram,1,P,Low,0,15,5
+Blackgram,1,P,Medium,0,10,5
+Blackgram,1,P,Optimum,0,5,5
+Blackgram,1,K,Very Low,0,24,6
+Blackgram,1,K,Low,0,18,6
+Blackgram,1,K,Medium,0,12,6
+Blackgram,1,K,Optimum,0,6,6
+Blackgram,1,S,Very Low,0,12,3
+Blackgram,1,S,Low,0,9,3
+Blackgram,1,S,Medium,0,6,3
+Blackgram,1,S,Optimum,0,3,3
+Blackgram,1,Zn,Very Low,0,0,0
+Blackgram,1,Zn,Low,0,0,0
+Blackgram,1,Zn,Medium,0,0,0
+Blackgram,1,Zn,Optimum,0,,0
+Blackgram,1,B,Very Low,0,0,0
+Blackgram,1,B,Low,0,0,0
+Blackgram,1,B,Medium,0,0,0
+Blackgram,1,B,Optimum,0,,0
+Blackgram,1,Mo,Very Low,0,0,0
+Blackgram,1,Mo,Low,0,0,0
+Blackgram,1,Mo,Medium,0,0,0
+Blackgram,1,Mo,Optimum,0,,0
+Blackgram,1,Mg,Very Low,0,0,0
+Blackgram,1,Mg,Low,0,0,0
+Blackgram,1,Mg,Medium,0,0,0
+Blackgram,1,Mg,Optimum,0,,0
+Grasspea,1,N,Very Low,0,20,5
+Grasspea,1,N,Low,0,15,5
+Grasspea,1,N,Medium,0,10,5
+Grasspea,1,N,Optimum,0,5,5
+Grasspea,1,P,Very Low,0,20,5
+Grasspea,1,P,Low,0,15,5
+Grasspea,1,P,Medium,0,10,5
+Grasspea,1,P,Optimum,0,5,5
+Grasspea,1,K,Very Low,0,24,6
+Grasspea,1,K,Low,0,18,6
+Grasspea,1,K,Medium,0,12,6
+Grasspea,1,K,Optimum,0,6,6
+Grasspea,1,S,Very Low,0,12,3
+Grasspea,1,S,Low,0,9,3
+Grasspea,1,S,Medium,0,6,3
+Grasspea,1,S,Optimum,0,3,3
+Grasspea,1,Zn,Very Low,0,0,0
+Grasspea,1,Zn,Low,0,0,0
+Grasspea,1,Zn,Medium,0,0,0
+Grasspea,1,Zn,Optimum,0,,0
+Grasspea,1,B,Very Low,0,0,0
+Grasspea,1,B,Low,0,0,0
+Grasspea,1,B,Medium,0,0,0
+Grasspea,1,B,Optimum,0,,0
+Grasspea,1,Mo,Very Low,0,0,0
+Grasspea,1,Mo,Low,0,0,0
+Grasspea,1,Mo,Medium,0,0,0
+Grasspea,1,Mo,Optimum,0,,0
+Grasspea,1,Mg,Very Low,0,0,0
+Grasspea,1,Mg,Low,0,0,0
+Grasspea,1,Mg,Medium,0,0,0
+Grasspea,1,Mg,Optimum,0,,0
+Cowpea,1,N,Very Low,0,20,5
+Cowpea,1,N,Low,0,15,5
+Cowpea,1,N,Medium,0,10,5
+Cowpea,1,N,Optimum,0,5,5
+Cowpea,1,P,Very Low,0,20,5
+Cowpea,1,P,Low,0,15,5
+Cowpea,1,P,Medium,0,10,5
+Cowpea,1,P,Optimum,0,5,5
+Cowpea,1,K,Very Low,0,24,6
+Cowpea,1,K,Low,0,18,6
+Cowpea,1,K,Medium,0,12,6
+Cowpea,1,K,Optimum,0,6,6
+Cowpea,1,S,Very Low,0,12,3
+Cowpea,1,S,Low,0,9,3
+Cowpea,1,S,Medium,0,6,3
+Cowpea,1,S,Optimum,0,3,3
+Cowpea,1,Zn,Very Low,0,0,0
+Cowpea,1,Zn,Low,0,0,0
+Cowpea,1,Zn,Medium,0,0,0
+Cowpea,1,Zn,Optimum,0,,0
+Cowpea,1,B,Very Low,0,0,0
+Cowpea,1,B,Low,0,0,0
+Cowpea,1,B,Medium,0,0,0
+Cowpea,1,B,Optimum,0,,0
+Cowpea,1,Mo,Very Low,0,0,0
+Cowpea,1,Mo,Low,0,0,0
+Cowpea,1,Mo,Medium,0,0,0
+Cowpea,1,Mo,Optimum,0,,0
+Cowpea,1,Mg,Very Low,0,0,0
+Cowpea,1,Mg,Low,0,0,0
+Cowpea,1,Mg,Medium,0,0,0
+Cowpea,1,Mg,Optimum,0,,0
+Mustard,1,N,Very Low,0,160,40
+Mustard,1,N,Low,0,120,40
+Mustard,1,N,Medium,0,80,40
 Mustard,1,N,Optimum,0,40,40
-Mustard,1,N,Medium,41,80,40
-Mustard,1,N,Low,81,120,40
-Mustard,1,N,Very Low,121,160,40
+Mustard,1,P,Very Low,0,48,12
+Mustard,1,P,Low,0,36,12
+Mustard,1,P,Medium,0,24,12
 Mustard,1,P,Optimum,0,12,12
-Mustard,1,P,Medium,13,24,12
-Mustard,1,P,Low,25,36,12
-Mustard,1,P,Very Low,49,48,12
+Mustard,1,K,Very Low,0,120,30
+Mustard,1,K,Low,0,90,30
+Mustard,1,K,Medium,0,60,30
 Mustard,1,K,Optimum,0,30,30
-Mustard,1,K,Medium,31,60,30
-Mustard,1,K,Low,61,90,30
-Mustard,1,K,Very Low,91,120,30
+Mustard,1,S,Very Low,0,36,9
+Mustard,1,S,Low,0,27,9
+Mustard,1,S,Medium,0,18,9
 Mustard,1,S,Optimum,0,9,9
-Mustard,1,S,Medium,10,18,9
-Mustard,1,S,Low,19,27,9
-Mustard,1,S,Very Low,28,36,9
-Mustard,1,Mg,Optimum,0,0,0
-Mustard,1,Mg,Medium,0,3,3
-Mustard,1,Mg,Low,4,6,3
-Mustard,1,Mg,Very Low,7,9,3
-Mustard,1,Zn,Optimum,0,0,0
-Mustard,1,Zn,Medium,0,1.4,1.4
-Mustard,1,Zn,Low,1.5,2.8,1.4
-Mustard,1,Zn,Very Low,2.9,4.2,1.4
-Mustard,1,B,Optimum,0,0,0
+Mustard,1,Zn,Very Low,0,4.5,1.5
+Mustard,1,Zn,Low,0,3,1.5
+Mustard,1,Zn,Medium,0,1.5,1.5
+Mustard,1,Zn,Optimum,0,,1.5
+Mustard,1,B,Very Low,0,1.5,0.5
+Mustard,1,B,Low,0,1,0.5
 Mustard,1,B,Medium,0,0.5,0.5
-Mustard,1,B,Low,0.6,1,0.5
-Mustard,1,B,Very Low,1.1,1.5,0.5
+Mustard,1,B,Optimum,0,,0.5
+Mustard,1,Mo,Very Low,0,0,0
+Mustard,1,Mo,Low,0,0,0
+Mustard,1,Mo,Medium,0,0,0
+Mustard,1,Mo,Optimum,0,,0
+Mustard,1,Mg,Very Low,0,9,3
+Mustard,1,Mg,Low,0,6,3
+Mustard,1,Mg,Medium,0,3,3
+Mustard,1,Mg,Optimum,0,,3
+Mustard,2,N,Very Low,0,120,30
+Mustard,2,N,Low,0,90,30
+Mustard,2,N,Medium,0,60,30
 Mustard,2,N,Optimum,0,30,30
-Mustard,2,N,Medium,31,60,30
-Mustard,2,N,Low,61,90,30
-Mustard,2,N,Very Low,91,120,30,
+Mustard,2,P,Very Low,0,36,9
+Mustard,2,P,Low,0,27,9
+Mustard,2,P,Medium,0,18,9
 Mustard,2,P,Optimum,0,9,9
-Mustard,2,P,Medium,10,18,9
-Mustard,2,P,Low,19,27,9
-Mustard,2,P,Very Low,28,36,9
+Mustard,2,K,Very Low,0,80,20
+Mustard,2,K,Low,0,60,20
+Mustard,2,K,Medium,0,40,20
 Mustard,2,K,Optimum,0,20,20
-Mustard,2,K,Medium,21,40,20
-Mustard,2,K,Low,41,60,20
-Mustard,2,K,Very Low,61,80,20
+Mustard,2,S,Very Low,0,20,5
+Mustard,2,S,Low,0,15,5
+Mustard,2,S,Medium,0,10,5
 Mustard,2,S,Optimum,0,5,5
-Mustard,2,S,Medium,6,10,5
-Mustard,2,S,Low,11,15,5
-Mustard,2,S,Very Low,16,20,5
-Mustard,2,Mg,Optimum,0,0,0
-Mustard,2,Mg,Medium,0,2.5,2.5
-Mustard,2,Mg,Low,2.6,5,2.5
-Mustard,2,Mg,Very Low,5.1,7.5,2.5
-Mustard,2,Zn,Optimum,0,0,0
+Mustard,2,Zn,Very Low,0,3,1
+Mustard,2,Zn,Low,0,2,1
 Mustard,2,Zn,Medium,0,1,1
-Mustard,2,Zn,Low,1.1,2,1
-Mustard,2,Zn,Very Low,2.1,3,1
-Mustard,2,B,Optimum,0,0,0
+Mustard,2,Zn,Optimum,0,,1
+Mustard,2,B,Very Low,0,1.5,0.5
+Mustard,2,B,Low,0,1,0.5
 Mustard,2,B,Medium,0,0.5,0.5
-Mustard,2,B,Low,0.6,1,0.5
-Mustard,2,B,Very Low,1.1,1.5,0.5
+Mustard,2,B,Optimum,0,,0.5
+Mustard,2,Mo,Very Low,0,0,0
+Mustard,2,Mo,Low,0,0,0
+Mustard,2,Mo,Medium,0,0,0
+Mustard,2,Mo,Optimum,0,,0
+Mustard,2,Mg,Very Low,0,7.5,2.5
+Mustard,2,Mg,Low,0,5,2.5
+Mustard,2,Mg,Medium,0,2.5,2.5
+Mustard,2,Mg,Optimum,0,,2.5
+Sesame,1,N,Very Low,0,100,25
+Sesame,1,N,Low,0,75,25
+Sesame,1,N,Medium,0,50,25
+Sesame,1,N,Optimum,0,25,25
+Sesame,1,P,Very Low,0,40,10
+Sesame,1,P,Low,0,30,10
+Sesame,1,P,Medium,0,20,10
+Sesame,1,P,Optimum,0,10,10
+Sesame,1,K,Very Low,0,80,20
+Sesame,1,K,Low,0,60,20
+Sesame,1,K,Medium,0,40,20
+Sesame,1,K,Optimum,0,20,20
+Sesame,1,S,Very Low,0,28,7
+Sesame,1,S,Low,0,21,7
+Sesame,1,S,Medium,0,14,7
+Sesame,1,S,Optimum,0,7,7
+Sesame,1,Zn,Very Low,0,3.9,1.3
+Sesame,1,Zn,Low,0,2.6,1.3
+Sesame,1,Zn,Medium,0,1.3,1.3
+Sesame,1,Zn,Optimum,0,,1.3
+Sesame,1,B,Very Low,0,3,1
+Sesame,1,B,Low,0,2,1
+Sesame,1,B,Medium,0,1,1
+Sesame,1,B,Optimum,0,,1
+Sesame,1,Mo,Very Low,0,0,0
+Sesame,1,Mo,Low,0,0,0
+Sesame,1,Mo,Medium,0,0,0
+Sesame,1,Mo,Optimum,0,,0
+Sesame,1,Mg,Very Low,0,0,0
+Sesame,1,Mg,Low,0,0,0
+Sesame,1,Mg,Medium,0,0,0
+Sesame,1,Mg,Optimum,0,,0
+GroundNut,1,N,Very Low,0,48,12
+GroundNut,1,N,Low,0,36,12
+GroundNut,1,N,Medium,0,24,12
+GroundNut,1,N,Optimum,0,12,12
+GroundNut,1,P,Very Low,0,48,12
+GroundNut,1,P,Low,0,36,12
+GroundNut,1,P,Medium,0,24,12
+GroundNut,1,P,Optimum,0,12,12
+GroundNut,1,K,Very Low,0,60,15
+GroundNut,1,K,Low,0,45,15
+GroundNut,1,K,Medium,0,30,15
+GroundNut,1,K,Optimum,0,15,15
+GroundNut,1,S,Very Low,0,48,12
+GroundNut,1,S,Low,0,36,12
+GroundNut,1,S,Medium,0,24,12
+GroundNut,1,S,Optimum,0,12,12
+GroundNut,1,Zn,Very Low,0,3,1
+GroundNut,1,Zn,Low,0,2,1
+GroundNut,1,Zn,Medium,0,1,1
+GroundNut,1,Zn,Optimum,0,,1
+GroundNut,1,B,Very Low,0,2.1,0.7
+GroundNut,1,B,Low,0,1.4,0.7
+GroundNut,1,B,Medium,0,0.7,0.7
+GroundNut,1,B,Optimum,0,,0.7
+GroundNut,1,Mo,Very Low,0,0.6,0.2
+GroundNut,1,Mo,Low,0,0.4,0.2
+GroundNut,1,Mo,Medium,0,0.2,0.2
+GroundNut,1,Mo,Optimum,0,,0.2
+GroundNut,1,Mg,Very Low,0,0,0
+GroundNut,1,Mg,Low,0,0,0
+GroundNut,1,Mg,Medium,0,0,0
+GroundNut,1,Mg,Optimum,0,,0
+Soybean,1,N,Very Low,0,36,9
+Soybean,1,N,Low,0,27,9
+Soybean,1,N,Medium,0,18,9
+Soybean,1,N,Optimum,0,9,9
+Soybean,1,P,Very Low,0,48,12
+Soybean,1,P,Low,0,36,12
+Soybean,1,P,Medium,0,24,12
+Soybean,1,P,Optimum,0,12,12
+Soybean,1,K,Very Low,0,80,20
+Soybean,1,K,Low,0,60,20
+Soybean,1,K,Medium,0,40,20
+Soybean,1,K,Optimum,0,20,20
+Soybean,1,S,Very Low,0,28,7
+Soybean,1,S,Low,0,21,7
+Soybean,1,S,Medium,0,14,7
+Soybean,1,S,Optimum,0,7,7
+Soybean,1,Zn,Very Low,0,3,1
+Soybean,1,Zn,Low,0,2,1
+Soybean,1,Zn,Medium,0,1,1
+Soybean,1,Zn,Optimum,0,,1
+Soybean,1,B,Very Low,0,1.5,0.5
+Soybean,1,B,Low,0,1,0.5
+Soybean,1,B,Medium,0,0.5,0.5
+Soybean,1,B,Optimum,0,,0.5
+Soybean,1,Mo,Very Low,0,0.6,0.2
+Soybean,1,Mo,Low,0,0.4,0.2
+Soybean,1,Mo,Medium,0,0.2,0.2
+Soybean,1,Mo,Optimum,0,,0.2
+Soybean,1,Mg,Very Low,0,0,0
+Soybean,1,Mg,Low,0,0,0
+Soybean,1,Mg,Medium,0,0,0
+Soybean,1,Mg,Optimum,0,,0
+Sunflower,1,N,Very Low,0,140,35
+Sunflower,1,N,Low,0,105,35
+Sunflower,1,N,Medium,0,70,35
+Sunflower,1,N,Optimum,0,35,35
+Sunflower,1,P,Very Low,0,48,12
+Sunflower,1,P,Low,0,36,12
+Sunflower,1,P,Medium,0,24,12
+Sunflower,1,P,Optimum,0,12,12
+Sunflower,1,K,Very Low,0,112,28
+Sunflower,1,K,Low,0,84,28
+Sunflower,1,K,Medium,0,56,28
+Sunflower,1,K,Optimum,0,28,28
+Sunflower,1,S,Very Low,0,32,8
+Sunflower,1,S,Low,0,24,8
+Sunflower,1,S,Medium,0,16,8
+Sunflower,1,S,Optimum,0,8,8
+Sunflower,1,Zn,Very Low,0,3,1
+Sunflower,1,Zn,Low,0,2,1
+Sunflower,1,Zn,Medium,0,1,1
+Sunflower,1,Zn,Optimum,0,,1
+Sunflower,1,B,Very Low,0,2.4,0.8
+Sunflower,1,B,Low,0,1.6,0.8
+Sunflower,1,B,Medium,0,0.8,0.8
+Sunflower,1,B,Optimum,0,,0.8
+Sunflower,1,Mo,Very Low,0,0,0
+Sunflower,1,Mo,Low,0,0,0
+Sunflower,1,Mo,Medium,0,0,0
+Sunflower,1,Mo,Optimum,0,,0
+Sunflower,1,Mg,Very Low,0,9,3
+Sunflower,1,Mg,Low,0,6,3
+Sunflower,1,Mg,Medium,0,3,3
+Sunflower,1,Mg,Optimum,0,,3
+Sunflower,2,N,Very Low,0,100,25
+Sunflower,2,N,Low,0,75,25
+Sunflower,2,N,Medium,0,50,25
+Sunflower,2,N,Optimum,0,25,25
+Sunflower,2,P,Very Low,0,40,10
+Sunflower,2,P,Low,0,30,10
+Sunflower,2,P,Medium,0,20,10
+Sunflower,2,P,Optimum,0,10,10
+Sunflower,2,K,Very Low,0,80,20
+Sunflower,2,K,Low,0,60,20
+Sunflower,2,K,Medium,0,40,20
+Sunflower,2,K,Optimum,0,20,20
+Sunflower,2,S,Very Low,0,28,7
+Sunflower,2,S,Low,0,21,7
+Sunflower,2,S,Medium,0,14,7
+Sunflower,2,S,Optimum,0,7,7
+Sunflower,2,Zn,Very Low,0,3.9,1.3
+Sunflower,2,Zn,Low,0,2.6,1.3
+Sunflower,2,Zn,Medium,0,1.3,1.3
+Sunflower,2,Zn,Optimum,0,,1.3
+Sunflower,2,B,Very Low,0,3,1
+Sunflower,2,B,Low,0,2,1
+Sunflower,2,B,Medium,0,1,1
+Sunflower,2,B,Optimum,0,,1
+Sunflower,2,Mo,Very Low,0,0,0
+Sunflower,2,Mo,Low,0,0,0
+Sunflower,2,Mo,Medium,0,0,0
+Sunflower,2,Mo,Optimum,0,,0
+Sunflower,2,Mg,Very Low,0,0,0
+Sunflower,2,Mg,Low,0,0,0
+Sunflower,2,Mg,Medium,0,0,0
+Sunflower,2,Mg,Optimum,0,,0
+Linseed,1,N,Very Low,0,60,15
+Linseed,1,N,Low,0,45,15
+Linseed,1,N,Medium,0,30,15
+Linseed,1,N,Optimum,0,15,15
+Linseed,1,P,Very Low,0,20,5
+Linseed,1,P,Low,0,15,5
+Linseed,1,P,Medium,0,10,5
+Linseed,1,P,Optimum,0,5,5
+Linseed,1,K,Very Low,0,32,8
+Linseed,1,K,Low,0,24,8
+Linseed,1,K,Medium,0,16,8
+Linseed,1,K,Optimum,0,8,8
+Linseed,1,S,Very Low,0,12,3
+Linseed,1,S,Low,0,9,3
+Linseed,1,S,Medium,0,6,3
+Linseed,1,S,Optimum,0,3,3
+Linseed,1,Zn,Very Low,0,0,0
+Linseed,1,Zn,Low,0,0,0
+Linseed,1,Zn,Medium,0,0,0
+Linseed,1,Zn,Optimum,0,,0
+Linseed,1,B,Very Low,0,0,0
+Linseed,1,B,Low,0,0,0
+Linseed,1,B,Medium,0,0,0
+Linseed,1,B,Optimum,0,,0
+Linseed,1,Mo,Very Low,0,0,0
+Linseed,1,Mo,Low,0,0,0
+Linseed,1,Mo,Medium,0,0,0
+Linseed,1,Mo,Optimum,0,,0
+Linseed,1,Mg,Very Low,0,0,0
+Linseed,1,Mg,Low,0,0,0
+Linseed,1,Mg,Medium,0,0,0
+Linseed,1,Mg,Optimum,0,,0
+Niger,1,N,Very Low,0,100,25
+Niger,1,N,Low,0,75,25
+Niger,1,N,Medium,0,50,25
+Niger,1,N,Optimum,0,25,25
+Niger,1,P,Very Low,0,40,10
+Niger,1,P,Low,0,30,10
+Niger,1,P,Medium,0,20,10
+Niger,1,P,Optimum,0,10,10
+Niger,1,K,Very Low,0,80,20
+Niger,1,K,Low,0,60,20
+Niger,1,K,Medium,0,40,20
+Niger,1,K,Optimum,0,20,20
+Niger,1,S,Very Low,0,28,7
+Niger,1,S,Low,0,21,7
+Niger,1,S,Medium,0,14,7
+Niger,1,S,Optimum,0,7,7
+Niger,1,Zn,Very Low,0,3.9,1.3
+Niger,1,Zn,Low,0,2.6,1.3
+Niger,1,Zn,Medium,0,1.3,1.3
+Niger,1,Zn,Optimum,0,,1.3
+Niger,1,B,Very Low,0,3,1
+Niger,1,B,Low,0,2,1
+Niger,1,B,Medium,0,1,1
+Niger,1,B,Optimum,0,,1
+Niger,1,Mo,Very Low,0,0,0
+Niger,1,Mo,Low,0,0,0
+Niger,1,Mo,Medium,0,0,0
+Niger,1,Mo,Optimum,0,,0
+Niger,1,Mg,Very Low,0,0,0
+Niger,1,Mg,Low,0,0,0
+Niger,1,Mg,Medium,0,0,0
+Niger,1,Mg,Optimum,0,,0
+Potato,1,N,Very Low,0,180,45
+Potato,1,N,Low,0,135,45
+Potato,1,N,Medium,0,90,45
 Potato,1,N,Optimum,0,45,45
-Potato,1,N,Medium,46,90,45
-Potato,1,N,Low,91,135,45
-Potato,1,N,Very Low,136,180,45
+Potato,1,P,Very Low,0,40,10
+Potato,1,P,Low,0,30,10
+Potato,1,P,Medium,0,20,10
 Potato,1,P,Optimum,0,10,10
-Potato,1,P,Medium,11,20,10
-Potato,1,P,Low,21,30,10
-Potato,1,P,Very Low,31,40,10
+Potato,1,K,Very Low,0,180,45
+Potato,1,K,Low,0,135,45
+Potato,1,K,Medium,0,90,45
 Potato,1,K,Optimum,0,45,45
-Potato,1,K,Medium,46,90,45
-Potato,1,K,Low,91,135,45
-Potato,1,K,Very Low,136,180,45
+Potato,1,S,Very Low,0,20,5
+Potato,1,S,Low,0,15,5
+Potato,1,S,Medium,0,10,5
 Potato,1,S,Optimum,0,5,5
-Potato,1,S,Medium,6,10,5
-Potato,1,S,Low,11,15,5
-Potato,1,S,Very Low,16,20,5
-Potato,1,Mg,Optimum,0,0,0
-Potato,1,Mg,Medium,0,5,5
-Potato,1,Mg,Low,6,10,5
-Potato,1,Mg,Very Low,11,15,5
-Potato,1,Zn,Optimum,0,0,0
+Potato,1,Zn,Very Low,0,6,2
+Potato,1,Zn,Low,0,4,2
 Potato,1,Zn,Medium,0,2,2
-Potato,1,Zn,Low,3,4,2
-Potato,1,Zn,Very Low,5,6,2
-Potato,1,B,Optimum,0,0,0
-Potato,1,B,Medium,0,0.5,0.5
-Potato,1,B,Low,0.6,1,0.5
-Potato,1,B,Very Low,1.1,1.5,0.5
-Sweet potato,1,N,Optimum,0,35,35
-Sweet potato,1,N,Medium,36,70,35
-Sweet potato,1,N,Low,71,105,35
-Sweet potato,1,N,Very Low,106,140,35
-Sweet potato,1,P,Optimum,0,15,15
-Sweet potato,1,P,Medium,10,30,15
-Sweet potato,1,P,Low,31,45,15
-Sweet potato,1,P,Very Low,46,60,15
-Sweet potato,1,K,Optimum,0,35,35
-Sweet potato,1,K,Medium,36,70,35
-Sweet potato,1,K,Low,71,105,35
-Sweet potato,1,K,Very Low,106,140,35
-Sweet potato,1,S,Optimum,0,5,5
-Sweet potato,1,S,Medium,6,10,5
-Sweet potato,1,S,Low,11,15,5
-Sweet potato,1,S,Very Low,16,20,5
-Sweet potato,1,Mg,Optimum,0,0,0
-Sweet potato,1,Mg,Medium,0,4,4
-Sweet potato,1,Mg,Low,5,8,4
-Sweet potato,1,Mg,Very Low,9,12,4
-Sweet potato,1,Zn,Optimum,0,0,0
-Sweet potato,1,Zn,Medium,0,1,1
-Sweet potato,1,Zn,Low,1.1,2,1
-Sweet potato,1,Zn,Very Low,2.1,3,1
-Sweet potato,1,B,Optimum,0,0,0
-Sweet potato,1,B,Medium,0,0.5,0.5
-Sweet potato,1,B,Low,0.6,1,0.5
-Sweet potato,1,B,Very Low,1.1,1.5,0.5
+Potato,1,Zn,Optimum,0,,2
+Potato,1,B,Very Low,0,2.4,0.8
+Potato,1,B,Low,0,1.6,0.8
+Potato,1,B,Medium,0,0.8,0.8
+Potato,1,B,Optimum,0,,0.8
+Potato,1,Mo,Very Low,0,0,0
+Potato,1,Mo,Low,0,0,0
+Potato,1,Mo,Medium,0,0,0
+Potato,1,Mo,Optimum,0,,0
+Potato,1,Mg,Very Low,0,15,5
+Potato,1,Mg,Low,0,10,5
+Potato,1,Mg,Medium,0,5,5
+Potato,1,Mg,Optimum,0,,5
+Sweet Potato,1,N,Very Low,0,160,40
+Sweet Potato,1,N,Low,0,120,40
+Sweet Potato,1,N,Medium,0,80,40
+Sweet Potato,1,N,Optimum,0,40,40
+Sweet Potato,1,P,Very Low,0,48,12
+Sweet Potato,1,P,Low,0,36,12
+Sweet Potato,1,P,Medium,0,24,12
+Sweet Potato,1,P,Optimum,0,12,12
+Sweet Potato,1,K,Very Low,0,160,40
+Sweet Potato,1,K,Low,0,120,40
+Sweet Potato,1,K,Medium,0,80,40
+Sweet Potato,1,K,Optimum,0,40,40
+Sweet Potato,1,S,Very Low,0,20,5
+Sweet Potato,1,S,Low,0,15,5
+Sweet Potato,1,S,Medium,0,10,5
+Sweet Potato,1,S,Optimum,0,5,5
+Sweet Potato,1,Zn,Very Low,0,4.5,1.5
+Sweet Potato,1,Zn,Low,0,3,1.5
+Sweet Potato,1,Zn,Medium,0,1.5,1.5
+Sweet Potato,1,Zn,Optimum,0,,1.5
+Sweet Potato,1,B,Very Low,0,2.4,0.8
+Sweet Potato,1,B,Low,0,1.6,0.8
+Sweet Potato,1,B,Medium,0,0.8,0.8
+Sweet Potato,1,B,Optimum,0,,0.8
+Sweet Potato,1,Mo,Very Low,0,0,0
+Sweet Potato,1,Mo,Low,0,0,0
+Sweet Potato,1,Mo,Medium,0,0,0
+Sweet Potato,1,Mo,Optimum,0,,0
+Sweet Potato,1,Mg,Very Low,0,15,5
+Sweet Potato,1,Mg,Low,0,10,5
+Sweet Potato,1,Mg,Medium,0,5,5
+Sweet Potato,1,Mg,Optimum,0,,5
+Mukhikachu,1,N,Very Low,0,140,35
+Mukhikachu,1,N,Low,0,105,35
+Mukhikachu,1,N,Medium,0,70,35
+Mukhikachu,1,N,Optimum,0,35,35
+Mukhikachu,1,P,Very Low,0,40,10
+Mukhikachu,1,P,Low,0,30,10
+Mukhikachu,1,P,Medium,0,20,10
+Mukhikachu,1,P,Optimum,0,10,10
+Mukhikachu,1,K,Very Low,0,120,30
+Mukhikachu,1,K,Low,0,90,30
+Mukhikachu,1,K,Medium,0,60,30
+Mukhikachu,1,K,Optimum,0,30,30
+Mukhikachu,1,S,Very Low,0,24,6
+Mukhikachu,1,S,Low,0,18,6
+Mukhikachu,1,S,Medium,0,12,6
+Mukhikachu,1,S,Optimum,0,6,6
+Mukhikachu,1,Zn,Very Low,0,0,0
+Mukhikachu,1,Zn,Low,0,0,0
+Mukhikachu,1,Zn,Medium,0,0,0
+Mukhikachu,1,Zn,Optimum,0,,0
+Mukhikachu,1,B,Very Low,0,0,0
+Mukhikachu,1,B,Low,0,0,0
+Mukhikachu,1,B,Medium,0,0,0
+Mukhikachu,1,B,Optimum,0,,0
+Mukhikachu,1,Mo,Very Low,0,0,0
+Mukhikachu,1,Mo,Low,0,0,0
+Mukhikachu,1,Mo,Medium,0,0,0
+Mukhikachu,1,Mo,Optimum,0,,0
+Mukhikachu,1,Mg,Very Low,0,0,0
+Mukhikachu,1,Mg,Low,0,0,0
+Mukhikachu,1,Mg,Medium,0,0,0
+Mukhikachu,1,Mg,Optimum,0,,0
+Panikachu,2,N,Very Low,0,120,30
+Panikachu,2,N,Low,0,90,30
+Panikachu,2,N,Medium,0,60,30
+Panikachu,2,N,Optimum,0,30,30
+Panikachu,2,P,Very Low,0,40,10
+Panikachu,2,P,Low,0,30,10
+Panikachu,2,P,Medium,0,20,10
+Panikachu,2,P,Optimum,0,10,10
+Panikachu,2,K,Very Low,0,128,32
+Panikachu,2,K,Low,0,96,32
+Panikachu,2,K,Medium,0,64,32
+Panikachu,2,K,Optimum,0,32,32
+Panikachu,2,S,Very Low,0,20,5
+Panikachu,2,S,Low,0,15,5
+Panikachu,2,S,Medium,0,10,5
+Panikachu,2,S,Optimum,0,5,5
+Panikachu,2,Zn,Very Low,0,0,0
+Panikachu,2,Zn,Low,0,0,0
+Panikachu,2,Zn,Medium,0,0,0
+Panikachu,2,Zn,Optimum,0,,0
+Panikachu,2,B,Very Low,0,0,0
+Panikachu,2,B,Low,0,0,0
+Panikachu,2,B,Medium,0,0,0
+Panikachu,2,B,Optimum,0,,0
+Panikachu,2,Mo,Very Low,0,0,0
+Panikachu,2,Mo,Low,0,0,0
+Panikachu,2,Mo,Medium,0,0,0
+Panikachu,2,Mo,Optimum,0,,0
+Panikachu,2,Mg,Very Low,0,0,0
+Panikachu,2,Mg,Low,0,0,0
+Panikachu,2,Mg,Medium,0,0,0
+Panikachu,2,Mg,Optimum,0,,0
+Cabbage,1,N,Very Low,0,240,60
+Cabbage,1,N,Low,0,180,60
+Cabbage,1,N,Medium,0,120,60
+Cabbage,1,N,Optimum,0,60,60
+Cabbage,1,P,Very Low,0,60,15
+Cabbage,1,P,Low,0,45,15
+Cabbage,1,P,Medium,0,30,15
+Cabbage,1,P,Optimum,0,15,15
+Cabbage,1,K,Very Low,0,80,20
+Cabbage,1,K,Low,0,60,20
+Cabbage,1,K,Medium,0,40,20
+Cabbage,1,K,Optimum,0,20,20
+Cabbage,1,S,Very Low,0,32,8
+Cabbage,1,S,Low,0,24,8
+Cabbage,1,S,Medium,0,16,8
+Cabbage,1,S,Optimum,0,8,8
+Cabbage,1,Zn,Very Low,0,4.5,1.5
+Cabbage,1,Zn,Low,0,3,1.5
+Cabbage,1,Zn,Medium,0,1.5,1.5
+Cabbage,1,Zn,Optimum,0,,1.5
+Cabbage,1,B,Very Low,0,1.5,0.5
+Cabbage,1,B,Low,0,1,0.5
+Cabbage,1,B,Medium,0,0.5,0.5
+Cabbage,1,B,Optimum,0,,0.5
+Cabbage,1,Mo,Very Low,0,0,0
+Cabbage,1,Mo,Low,0,0,0
+Cabbage,1,Mo,Medium,0,0,0
+Cabbage,1,Mo,Optimum,0,,0
+Cabbage,1,Mg,Very Low,0,0,0
+Cabbage,1,Mg,Low,0,0,0
+Cabbage,1,Mg,Medium,0,0,0
+Cabbage,1,Mg,Optimum,0,,0
+Cabbage,2,N,Very Low,0,160,40
+Cabbage,2,N,Low,0,120,40
+Cabbage,2,N,Medium,0,80,40
+Cabbage,2,N,Optimum,0,40,40
+Cabbage,2,P,Very Low,0,48,12
+Cabbage,2,P,Low,0,36,12
+Cabbage,2,P,Medium,0,24,12
+Cabbage,2,P,Optimum,0,12,12
+Cabbage,2,K,Very Low,0,60,15
+Cabbage,2,K,Low,0,45,15
+Cabbage,2,K,Medium,0,30,15
+Cabbage,2,K,Optimum,0,15,15
+Cabbage,2,S,Very Low,0,24,6
+Cabbage,2,S,Low,0,18,6
+Cabbage,2,S,Medium,0,12,6
+Cabbage,2,S,Optimum,0,6,6
+Cabbage,2,Zn,Very Low,0,3.6,1.2
+Cabbage,2,Zn,Low,0,2.4,1.2
+Cabbage,2,Zn,Medium,0,1.2,1.2
+Cabbage,2,Zn,Optimum,0,,1.2
+Cabbage,2,B,Very Low,0,1.2,0.4
+Cabbage,2,B,Low,0,0.8,0.4
+Cabbage,2,B,Medium,0,0.4,0.4
+Cabbage,2,B,Optimum,0,,0.4
+Cabbage,2,Mo,Very Low,0,0,0
+Cabbage,2,Mo,Low,0,0,0
+Cabbage,2,Mo,Medium,0,0,0
+Cabbage,2,Mo,Optimum,0,,0
+Cabbage,2,Mg,Very Low,0,0,0
+Cabbage,2,Mg,Low,0,0,0
+Cabbage,2,Mg,Medium,0,0,0
+Cabbage,2,Mg,Optimum,0,,0
+Cauliflower,1,N,Very Low,0,160,40
+Cauliflower,1,N,Low,0,120,40
+Cauliflower,1,N,Medium,0,80,40
+Cauliflower,1,N,Optimum,0,40,40
+Cauliflower,1,P,Very Low,0,80,20
+Cauliflower,1,P,Low,0,60,20
+Cauliflower,1,P,Medium,0,40,20
+Cauliflower,1,P,Optimum,0,20,20
+Cauliflower,1,K,Very Low,0,120,30
+Cauliflower,1,K,Low,0,90,30
+Cauliflower,1,K,Medium,0,60,30
+Cauliflower,1,K,Optimum,0,30,30
+Cauliflower,1,S,Very Low,0,28,7
+Cauliflower,1,S,Low,0,21,7
+Cauliflower,1,S,Medium,0,14,7
+Cauliflower,1,S,Optimum,0,7,7
+Cauliflower,1,Zn,Very Low,0,4.5,1.5
+Cauliflower,1,Zn,Low,0,3,1.5
+Cauliflower,1,Zn,Medium,0,1.5,1.5
+Cauliflower,1,Zn,Optimum,0,,1.5
+Cauliflower,1,B,Very Low,0,2.4,0.8
+Cauliflower,1,B,Low,0,1.6,0.8
+Cauliflower,1,B,Medium,0,0.8,0.8
+Cauliflower,1,B,Optimum,0,,0.8
+Cauliflower,1,Mo,Very Low,0,0,0
+Cauliflower,1,Mo,Low,0,0,0
+Cauliflower,1,Mo,Medium,0,0,0
+Cauliflower,1,Mo,Optimum,0,,0
+Cauliflower,1,Mg,Very Low,0,0,0
+Cauliflower,1,Mg,Low,0,0,0
+Cauliflower,1,Mg,Medium,0,0,0
+Cauliflower,1,Mg,Optimum,0,,0
+Cauliflower,2,N,Very Low,0,120,30
+Cauliflower,2,N,Low,0,90,30
+Cauliflower,2,N,Medium,0,60,30
+Cauliflower,2,N,Optimum,0,30,30
+Cauliflower,2,P,Very Low,0,60,15
+Cauliflower,2,P,Low,0,45,15
+Cauliflower,2,P,Medium,0,30,15
+Cauliflower,2,P,Optimum,0,15,15
+Cauliflower,2,K,Very Low,0,100,25
+Cauliflower,2,K,Low,0,75,25
+Cauliflower,2,K,Medium,0,50,25
+Cauliflower,2,K,Optimum,0,25,25
+Cauliflower,2,S,Very Low,0,24,6
+Cauliflower,2,S,Low,0,18,6
+Cauliflower,2,S,Medium,0,12,6
+Cauliflower,2,S,Optimum,0,6,6
+Cauliflower,2,Zn,Very Low,0,3.6,1.2
+Cauliflower,2,Zn,Low,0,2.4,1.2
+Cauliflower,2,Zn,Medium,0,1.2,1.2
+Cauliflower,2,Zn,Optimum,0,,1.2
+Cauliflower,2,B,Very Low,0,2.1,0.7
+Cauliflower,2,B,Low,0,1.4,0.7
+Cauliflower,2,B,Medium,0,0.7,0.7
+Cauliflower,2,B,Optimum,0,,0.7
+Cauliflower,2,Mo,Very Low,0,0,0
+Cauliflower,2,Mo,Low,0,0,0
+Cauliflower,2,Mo,Medium,0,0,0
+Cauliflower,2,Mo,Optimum,0,,0
+Cauliflower,2,Mg,Very Low,0,0,0
+Cauliflower,2,Mg,Low,0,0,0
+Cauliflower,2,Mg,Medium,0,0,0
+Cauliflower,2,Mg,Optimum,0,,0
+Chinese Cabbage,1,N,Very Low,0,140,35
+Chinese Cabbage,1,N,Low,0,105,35
+Chinese Cabbage,1,N,Medium,0,70,35
+Chinese Cabbage,1,N,Optimum,0,35,35
+Chinese Cabbage,1,P,Very Low,0,40,10
+Chinese Cabbage,1,P,Low,0,30,10
+Chinese Cabbage,1,P,Medium,0,20,10
+Chinese Cabbage,1,P,Optimum,0,10,10
+Chinese Cabbage,1,K,Very Low,0,48,12
+Chinese Cabbage,1,K,Low,0,36,12
+Chinese Cabbage,1,K,Medium,0,24,12
+Chinese Cabbage,1,K,Optimum,0,12,12
+Chinese Cabbage,1,S,Very Low,0,20,5
+Chinese Cabbage,1,S,Low,0,15,5
+Chinese Cabbage,1,S,Medium,0,10,5
+Chinese Cabbage,1,S,Optimum,0,5,5
+Chinese Cabbage,1,Zn,Very Low,0,0,0
+Chinese Cabbage,1,Zn,Low,0,0,0
+Chinese Cabbage,1,Zn,Medium,0,0,0
+Chinese Cabbage,1,Zn,Optimum,0,,0
+Chinese Cabbage,1,B,Very Low,0,0,0
+Chinese Cabbage,1,B,Low,0,0,0
+Chinese Cabbage,1,B,Medium,0,0,0
+Chinese Cabbage,1,B,Optimum,0,,0
+Chinese Cabbage,1,Mo,Very Low,0,0,0
+Chinese Cabbage,1,Mo,Low,0,0,0
+Chinese Cabbage,1,Mo,Medium,0,0,0
+Chinese Cabbage,1,Mo,Optimum,0,,0
+Chinese Cabbage,1,Mg,Very Low,0,0,0
+Chinese Cabbage,1,Mg,Low,0,0,0
+Chinese Cabbage,1,Mg,Medium,0,0,0
+Chinese Cabbage,1,Mg,Optimum,0,,0
+Broccoli,1,N,Very Low,0,120,30
+Broccoli,1,N,Low,0,90,30
+Broccoli,1,N,Medium,0,60,30
+Broccoli,1,N,Optimum,0,30,30
+Broccoli,1,P,Very Low,0,48,12
+Broccoli,1,P,Low,0,36,12
+Broccoli,1,P,Medium,0,24,12
+Broccoli,1,P,Optimum,0,12,12
+Broccoli,1,K,Very Low,0,80,20
+Broccoli,1,K,Low,0,60,20
+Broccoli,1,K,Medium,0,40,20
+Broccoli,1,K,Optimum,0,20,20
+Broccoli,1,S,Very Low,0,20,5
+Broccoli,1,S,Low,0,15,5
+Broccoli,1,S,Medium,0,10,5
+Broccoli,1,S,Optimum,0,5,5
+Broccoli,1,Zn,Very Low,0,3,1
+Broccoli,1,Zn,Low,0,2,1
+Broccoli,1,Zn,Medium,0,1,1
+Broccoli,1,Zn,Optimum,0,,1
+Broccoli,1,B,Very Low,0,1.8,0.6
+Broccoli,1,B,Low,0,1.2,0.6
+Broccoli,1,B,Medium,0,0.6,0.6
+Broccoli,1,B,Optimum,0,,0.6
+Broccoli,1,Mo,Very Low,0,0,0
+Broccoli,1,Mo,Low,0,0,0
+Broccoli,1,Mo,Medium,0,0,0
+Broccoli,1,Mo,Optimum,0,,0
+Broccoli,1,Mg,Very Low,0,0,0
+Broccoli,1,Mg,Low,0,0,0
+Broccoli,1,Mg,Medium,0,0,0
+Broccoli,1,Mg,Optimum,0,,0
+Batisak,1,N,Very Low,0,120,30
+Batisak,1,N,Low,0,90,30
+Batisak,1,N,Medium,0,60,30
+Batisak,1,N,Optimum,0,30,30
+Batisak,1,P,Very Low,0,32,8
+Batisak,1,P,Low,0,24,8
+Batisak,1,P,Medium,0,16,8
+Batisak,1,P,Optimum,0,8,8
+Batisak,1,K,Very Low,0,40,10
+Batisak,1,K,Low,0,30,10
+Batisak,1,K,Medium,0,20,10
+Batisak,1,K,Optimum,0,10,10
+Batisak,1,S,Very Low,0,20,5
+Batisak,1,S,Low,0,15,5
+Batisak,1,S,Medium,0,10,5
+Batisak,1,S,Optimum,0,5,5
+Batisak,1,Zn,Very Low,0,0,0
+Batisak,1,Zn,Low,0,0,0
+Batisak,1,Zn,Medium,0,0,0
+Batisak,1,Zn,Optimum,0,,0
+Batisak,1,B,Very Low,0,0,0
+Batisak,1,B,Low,0,0,0
+Batisak,1,B,Medium,0,0,0
+Batisak,1,B,Optimum,0,,0
+Batisak,1,Mo,Very Low,0,0,0
+Batisak,1,Mo,Low,0,0,0
+Batisak,1,Mo,Medium,0,0,0
+Batisak,1,Mo,Optimum,0,,0
+Batisak,1,Mg,Very Low,0,0,0
+Batisak,1,Mg,Low,0,0,0
+Batisak,1,Mg,Medium,0,0,0
+Batisak,1,Mg,Optimum,0,,0
+Tomato,1,N,Very Low,0,160,40
+Tomato,1,N,Low,0,120,40
+Tomato,1,N,Medium,0,80,40
+Tomato,1,N,Optimum,0,40,40
+Tomato,1,P,Very Low,0,60,15
+Tomato,1,P,Low,0,45,15
+Tomato,1,P,Medium,0,30,15
+Tomato,1,P,Optimum,0,15,15
+Tomato,1,K,Very Low,0,80,20
+Tomato,1,K,Low,0,60,20
+Tomato,1,K,Medium,0,40,20
+Tomato,1,K,Optimum,0,20,20
+Tomato,1,S,Very Low,0,28,7
+Tomato,1,S,Low,0,21,7
+Tomato,1,S,Medium,0,14,7
+Tomato,1,S,Optimum,0,7,7
+Tomato,1,Zn,Very Low,0,3,1
+Tomato,1,Zn,Low,0,2,1
+Tomato,1,Zn,Medium,0,1,1
+Tomato,1,Zn,Optimum,0,,1
+Tomato,1,B,Very Low,0,1.5,0.5
+Tomato,1,B,Low,0,1,0.5
+Tomato,1,B,Medium,0,0.5,0.5
+Tomato,1,B,Optimum,0,,0.5
+Tomato,1,Mo,Very Low,0,0,0
+Tomato,1,Mo,Low,0,0,0
+Tomato,1,Mo,Medium,0,0,0
+Tomato,1,Mo,Optimum,0,,0
+Tomato,1,Mg,Very Low,0,0,0
+Tomato,1,Mg,Low,0,0,0
+Tomato,1,Mg,Medium,0,0,0
+Tomato,1,Mg,Optimum,0,,0
+Tomato,2,N,Very Low,0,120,30
+Tomato,2,N,Low,0,90,30
+Tomato,2,N,Medium,0,60,30
+Tomato,2,N,Optimum,0,30,30
+Tomato,2,P,Very Low,0,48,12
+Tomato,2,P,Low,0,36,12
+Tomato,2,P,Medium,0,24,12
+Tomato,2,P,Optimum,0,12,12
+Tomato,2,K,Very Low,0,60,15
+Tomato,2,K,Low,0,45,15
+Tomato,2,K,Medium,0,30,15
+Tomato,2,K,Optimum,0,15,15
+Tomato,2,S,Very Low,0,20,5
+Tomato,2,S,Low,0,15,5
+Tomato,2,S,Medium,0,10,5
+Tomato,2,S,Optimum,0,5,5
+Tomato,2,Zn,Very Low,0,3,1
+Tomato,2,Zn,Low,0,2,1
+Tomato,2,Zn,Medium,0,1,1
+Tomato,2,Zn,Optimum,0,,1
+Tomato,2,B,Very Low,0,1.5,0.5
+Tomato,2,B,Low,0,1,0.5
+Tomato,2,B,Medium,0,0.5,0.5
+Tomato,2,B,Optimum,0,,0.5
+Tomato,2,Mo,Very Low,0,0,0
+Tomato,2,Mo,Low,0,0,0
+Tomato,2,Mo,Medium,0,0,0
+Tomato,2,Mo,Optimum,0,,0
+Tomato,2,Mg,Very Low,0,0,0
+Tomato,2,Mg,Low,0,0,0
+Tomato,2,Mg,Medium,0,0,0
+Tomato,2,Mg,Optimum,0,,0
+Brinjal,1,N,Very Low,0,180,45
+Brinjal,1,N,Low,0,135,45
+Brinjal,1,N,Medium,0,90,45
+Brinjal,1,N,Optimum,0,45,45
+Brinjal,1,P,Very Low,0,48,12
+Brinjal,1,P,Low,0,36,12
+Brinjal,1,P,Medium,0,24,12
+Brinjal,1,P,Optimum,0,12,12
+Brinjal,1,K,Very Low,0,140,35
+Brinjal,1,K,Low,0,105,35
+Brinjal,1,K,Medium,0,70,35
+Brinjal,1,K,Optimum,0,35,35
+Brinjal,1,S,Very Low,0,20,5
+Brinjal,1,S,Low,0,15,5
+Brinjal,1,S,Medium,0,10,5
+Brinjal,1,S,Optimum,0,5,5
+Brinjal,1,Zn,Very Low,0,3,1
+Brinjal,1,Zn,Low,0,2,1
+Brinjal,1,Zn,Medium,0,1,1
+Brinjal,1,Zn,Optimum,0,,1
+Brinjal,1,B,Very Low,0,1.5,0.5
+Brinjal,1,B,Low,0,1,0.5
+Brinjal,1,B,Medium,0,0.5,0.5
+Brinjal,1,B,Optimum,0,,0.5
+Brinjal,1,Mo,Very Low,0,0,0
+Brinjal,1,Mo,Low,0,0,0
+Brinjal,1,Mo,Medium,0,0,0
+Brinjal,1,Mo,Optimum,0,,0
+Brinjal,1,Mg,Very Low,0,0,0
+Brinjal,1,Mg,Low,0,0,0
+Brinjal,1,Mg,Medium,0,0,0
+Brinjal,1,Mg,Optimum,0,,0
+Ladys Finger,1,N,Very Low,0,120,30
+Ladys Finger,1,N,Low,0,90,30
+Ladys Finger,1,N,Medium,0,60,30
+Ladys Finger,1,N,Optimum,0,30,30
+Ladys Finger,1,P,Very Low,0,40,10
+Ladys Finger,1,P,Low,0,30,10
+Ladys Finger,1,P,Medium,0,20,10
+Ladys Finger,1,P,Optimum,0,10,10
+Ladys Finger,1,K,Very Low,0,80,20
+Ladys Finger,1,K,Low,0,60,20
+Ladys Finger,1,K,Medium,0,40,20
+Ladys Finger,1,K,Optimum,0,20,20
+Ladys Finger,1,S,Very Low,0,20,5
+Ladys Finger,1,S,Low,0,15,5
+Ladys Finger,1,S,Medium,0,10,5
+Ladys Finger,1,S,Optimum,0,5,5
+Ladys Finger,1,Zn,Very Low,0,3,1
+Ladys Finger,1,Zn,Low,0,2,1
+Ladys Finger,1,Zn,Medium,0,1,1
+Ladys Finger,1,Zn,Optimum,0,,1
+Ladys Finger,1,B,Very Low,0,2.1,0.7
+Ladys Finger,1,B,Low,0,1.4,0.7
+Ladys Finger,1,B,Medium,0,0.7,0.7
+Ladys Finger,1,B,Optimum,0,,0.7
+Ladys Finger,1,Mo,Very Low,0,0,0
+Ladys Finger,1,Mo,Low,0,0,0
+Ladys Finger,1,Mo,Medium,0,0,0
+Ladys Finger,1,Mo,Optimum,0,,0
+Ladys Finger,1,Mg,Very Low,0,0,0
+Ladys Finger,1,Mg,Low,0,0,0
+Ladys Finger,1,Mg,Medium,0,0,0
+Ladys Finger,1,Mg,Optimum,0,,0
+Radish,1,N,Very Low,0,180,45
+Radish,1,N,Low,0,135,45
+Radish,1,N,Medium,0,90,45
+Radish,1,N,Optimum,0,45,45
+Radish,1,P,Very Low,0,60,15
+Radish,1,P,Low,0,45,15
+Radish,1,P,Medium,0,30,15
+Radish,1,P,Optimum,0,15,15
+Radish,1,K,Very Low,0,160,40
+Radish,1,K,Low,0,120,40
+Radish,1,K,Medium,0,80,40
+Radish,1,K,Optimum,0,40,40
+Radish,1,S,Very Low,0,24,6
+Radish,1,S,Low,0,18,6
+Radish,1,S,Medium,0,12,6
+Radish,1,S,Optimum,0,6,6
+Radish,1,Zn,Very Low,0,4.5,1.5
+Radish,1,Zn,Low,0,3,1.5
+Radish,1,Zn,Medium,0,1.5,1.5
+Radish,1,Zn,Optimum,0,,1.5
+Radish,1,B,Very Low,0,0,0
+Radish,1,B,Low,0,0,0
+Radish,1,B,Medium,0,0,0
+Radish,1,B,Optimum,0,,0
+Radish,1,Mo,Very Low,0,0,0
+Radish,1,Mo,Low,0,0,0
+Radish,1,Mo,Medium,0,0,0
+Radish,1,Mo,Optimum,0,,0
+Radish,1,Mg,Very Low,0,0,0
+Radish,1,Mg,Low,0,0,0
+Radish,1,Mg,Medium,0,0,0
+Radish,1,Mg,Optimum,0,,0
+Carrot,1,N,Very Low,0,160,40
+Carrot,1,N,Low,0,120,40
+Carrot,1,N,Medium,0,80,40
+Carrot,1,N,Optimum,0,40,40
+Carrot,1,P,Very Low,0,52,13
+Carrot,1,P,Low,0,39,13
+Carrot,1,P,Medium,0,26,13
+Carrot,1,P,Optimum,0,13,13
+Carrot,1,K,Very Low,0,120,30
+Carrot,1,K,Low,0,90,30
+Carrot,1,K,Medium,0,60,30
+Carrot,1,K,Optimum,0,30,30
+Carrot,1,S,Very Low,0,24,6
+Carrot,1,S,Low,0,18,6
+Carrot,1,S,Medium,0,12,6
+Carrot,1,S,Optimum,0,6,6
+Carrot,1,Zn,Very Low,0,3,1
+Carrot,1,Zn,Low,0,2,1
+Carrot,1,Zn,Medium,0,1,1
+Carrot,1,Zn,Optimum,0,,1
+Carrot,1,B,Very Low,0,0,0
+Carrot,1,B,Low,0,0,0
+Carrot,1,B,Medium,0,0,0
+Carrot,1,B,Optimum,0,,0
+Carrot,1,Mo,Very Low,0,0,0
+Carrot,1,Mo,Low,0,0,0
+Carrot,1,Mo,Medium,0,0,0
+Carrot,1,Mo,Optimum,0,,0
+Carrot,1,Mg,Very Low,0,0,0
+Carrot,1,Mg,Low,0,0,0
+Carrot,1,Mg,Medium,0,0,0
+Carrot,1,Mg,Optimum,0,,0
+Country Bean,1,N,Very Low,0,60,15
+Country Bean,1,N,Low,0,45,15
+Country Bean,1,N,Medium,0,30,15
+Country Bean,1,N,Optimum,0,15,15
+Country Bean,1,P,Very Low,0,40,10
+Country Bean,1,P,Low,0,30,10
+Country Bean,1,P,Medium,0,20,10
+Country Bean,1,P,Optimum,0,10,10
+Country Bean,1,K,Very Low,0,60,15
+Country Bean,1,K,Low,0,45,15
+Country Bean,1,K,Medium,0,30,15
+Country Bean,1,K,Optimum,0,15,15
+Country Bean,1,S,Very Low,0,12,3
+Country Bean,1,S,Low,0,9,3
+Country Bean,1,S,Medium,0,6,3
+Country Bean,1,S,Optimum,0,3,3
+Country Bean,1,Zn,Very Low,0,3,1
+Country Bean,1,Zn,Low,0,2,1
+Country Bean,1,Zn,Medium,0,1,1
+Country Bean,1,Zn,Optimum,0,,1
+Country Bean,1,B,Very Low,0,0,0
+Country Bean,1,B,Low,0,0,0
+Country Bean,1,B,Medium,0,0,0
+Country Bean,1,B,Optimum,0,,0
+Country Bean,1,Mo,Very Low,0,0,0
+Country Bean,1,Mo,Low,0,0,0
+Country Bean,1,Mo,Medium,0,0,0
+Country Bean,1,Mo,Optimum,0,,0
+Country Bean,1,Mg,Very Low,0,0,0
+Country Bean,1,Mg,Low,0,0,0
+Country Bean,1,Mg,Medium,0,0,0
+Country Bean,1,Mg,Optimum,0,,0
+Yardlong Bean,1,N,Very Low,0,28,7
+Yardlong Bean,1,N,Low,0,21,7
+Yardlong Bean,1,N,Medium,0,14,7
+Yardlong Bean,1,N,Optimum,0,7,7
+Yardlong Bean,1,P,Very Low,0,36,9
+Yardlong Bean,1,P,Low,0,27,9
+Yardlong Bean,1,P,Medium,0,18,9
+Yardlong Bean,1,P,Optimum,0,9,9
+Yardlong Bean,1,K,Very Low,0,44,11
+Yardlong Bean,1,K,Low,0,33,11
+Yardlong Bean,1,K,Medium,0,22,11
+Yardlong Bean,1,K,Optimum,0,11,11
+Yardlong Bean,1,S,Very Low,0,12,3
+Yardlong Bean,1,S,Low,0,9,3
+Yardlong Bean,1,S,Medium,0,6,3
+Yardlong Bean,1,S,Optimum,0,3,3
+Yardlong Bean,1,Zn,Very Low,0,1.8,0.6
+Yardlong Bean,1,Zn,Low,0,1.2,0.6
+Yardlong Bean,1,Zn,Medium,0,0.6,0.6
+Yardlong Bean,1,Zn,Optimum,0,,0.6
+Yardlong Bean,1,B,Very Low,0,1.8,0.6
+Yardlong Bean,1,B,Low,0,1.2,0.6
+Yardlong Bean,1,B,Medium,0,0.6,0.6
+Yardlong Bean,1,B,Optimum,0,,0.6
+Yardlong Bean,1,Mo,Very Low,0,0,0
+Yardlong Bean,1,Mo,Low,0,0,0
+Yardlong Bean,1,Mo,Medium,0,0,0
+Yardlong Bean,1,Mo,Optimum,0,,0
+Yardlong Bean,1,Mg,Very Low,0,0,0
+Yardlong Bean,1,Mg,Low,0,0,0
+Yardlong Bean,1,Mg,Medium,0,0,0
+Yardlong Bean,1,Mg,Optimum,0,,0
+French Bean,1,N,Very Low,0,100,25
+French Bean,1,N,Low,0,75,25
+French Bean,1,N,Medium,0,50,25
+French Bean,1,N,Optimum,0,25,25
+French Bean,1,P,Very Low,0,40,10
+French Bean,1,P,Low,0,30,10
+French Bean,1,P,Medium,0,20,10
+French Bean,1,P,Optimum,0,10,10
+French Bean,1,K,Very Low,0,60,15
+French Bean,1,K,Low,0,45,15
+French Bean,1,K,Medium,0,30,15
+French Bean,1,K,Optimum,0,15,15
+French Bean,1,S,Very Low,0,12,3
+French Bean,1,S,Low,0,9,3
+French Bean,1,S,Medium,0,6,3
+French Bean,1,S,Optimum,0,3,3
+French Bean,1,Zn,Very Low,0,3,1
+French Bean,1,Zn,Low,0,2,1
+French Bean,1,Zn,Medium,0,1,1
+French Bean,1,Zn,Optimum,0,,1
+French Bean,1,B,Very Low,0,2.1,0.7
+French Bean,1,B,Low,0,1.4,0.7
+French Bean,1,B,Medium,0,0.7,0.7
+French Bean,1,B,Optimum,0,,0.7
+French Bean,1,Mo,Very Low,0,0,0
+French Bean,1,Mo,Low,0,0,0
+French Bean,1,Mo,Medium,0,0,0
+French Bean,1,Mo,Optimum,0,,0
+French Bean,1,Mg,Very Low,0,0,0
+French Bean,1,Mg,Low,0,0,0
+French Bean,1,Mg,Medium,0,0,0
+French Bean,1,Mg,Optimum,0,,0
+Garden Pea,1,N,Very Low,0,60,15
+Garden Pea,1,N,Low,0,45,15
+Garden Pea,1,N,Medium,0,30,15
+Garden Pea,1,N,Optimum,0,15,15
+Garden Pea,1,P,Very Low,0,32,8
+Garden Pea,1,P,Low,0,24,8
+Garden Pea,1,P,Medium,0,16,8
+Garden Pea,1,P,Optimum,0,8,8
+Garden Pea,1,K,Very Low,0,40,10
+Garden Pea,1,K,Low,0,30,10
+Garden Pea,1,K,Medium,0,20,10
+Garden Pea,1,K,Optimum,0,10,10
+Garden Pea,1,S,Very Low,0,16,4
+Garden Pea,1,S,Low,0,12,4
+Garden Pea,1,S,Medium,0,8,4
+Garden Pea,1,S,Optimum,0,4,4
+Garden Pea,1,Zn,Very Low,0,2.1,0.7
+Garden Pea,1,Zn,Low,0,1.4,0.7
+Garden Pea,1,Zn,Medium,0,0.7,0.7
+Garden Pea,1,Zn,Optimum,0,,0.7
+Garden Pea,1,B,Very Low,0,0,0
+Garden Pea,1,B,Low,0,0,0
+Garden Pea,1,B,Medium,0,0,0
+Garden Pea,1,B,Optimum,0,,0
+Garden Pea,1,Mo,Very Low,0,0,0
+Garden Pea,1,Mo,Low,0,0,0
+Garden Pea,1,Mo,Medium,0,0,0
+Garden Pea,1,Mo,Optimum,0,,0
+Garden Pea,1,Mg,Very Low,0,0,0
+Garden Pea,1,Mg,Low,0,0,0
+Garden Pea,1,Mg,Medium,0,0,0
+Garden Pea,1,Mg,Optimum,0,,0
+Sweet Gourd,1,N,Very Low,0,100,25
+Sweet Gourd,1,N,Low,0,75,25
+Sweet Gourd,1,N,Medium,0,50,25
+Sweet Gourd,1,N,Optimum,0,25,25
+Sweet Gourd,1,P,Very Low,0,48,12
+Sweet Gourd,1,P,Low,0,36,12
+Sweet Gourd,1,P,Medium,0,24,12
+Sweet Gourd,1,P,Optimum,0,12,12
+Sweet Gourd,1,K,Very Low,0,80,20
+Sweet Gourd,1,K,Low,0,60,20
+Sweet Gourd,1,K,Medium,0,40,20
+Sweet Gourd,1,K,Optimum,0,20,20
+Sweet Gourd,1,S,Very Low,0,28,7
+Sweet Gourd,1,S,Low,0,21,7
+Sweet Gourd,1,S,Medium,0,14,7
+Sweet Gourd,1,S,Optimum,0,7,7
+Sweet Gourd,1,Zn,Very Low,0,3,1
+Sweet Gourd,1,Zn,Low,0,2,1
+Sweet Gourd,1,Zn,Medium,0,1,1
+Sweet Gourd,1,Zn,Optimum,0,,1
+Sweet Gourd,1,B,Very Low,0,2.1,0.7
+Sweet Gourd,1,B,Low,0,1.4,0.7
+Sweet Gourd,1,B,Medium,0,0.7,0.7
+Sweet Gourd,1,B,Optimum,0,,0.7
+Sweet Gourd,1,Mo,Very Low,0,0,0
+Sweet Gourd,1,Mo,Low,0,0,0
+Sweet Gourd,1,Mo,Medium,0,0,0
+Sweet Gourd,1,Mo,Optimum,0,,0
+Sweet Gourd,1,Mg,Very Low,0,0,0
+Sweet Gourd,1,Mg,Low,0,0,0
+Sweet Gourd,1,Mg,Medium,0,0,0
+Sweet Gourd,1,Mg,Optimum,0,,0
+Bottle Gourd,1,N,Very Low,0,80,20
+Bottle Gourd,1,N,Low,0,60,20
+Bottle Gourd,1,N,Medium,0,40,20
+Bottle Gourd,1,N,Optimum,0,20,20
+Bottle Gourd,1,P,Very Low,0,40,10
+Bottle Gourd,1,P,Low,0,30,10
+Bottle Gourd,1,P,Medium,0,20,10
+Bottle Gourd,1,P,Optimum,0,10,10
+Bottle Gourd,1,K,Very Low,0,60,15
+Bottle Gourd,1,K,Low,0,45,15
+Bottle Gourd,1,K,Medium,0,30,15
+Bottle Gourd,1,K,Optimum,0,15,15
+Bottle Gourd,1,S,Very Low,0,24,6
+Bottle Gourd,1,S,Low,0,18,6
+Bottle Gourd,1,S,Medium,0,12,6
+Bottle Gourd,1,S,Optimum,0,6,6
+Bottle Gourd,1,Zn,Very Low,0,3,1
+Bottle Gourd,1,Zn,Low,0,2,1
+Bottle Gourd,1,Zn,Medium,0,1,1
+Bottle Gourd,1,Zn,Optimum,0,,1
+Bottle Gourd,1,B,Very Low,0,2.1,0.7
+Bottle Gourd,1,B,Low,0,1.4,0.7
+Bottle Gourd,1,B,Medium,0,0.7,0.7
+Bottle Gourd,1,B,Optimum,0,,0.7
+Bottle Gourd,1,Mo,Very Low,0,0,0
+Bottle Gourd,1,Mo,Low,0,0,0
+Bottle Gourd,1,Mo,Medium,0,0,0
+Bottle Gourd,1,Mo,Optimum,0,,0
+Bottle Gourd,1,Mg,Very Low,0,0,0
+Bottle Gourd,1,Mg,Low,0,0,0
+Bottle Gourd,1,Mg,Medium,0,0,0
+Bottle Gourd,1,Mg,Optimum,0,,0
+Ash Gourd,1,N,Very Low,0,80,20
+Ash Gourd,1,N,Low,0,60,20
+Ash Gourd,1,N,Medium,0,40,20
+Ash Gourd,1,N,Optimum,0,20,20
+Ash Gourd,1,P,Very Low,0,40,10
+Ash Gourd,1,P,Low,0,30,10
+Ash Gourd,1,P,Medium,0,20,10
+Ash Gourd,1,P,Optimum,0,10,10
+Ash Gourd,1,K,Very Low,0,60,15
+Ash Gourd,1,K,Low,0,45,15
+Ash Gourd,1,K,Medium,0,30,15
+Ash Gourd,1,K,Optimum,0,15,15
+Ash Gourd,1,S,Very Low,0,24,6
+Ash Gourd,1,S,Low,0,18,6
+Ash Gourd,1,S,Medium,0,12,6
+Ash Gourd,1,S,Optimum,0,6,6
+Ash Gourd,1,Zn,Very Low,0,3,1
+Ash Gourd,1,Zn,Low,0,2,1
+Ash Gourd,1,Zn,Medium,0,1,1
+Ash Gourd,1,Zn,Optimum,0,,1
+Ash Gourd,1,B,Very Low,0,2.1,0.7
+Ash Gourd,1,B,Low,0,1.4,0.7
+Ash Gourd,1,B,Medium,0,0.7,0.7
+Ash Gourd,1,B,Optimum,0,,0.7
+Ash Gourd,1,Mo,Very Low,0,0,0
+Ash Gourd,1,Mo,Low,0,0,0
+Ash Gourd,1,Mo,Medium,0,0,0
+Ash Gourd,1,Mo,Optimum,0,,0
+Ash Gourd,1,Mg,Very Low,0,0,0
+Ash Gourd,1,Mg,Low,0,0,0
+Ash Gourd,1,Mg,Medium,0,0,0
+Ash Gourd,1,Mg,Optimum,0,,0
+Teasle Gourd,1,N,Very Low,0,80,20
+Teasle Gourd,1,N,Low,0,60,20
+Teasle Gourd,1,N,Medium,0,40,20
+Teasle Gourd,1,N,Optimum,0,20,20
+Teasle Gourd,1,P,Very Low,0,32,8
+Teasle Gourd,1,P,Low,0,24,8
+Teasle Gourd,1,P,Medium,0,16,8
+Teasle Gourd,1,P,Optimum,0,8,8
+Teasle Gourd,1,K,Very Low,0,56,14
+Teasle Gourd,1,K,Low,0,42,14
+Teasle Gourd,1,K,Medium,0,28,14
+Teasle Gourd,1,K,Optimum,0,14,14
+Teasle Gourd,1,S,Very Low,0,20,5
+Teasle Gourd,1,S,Low,0,15,5
+Teasle Gourd,1,S,Medium,0,10,5
+Teasle Gourd,1,S,Optimum,0,5,5
+Teasle Gourd,1,Zn,Very Low,0,3,1
+Teasle Gourd,1,Zn,Low,0,2,1
+Teasle Gourd,1,Zn,Medium,0,1,1
+Teasle Gourd,1,Zn,Optimum,0,,1
+Teasle Gourd,1,B,Very Low,0,2.1,0.7
+Teasle Gourd,1,B,Low,0,1.4,0.7
+Teasle Gourd,1,B,Medium,0,0.7,0.7
+Teasle Gourd,1,B,Optimum,0,,0.7
+Teasle Gourd,1,Mo,Very Low,0,0,0
+Teasle Gourd,1,Mo,Low,0,0,0
+Teasle Gourd,1,Mo,Medium,0,0,0
+Teasle Gourd,1,Mo,Optimum,0,,0
+Teasle Gourd,1,Mg,Very Low,0,0,0
+Teasle Gourd,1,Mg,Low,0,0,0
+Teasle Gourd,1,Mg,Medium,0,0,0
+Teasle Gourd,1,Mg,Optimum,0,,0
+Bitter Gourd,1,N,Very Low,0,100,25
+Bitter Gourd,1,N,Low,0,75,25
+Bitter Gourd,1,N,Medium,0,50,25
+Bitter Gourd,1,N,Optimum,0,25,25
+Bitter Gourd,1,P,Very Low,0,40,10
+Bitter Gourd,1,P,Low,0,30,10
+Bitter Gourd,1,P,Medium,0,20,10
+Bitter Gourd,1,P,Optimum,0,10,10
+Bitter Gourd,1,K,Very Low,0,60,15
+Bitter Gourd,1,K,Low,0,45,15
+Bitter Gourd,1,K,Medium,0,30,15
+Bitter Gourd,1,K,Optimum,0,15,15
+Bitter Gourd,1,S,Very Low,0,20,5
+Bitter Gourd,1,S,Low,0,15,5
+Bitter Gourd,1,S,Medium,0,10,5
+Bitter Gourd,1,S,Optimum,0,5,5
+Bitter Gourd,1,Zn,Very Low,0,0,0
+Bitter Gourd,1,Zn,Low,0,0,0
+Bitter Gourd,1,Zn,Medium,0,0,0
+Bitter Gourd,1,Zn,Optimum,0,,0
+Bitter Gourd,1,B,Very Low,0,0,0
+Bitter Gourd,1,B,Low,0,0,0
+Bitter Gourd,1,B,Medium,0,0,0
+Bitter Gourd,1,B,Optimum,0,,0
+Bitter Gourd,1,Mo,Very Low,0,0,0
+Bitter Gourd,1,Mo,Low,0,0,0
+Bitter Gourd,1,Mo,Medium,0,0,0
+Bitter Gourd,1,Mo,Optimum,0,,0
+Bitter Gourd,1,Mg,Very Low,0,0,0
+Bitter Gourd,1,Mg,Low,0,0,0
+Bitter Gourd,1,Mg,Medium,0,0,0
+Bitter Gourd,1,Mg,Optimum,0,,0
+Point Gourd,1,N,Very Low,0,120,30
+Point Gourd,1,N,Low,0,90,30
+Point Gourd,1,N,Medium,0,60,30
+Point Gourd,1,N,Optimum,0,30,30
+Point Gourd,1,P,Very Low,0,24,6
+Point Gourd,1,P,Low,0,18,6
+Point Gourd,1,P,Medium,0,12,6
+Point Gourd,1,P,Optimum,0,6,6
+Point Gourd,1,K,Very Low,0,48,12
+Point Gourd,1,K,Low,0,36,12
+Point Gourd,1,K,Medium,0,24,12
+Point Gourd,1,K,Optimum,0,12,12
+Point Gourd,1,S,Very Low,0,20,5
+Point Gourd,1,S,Low,0,15,5
+Point Gourd,1,S,Medium,0,10,5
+Point Gourd,1,S,Optimum,0,5,5
+Point Gourd,1,Zn,Very Low,0,3,1
+Point Gourd,1,Zn,Low,0,2,1
+Point Gourd,1,Zn,Medium,0,1,1
+Point Gourd,1,Zn,Optimum,0,,1
+Point Gourd,1,B,Very Low,0,1.5,0.5
+Point Gourd,1,B,Low,0,1,0.5
+Point Gourd,1,B,Medium,0,0.5,0.5
+Point Gourd,1,B,Optimum,0,,0.5
+Point Gourd,1,Mo,Very Low,0,0,0
+Point Gourd,1,Mo,Low,0,0,0
+Point Gourd,1,Mo,Medium,0,0,0
+Point Gourd,1,Mo,Optimum,0,,0
+Point Gourd,1,Mg,Very Low,0,0,0
+Point Gourd,1,Mg,Low,0,0,0
+Point Gourd,1,Mg,Medium,0,0,0
+Point Gourd,1,Mg,Optimum,0,,0
+Shake Gourd,1,N,Very Low,0,100,25
+Shake Gourd,1,N,Low,0,75,25
+Shake Gourd,1,N,Medium,0,50,25
+Shake Gourd,1,N,Optimum,0,25,25
+Shake Gourd,1,P,Very Low,0,48,12
+Shake Gourd,1,P,Low,0,36,12
+Shake Gourd,1,P,Medium,0,24,12
+Shake Gourd,1,P,Optimum,0,12,12
+Shake Gourd,1,K,Very Low,0,80,20
+Shake Gourd,1,K,Low,0,60,20
+Shake Gourd,1,K,Medium,0,40,20
+Shake Gourd,1,K,Optimum,0,20,20
+Shake Gourd,1,S,Very Low,0,28,7
+Shake Gourd,1,S,Low,0,21,7
+Shake Gourd,1,S,Medium,0,14,7
+Shake Gourd,1,S,Optimum,0,7,7
+Shake Gourd,1,Zn,Very Low,0,3,1
+Shake Gourd,1,Zn,Low,0,2,1
+Shake Gourd,1,Zn,Medium,0,1,1
+Shake Gourd,1,Zn,Optimum,0,,1
+Shake Gourd,1,B,Very Low,0,2.1,0.7
+Shake Gourd,1,B,Low,0,1.4,0.7
+Shake Gourd,1,B,Medium,0,0.7,0.7
+Shake Gourd,1,B,Optimum,0,,0.7
+Shake Gourd,1,Mo,Very Low,0,0,0
+Shake Gourd,1,Mo,Low,0,0,0
+Shake Gourd,1,Mo,Medium,0,0,0
+Shake Gourd,1,Mo,Optimum,0,,0
+Shake Gourd,1,Mg,Very Low,0,0,0
+Shake Gourd,1,Mg,Low,0,0,0
+Shake Gourd,1,Mg,Medium,0,0,0
+Shake Gourd,1,Mg,Optimum,0,,0
+Ridge Gourd,1,N,Very Low,0,100,25
+Ridge Gourd,1,N,Low,0,75,25
+Ridge Gourd,1,N,Medium,0,50,25
+Ridge Gourd,1,N,Optimum,0,25,25
+Ridge Gourd,1,P,Very Low,0,48,12
+Ridge Gourd,1,P,Low,0,36,12
+Ridge Gourd,1,P,Medium,0,24,12
+Ridge Gourd,1,P,Optimum,0,12,12
+Ridge Gourd,1,K,Very Low,0,80,20
+Ridge Gourd,1,K,Low,0,60,20
+Ridge Gourd,1,K,Medium,0,40,20
+Ridge Gourd,1,K,Optimum,0,20,20
+Ridge Gourd,1,S,Very Low,0,28,7
+Ridge Gourd,1,S,Low,0,21,7
+Ridge Gourd,1,S,Medium,0,14,7
+Ridge Gourd,1,S,Optimum,0,7,7
+Ridge Gourd,1,Zn,Very Low,0,3,1
+Ridge Gourd,1,Zn,Low,0,2,1
+Ridge Gourd,1,Zn,Medium,0,1,1
+Ridge Gourd,1,Zn,Optimum,0,,1
+Ridge Gourd,1,B,Very Low,0,2.1,0.7
+Ridge Gourd,1,B,Low,0,1.4,0.7
+Ridge Gourd,1,B,Medium,0,0.7,0.7
+Ridge Gourd,1,B,Optimum,0,,0.7
+Ridge Gourd,1,Mo,Very Low,0,0,0
+Ridge Gourd,1,Mo,Low,0,0,0
+Ridge Gourd,1,Mo,Medium,0,0,0
+Ridge Gourd,1,Mo,Optimum,0,,0
+Ridge Gourd,1,Mg,Very Low,0,0,0
+Ridge Gourd,1,Mg,Low,0,0,0
+Ridge Gourd,1,Mg,Medium,0,0,0
+Ridge Gourd,1,Mg,Optimum,0,,0
+Sponge Gourd,1,N,Very Low,0,100,25
+Sponge Gourd,1,N,Low,0,75,25
+Sponge Gourd,1,N,Medium,0,50,25
+Sponge Gourd,1,N,Optimum,0,25,25
+Sponge Gourd,1,P,Very Low,0,48,12
+Sponge Gourd,1,P,Low,0,36,12
+Sponge Gourd,1,P,Medium,0,24,12
+Sponge Gourd,1,P,Optimum,0,12,12
+Sponge Gourd,1,K,Very Low,0,80,20
+Sponge Gourd,1,K,Low,0,60,20
+Sponge Gourd,1,K,Medium,0,40,20
+Sponge Gourd,1,K,Optimum,0,20,20
+Sponge Gourd,1,S,Very Low,0,28,7
+Sponge Gourd,1,S,Low,0,21,7
+Sponge Gourd,1,S,Medium,0,14,7
+Sponge Gourd,1,S,Optimum,0,7,7
+Sponge Gourd,1,Zn,Very Low,0,3,1
+Sponge Gourd,1,Zn,Low,0,2,1
+Sponge Gourd,1,Zn,Medium,0,1,1
+Sponge Gourd,1,Zn,Optimum,0,,1
+Sponge Gourd,1,B,Very Low,0,2.1,0.7
+Sponge Gourd,1,B,Low,0,1.4,0.7
+Sponge Gourd,1,B,Medium,0,0.7,0.7
+Sponge Gourd,1,B,Optimum,0,,0.7
+Sponge Gourd,1,Mo,Very Low,0,0,0
+Sponge Gourd,1,Mo,Low,0,0,0
+Sponge Gourd,1,Mo,Medium,0,0,0
+Sponge Gourd,1,Mo,Optimum,0,,0
+Sponge Gourd,1,Mg,Very Low,0,0,0
+Sponge Gourd,1,Mg,Low,0,0,0
+Sponge Gourd,1,Mg,Medium,0,0,0
+Sponge Gourd,1,Mg,Optimum,0,,0
+Cucumber,1,N,Very Low,0,100,25
+Cucumber,1,N,Low,0,75,25
+Cucumber,1,N,Medium,0,50,25
+Cucumber,1,N,Optimum,0,25,25
+Cucumber,1,P,Very Low,0,32,8
+Cucumber,1,P,Low,0,24,8
+Cucumber,1,P,Medium,0,16,8
+Cucumber,1,P,Optimum,0,8,8
+Cucumber,1,K,Very Low,0,80,20
+Cucumber,1,K,Low,0,60,20
+Cucumber,1,K,Medium,0,40,20
+Cucumber,1,K,Optimum,0,20,20
+Cucumber,1,S,Very Low,0,24,6
+Cucumber,1,S,Low,0,18,6
+Cucumber,1,S,Medium,0,12,6
+Cucumber,1,S,Optimum,0,6,6
+Cucumber,1,Zn,Very Low,0,3,1
+Cucumber,1,Zn,Low,0,2,1
+Cucumber,1,Zn,Medium,0,1,1
+Cucumber,1,Zn,Optimum,0,,1
+Cucumber,1,B,Very Low,0,2.1,0.7
+Cucumber,1,B,Low,0,1.4,0.7
+Cucumber,1,B,Medium,0,0.7,0.7
+Cucumber,1,B,Optimum,0,,0.7
+Cucumber,1,Mo,Very Low,0,0,0
+Cucumber,1,Mo,Low,0,0,0
+Cucumber,1,Mo,Medium,0,0,0
+Cucumber,1,Mo,Optimum,0,,0
+Cucumber,1,Mg,Very Low,0,0,0
+Cucumber,1,Mg,Low,0,0,0
+Cucumber,1,Mg,Medium,0,0,0
+Cucumber,1,Mg,Optimum,0,,0
+Kangkong,1,N,Very Low,0,120,30
+Kangkong,1,N,Low,0,90,30
+Kangkong,1,N,Medium,0,60,30
+Kangkong,1,N,Optimum,0,30,30
+Kangkong,1,P,Very Low,0,40,10
+Kangkong,1,P,Low,0,30,10
+Kangkong,1,P,Medium,0,20,10
+Kangkong,1,P,Optimum,0,10,10
+Kangkong,1,K,Very Low,0,60,15
+Kangkong,1,K,Low,0,45,15
+Kangkong,1,K,Medium,0,30,15
+Kangkong,1,K,Optimum,0,15,15
+Kangkong,1,S,Very Low,0,20,5
+Kangkong,1,S,Low,0,15,5
+Kangkong,1,S,Medium,0,10,5
+Kangkong,1,S,Optimum,0,5,5
+Kangkong,1,Zn,Very Low,0,0,0
+Kangkong,1,Zn,Low,0,0,0
+Kangkong,1,Zn,Medium,0,0,0
+Kangkong,1,Zn,Optimum,0,,0
+Kangkong,1,B,Very Low,0,0,0
+Kangkong,1,B,Low,0,0,0
+Kangkong,1,B,Medium,0,0,0
+Kangkong,1,B,Optimum,0,,0
+Kangkong,1,Mo,Very Low,0,0,0
+Kangkong,1,Mo,Low,0,0,0
+Kangkong,1,Mo,Medium,0,0,0
+Kangkong,1,Mo,Optimum,0,,0
+Kangkong,1,Mg,Very Low,0,0,0
+Kangkong,1,Mg,Low,0,0,0
+Kangkong,1,Mg,Medium,0,0,0
+Kangkong,1,Mg,Optimum,0,,0
+Indian Spinach,1,N,Very Low,0,140,35
+Indian Spinach,1,N,Low,0,105,35
+Indian Spinach,1,N,Medium,0,70,35
+Indian Spinach,1,N,Optimum,0,35,35
+Indian Spinach,1,P,Very Low,0,40,10
+Indian Spinach,1,P,Low,0,30,10
+Indian Spinach,1,P,Medium,0,20,10
+Indian Spinach,1,P,Optimum,0,10,10
+Indian Spinach,1,K,Very Low,0,80,20
+Indian Spinach,1,K,Low,0,60,20
+Indian Spinach,1,K,Medium,0,40,20
+Indian Spinach,1,K,Optimum,0,20,20
+Indian Spinach,1,S,Very Low,0,20,5
+Indian Spinach,1,S,Low,0,15,5
+Indian Spinach,1,S,Medium,0,10,5
+Indian Spinach,1,S,Optimum,0,5,5
+Indian Spinach,1,Zn,Very Low,0,0,0
+Indian Spinach,1,Zn,Low,0,0,0
+Indian Spinach,1,Zn,Medium,0,0,0
+Indian Spinach,1,Zn,Optimum,0,,0
+Indian Spinach,1,B,Very Low,0,0,0
+Indian Spinach,1,B,Low,0,0,0
+Indian Spinach,1,B,Medium,0,0,0
+Indian Spinach,1,B,Optimum,0,,0
+Indian Spinach,1,Mo,Very Low,0,0,0
+Indian Spinach,1,Mo,Low,0,0,0
+Indian Spinach,1,Mo,Medium,0,0,0
+Indian Spinach,1,Mo,Optimum,0,,0
+Indian Spinach,1,Mg,Very Low,0,0,0
+Indian Spinach,1,Mg,Low,0,0,0
+Indian Spinach,1,Mg,Medium,0,0,0
+Indian Spinach,1,Mg,Optimum,0,,0
+Spinach,1,N,Very Low,0,60,15
+Spinach,1,N,Low,0,45,15
+Spinach,1,N,Medium,0,30,15
+Spinach,1,N,Optimum,0,15,15
+Spinach,1,P,Very Low,0,20,5
+Spinach,1,P,Low,0,15,5
+Spinach,1,P,Medium,0,10,5
+Spinach,1,P,Optimum,0,5,5
+Spinach,1,K,Very Low,0,20,5
+Spinach,1,K,Low,0,15,5
+Spinach,1,K,Medium,0,10,5
+Spinach,1,K,Optimum,0,5,5
+Spinach,1,S,Very Low,0,16,4
+Spinach,1,S,Low,0,12,4
+Spinach,1,S,Medium,0,8,4
+Spinach,1,S,Optimum,0,4,4
+Spinach,1,Zn,Very Low,0,0,0
+Spinach,1,Zn,Low,0,0,0
+Spinach,1,Zn,Medium,0,0,0
+Spinach,1,Zn,Optimum,0,,0
+Spinach,1,B,Very Low,0,0,0
+Spinach,1,B,Low,0,0,0
+Spinach,1,B,Medium,0,0,0
+Spinach,1,B,Optimum,0,,0
+Spinach,1,Mo,Very Low,0,0,0
+Spinach,1,Mo,Low,0,0,0
+Spinach,1,Mo,Medium,0,0,0
+Spinach,1,Mo,Optimum,0,,0
+Spinach,1,Mg,Very Low,0,0,0
+Spinach,1,Mg,Low,0,0,0
+Spinach,1,Mg,Medium,0,0,0
+Spinach,1,Mg,Optimum,0,,0
+Amaranthus,1,N,Very Low,0,120,30
+Amaranthus,1,N,Low,0,90,30
+Amaranthus,1,N,Medium,0,60,30
+Amaranthus,1,N,Optimum,0,30,30
+Amaranthus,1,P,Very Low,0,36,9
+Amaranthus,1,P,Low,0,27,9
+Amaranthus,1,P,Medium,0,18,9
+Amaranthus,1,P,Optimum,0,9,9
+Amaranthus,1,K,Very Low,0,60,15
+Amaranthus,1,K,Low,0,45,15
+Amaranthus,1,K,Medium,0,30,15
+Amaranthus,1,K,Optimum,0,15,15
+Amaranthus,1,S,Very Low,0,16,4
+Amaranthus,1,S,Low,0,12,4
+Amaranthus,1,S,Medium,0,8,4
+Amaranthus,1,S,Optimum,0,4,4
+Amaranthus,1,Zn,Very Low,0,0,0
+Amaranthus,1,Zn,Low,0,0,0
+Amaranthus,1,Zn,Medium,0,0,0
+Amaranthus,1,Zn,Optimum,0,,0
+Amaranthus,1,B,Very Low,0,0,0
+Amaranthus,1,B,Low,0,0,0
+Amaranthus,1,B,Medium,0,0,0
+Amaranthus,1,B,Optimum,0,,0
+Amaranthus,1,Mo,Very Low,0,0,0
+Amaranthus,1,Mo,Low,0,0,0
+Amaranthus,1,Mo,Medium,0,0,0
+Amaranthus,1,Mo,Optimum,0,,0
+Amaranthus,1,Mg,Very Low,0,0,0
+Amaranthus,1,Mg,Low,0,0,0
+Amaranthus,1,Mg,Medium,0,0,0
+Amaranthus,1,Mg,Optimum,0,,0
+Red Amaranthus,1,N,Very Low,0,100,25
+Red Amaranthus,1,N,Low,0,75,25
+Red Amaranthus,1,N,Medium,0,50,25
+Red Amaranthus,1,N,Optimum,0,25,25
+Red Amaranthus,1,P,Very Low,0,24,6
+Red Amaranthus,1,P,Low,0,18,6
+Red Amaranthus,1,P,Medium,0,12,6
+Red Amaranthus,1,P,Optimum,0,6,6
+Red Amaranthus,1,K,Very Low,0,40,10
+Red Amaranthus,1,K,Low,0,30,10
+Red Amaranthus,1,K,Medium,0,20,10
+Red Amaranthus,1,K,Optimum,0,10,10
+Red Amaranthus,1,S,Very Low,0,12,3
+Red Amaranthus,1,S,Low,0,9,3
+Red Amaranthus,1,S,Medium,0,6,3
+Red Amaranthus,1,S,Optimum,0,3,3
+Red Amaranthus,1,Zn,Very Low,0,0,0
+Red Amaranthus,1,Zn,Low,0,0,0
+Red Amaranthus,1,Zn,Medium,0,0,0
+Red Amaranthus,1,Zn,Optimum,0,,0
+Red Amaranthus,1,B,Very Low,0,0,0
+Red Amaranthus,1,B,Low,0,0,0
+Red Amaranthus,1,B,Medium,0,0,0
+Red Amaranthus,1,B,Optimum,0,,0
+Red Amaranthus,1,Mo,Very Low,0,0,0
+Red Amaranthus,1,Mo,Low,0,0,0
+Red Amaranthus,1,Mo,Medium,0,0,0
+Red Amaranthus,1,Mo,Optimum,0,,0
+Red Amaranthus,1,Mg,Very Low,0,0,0
+Red Amaranthus,1,Mg,Low,0,0,0
+Red Amaranthus,1,Mg,Medium,0,0,0
+Red Amaranthus,1,Mg,Optimum,0,,0
+Onion,1,N,Very Low,0,140,35
+Onion,1,N,Low,0,105,35
+Onion,1,N,Medium,0,70,35
+Onion,1,N,Optimum,0,35,35
+Onion,1,P,Very Low,0,60,15
+Onion,1,P,Low,0,45,15
+Onion,1,P,Medium,0,30,15
+Onion,1,P,Optimum,0,15,15
+Onion,1,K,Very Low,0,120,30
+Onion,1,K,Low,0,90,30
+Onion,1,K,Medium,0,60,30
+Onion,1,K,Optimum,0,30,30
+Onion,1,S,Very Low,0,40,10
+Onion,1,S,Low,0,30,10
+Onion,1,S,Medium,0,20,10
+Onion,1,S,Optimum,0,10,10
+Onion,1,Zn,Very Low,0,4.5,1.5
+Onion,1,Zn,Low,0,3,1.5
+Onion,1,Zn,Medium,0,1.5,1.5
+Onion,1,Zn,Optimum,0,,1.5
+Onion,1,B,Very Low,0,2.1,0.7
+Onion,1,B,Low,0,1.4,0.7
+Onion,1,B,Medium,0,0.7,0.7
+Onion,1,B,Optimum,0,,0.7
+Onion,1,Mo,Very Low,0,0,0
+Onion,1,Mo,Low,0,0,0
+Onion,1,Mo,Medium,0,0,0
+Onion,1,Mo,Optimum,0,,0
+Onion,1,Mg,Very Low,0,0,0
+Onion,1,Mg,Low,0,0,0
+Onion,1,Mg,Medium,0,0,0
+Onion,1,Mg,Optimum,0,,0
+Summer Onion,1,N,Very Low,0,100,25
+Summer Onion,1,N,Low,0,75,25
+Summer Onion,1,N,Medium,0,50,25
+Summer Onion,1,N,Optimum,0,25,25
+Summer Onion,1,P,Very Low,0,40,10
+Summer Onion,1,P,Low,0,30,10
+Summer Onion,1,P,Medium,0,20,10
+Summer Onion,1,P,Optimum,0,10,10
+Summer Onion,1,K,Very Low,0,80,20
+Summer Onion,1,K,Low,0,60,20
+Summer Onion,1,K,Medium,0,40,20
+Summer Onion,1,K,Optimum,0,20,20
+Summer Onion,1,S,Very Low,0,32,8
+Summer Onion,1,S,Low,0,24,8
+Summer Onion,1,S,Medium,0,16,8
+Summer Onion,1,S,Optimum,0,8,8
+Summer Onion,1,Zn,Very Low,0,3,1
+Summer Onion,1,Zn,Low,0,2,1
+Summer Onion,1,Zn,Medium,0,1,1
+Summer Onion,1,Zn,Optimum,0,,1
+Summer Onion,1,B,Very Low,0,1.5,0.5
+Summer Onion,1,B,Low,0,1,0.5
+Summer Onion,1,B,Medium,0,0.5,0.5
+Summer Onion,1,B,Optimum,0,,0.5
+Summer Onion,1,Mo,Very Low,0,0,0
+Summer Onion,1,Mo,Low,0,0,0
+Summer Onion,1,Mo,Medium,0,0,0
+Summer Onion,1,Mo,Optimum,0,,0
+Summer Onion,1,Mg,Very Low,0,0,0
+Summer Onion,1,Mg,Low,0,0,0
+Summer Onion,1,Mg,Medium,0,0,0
+Summer Onion,1,Mg,Optimum,0,,0
+Onion Seed,1,N,Very Low,0,160,40
+Onion Seed,1,N,Low,0,120,40
+Onion Seed,1,N,Medium,0,80,40
+Onion Seed,1,N,Optimum,0,40,40
+Onion Seed,1,P,Very Low,0,60,15
+Onion Seed,1,P,Low,0,45,15
+Onion Seed,1,P,Medium,0,30,15
+Onion Seed,1,P,Optimum,0,15,15
+Onion Seed,1,K,Very Low,0,140,35
+Onion Seed,1,K,Low,0,105,35
+Onion Seed,1,K,Medium,0,70,35
+Onion Seed,1,K,Optimum,0,35,35
+Onion Seed,1,S,Very Low,0,32,8
+Onion Seed,1,S,Low,0,24,8
+Onion Seed,1,S,Medium,0,16,8
+Onion Seed,1,S,Optimum,0,8,8
+Onion Seed,1,Zn,Very Low,0,4.5,1.5
+Onion Seed,1,Zn,Low,0,3,1.5
+Onion Seed,1,Zn,Medium,0,1.5,1.5
+Onion Seed,1,Zn,Optimum,0,,1.5
+Onion Seed,1,B,Very Low,0,2.1,0.7
+Onion Seed,1,B,Low,0,1.4,0.7
+Onion Seed,1,B,Medium,0,0.7,0.7
+Onion Seed,1,B,Optimum,0,,0.7
+Onion Seed,1,Mo,Very Low,0,0,0
+Onion Seed,1,Mo,Low,0,0,0
+Onion Seed,1,Mo,Medium,0,0,0
+Onion Seed,1,Mo,Optimum,0,,0
+Onion Seed,1,Mg,Very Low,0,0,0
+Onion Seed,1,Mg,Low,0,0,0
+Onion Seed,1,Mg,Medium,0,0,0
+Onion Seed,1,Mg,Optimum,0,,0
+Garlic,1,N,Very Low,0,152,38
+Garlic,1,N,Low,0,114,38
+Garlic,1,N,Medium,0,76,38
+Garlic,1,N,Optimum,0,38,38
+Garlic,1,P,Very Low,0,64,16
+Garlic,1,P,Low,0,48,16
+Garlic,1,P,Medium,0,32,16
+Garlic,1,P,Optimum,0,16,16
+Garlic,1,K,Very Low,0,120,30
+Garlic,1,K,Low,0,90,30
+Garlic,1,K,Medium,0,60,30
+Garlic,1,K,Optimum,0,30,30
+Garlic,1,S,Very Low,0,40,10
+Garlic,1,S,Low,0,30,10
+Garlic,1,S,Medium,0,20,10
+Garlic,1,S,Optimum,0,10,10
+Garlic,1,Zn,Very Low,0,4,1
+Garlic,1,Zn,Low,0,3,1
+Garlic,1,Zn,Medium,0,2,1
+Garlic,1,Zn,Optimum,0,1,1
+Garlic,1,B,Very Low,0,4,1
+Garlic,1,B,Low,0,3,1
+Garlic,1,B,Medium,0,2,1
+Garlic,1,B,Optimum,0,1,1
+Garlic,1,Mo,Very Low,0,0,0
+Garlic,1,Mo,Low,0,0,0
+Garlic,1,Mo,Medium,0,0,0
+Garlic,1,Mo,Optimum,0,,0
+Garlic,1,Mg,Very Low,0,0,0
+Garlic,1,Mg,Low,0,0,0
+Garlic,1,Mg,Medium,0,0,0
+Garlic,1,Mg,Optimum,0,,0
+Ginger,1,N,Very Low,0,180,45
+Ginger,1,N,Low,0,135,45
+Ginger,1,N,Medium,0,90,45
+Ginger,1,N,Optimum,0,45,45
+Ginger,1,P,Very Low,0,60,15
+Ginger,1,P,Low,0,45,15
+Ginger,1,P,Medium,0,30,15
+Ginger,1,P,Optimum,0,15,15
+Ginger,1,K,Very Low,0,160,40
+Ginger,1,K,Low,0,120,40
+Ginger,1,K,Medium,0,80,40
+Ginger,1,K,Optimum,0,40,40
+Ginger,1,S,Very Low,0,20,5
+Ginger,1,S,Low,0,15,5
+Ginger,1,S,Medium,0,10,5
+Ginger,1,S,Optimum,0,5,5
+Ginger,1,Zn,Very Low,0,4.5,1.5
+Ginger,1,Zn,Low,0,3,1.5
+Ginger,1,Zn,Medium,0,1.5,1.5
+Ginger,1,Zn,Optimum,0,,1.5
+Ginger,1,B,Very Low,0,1.5,0.5
+Ginger,1,B,Low,0,1,0.5
+Ginger,1,B,Medium,0,0.5,0.5
+Ginger,1,B,Optimum,0,,0.5
+Ginger,1,Mo,Very Low,0,0,0
+Ginger,1,Mo,Low,0,0,0
+Ginger,1,Mo,Medium,0,0,0
+Ginger,1,Mo,Optimum,0,,0
+Ginger,1,Mg,Very Low,0,0,0
+Ginger,1,Mg,Low,0,0,0
+Ginger,1,Mg,Medium,0,0,0
+Ginger,1,Mg,Optimum,0,,0
+Tumeric,1,N,Very Low,0,140,35
+Tumeric,1,N,Low,0,105,35
+Tumeric,1,N,Medium,0,70,35
+Tumeric,1,N,Optimum,0,35,35
+Tumeric,1,P,Very Low,0,40,10
+Tumeric,1,P,Low,0,30,10
+Tumeric,1,P,Medium,0,20,10
+Tumeric,1,P,Optimum,0,10,10
+Tumeric,1,K,Very Low,0,160,40
+Tumeric,1,K,Low,0,120,40
+Tumeric,1,K,Medium,0,80,40
+Tumeric,1,K,Optimum,0,40,40
+Tumeric,1,S,Very Low,0,20,5
+Tumeric,1,S,Low,0,15,5
+Tumeric,1,S,Medium,0,10,5
+Tumeric,1,S,Optimum,0,5,5
+Tumeric,1,Zn,Very Low,0,4.5,1.5
+Tumeric,1,Zn,Low,0,3,1.5
+Tumeric,1,Zn,Medium,0,1.5,1.5
+Tumeric,1,Zn,Optimum,0,,1.5
+Tumeric,1,B,Very Low,0,2.1,0.7
+Tumeric,1,B,Low,0,1.4,0.7
+Tumeric,1,B,Medium,0,0.7,0.7
+Tumeric,1,B,Optimum,0,,0.7
+Tumeric,1,Mo,Very Low,0,0,0
+Tumeric,1,Mo,Low,0,0,0
+Tumeric,1,Mo,Medium,0,0,0
+Tumeric,1,Mo,Optimum,0,,0
+Tumeric,1,Mg,Very Low,0,0,0
+Tumeric,1,Mg,Low,0,0,0
+Tumeric,1,Mg,Medium,0,0,0
+Tumeric,1,Mg,Optimum,0,,0
+Chilli,1,N,Very Low,0,128,32
+Chilli,1,N,Low,0,96,32
+Chilli,1,N,Medium,0,64,32
+Chilli,1,N,Optimum,0,32,32
+Chilli,1,P,Very Low,0,60,15
+Chilli,1,P,Low,0,45,15
+Chilli,1,P,Medium,0,30,15
+Chilli,1,P,Optimum,0,15,15
+Chilli,1,K,Very Low,0,100,25
+Chilli,1,K,Low,0,75,25
+Chilli,1,K,Medium,0,50,25
+Chilli,1,K,Optimum,0,25,25
+Chilli,1,S,Very Low,0,20,5
+Chilli,1,S,Low,0,15,5
+Chilli,1,S,Medium,0,10,5
+Chilli,1,S,Optimum,0,5,5
+Chilli,1,Zn,Very Low,0,2,0.5
+Chilli,1,Zn,Low,0,1.5,0.5
+Chilli,1,Zn,Medium,0,1,0.5
+Chilli,1,Zn,Optimum,0,0.5,0.5
+Chilli,1,B,Very Low,0,2.1,0.7
+Chilli,1,B,Low,0,1.4,0.7
+Chilli,1,B,Medium,0,0.7,0.7
+Chilli,1,B,Optimum,0,,0.7
+Chilli,1,Mo,Very Low,0,0,0
+Chilli,1,Mo,Low,0,0,0
+Chilli,1,Mo,Medium,0,0,0
+Chilli,1,Mo,Optimum,0,,0
+Chilli,1,Mg,Very Low,0,0,0
+Chilli,1,Mg,Low,0,0,0
+Chilli,1,Mg,Medium,0,0,0
+Chilli,1,Mg,Optimum,0,,0
+Coriander,1,N,Very Low,0,100,25
+Coriander,1,N,Low,0,75,25
+Coriander,1,N,Medium,0,50,25
+Coriander,1,N,Optimum,0,25,25
+Coriander,1,P,Very Low,0,40,10
+Coriander,1,P,Low,0,30,10
+Coriander,1,P,Medium,0,20,10
+Coriander,1,P,Optimum,0,10,10
+Coriander,1,K,Very Low,0,64,16
+Coriander,1,K,Low,0,48,16
+Coriander,1,K,Medium,0,32,16
+Coriander,1,K,Optimum,0,16,16
+Coriander,1,S,Very Low,0,20,5
+Coriander,1,S,Low,0,15,5
+Coriander,1,S,Medium,0,10,5
+Coriander,1,S,Optimum,0,5,5
+Coriander,1,Zn,Very Low,0,3,1
+Coriander,1,Zn,Low,0,2,1
+Coriander,1,Zn,Medium,0,1,1
+Coriander,1,Zn,Optimum,0,,1
+Coriander,1,B,Very Low,0,2.1,0.7
+Coriander,1,B,Low,0,1.4,0.7
+Coriander,1,B,Medium,0,0.7,0.7
+Coriander,1,B,Optimum,0,,0.7
+Coriander,1,Mo,Very Low,0,0,0
+Coriander,1,Mo,Low,0,0,0
+Coriander,1,Mo,Medium,0,0,0
+Coriander,1,Mo,Optimum,0,,0
+Coriander,1,Mg,Very Low,0,0,0
+Coriander,1,Mg,Low,0,0,0
+Coriander,1,Mg,Medium,0,0,0
+Coriander,1,Mg,Optimum,0,,0
+Black Cumin,1,N,Very Low,0,80,20
+Black Cumin,1,N,Low,0,60,20
+Black Cumin,1,N,Medium,0,40,20
+Black Cumin,1,N,Optimum,0,20,20
+Black Cumin,1,P,Very Low,0,32,8
+Black Cumin,1,P,Low,0,24,8
+Black Cumin,1,P,Medium,0,16,8
+Black Cumin,1,P,Optimum,0,8,8
+Black Cumin,1,K,Very Low,0,60,15
+Black Cumin,1,K,Low,0,45,15
+Black Cumin,1,K,Medium,0,30,15
+Black Cumin,1,K,Optimum,0,15,15
+Black Cumin,1,S,Very Low,0,20,5
+Black Cumin,1,S,Low,0,15,5
+Black Cumin,1,S,Medium,0,10,5
+Black Cumin,1,S,Optimum,0,5,5
+Black Cumin,1,Zn,Very Low,0,3,1
+Black Cumin,1,Zn,Low,0,2,1
+Black Cumin,1,Zn,Medium,0,1,1
+Black Cumin,1,Zn,Optimum,0,,1
+Black Cumin,1,B,Very Low,0,2.1,0.7
+Black Cumin,1,B,Low,0,1.4,0.7
+Black Cumin,1,B,Medium,0,0.7,0.7
+Black Cumin,1,B,Optimum,0,,0.7
+Black Cumin,1,Mo,Very Low,0,0,0
+Black Cumin,1,Mo,Low,0,0,0
+Black Cumin,1,Mo,Medium,0,0,0
+Black Cumin,1,Mo,Optimum,0,,0
+Black Cumin,1,Mg,Very Low,0,0,0
+Black Cumin,1,Mg,Low,0,0,0
+Black Cumin,1,Mg,Medium,0,0,0
+Black Cumin,1,Mg,Optimum,0,,0
+Fenugreek,1,N,Very Low,0,100,25
+Fenugreek,1,N,Low,0,75,25
+Fenugreek,1,N,Medium,0,50,25
+Fenugreek,1,N,Optimum,0,25,25
+Fenugreek,1,P,Very Low,0,40,10
+Fenugreek,1,P,Low,0,30,10
+Fenugreek,1,P,Medium,0,20,10
+Fenugreek,1,P,Optimum,0,10,10
+Fenugreek,1,K,Very Low,0,80,20
+Fenugreek,1,K,Low,0,60,20
+Fenugreek,1,K,Medium,0,40,20
+Fenugreek,1,K,Optimum,0,20,20
+Fenugreek,1,S,Very Low,0,20,5
+Fenugreek,1,S,Low,0,15,5
+Fenugreek,1,S,Medium,0,10,5
+Fenugreek,1,S,Optimum,0,5,5
+Fenugreek,1,Zn,Very Low,0,3,1
+Fenugreek,1,Zn,Low,0,2,1
+Fenugreek,1,Zn,Medium,0,1,1
+Fenugreek,1,Zn,Optimum,0,,1
+Fenugreek,1,B,Very Low,0,2.1,0.7
+Fenugreek,1,B,Low,0,1.4,0.7
+Fenugreek,1,B,Medium,0,0.7,0.7
+Fenugreek,1,B,Optimum,0,,0.7
+Fenugreek,1,Mo,Very Low,0,0,0
+Fenugreek,1,Mo,Low,0,0,0
+Fenugreek,1,Mo,Medium,0,0,0
+Fenugreek,1,Mo,Optimum,0,,0
+Fenugreek,1,Mg,Very Low,0,0,0
+Fenugreek,1,Mg,Low,0,0,0
+Fenugreek,1,Mg,Medium,0,0,0
+Fenugreek,1,Mg,Optimum,0,,0
+Sugarcane,1,N,Very Low,0,240,60
+Sugarcane,1,N,Low,0,180,60
+Sugarcane,1,N,Medium,0,120,60
+Sugarcane,1,N,Optimum,0,60,60
+Sugarcane,1,P,Very Low,0,80,20
+Sugarcane,1,P,Low,0,60,20
+Sugarcane,1,P,Medium,0,40,20
+Sugarcane,1,P,Optimum,0,20,20
+Sugarcane,1,K,Very Low,0,180,45
+Sugarcane,1,K,Low,0,135,45
+Sugarcane,1,K,Medium,0,90,45
+Sugarcane,1,K,Optimum,0,45,45
+Sugarcane,1,S,Very Low,0,60,15
+Sugarcane,1,S,Low,0,45,15
+Sugarcane,1,S,Medium,0,30,15
+Sugarcane,1,S,Optimum,0,15,15
+Sugarcane,1,Zn,Very Low,0,7.5,2.5
+Sugarcane,1,Zn,Low,0,5,2.5
+Sugarcane,1,Zn,Medium,0,2.5,2.5
+Sugarcane,1,Zn,Optimum,0,,2.5
+Sugarcane,1,B,Very Low,0,0,0
+Sugarcane,1,B,Low,0,0,0
+Sugarcane,1,B,Medium,0,0,0
+Sugarcane,1,B,Optimum,0,,0
+Sugarcane,1,Mo,Very Low,0,0,0
+Sugarcane,1,Mo,Low,0,0,0
+Sugarcane,1,Mo,Medium,0,0,0
+Sugarcane,1,Mo,Optimum,0,,0
+Sugarcane,1,Mg,Very Low,0,40,10
+Sugarcane,1,Mg,Low,0,30,10
+Sugarcane,1,Mg,Medium,0,20,10
+Sugarcane,1,Mg,Optimum,0,10,10
+Tobacco,1,N,Very Low,0,80,20
+Tobacco,1,N,Low,0,60,20
+Tobacco,1,N,Medium,0,40,20
+Tobacco,1,N,Optimum,0,20,20
+Tobacco,1,P,Very Low,0,44,11
+Tobacco,1,P,Low,0,33,11
+Tobacco,1,P,Medium,0,22,11
+Tobacco,1,P,Optimum,0,11,11
+Tobacco,1,K,Very Low,0,108,27
+Tobacco,1,K,Low,0,81,27
+Tobacco,1,K,Medium,0,54,27
+Tobacco,1,K,Optimum,0,27,27
+Tobacco,1,S,Very Low,0,16,4
+Tobacco,1,S,Low,0,12,4
+Tobacco,1,S,Medium,0,8,4
+Tobacco,1,S,Optimum,0,4,4
+Tobacco,1,Zn,Very Low,0,1.8,0.6
+Tobacco,1,Zn,Low,0,1.2,0.6
+Tobacco,1,Zn,Medium,0,0.6,0.6
+Tobacco,1,Zn,Optimum,0,,0.6
+Tobacco,1,B,Very Low,0,0,0
+Tobacco,1,B,Low,0,0,0
+Tobacco,1,B,Medium,0,0,0
+Tobacco,1,B,Optimum,0,,0
+Tobacco,1,Mo,Very Low,0,0,0
+Tobacco,1,Mo,Low,0,0,0
+Tobacco,1,Mo,Medium,0,0,0
+Tobacco,1,Mo,Optimum,0,,0
+Tobacco,1,Mg,Very Low,0,0,0
+Tobacco,1,Mg,Low,0,0,0
+Tobacco,1,Mg,Medium,0,0,0
+Tobacco,1,Mg,Optimum,0,,0
+Betel Leaf,1,N,Very Low,0,80,20
+Betel Leaf,1,N,Low,0,60,20
+Betel Leaf,1,N,Medium,0,40,20
+Betel Leaf,1,N,Optimum,0,20,20
+Betel Leaf,1,P,Very Low,0,32,8
+Betel Leaf,1,P,Low,0,24,8
+Betel Leaf,1,P,Medium,0,16,8
+Betel Leaf,1,P,Optimum,0,8,8
+Betel Leaf,1,K,Very Low,0,48,12
+Betel Leaf,1,K,Low,0,36,12
+Betel Leaf,1,K,Medium,0,24,12
+Betel Leaf,1,K,Optimum,0,12,12
+Betel Leaf,1,S,Very Low,0,16,4
+Betel Leaf,1,S,Low,0,12,4
+Betel Leaf,1,S,Medium,0,8,4
+Betel Leaf,1,S,Optimum,0,4,4
+Betel Leaf,1,Zn,Very Low,0,3,1
+Betel Leaf,1,Zn,Low,0,2,1
+Betel Leaf,1,Zn,Medium,0,1,1
+Betel Leaf,1,Zn,Optimum,0,,1
+Betel Leaf,1,B,Very Low,0,0,0
+Betel Leaf,1,B,Low,0,0,0
+Betel Leaf,1,B,Medium,0,0,0
+Betel Leaf,1,B,Optimum,0,,0
+Betel Leaf,1,Mo,Very Low,0,0,0
+Betel Leaf,1,Mo,Low,0,0,0
+Betel Leaf,1,Mo,Medium,0,0,0
+Betel Leaf,1,Mo,Optimum,0,,0
+Betel Leaf,1,Mg,Very Low,0,0,0
+Betel Leaf,1,Mg,Low,0,0,0
+Betel Leaf,1,Mg,Medium,0,0,0
+Betel Leaf,1,Mg,Optimum,0,,0
+Napier Grass,1,N,Very Low,0,180,45
+Napier Grass,1,N,Low,0,135,45
+Napier Grass,1,N,Medium,0,90,45
+Napier Grass,1,N,Optimum,0,45,45
+Napier Grass,1,P,Very Low,0,48,12
+Napier Grass,1,P,Low,0,36,12
+Napier Grass,1,P,Medium,0,24,12
+Napier Grass,1,P,Optimum,0,12,12
+Napier Grass,1,K,Very Low,0,60,15
+Napier Grass,1,K,Low,0,45,15
+Napier Grass,1,K,Medium,0,30,15
+Napier Grass,1,K,Optimum,0,15,15
+Napier Grass,1,S,Very Low,0,20,5
+Napier Grass,1,S,Low,0,15,5
+Napier Grass,1,S,Medium,0,10,5
+Napier Grass,1,S,Optimum,0,5,5
+Napier Grass,1,Zn,Very Low,0,6,2
+Napier Grass,1,Zn,Low,0,4,2
+Napier Grass,1,Zn,Medium,0,2,2
+Napier Grass,1,Zn,Optimum,0,,2
+Napier Grass,1,B,Very Low,0,0,0
+Napier Grass,1,B,Low,0,0,0
+Napier Grass,1,B,Medium,0,0,0
+Napier Grass,1,B,Optimum,0,,0
+Napier Grass,1,Mo,Very Low,0,0,0
+Napier Grass,1,Mo,Low,0,0,0
+Napier Grass,1,Mo,Medium,0,0,0
+Napier Grass,1,Mo,Optimum,0,,0
+Napier Grass,1,Mg,Very Low,0,0,0
+Napier Grass,1,Mg,Low,0,0,0
+Napier Grass,1,Mg,Medium,0,0,0
+Napier Grass,1,Mg,Optimum,0,,0
+Para Grass,1,N,Very Low,0,160,40
+Para Grass,1,N,Low,0,120,40
+Para Grass,1,N,Medium,0,80,40
+Para Grass,1,N,Optimum,0,40,40
+Para Grass,1,P,Very Low,0,40,10
+Para Grass,1,P,Low,0,30,10
+Para Grass,1,P,Medium,0,20,10
+Para Grass,1,P,Optimum,0,10,10
+Para Grass,1,K,Very Low,0,44,11
+Para Grass,1,K,Low,0,33,11
+Para Grass,1,K,Medium,0,22,11
+Para Grass,1,K,Optimum,0,11,11
+Para Grass,1,S,Very Low,0,20,5
+Para Grass,1,S,Low,0,15,5
+Para Grass,1,S,Medium,0,10,5
+Para Grass,1,S,Optimum,0,5,5
+Para Grass,1,Zn,Very Low,0,6,2
+Para Grass,1,Zn,Low,0,4,2
+Para Grass,1,Zn,Medium,0,2,2
+Para Grass,1,Zn,Optimum,0,,2
+Para Grass,1,B,Very Low,0,0,0
+Para Grass,1,B,Low,0,0,0
+Para Grass,1,B,Medium,0,0,0
+Para Grass,1,B,Optimum,0,,0
+Para Grass,1,Mo,Very Low,0,0,0
+Para Grass,1,Mo,Low,0,0,0
+Para Grass,1,Mo,Medium,0,0,0
+Para Grass,1,Mo,Optimum,0,,0
+Para Grass,1,Mg,Very Low,0,0,0
+Para Grass,1,Mg,Low,0,0,0
+Para Grass,1,Mg,Medium,0,0,0
+Para Grass,1,Mg,Optimum,0,,0
+German Grass,1,N,Very Low,0,140,35
+German Grass,1,N,Low,0,105,35
+German Grass,1,N,Medium,0,70,35
+German Grass,1,N,Optimum,0,35,35
+German Grass,1,P,Very Low,0,40,10
+German Grass,1,P,Low,0,30,10
+German Grass,1,P,Medium,0,20,10
+German Grass,1,P,Optimum,0,10,10
+German Grass,1,K,Very Low,0,44,11
+German Grass,1,K,Low,0,33,11
+German Grass,1,K,Medium,0,22,11
+German Grass,1,K,Optimum,0,11,11
+German Grass,1,S,Very Low,0,20,5
+German Grass,1,S,Low,0,15,5
+German Grass,1,S,Medium,0,10,5
+German Grass,1,S,Optimum,0,5,5
+German Grass,1,Zn,Very Low,0,6,2
+German Grass,1,Zn,Low,0,4,2
+German Grass,1,Zn,Medium,0,2,2
+German Grass,1,Zn,Optimum,0,,2
+German Grass,1,B,Very Low,0,0,0
+German Grass,1,B,Low,0,0,0
+German Grass,1,B,Medium,0,0,0
+German Grass,1,B,Optimum,0,,0
+German Grass,1,Mo,Very Low,0,0,0
+German Grass,1,Mo,Low,0,0,0
+German Grass,1,Mo,Medium,0,0,0
+German Grass,1,Mo,Optimum,0,,0
+German Grass,1,Mg,Very Low,0,0,0
+German Grass,1,Mg,Low,0,0,0
+German Grass,1,Mg,Medium,0,0,0
+German Grass,1,Mg,Optimum,0,,0
+Dhal Grass,1,N,Very Low,0,200,50
+Dhal Grass,1,N,Low,0,150,50
+Dhal Grass,1,N,Medium,0,100,50
+Dhal Grass,1,N,Optimum,0,50,50
+Dhal Grass,1,P,Very Low,0,40,10
+Dhal Grass,1,P,Low,0,30,10
+Dhal Grass,1,P,Medium,0,20,10
+Dhal Grass,1,P,Optimum,0,10,10
+Dhal Grass,1,K,Very Low,0,44,11
+Dhal Grass,1,K,Low,0,33,11
+Dhal Grass,1,K,Medium,0,22,11
+Dhal Grass,1,K,Optimum,0,11,11
+Dhal Grass,1,S,Very Low,0,20,5
+Dhal Grass,1,S,Low,0,15,5
+Dhal Grass,1,S,Medium,0,10,5
+Dhal Grass,1,S,Optimum,0,5,5
+Dhal Grass,1,Zn,Very Low,0,6,2
+Dhal Grass,1,Zn,Low,0,4,2
+Dhal Grass,1,Zn,Medium,0,2,2
+Dhal Grass,1,Zn,Optimum,0,,2
+Dhal Grass,1,B,Very Low,0,0,0
+Dhal Grass,1,B,Low,0,0,0
+Dhal Grass,1,B,Medium,0,0,0
+Dhal Grass,1,B,Optimum,0,,0
+Dhal Grass,1,Mo,Very Low,0,0,0
+Dhal Grass,1,Mo,Low,0,0,0
+Dhal Grass,1,Mo,Medium,0,0,0
+Dhal Grass,1,Mo,Optimum,0,,0
+Dhal Grass,1,Mg,Very Low,0,0,0
+Dhal Grass,1,Mg,Low,0,0,0
+Dhal Grass,1,Mg,Medium,0,0,0
+Dhal Grass,1,Mg,Optimum,0,,0
+Guinea Grass,1,N,Very Low,0,180,45
+Guinea Grass,1,N,Low,0,135,45
+Guinea Grass,1,N,Medium,0,90,45
+Guinea Grass,1,N,Optimum,0,45,45
+Guinea Grass,1,P,Very Low,0,40,10
+Guinea Grass,1,P,Low,0,30,10
+Guinea Grass,1,P,Medium,0,20,10
+Guinea Grass,1,P,Optimum,0,10,10
+Guinea Grass,1,K,Very Low,0,48,12
+Guinea Grass,1,K,Low,0,36,12
+Guinea Grass,1,K,Medium,0,24,12
+Guinea Grass,1,K,Optimum,0,12,12
+Guinea Grass,1,S,Very Low,0,20,5
+Guinea Grass,1,S,Low,0,15,5
+Guinea Grass,1,S,Medium,0,10,5
+Guinea Grass,1,S,Optimum,0,5,5
+Guinea Grass,1,Zn,Very Low,0,6,2
+Guinea Grass,1,Zn,Low,0,4,2
+Guinea Grass,1,Zn,Medium,0,2,2
+Guinea Grass,1,Zn,Optimum,0,,2
+Guinea Grass,1,B,Very Low,0,0,0
+Guinea Grass,1,B,Low,0,0,0
+Guinea Grass,1,B,Medium,0,0,0
+Guinea Grass,1,B,Optimum,0,,0
+Guinea Grass,1,Mo,Very Low,0,0,0
+Guinea Grass,1,Mo,Low,0,0,0
+Guinea Grass,1,Mo,Medium,0,0,0
+Guinea Grass,1,Mo,Optimum,0,,0
+Guinea Grass,1,Mg,Very Low,0,0,0
+Guinea Grass,1,Mg,Low,0,0,0
+Guinea Grass,1,Mg,Medium,0,0,0
+Guinea Grass,1,Mg,Optimum,0,,0
+Jumbo,1,N,Very Low,0,160,40
+Jumbo,1,N,Low,0,120,40
+Jumbo,1,N,Medium,0,80,40
+Jumbo,1,N,Optimum,0,40,40
+Jumbo,1,P,Very Low,0,40,10
+Jumbo,1,P,Low,0,30,10
+Jumbo,1,P,Medium,0,20,10
+Jumbo,1,P,Optimum,0,10,10
+Jumbo,1,K,Very Low,0,44,11
+Jumbo,1,K,Low,0,33,11
+Jumbo,1,K,Medium,0,22,11
+Jumbo,1,K,Optimum,0,11,11
+Jumbo,1,S,Very Low,0,20,5
+Jumbo,1,S,Low,0,15,5
+Jumbo,1,S,Medium,0,10,5
+Jumbo,1,S,Optimum,0,5,5
+Jumbo,1,Zn,Very Low,0,6,2
+Jumbo,1,Zn,Low,0,4,2
+Jumbo,1,Zn,Medium,0,2,2
+Jumbo,1,Zn,Optimum,0,,2
+Jumbo,1,B,Very Low,0,0,0
+Jumbo,1,B,Low,0,0,0
+Jumbo,1,B,Medium,0,0,0
+Jumbo,1,B,Optimum,0,,0
+Jumbo,1,Mo,Very Low,0,0,0
+Jumbo,1,Mo,Low,0,0,0
+Jumbo,1,Mo,Medium,0,0,0
+Jumbo,1,Mo,Optimum,0,,0
+Jumbo,1,Mg,Very Low,0,0,0
+Jumbo,1,Mg,Low,0,0,0
+Jumbo,1,Mg,Medium,0,0,0
+Jumbo,1,Mg,Optimum,0,,0
+Zamboo Grass,1,N,Very Low,0,60,15
+Zamboo Grass,1,N,Low,0,45,15
+Zamboo Grass,1,N,Medium,0,30,15
+Zamboo Grass,1,N,Optimum,0,15,15
+Zamboo Grass,1,P,Very Low,0,12,3
+Zamboo Grass,1,P,Low,0,9,3
+Zamboo Grass,1,P,Medium,0,6,3
+Zamboo Grass,1,P,Optimum,0,3,3
+Zamboo Grass,1,K,Very Low,0,16,4
+Zamboo Grass,1,K,Low,0,12,4
+Zamboo Grass,1,K,Medium,0,8,4
+Zamboo Grass,1,K,Optimum,0,4,4
+Zamboo Grass,1,S,Very Low,0,20,5
+Zamboo Grass,1,S,Low,0,15,5
+Zamboo Grass,1,S,Medium,0,10,5
+Zamboo Grass,1,S,Optimum,0,5,5
+Zamboo Grass,1,Zn,Very Low,0,6,2
+Zamboo Grass,1,Zn,Low,0,4,2
+Zamboo Grass,1,Zn,Medium,0,2,2
+Zamboo Grass,1,Zn,Optimum,0,,2
+Zamboo Grass,1,B,Very Low,0,0,0
+Zamboo Grass,1,B,Low,0,0,0
+Zamboo Grass,1,B,Medium,0,0,0
+Zamboo Grass,1,B,Optimum,0,,0
+Zamboo Grass,1,Mo,Very Low,0,0,0
+Zamboo Grass,1,Mo,Low,0,0,0
+Zamboo Grass,1,Mo,Medium,0,0,0
+Zamboo Grass,1,Mo,Optimum,0,,0
+Zamboo Grass,1,Mg,Very Low,0,0,0
+Zamboo Grass,1,Mg,Low,0,0,0
+Zamboo Grass,1,Mg,Medium,0,0,0
+Zamboo Grass,1,Mg,Optimum,0,,0
+Pineapple,1,N,Very Low,0,240,60
+Pineapple,1,N,Low,0,180,60
+Pineapple,1,N,Medium,0,120,60
+Pineapple,1,N,Optimum,0,60,60
+Pineapple,1,P,Very Low,0,100,25
+Pineapple,1,P,Low,0,75,25
+Pineapple,1,P,Medium,0,50,25
+Pineapple,1,P,Optimum,0,25,25
+Pineapple,1,K,Very Low,0,240,60
+Pineapple,1,K,Low,0,180,60
+Pineapple,1,K,Medium,0,120,60
+Pineapple,1,K,Optimum,0,60,60
+Pineapple,1,S,Very Low,0,28,7
+Pineapple,1,S,Low,0,21,7
+Pineapple,1,S,Medium,0,14,7
+Pineapple,1,S,Optimum,0,7,7
+Pineapple,1,Zn,Very Low,0,4.5,1.5
+Pineapple,1,Zn,Low,0,3,1.5
+Pineapple,1,Zn,Medium,0,1.5,1.5
+Pineapple,1,Zn,Optimum,0,,1.5
+Pineapple,1,B,Very Low,0,0,0
+Pineapple,1,B,Low,0,0,0
+Pineapple,1,B,Medium,0,0,0
+Pineapple,1,B,Optimum,0,,0
+Pineapple,1,Mo,Very Low,0,0,0
+Pineapple,1,Mo,Low,0,0,0
+Pineapple,1,Mo,Medium,0,0,0
+Pineapple,1,Mo,Optimum,0,,0
+Pineapple,1,Mg,Very Low,0,0,0
+Pineapple,1,Mg,Low,0,0,0
+Pineapple,1,Mg,Medium,0,0,0
+Pineapple,1,Mg,Optimum,0,,0
+Water Melon,1,N,Very Low,0,140,35
+Water Melon,1,N,Low,0,105,35
+Water Melon,1,N,Medium,0,70,35
+Water Melon,1,N,Optimum,0,35,35
+Water Melon,1,P,Very Low,0,48,12
+Water Melon,1,P,Low,0,36,12
+Water Melon,1,P,Medium,0,24,12
+Water Melon,1,P,Optimum,0,12,12
+Water Melon,1,K,Very Low,0,108,27
+Water Melon,1,K,Low,0,81,27
+Water Melon,1,K,Medium,0,54,27
+Water Melon,1,K,Optimum,0,27,27
+Water Melon,1,S,Very Low,0,20,5
+Water Melon,1,S,Low,0,15,5
+Water Melon,1,S,Medium,0,10,5
+Water Melon,1,S,Optimum,0,5,5
+Water Melon,1,Zn,Very Low,0,3,1
+Water Melon,1,Zn,Low,0,2,1
+Water Melon,1,Zn,Medium,0,1,1
+Water Melon,1,Zn,Optimum,0,,1
+Water Melon,1,B,Very Low,0,2.1,0.7
+Water Melon,1,B,Low,0,1.4,0.7
+Water Melon,1,B,Medium,0,0.7,0.7
+Water Melon,1,B,Optimum,0,,0.7
+Water Melon,1,Mo,Very Low,0,0,0
+Water Melon,1,Mo,Low,0,0,0
+Water Melon,1,Mo,Medium,0,0,0
+Water Melon,1,Mo,Optimum,0,,0
+Water Melon,1,Mg,Very Low,0,0,0
+Water Melon,1,Mg,Low,0,0,0
+Water Melon,1,Mg,Medium,0,0,0
+Water Melon,1,Mg,Optimum,0,,0
+Marigold,1,N,Very Low,0,120,30
+Marigold,1,N,Low,0,90,30
+Marigold,1,N,Medium,0,60,30
+Marigold,1,N,Optimum,0,30,30
+Marigold,1,P,Very Low,0,52,13
+Marigold,1,P,Low,0,39,13
+Marigold,1,P,Medium,0,26,13
+Marigold,1,P,Optimum,0,13,13
+Marigold,1,K,Very Low,0,120,30
+Marigold,1,K,Low,0,90,30
+Marigold,1,K,Medium,0,60,30
+Marigold,1,K,Optimum,0,30,30
+Marigold,1,S,Very Low,0,,5
+Marigold,1,S,Low,0,,5
+Marigold,1,S,Medium,0,,5
+Marigold,1,S,Optimum,0,,5
+Marigold,1,Zn,Very Low,0,,2
+Marigold,1,Zn,Low,0,,2
+Marigold,1,Zn,Medium,0,,2
+Marigold,1,Zn,Optimum,0,,2
+Marigold,1,B,Very Low,0,,0
+Marigold,1,B,Low,0,,0
+Marigold,1,B,Medium,0,,0
+Marigold,1,B,Optimum,0,,0
+Marigold,1,Mo,Very Low,0,,0
+Marigold,1,Mo,Low,0,,0
+Marigold,1,Mo,Medium,0,,0
+Marigold,1,Mo,Optimum,0,,0
+Marigold,1,Mg,Very Low,0,,0
+Marigold,1,Mg,Low,0,,0
+Marigold,1,Mg,Medium,0,,0
+Marigold,1,Mg,Optimum,0,,0
+Marigold,2,N,Very Low,0,180,45
+Marigold,2,N,Low,0,135,45
+Marigold,2,N,Medium,0,90,45
+Marigold,2,N,Optimum,0,45,45
+Marigold,2,P,Very Low,0,80,20
+Marigold,2,P,Low,0,60,20
+Marigold,2,P,Medium,0,40,20
+Marigold,2,P,Optimum,0,20,20
+Marigold,2,K,Very Low,0,160,40
+Marigold,2,K,Low,0,120,40
+Marigold,2,K,Medium,0,80,40
+Marigold,2,K,Optimum,0,40,40
+Marigold,2,S,Very Low,0,,6
+Marigold,2,S,Low,0,,6
+Marigold,2,S,Medium,0,,6
+Marigold,2,S,Optimum,0,,6
+Marigold,2,Zn,Very Low,0,,3
+Marigold,2,Zn,Low,0,,3
+Marigold,2,Zn,Medium,0,,3
+Marigold,2,Zn,Optimum,0,,3
+Marigold,2,B,Very Low,0,,0
+Marigold,2,B,Low,0,,0
+Marigold,2,B,Medium,0,,0
+Marigold,2,B,Optimum,0,,0
+Marigold,2,Mo,Very Low,0,,0
+Marigold,2,Mo,Low,0,,0
+Marigold,2,Mo,Medium,0,,0
+Marigold,2,Mo,Optimum,0,,0
+Marigold,2,Mg,Very Low,0,,0
+Marigold,2,Mg,Low,0,,0
+Marigold,2,Mg,Medium,0,,0
+Marigold,2,Mg,Optimum,0,,0
+Rose,1,N,Very Low,0,140,35
+Rose,1,N,Low,0,105,35
+Rose,1,N,Medium,0,70,35
+Rose,1,N,Optimum,0,35,35
+Rose,1,P,Very Low,0,100,25
+Rose,1,P,Low,0,75,25
+Rose,1,P,Medium,0,50,25
+Rose,1,P,Optimum,0,25,25
+Rose,1,K,Very Low,0,140,35
+Rose,1,K,Low,0,105,35
+Rose,1,K,Medium,0,70,35
+Rose,1,K,Optimum,0,35,35
+Rose,1,S,Very Low,0,,5
+Rose,1,S,Low,0,,5
+Rose,1,S,Medium,0,,5
+Rose,1,S,Optimum,0,,5
+Rose,1,Zn,Very Low,0,,2
+Rose,1,Zn,Low,0,,2
+Rose,1,Zn,Medium,0,,2
+Rose,1,Zn,Optimum,0,,2
+Rose,1,B,Very Low,0,,0
+Rose,1,B,Low,0,,0
+Rose,1,B,Medium,0,,0
+Rose,1,B,Optimum,0,,0
+Rose,1,Mo,Very Low,0,,0
+Rose,1,Mo,Low,0,,0
+Rose,1,Mo,Medium,0,,0
+Rose,1,Mo,Optimum,0,,0
+Rose,1,Mg,Very Low,0,,0
+Rose,1,Mg,Low,0,,0
+Rose,1,Mg,Medium,0,,0
+Rose,1,Mg,Optimum,0,,0
+Tuberose,1,N,Very Low,0,300,75
+Tuberose,1,N,Low,0,225,75
+Tuberose,1,N,Medium,0,150,75
+Tuberose,1,N,Optimum,0,75,75
+Tuberose,1,P,Very Low,0,92,23
+Tuberose,1,P,Low,0,69,23
+Tuberose,1,P,Medium,0,46,23
+Tuberose,1,P,Optimum,0,23,23
+Tuberose,1,K,Very Low,0,176,44
+Tuberose,1,K,Low,0,132,44
+Tuberose,1,K,Medium,0,88,44
+Tuberose,1,K,Optimum,0,44,44
+Tuberose,1,S,Very Low,0,,5
+Tuberose,1,S,Low,0,,5
+Tuberose,1,S,Medium,0,,5
+Tuberose,1,S,Optimum,0,,5
+Tuberose,1,Zn,Very Low,0,,2
+Tuberose,1,Zn,Low,0,,2
+Tuberose,1,Zn,Medium,0,,2
+Tuberose,1,Zn,Optimum,0,,2
+Tuberose,1,B,Very Low,0,,1
+Tuberose,1,B,Low,0,,1
+Tuberose,1,B,Medium,0,,1
+Tuberose,1,B,Optimum,0,,1
+Tuberose,1,Mo,Very Low,0,,0
+Tuberose,1,Mo,Low,0,,0
+Tuberose,1,Mo,Medium,0,,0
+Tuberose,1,Mo,Optimum,0,,0
+Tuberose,1,Mg,Very Low,0,,0
+Tuberose,1,Mg,Low,0,,0
+Tuberose,1,Mg,Medium,0,,0
+Tuberose,1,Mg,Optimum,0,,0
+Gladiolus,1,N,Very Low,0,240,60
+Gladiolus,1,N,Low,0,180,60
+Gladiolus,1,N,Medium,0,120,60
+Gladiolus,1,N,Optimum,0,60,60
+Gladiolus,1,P,Very Low,0,88,22
+Gladiolus,1,P,Low,0,66,22
+Gladiolus,1,P,Medium,0,44,22
+Gladiolus,1,P,Optimum,0,22,22
+Gladiolus,1,K,Very Low,0,180,45
+Gladiolus,1,K,Low,0,135,45
+Gladiolus,1,K,Medium,0,90,45
+Gladiolus,1,K,Optimum,0,45,45
+Gladiolus,1,S,Very Low,0,,8
+Gladiolus,1,S,Low,0,,8
+Gladiolus,1,S,Medium,0,,8
+Gladiolus,1,S,Optimum,0,,8
+Gladiolus,1,Zn,Very Low,0,,2
+Gladiolus,1,Zn,Low,0,,2
+Gladiolus,1,Zn,Medium,0,,2
+Gladiolus,1,Zn,Optimum,0,,2
+Gladiolus,1,B,Very Low,0,,0.7
+Gladiolus,1,B,Low,0,,0.7
+Gladiolus,1,B,Medium,0,,0.7
+Gladiolus,1,B,Optimum,0,,0.7
+Gladiolus,1,Mo,Very Low,0,,0
+Gladiolus,1,Mo,Low,0,,0
+Gladiolus,1,Mo,Medium,0,,0
+Gladiolus,1,Mo,Optimum,0,,0
+Gladiolus,1,Mg,Very Low,0,,0
+Gladiolus,1,Mg,Low,0,,0
+Gladiolus,1,Mg,Medium,0,,0
+Gladiolus,1,Mg,Optimum,0,,0
+Zinnia,1,N,Very Low,0,100,25
+Zinnia,1,N,Low,0,75,25
+Zinnia,1,N,Medium,0,50,25
+Zinnia,1,N,Optimum,0,25,25
+Zinnia,1,P,Very Low,0,32,8
+Zinnia,1,P,Low,0,24,8
+Zinnia,1,P,Medium,0,16,8
+Zinnia,1,P,Optimum,0,8,8
+Zinnia,1,K,Very Low,0,60,15
+Zinnia,1,K,Low,0,45,15
+Zinnia,1,K,Medium,0,30,15
+Zinnia,1,K,Optimum,0,15,15
+Zinnia,1,S,Very Low,0,,5
+Zinnia,1,S,Low,0,,5
+Zinnia,1,S,Medium,0,,5
+Zinnia,1,S,Optimum,0,,5
+Zinnia,1,Zn,Very Low,0,,2
+Zinnia,1,Zn,Low,0,,2
+Zinnia,1,Zn,Medium,0,,2
+Zinnia,1,Zn,Optimum,0,,2
+Zinnia,1,B,Very Low,0,,0
+Zinnia,1,B,Low,0,,0
+Zinnia,1,B,Medium,0,,0
+Zinnia,1,B,Optimum,0,,0
+Zinnia,1,Mo,Very Low,0,,0
+Zinnia,1,Mo,Low,0,,0
+Zinnia,1,Mo,Medium,0,,0
+Zinnia,1,Mo,Optimum,0,,0
+Zinnia,1,Mg,Very Low,0,,0
+Zinnia,1,Mg,Low,0,,0
+Zinnia,1,Mg,Medium,0,,0
+Zinnia,1,Mg,Optimum,0,,0
+Chrysanthemum,1,N,Very Low,0,200,50
+Chrysanthemum,1,N,Low,0,150,50
+Chrysanthemum,1,N,Medium,0,100,50
+Chrysanthemum,1,N,Optimum,0,50,50
+Chrysanthemum,1,P,Very Low,0,100,25
+Chrysanthemum,1,P,Low,0,75,25
+Chrysanthemum,1,P,Medium,0,50,25
+Chrysanthemum,1,P,Optimum,0,25,25
+Chrysanthemum,1,K,Very Low,0,160,40
+Chrysanthemum,1,K,Low,0,120,40
+Chrysanthemum,1,K,Medium,0,80,40
+Chrysanthemum,1,K,Optimum,0,40,40
+Chrysanthemum,1,S,Very Low,0,,5
+Chrysanthemum,1,S,Low,0,,5
+Chrysanthemum,1,S,Medium,0,,5
+Chrysanthemum,1,S,Optimum,0,,5
+Chrysanthemum,1,Zn,Very Low,0,,2
+Chrysanthemum,1,Zn,Low,0,,2
+Chrysanthemum,1,Zn,Medium,0,,2
+Chrysanthemum,1,Zn,Optimum,0,,2
+Chrysanthemum,1,B,Very Low,0,,1
+Chrysanthemum,1,B,Low,0,,1
+Chrysanthemum,1,B,Medium,0,,1
+Chrysanthemum,1,B,Optimum,0,,1
+Chrysanthemum,1,Mo,Very Low,0,,0
+Chrysanthemum,1,Mo,Low,0,,0
+Chrysanthemum,1,Mo,Medium,0,,0
+Chrysanthemum,1,Mo,Optimum,0,,0
+Chrysanthemum,1,Mg,Very Low,0,,0
+Chrysanthemum,1,Mg,Low,0,,0
+Chrysanthemum,1,Mg,Medium,0,,0
+Chrysanthemum,1,Mg,Optimum,0,,0
+Chrysanthemum,2,N,Very Low,0,180,45
+Chrysanthemum,2,N,Low,0,135,45
+Chrysanthemum,2,N,Medium,0,90,45
+Chrysanthemum,2,N,Optimum,0,45,45
+Chrysanthemum,2,P,Very Low,0,88,22
+Chrysanthemum,2,P,Low,0,66,22
+Chrysanthemum,2,P,Medium,0,44,22
+Chrysanthemum,2,P,Optimum,0,22,22
+Chrysanthemum,2,K,Very Low,0,160,40
+Chrysanthemum,2,K,Low,0,120,40
+Chrysanthemum,2,K,Medium,0,80,40
+Chrysanthemum,2,K,Optimum,0,40,40
+Chrysanthemum,2,S,Very Low,0,,5
+Chrysanthemum,2,S,Low,0,,5
+Chrysanthemum,2,S,Medium,0,,5
+Chrysanthemum,2,S,Optimum,0,,5
+Chrysanthemum,2,Zn,Very Low,0,,2
+Chrysanthemum,2,Zn,Low,0,,2
+Chrysanthemum,2,Zn,Medium,0,,2
+Chrysanthemum,2,Zn,Optimum,0,,2
+Chrysanthemum,2,B,Very Low,0,,1
+Chrysanthemum,2,B,Low,0,,1
+Chrysanthemum,2,B,Medium,0,,1
+Chrysanthemum,2,B,Optimum,0,,1
+Chrysanthemum,2,Mo,Very Low,0,,0
+Chrysanthemum,2,Mo,Low,0,,0
+Chrysanthemum,2,Mo,Medium,0,,0
+Chrysanthemum,2,Mo,Optimum,0,,0
+Chrysanthemum,2,Mg,Very Low,0,,0
+Chrysanthemum,2,Mg,Low,0,,0
+Chrysanthemum,2,Mg,Medium,0,,0
+Chrysanthemum,2,Mg,Optimum,0,,0
+Orchid,1,N,Very Low,0,88,22
+Orchid,1,N,Low,0,66,22
+Orchid,1,N,Medium,0,44,22
+Orchid,1,N,Optimum,0,22,22
+Orchid,1,P,Very Low,0,40,10
+Orchid,1,P,Low,0,30,10
+Orchid,1,P,Medium,0,20,10
+Orchid,1,P,Optimum,0,10,10
+Orchid,1,K,Very Low,0,80,20
+Orchid,1,K,Low,0,60,20
+Orchid,1,K,Medium,0,40,20
+Orchid,1,K,Optimum,0,20,20
+Orchid,1,S,Very Low,0,,5
+Orchid,1,S,Low,0,,5
+Orchid,1,S,Medium,0,,5
+Orchid,1,S,Optimum,0,,5
+Orchid,1,Zn,Very Low,0,,2
+Orchid,1,Zn,Low,0,,2
+Orchid,1,Zn,Medium,0,,2
+Orchid,1,Zn,Optimum,0,,2
+Orchid,1,B,Very Low,0,,1
+Orchid,1,B,Low,0,,1
+Orchid,1,B,Medium,0,,1
+Orchid,1,B,Optimum,0,,1
+Orchid,1,Mo,Very Low,0,,0
+Orchid,1,Mo,Low,0,,0
+Orchid,1,Mo,Medium,0,,0
+Orchid,1,Mo,Optimum,0,,0
+Orchid,1,Mg,Very Low,0,,0
+Orchid,1,Mg,Low,0,,0
+Orchid,1,Mg,Medium,0,,0
+Orchid,1,Mg,Optimum,0,,0
+Gerbera,1,N,Very Low,0,200,50
+Gerbera,1,N,Low,0,150,50
+Gerbera,1,N,Medium,0,100,50
+Gerbera,1,N,Optimum,0,50,50
+Gerbera,1,P,Very Low,0,100,25
+Gerbera,1,P,Low,0,75,25
+Gerbera,1,P,Medium,0,50,25
+Gerbera,1,P,Optimum,0,25,25
+Gerbera,1,K,Very Low,0,160,40
+Gerbera,1,K,Low,0,120,40
+Gerbera,1,K,Medium,0,80,40
+Gerbera,1,K,Optimum,0,40,40
+Gerbera,1,S,Very Low,0,,8
+Gerbera,1,S,Low,0,,8
+Gerbera,1,S,Medium,0,,8
+Gerbera,1,S,Optimum,0,,8
+Gerbera,1,Zn,Very Low,0,,2
+Gerbera,1,Zn,Low,0,,2
+Gerbera,1,Zn,Medium,0,,2
+Gerbera,1,Zn,Optimum,0,,2
+Gerbera,1,B,Very Low,0,,1
+Gerbera,1,B,Low,0,,1
+Gerbera,1,B,Medium,0,,1
+Gerbera,1,B,Optimum,0,,1
+Gerbera,1,Mo,Very Low,0,,0
+Gerbera,1,Mo,Low,0,,0
+Gerbera,1,Mo,Medium,0,,0
+Gerbera,1,Mo,Optimum,0,,0
+Gerbera,1,Mg,Very Low,0,,0
+Gerbera,1,Mg,Low,0,,0
+Gerbera,1,Mg,Medium,0,,0
+Gerbera,1,Mg,Optimum,0,,0
+Suger Beet,1,N,Very Low,0,200,50
+Suger Beet,1,N,Low,0,150,50
+Suger Beet,1,N,Medium,0,100,50
+Suger Beet,1,N,Optimum,0,50,50
+Suger Beet,1,P,Very Low,0,60,15
+Suger Beet,1,P,Low,0,45,15
+Suger Beet,1,P,Medium,0,30,15
+Suger Beet,1,P,Optimum,0,15,15
+Suger Beet,1,K,Very Low,0,160,40
+Suger Beet,1,K,Low,0,120,40
+Suger Beet,1,K,Medium,0,80,40
+Suger Beet,1,K,Optimum,0,40,40
+Suger Beet,1,S,Very Low,0,,5
+Suger Beet,1,S,Low,0,,5
+Suger Beet,1,S,Medium,0,,5
+Suger Beet,1,S,Optimum,0,,5
+Suger Beet,1,Zn,Very Low,0,,2
+Suger Beet,1,Zn,Low,0,,2
+Suger Beet,1,Zn,Medium,0,,2
+Suger Beet,1,Zn,Optimum,0,,2
+Suger Beet,1,B,Very Low,0,,0
+Suger Beet,1,B,Low,0,,0
+Suger Beet,1,B,Medium,0,,0
+Suger Beet,1,B,Optimum,0,,0
+Suger Beet,1,Mo,Very Low,0,,0
+Suger Beet,1,Mo,Low,0,,0
+Suger Beet,1,Mo,Medium,0,,0
+Suger Beet,1,Mo,Optimum,0,,0
+Suger Beet,1,Mg,Very Low,0,,5
+Suger Beet,1,Mg,Low,0,,5
+Suger Beet,1,Mg,Medium,0,,5
+Suger Beet,1,Mg,Optimum,0,,5

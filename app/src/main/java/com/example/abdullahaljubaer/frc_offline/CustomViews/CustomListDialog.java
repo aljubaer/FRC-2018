@@ -16,14 +16,13 @@ import android.widget.TextView;
 import com.example.abdullahaljubaer.frc_offline.R;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 
 /**
- * Created by ABDULLAH AL JUBAER on 12-02-18.
+ * Created by ABDULLAH AL JUBAER on 08-05-18.
  */
 
-public class CustomSearchableDialog {
-    
+public class CustomListDialog {
+
     private Context context;
     private ArrayList<String> values;
     private ArrayList<String> currentValueList;
@@ -33,7 +32,7 @@ public class CustomSearchableDialog {
     private TextView textView = null;
     public ArrayList<String> a = null;
 
-    public CustomSearchableDialog (){}
+    public CustomListDialog(){}
 
     public void init(Context context, ArrayList<String> values, AlertDialog dialog, TextView v) {
         this.dialog = dialog;
@@ -47,16 +46,11 @@ public class CustomSearchableDialog {
     private void createView(){
 
         AlertDialog.Builder mDialog = new AlertDialog.Builder(context);
-        final EditText editText = new EditText(context);
         final ListView listView = new ListView(context);
-        editText.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_search, 0, 0, 0);
-        editText.setPadding(10,10,10,30);
-        editText.setTextSize(18);
         currentValueList = new ArrayList<>();
         currentValueList = (ArrayList<String>) values.clone();
         LinearLayout layout = new LinearLayout(context);
         layout.setOrientation(LinearLayout.VERTICAL);
-        layout.addView(editText);
         CustomAlertAdapter arrayAdapter = new CustomAlertAdapter((Activity) context, currentValueList);
         listView.setAdapter(arrayAdapter);
         layout.addView(listView);
@@ -74,30 +68,6 @@ public class CustomSearchableDialog {
                                         }
         );
 
-        editText.addTextChangedListener(new TextWatcher() {
-            public void afterTextChanged(Editable s){
-
-            }
-
-            public void beforeTextChanged(CharSequence s, int start, int count, int after){
-
-            }
-
-            public void onTextChanged(CharSequence s, int start, int before, int count) {
-                editText.setCompoundDrawablesWithIntrinsicBounds(0, 0, 0, 0);
-                textLength = editText.getText().length();
-                currentValueList.clear();
-                for (String ss: values) {
-                    if (textLength <= ss.length()) {
-                        if(ss.toLowerCase().contains(editText.getText().toString().toLowerCase().trim())) {
-                            currentValueList.add(ss);
-                        }
-                    }
-                }
-                listView.setAdapter(new CustomAlertAdapter((Activity) context, currentValueList));
-            }
-        });
-
         mDialog.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
 
             @Override
@@ -108,5 +78,6 @@ public class CustomSearchableDialog {
         dialog = mDialog.show();
 
     }
-    
+
+
 }

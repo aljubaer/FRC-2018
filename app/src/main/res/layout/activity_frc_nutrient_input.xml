@@ -24,92 +24,75 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            >
-
+            android:orientation="horizontal">
 
             <TextView
                 android:id="@+id/txt_top"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:paddingBottom="10dp"
+                android:paddingTop="5dp"
                 android:text="@string/crop_details"
-                android:textSize="15sp"
-                android:paddingTop="5dp"
-                android:paddingBottom="10dp"
-                />
-
-            <TextView
-                android:id="@+id/txt_top1"
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:layout_height="wrap_content"
-                android:textSize="15sp"
-                android:paddingTop="5dp"
-                android:paddingBottom="10dp"
-                />
-
+                android:textSize="15sp" />
 
         </LinearLayout>
 
         <View
             android:layout_width="match_parent"
-            android:layout_height="2dp"/>
-
+            android:layout_height="2dp" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="15dp"
-            android:paddingTop="15dp"
-            android:paddingBottom="15dp"
             android:layout_marginBottom="15dp"
+            android:layout_marginTop="15dp"
             android:background="#AAAED581"
             android:orientation="vertical"
-            >
+            android:paddingBottom="15dp"
+            android:paddingTop="15dp">
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="#8BC34A"
-                android:textColor="#000"
-                android:text="Select Urea/Guti urea for Nitrogen"
                 android:padding="10dp"
-                />
+                android:text="Select Urea/Guti urea for Nitrogen"
+                android:textColor="#000" />
 
             <RadioGroup
                 android:id="@+id/radio_fn"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
-                android:orientation="horizontal"
                 android:background="@drawable/back_white"
                 android:onClick="onClickFN"
-                >
+                android:orientation="horizontal">
 
                 <RadioButton
                     android:id="@+id/radiofn1"
                     android:layout_width="0dp"
-                    android:layout_weight="1"
                     android:layout_height="match_parent"
-                    android:text="Urea"
-                    android:onClick="onClickFN"
-                    android:button="@android:color/transparent"                            android:textAlignment="center"
+                    android:layout_weight="1"
                     android:background="@drawable/back_radio1"
-                    />
+                    android:button="@android:color/transparent"
+                    android:onClick="onClickFN"
+                    android:text="Urea"
+                    android:textAlignment="center" />
 
                 <View
                     android:layout_width="0dp"
-                    android:layout_height="match_parent"/>
+                    android:layout_height="match_parent" />
 
                 <RadioButton
                     android:id="@+id/radiofn2"
                     android:layout_width="0dp"
-                    android:layout_weight="1"
                     android:layout_height="match_parent"
-                    android:text="Guti Urea"
-                    android:onClick="onClickFN"
-                    android:button="@android:color/transparent"                            android:textAlignment="center"
+                    android:layout_weight="1"
                     android:background="@drawable/back_radio1"
+                    android:button="@android:color/transparent"
+                    android:onClick="onClickFN"
+                    android:text="Guti Urea"
+                    android:textAlignment="center"
 
                     />
             </RadioGroup>
@@ -126,19 +109,18 @@
                 android:id="@+id/nWrapper"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@drawable/back_white"
-                >
+                android:background="@drawable/back_white">
 
                 <EditText
                     android:id="@+id/edtxt_N1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:maxLength="7"
-                    android:inputType="numberDecimal"
                     android:hint="Enter Total N (%)"
-                    android:paddingTop="10dp"
+                    android:inputType="numberDecimal"
+                    android:maxLength="7"
                     android:paddingBottom="10dp"
                     android:paddingLeft="10dp"
+                    android:paddingTop="10dp"
 
                     />
             </android.support.design.widget.TextInputLayout>
@@ -147,59 +129,59 @@
                 android:id="@+id/radio_n"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
-                android:orientation="horizontal"
                 android:background="@drawable/back_white"
                 android:onClick="onClickRN"
-                >
+                android:orientation="horizontal">
 
                 <RadioButton
                     android:id="@+id/radioNVL"
                     android:layout_width="0dp"
-                    android:layout_weight="1.2"
                     android:layout_height="match_parent"
-                    android:text="Very Low"
-                    android:padding="5dp"
-                    android:onClick="onClickRN"
-                    android:button="@android:color/transparent"                            android:textAlignment="center"
+                    android:layout_weight="1.2"
                     android:background="@drawable/back_radio"
-                    />
+                    android:button="@android:color/transparent"
+                    android:onClick="onClickRN"
+                    android:padding="5dp"
+                    android:text="Very Low"
+                    android:textAlignment="center" />
 
                 <RadioButton
                     android:id="@+id/radioNL"
                     android:layout_width="0dp"
-                    android:layout_weight="1"
                     android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/back_radio"
+                    android:button="@android:color/transparent"
+                    android:onClick="onClickRN"
                     android:padding="5dp"
                     android:text="Low"
-                    android:onClick="onClickRN"
-                    android:button="@android:color/transparent"                            android:textAlignment="center"
-                    android:background="@drawable/back_radio"
+                    android:textAlignment="center"
 
                     />
 
                 <RadioButton
                     android:id="@+id/radioNM"
                     android:layout_width="0dp"
-                    android:layout_weight="1.1"
                     android:layout_height="match_parent"
+                    android:layout_weight="1.1"
+                    android:background="@drawable/back_radio"
+                    android:button="@android:color/transparent"
+                    android:onClick="onClickRN"
                     android:padding="5dp"
                     android:text="Medium"
-                    android:onClick="onClickRN"
-                    android:button="@android:color/transparent"                            android:textAlignment="center"
-                    android:background="@drawable/back_radio"
-                    />
+                    android:textAlignment="center" />
 
                 <RadioButton
                     android:id="@+id/radioNO"
                     android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:text="Optimum"
-                    android:padding="5dp"
-                    android:onClick="onClickRN"
                     android:layout_height="match_parent"
-                    android:button="@android:color/transparent"                            android:textAlignment="center"
+                    android:layout_weight="1"
                     android:background="@drawable/back_radio"
-                    />
+                    android:button="@android:color/transparent"
+                    android:onClick="onClickRN"
+                    android:padding="5dp"
+                    android:text="Optimum"
+                    android:textAlignment="center" />
 
             </RadioGroup>
 
@@ -208,51 +190,46 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="#F1F8E9"
-                android:textSize="15sp"
                 android:padding="5dp"
-                />
+                android:textSize="15sp" />
 
             <LinearLayout
                 android:id="@+id/res_n"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                >
+                android:orientation="horizontal">
 
                 <TextView
                     android:id="@+id/dn"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:textAlignment="center"
-                    android:textSize="12sp"
-                    android:textIsSelectable="true"
-                    android:paddingBottom="10dp"
-                    android:paddingTop="10dp"
                     android:background="#AAAED581"
                     android:onClick="showDetails"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp"
                     android:text="@string/see_details"
-                    />
+                    android:textAlignment="center"
+                    android:textIsSelectable="true"
+                    android:textSize="12sp" />
 
                 <View
                     android:layout_width="2dp"
-                    android:layout_height="match_parent"
-                    />
+                    android:layout_height="match_parent" />
 
                 <TextView
                     android:id="@+id/cn"
                     android:layout_width="0dp"
-                    android:layout_weight="1"
                     android:layout_height="wrap_content"
-                    android:textAlignment="center"
-                    android:textSize="12sp"
-                    android:textIsSelectable="true"
-                    android:paddingBottom="10dp"
-                    android:paddingTop="10dp"
+                    android:layout_weight="1"
                     android:background="#AAAED581"
                     android:onClick="close"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp"
                     android:text="@string/close"
-                    />
+                    android:textAlignment="center"
+                    android:textIsSelectable="true"
+                    android:textSize="12sp" />
 
 
             </LinearLayout>
@@ -260,60 +237,57 @@
 
         </LinearLayout>
 
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="15dp"
-            android:paddingTop="15dp"
-            android:paddingBottom="15dp"
             android:layout_marginBottom="15dp"
+            android:layout_marginTop="15dp"
             android:background="#AAAED581"
             android:orientation="vertical"
-            >
+            android:paddingBottom="15dp"
+            android:paddingTop="15dp">
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="#8BC34A"
-                android:textColor="#000"
-                android:text="Select TSP/DAP for Phosphorus"
                 android:padding="10dp"
-                />
+                android:text="Select TSP/DAP for Phosphorus"
+                android:textColor="#000" />
 
             <RadioGroup
                 android:id="@+id/radio_fp"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
-                android:orientation="horizontal"
                 android:background="@drawable/back_white"
                 android:onClick="onClickFN"
-                >
+                android:orientation="horizontal">
 
                 <RadioButton
                     android:id="@+id/radiofp1"
                     android:layout_width="0dp"
-                    android:layout_weight="1"
                     android:layout_height="match_parent"
-                    android:text="TSP"
-                    android:onClick="onClickFP"
-                    android:button="@android:color/transparent"                            android:textAlignment="center"
+                    android:layout_weight="1"
                     android:background="@drawable/back_radio1"
-                    />
+                    android:button="@android:color/transparent"
+                    android:onClick="onClickFP"
+                    android:text="TSP"
+                    android:textAlignment="center" />
 
                 <View
                     android:layout_width="0dp"
-                    android:layout_height="match_parent"/>
+                    android:layout_height="match_parent" />
 
                 <RadioButton
                     android:id="@+id/radiofp2"
                     android:layout_width="0dp"
-                    android:layout_weight="1"
                     android:layout_height="match_parent"
-                    android:text="DAP"
-                    android:onClick="onClickFP"
-                    android:button="@android:color/transparent"                            android:textAlignment="center"
+                    android:layout_weight="1"
                     android:background="@drawable/back_radio1"
+                    android:button="@android:color/transparent"
+                    android:onClick="onClickFP"
+                    android:text="DAP"
+                    android:textAlignment="center"
 
                     />
             </RadioGroup>
@@ -321,26 +295,24 @@
             <View
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:background="#F1F8E9"
-                />
+                android:background="#F1F8E9" />
 
             <android.support.design.widget.TextInputLayout
                 android:id="@+id/pWrapper"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@drawable/back_white"
-                >
+                android:background="@drawable/back_white">
 
                 <EditText
                     android:id="@+id/edtxt_P1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:maxLength="7"
-                    android:inputType="numberDecimal"
                     android:hint="Enter Available P(ug/g)"
-                    android:paddingTop="10dp"
+                    android:inputType="numberDecimal"
+                    android:maxLength="7"
                     android:paddingBottom="10dp"
                     android:paddingLeft="10dp"
+                    android:paddingTop="10dp"
 
                     />
             </android.support.design.widget.TextInputLayout>
@@ -349,59 +321,59 @@
                 android:id="@+id/radio_p"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
-                android:orientation="horizontal"
                 android:background="@drawable/back_white"
                 android:onClick="onClickRN"
-                >
+                android:orientation="horizontal">
 
                 <RadioButton
                     android:id="@+id/radioPVL"
                     android:layout_width="0dp"
-                    android:layout_weight="1.2"
                     android:layout_height="match_parent"
-                    android:text="Very Low"
-                    android:padding="5dp"
-                    android:onClick="onClickRP"
-                    android:button="@android:color/transparent"                            android:textAlignment="center"
+                    android:layout_weight="1.2"
                     android:background="@drawable/back_radio"
-                    />
+                    android:button="@android:color/transparent"
+                    android:onClick="onClickRP"
+                    android:padding="5dp"
+                    android:text="Very Low"
+                    android:textAlignment="center" />
 
                 <RadioButton
                     android:id="@+id/radioPL"
                     android:layout_width="0dp"
-                    android:layout_weight="1"
                     android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/back_radio"
+                    android:button="@android:color/transparent"
+                    android:onClick="onClickRP"
                     android:padding="5dp"
                     android:text="Low"
-                    android:onClick="onClickRP"
-                    android:button="@android:color/transparent"                            android:textAlignment="center"
-                    android:background="@drawable/back_radio"
+                    android:textAlignment="center"
 
                     />
 
                 <RadioButton
                     android:id="@+id/radioPM"
                     android:layout_width="0dp"
-                    android:layout_weight="1.1"
                     android:layout_height="match_parent"
+                    android:layout_weight="1.1"
+                    android:background="@drawable/back_radio"
+                    android:button="@android:color/transparent"
+                    android:onClick="onClickRP"
                     android:padding="5dp"
                     android:text="Medium"
-                    android:onClick="onClickRP"
-                    android:button="@android:color/transparent"                            android:textAlignment="center"
-                    android:background="@drawable/back_radio"
-                    />
+                    android:textAlignment="center" />
 
                 <RadioButton
                     android:id="@+id/radioPO"
                     android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:text="Optimum"
-                    android:padding="5dp"
-                    android:onClick="onClickRP"
                     android:layout_height="match_parent"
-                    android:button="@android:color/transparent"                            android:textAlignment="center"
+                    android:layout_weight="1"
                     android:background="@drawable/back_radio"
-                    />
+                    android:button="@android:color/transparent"
+                    android:onClick="onClickRP"
+                    android:padding="5dp"
+                    android:text="Optimum"
+                    android:textAlignment="center" />
 
             </RadioGroup>
 
@@ -410,51 +382,46 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="#F1F8E9"
-                android:textSize="15sp"
                 android:padding="5dp"
-                />
+                android:textSize="15sp" />
 
             <LinearLayout
                 android:id="@+id/res_p"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                >
+                android:orientation="horizontal">
 
                 <TextView
                     android:id="@+id/dp"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:textAlignment="center"
-                    android:textSize="12sp"
-                    android:textIsSelectable="true"
-                    android:paddingBottom="10dp"
-                    android:paddingTop="10dp"
                     android:background="#AAAED581"
                     android:onClick="showDetails"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp"
                     android:text="@string/see_details"
-                    />
+                    android:textAlignment="center"
+                    android:textIsSelectable="true"
+                    android:textSize="12sp" />
 
                 <View
                     android:layout_width="2dp"
-                    android:layout_height="match_parent"
-                    />
+                    android:layout_height="match_parent" />
 
                 <TextView
                     android:id="@+id/cp"
                     android:layout_width="0dp"
-                    android:layout_weight="1"
                     android:layout_height="wrap_content"
-                    android:textAlignment="center"
-                    android:textSize="12sp"
-                    android:textIsSelectable="true"
-                    android:paddingBottom="10dp"
-                    android:paddingTop="10dp"
+                    android:layout_weight="1"
                     android:background="#AAAED581"
                     android:onClick="close"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp"
                     android:text="@string/close"
-                    />
+                    android:textAlignment="center"
+                    android:textIsSelectable="true"
+                    android:textSize="12sp" />
 
 
             </LinearLayout>
@@ -462,60 +429,57 @@
 
         </LinearLayout>
 
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="15dp"
-            android:paddingTop="15dp"
-            android:paddingBottom="15dp"
             android:layout_marginBottom="15dp"
+            android:layout_marginTop="15dp"
             android:background="#AAAED581"
             android:orientation="vertical"
-            >
+            android:paddingBottom="15dp"
+            android:paddingTop="15dp">
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="#8BC34A"
-                android:textColor="#000"
-                android:text="Select MOP/SOP for Potassium"
                 android:padding="10dp"
-                />
+                android:text="Select MOP/SOP for Potassium"
+                android:textColor="#000" />
 
             <RadioGroup
                 android:id="@+id/radio_fk"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
-                android:orientation="horizontal"
                 android:background="@drawable/back_white"
                 android:onClick="onClickFK"
-                >
+                android:orientation="horizontal">
 
                 <RadioButton
                     android:id="@+id/radiofk1"
                     android:layout_width="0dp"
-                    android:layout_weight="1"
                     android:layout_height="match_parent"
-                    android:text="MOP"
-                    android:onClick="onClickFK"
-                    android:button="@android:color/transparent"                            android:textAlignment="center"
+                    android:layout_weight="1"
                     android:background="@drawable/back_radio1"
-                    />
+                    android:button="@android:color/transparent"
+                    android:onClick="onClickFK"
+                    android:text="MOP"
+                    android:textAlignment="center" />
 
                 <View
                     android:layout_width="0dp"
-                    android:layout_height="match_parent"/>
+                    android:layout_height="match_parent" />
 
                 <RadioButton
                     android:id="@+id/radiofk2"
                     android:layout_width="0dp"
-                    android:layout_weight="1"
                     android:layout_height="match_parent"
-                    android:text="SOP"
-                    android:onClick="onClickFK"
-                    android:button="@android:color/transparent"                            android:textAlignment="center"
+                    android:layout_weight="1"
                     android:background="@drawable/back_radio1"
+                    android:button="@android:color/transparent"
+                    android:onClick="onClickFK"
+                    android:text="SOP"
+                    android:textAlignment="center"
 
                     />
             </RadioGroup>
@@ -523,26 +487,24 @@
             <View
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:background="#F1F8E9"
-                />
+                android:background="#F1F8E9" />
 
             <android.support.design.widget.TextInputLayout
                 android:id="@+id/kWrapper"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@drawable/back_white"
-                >
+                android:background="@drawable/back_white">
 
                 <EditText
                     android:id="@+id/edtxt_K1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:maxLength="7"
-                    android:inputType="numberDecimal"
                     android:hint="Enter Exchangeable K(meg/100g)"
-                    android:paddingTop="10dp"
+                    android:inputType="numberDecimal"
+                    android:maxLength="7"
                     android:paddingBottom="10dp"
                     android:paddingLeft="10dp"
+                    android:paddingTop="10dp"
 
                     />
             </android.support.design.widget.TextInputLayout>
@@ -551,59 +513,59 @@
                 android:id="@+id/radio_k"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
-                android:orientation="horizontal"
                 android:background="@drawable/back_white"
                 android:onClick="onClickRK"
-                >
+                android:orientation="horizontal">
 
                 <RadioButton
                     android:id="@+id/radioKVL"
                     android:layout_width="0dp"
-                    android:layout_weight="1.2"
                     android:layout_height="match_parent"
-                    android:text="Very Low"
-                    android:padding="5dp"
-                    android:onClick="onClickRK"
-                    android:button="@android:color/transparent"                            android:textAlignment="center"
+                    android:layout_weight="1.2"
                     android:background="@drawable/back_radio"
-                    />
+                    android:button="@android:color/transparent"
+                    android:onClick="onClickRK"
+                    android:padding="5dp"
+                    android:text="Very Low"
+                    android:textAlignment="center" />
 
                 <RadioButton
                     android:id="@+id/radioKL"
                     android:layout_width="0dp"
-                    android:layout_weight="1"
                     android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/back_radio"
+                    android:button="@android:color/transparent"
+                    android:onClick="onClickRK"
                     android:padding="5dp"
                     android:text="Low"
-                    android:onClick="onClickRK"
-                    android:button="@android:color/transparent"                            android:textAlignment="center"
-                    android:background="@drawable/back_radio"
+                    android:textAlignment="center"
 
                     />
 
                 <RadioButton
                     android:id="@+id/radioKM"
                     android:layout_width="0dp"
-                    android:layout_weight="1.1"
                     android:layout_height="match_parent"
+                    android:layout_weight="1.1"
+                    android:background="@drawable/back_radio"
+                    android:button="@android:color/transparent"
+                    android:onClick="onClickRK"
                     android:padding="5dp"
                     android:text="Medium"
-                    android:onClick="onClickRK"
-                    android:button="@android:color/transparent"                            android:textAlignment="center"
-                    android:background="@drawable/back_radio"
-                    />
+                    android:textAlignment="center" />
 
                 <RadioButton
                     android:id="@+id/radioKO"
                     android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:text="Optimum"
-                    android:padding="5dp"
-                    android:onClick="onClickRK"
                     android:layout_height="match_parent"
-                    android:button="@android:color/transparent"                            android:textAlignment="center"
+                    android:layout_weight="1"
                     android:background="@drawable/back_radio"
-                    />
+                    android:button="@android:color/transparent"
+                    android:onClick="onClickRK"
+                    android:padding="5dp"
+                    android:text="Optimum"
+                    android:textAlignment="center" />
 
             </RadioGroup>
 
@@ -612,51 +574,46 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="#F1F8E9"
-                android:textSize="15sp"
                 android:padding="5dp"
-                />
+                android:textSize="15sp" />
 
             <LinearLayout
                 android:id="@+id/res_k"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                >
+                android:orientation="horizontal">
 
                 <TextView
                     android:id="@+id/dk"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:textAlignment="center"
-                    android:textSize="12sp"
-                    android:textIsSelectable="true"
-                    android:paddingBottom="10dp"
-                    android:paddingTop="10dp"
                     android:background="#AAAED581"
                     android:onClick="showDetails"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp"
                     android:text="@string/see_details"
-                    />
+                    android:textAlignment="center"
+                    android:textIsSelectable="true"
+                    android:textSize="12sp" />
 
                 <View
                     android:layout_width="2dp"
-                    android:layout_height="match_parent"
-                    />
+                    android:layout_height="match_parent" />
 
                 <TextView
                     android:id="@+id/ck"
                     android:layout_width="0dp"
-                    android:layout_weight="1"
                     android:layout_height="wrap_content"
-                    android:textAlignment="center"
-                    android:textSize="12sp"
-                    android:textIsSelectable="true"
-                    android:paddingBottom="10dp"
-                    android:paddingTop="10dp"
+                    android:layout_weight="1"
                     android:background="#AAAED581"
                     android:onClick="close"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp"
                     android:text="@string/close"
-                    />
+                    android:textAlignment="center"
+                    android:textIsSelectable="true"
+                    android:textSize="12sp" />
 
 
             </LinearLayout>
@@ -664,60 +621,57 @@
 
         </LinearLayout>
 
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="15dp"
-            android:paddingTop="15dp"
-            android:paddingBottom="15dp"
             android:layout_marginBottom="15dp"
+            android:layout_marginTop="15dp"
             android:background="#AAAED581"
             android:orientation="vertical"
-            >
+            android:paddingBottom="15dp"
+            android:paddingTop="15dp">
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="#8BC34A"
-                android:textColor="#000"
-                android:text="Select Gypsum/Ammonium Sulphate for Sulphur"
                 android:padding="10dp"
-                />
+                android:text="Select Gypsum/Ammonium Sulphate for Sulphur"
+                android:textColor="#000" />
 
             <RadioGroup
                 android:id="@+id/radio_fs"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
-                android:orientation="horizontal"
                 android:background="@drawable/back_white"
                 android:onClick="onClickFS"
-                >
+                android:orientation="horizontal">
 
                 <RadioButton
                     android:id="@+id/radiofs1"
                     android:layout_width="0dp"
-                    android:layout_weight="1"
                     android:layout_height="match_parent"
-                    android:text="Gypsum"
-                    android:onClick="onClickFS"
-                    android:button="@android:color/transparent"                            android:textAlignment="center"
+                    android:layout_weight="1"
                     android:background="@drawable/back_radio1"
-                    />
+                    android:button="@android:color/transparent"
+                    android:onClick="onClickFS"
+                    android:text="Gypsum"
+                    android:textAlignment="center" />
 
                 <View
                     android:layout_width="0dp"
-                    android:layout_height="match_parent"/>
+                    android:layout_height="match_parent" />
 
                 <RadioButton
                     android:id="@+id/radiofs2"
                     android:layout_width="0dp"
-                    android:layout_weight="1"
                     android:layout_height="match_parent"
-                    android:text="Ammonium Sulphate"
-                    android:onClick="onClickFS"
-                    android:button="@android:color/transparent"                            android:textAlignment="center"
+                    android:layout_weight="1"
                     android:background="@drawable/back_radio1"
+                    android:button="@android:color/transparent"
+                    android:onClick="onClickFS"
+                    android:text="Ammonium Sulphate"
+                    android:textAlignment="center"
 
                     />
             </RadioGroup>
@@ -725,26 +679,24 @@
             <View
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:background="#F1F8E9"
-                />
+                android:background="#F1F8E9" />
 
             <android.support.design.widget.TextInputLayout
                 android:id="@+id/sWrapper"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@drawable/back_white"
-                >
+                android:background="@drawable/back_white">
 
                 <EditText
                     android:id="@+id/edtxt_S1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:maxLength="7"
-                    android:inputType="numberDecimal"
                     android:hint="Enter Available S(ug/g)"
-                    android:paddingTop="10dp"
+                    android:inputType="numberDecimal"
+                    android:maxLength="7"
                     android:paddingBottom="10dp"
                     android:paddingLeft="10dp"
+                    android:paddingTop="10dp"
 
                     />
             </android.support.design.widget.TextInputLayout>
@@ -753,59 +705,59 @@
                 android:id="@+id/radio_s"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
-                android:orientation="horizontal"
                 android:background="@drawable/back_white"
                 android:onClick="onClickRN"
-                >
+                android:orientation="horizontal">
 
                 <RadioButton
                     android:id="@+id/radioSVL"
                     android:layout_width="0dp"
-                    android:layout_weight="1.2"
                     android:layout_height="match_parent"
-                    android:text="Very Low"
-                    android:padding="5dp"
-                    android:onClick="onClickRS"
-                    android:button="@android:color/transparent"                            android:textAlignment="center"
+                    android:layout_weight="1.2"
                     android:background="@drawable/back_radio"
-                    />
+                    android:button="@android:color/transparent"
+                    android:onClick="onClickRS"
+                    android:padding="5dp"
+                    android:text="Very Low"
+                    android:textAlignment="center" />
 
                 <RadioButton
                     android:id="@+id/radioSL"
                     android:layout_width="0dp"
-                    android:layout_weight="1"
                     android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/back_radio"
+                    android:button="@android:color/transparent"
+                    android:onClick="onClickRS"
                     android:padding="5dp"
                     android:text="Low"
-                    android:onClick="onClickRS"
-                    android:button="@android:color/transparent"                            android:textAlignment="center"
-                    android:background="@drawable/back_radio"
+                    android:textAlignment="center"
 
                     />
 
                 <RadioButton
                     android:id="@+id/radioSM"
                     android:layout_width="0dp"
-                    android:layout_weight="1.1"
                     android:layout_height="match_parent"
+                    android:layout_weight="1.1"
+                    android:background="@drawable/back_radio"
+                    android:button="@android:color/transparent"
+                    android:onClick="onClickRS"
                     android:padding="5dp"
                     android:text="Medium"
-                    android:onClick="onClickRS"
-                    android:button="@android:color/transparent"                            android:textAlignment="center"
-                    android:background="@drawable/back_radio"
-                    />
+                    android:textAlignment="center" />
 
                 <RadioButton
                     android:id="@+id/radioSO"
                     android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:text="Optimum"
-                    android:padding="5dp"
-                    android:onClick="onClickRS"
                     android:layout_height="match_parent"
-                    android:button="@android:color/transparent"                            android:textAlignment="center"
+                    android:layout_weight="1"
                     android:background="@drawable/back_radio"
-                    />
+                    android:button="@android:color/transparent"
+                    android:onClick="onClickRS"
+                    android:padding="5dp"
+                    android:text="Optimum"
+                    android:textAlignment="center" />
 
             </RadioGroup>
 
@@ -814,51 +766,46 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="#F1F8E9"
-                android:textSize="15sp"
                 android:padding="5dp"
-                />
+                android:textSize="15sp" />
 
             <LinearLayout
                 android:id="@+id/res_s"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                >
+                android:orientation="horizontal">
 
                 <TextView
                     android:id="@+id/ds"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:textAlignment="center"
-                    android:textSize="12sp"
-                    android:textIsSelectable="true"
-                    android:paddingBottom="10dp"
-                    android:paddingTop="10dp"
                     android:background="#AAAED581"
                     android:onClick="showDetails"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp"
                     android:text="@string/see_details"
-                    />
+                    android:textAlignment="center"
+                    android:textIsSelectable="true"
+                    android:textSize="12sp" />
 
                 <View
                     android:layout_width="2dp"
-                    android:layout_height="match_parent"
-                    />
+                    android:layout_height="match_parent" />
 
                 <TextView
                     android:id="@+id/cs"
                     android:layout_width="0dp"
-                    android:layout_weight="1"
                     android:layout_height="wrap_content"
-                    android:textAlignment="center"
-                    android:textSize="12sp"
-                    android:textIsSelectable="true"
-                    android:paddingBottom="10dp"
-                    android:paddingTop="10dp"
+                    android:layout_weight="1"
                     android:background="#AAAED581"
                     android:onClick="close"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp"
                     android:text="@string/close"
-                    />
+                    android:textAlignment="center"
+                    android:textIsSelectable="true"
+                    android:textSize="12sp" />
 
 
             </LinearLayout>
@@ -869,56 +816,54 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="15dp"
-            android:paddingTop="15dp"
-            android:paddingBottom="15dp"
             android:layout_marginBottom="15dp"
+            android:layout_marginTop="15dp"
             android:background="#AAAED581"
             android:orientation="vertical"
-            >
+            android:paddingBottom="15dp"
+            android:paddingTop="15dp">
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="#8BC34A"
-                android:textColor="#000"
-                android:text="Select Zinc Sulphate(Mono)/Zinc Sulphate(Hepta) for Zinc"
                 android:padding="10dp"
-                />
+                android:text="Select Zinc Sulphate(Mono)/Zinc Sulphate(Hepta) for Zinc"
+                android:textColor="#000" />
 
             <RadioGroup
                 android:id="@+id/radio_fzn"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
-                android:orientation="horizontal"
                 android:background="@drawable/back_white"
                 android:onClick="onClickFZn"
-                >
+                android:orientation="horizontal">
 
                 <RadioButton
                     android:id="@+id/radiofzn1"
                     android:layout_width="0dp"
-                    android:layout_weight="1"
                     android:layout_height="match_parent"
-                    android:text="Zinc Sulphate(Mono)"
-                    android:onClick="onClickFZn"
-                    android:button="@android:color/transparent"                            android:textAlignment="center"
+                    android:layout_weight="1"
                     android:background="@drawable/back_radio1"
-                    />
+                    android:button="@android:color/transparent"
+                    android:onClick="onClickFZn"
+                    android:text="Zinc Sulphate(Mono)"
+                    android:textAlignment="center" />
 
                 <View
                     android:layout_width="0dp"
-                    android:layout_height="match_parent"/>
+                    android:layout_height="match_parent" />
 
                 <RadioButton
                     android:id="@+id/radiofzn2"
                     android:layout_width="0dp"
-                    android:layout_weight="1"
                     android:layout_height="match_parent"
-                    android:text="Zinc Sulphate(Hepta)"
-                    android:onClick="onClickFZn"
-                    android:button="@android:color/transparent"                            android:textAlignment="center"
+                    android:layout_weight="1"
                     android:background="@drawable/back_radio1"
+                    android:button="@android:color/transparent"
+                    android:onClick="onClickFZn"
+                    android:text="Zinc Sulphate(Hepta)"
+                    android:textAlignment="center"
 
                     />
             </RadioGroup>
@@ -926,26 +871,24 @@
             <View
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:background="#F1F8E9"
-                />
+                android:background="#F1F8E9" />
 
             <android.support.design.widget.TextInputLayout
                 android:id="@+id/znWrapper"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@drawable/back_white"
-                >
+                android:background="@drawable/back_white">
 
                 <EditText
                     android:id="@+id/edtxt_Zn1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:maxLength="7"
-                    android:inputType="numberDecimal"
                     android:hint="Enter Available Zn(ug/g)"
-                    android:paddingTop="10dp"
+                    android:inputType="numberDecimal"
+                    android:maxLength="7"
                     android:paddingBottom="10dp"
                     android:paddingLeft="10dp"
+                    android:paddingTop="10dp"
 
                     />
             </android.support.design.widget.TextInputLayout>
@@ -954,59 +897,59 @@
                 android:id="@+id/radio_zn"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
-                android:orientation="horizontal"
                 android:background="@drawable/back_white"
                 android:onClick="onClickRZn"
-                >
+                android:orientation="horizontal">
 
                 <RadioButton
                     android:id="@+id/radioZnVL"
                     android:layout_width="0dp"
-                    android:layout_weight="1.2"
                     android:layout_height="match_parent"
-                    android:text="Very Low"
-                    android:padding="5dp"
-                    android:onClick="onClickRZn"
-                    android:button="@android:color/transparent"                            android:textAlignment="center"
+                    android:layout_weight="1.2"
                     android:background="@drawable/back_radio"
-                    />
+                    android:button="@android:color/transparent"
+                    android:onClick="onClickRZn"
+                    android:padding="5dp"
+                    android:text="Very Low"
+                    android:textAlignment="center" />
 
                 <RadioButton
                     android:id="@+id/radioZnL"
                     android:layout_width="0dp"
-                    android:layout_weight="1"
                     android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/back_radio"
+                    android:button="@android:color/transparent"
+                    android:onClick="onClickRZn"
                     android:padding="5dp"
                     android:text="Low"
-                    android:onClick="onClickRZn"
-                    android:button="@android:color/transparent"                            android:textAlignment="center"
-                    android:background="@drawable/back_radio"
+                    android:textAlignment="center"
 
                     />
 
                 <RadioButton
                     android:id="@+id/radioZnM"
                     android:layout_width="0dp"
-                    android:layout_weight="1.1"
                     android:layout_height="match_parent"
+                    android:layout_weight="1.1"
+                    android:background="@drawable/back_radio"
+                    android:button="@android:color/transparent"
+                    android:onClick="onClickRZn"
                     android:padding="5dp"
                     android:text="Medium"
-                    android:onClick="onClickRZn"
-                    android:button="@android:color/transparent"                            android:textAlignment="center"
-                    android:background="@drawable/back_radio"
-                    />
+                    android:textAlignment="center" />
 
                 <RadioButton
                     android:id="@+id/radioZnO"
                     android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:text="Optimum"
-                    android:padding="5dp"
-                    android:onClick="onClickRZn"
                     android:layout_height="match_parent"
-                    android:button="@android:color/transparent"                            android:textAlignment="center"
+                    android:layout_weight="1"
                     android:background="@drawable/back_radio"
-                    />
+                    android:button="@android:color/transparent"
+                    android:onClick="onClickRZn"
+                    android:padding="5dp"
+                    android:text="Optimum"
+                    android:textAlignment="center" />
 
             </RadioGroup>
 
@@ -1015,51 +958,46 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="#F1F8E9"
-                android:textSize="15sp"
                 android:padding="5dp"
-                />
+                android:textSize="15sp" />
 
             <LinearLayout
                 android:id="@+id/res_zn"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                >
+                android:orientation="horizontal">
 
                 <TextView
                     android:id="@+id/dzn"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:textAlignment="center"
-                    android:textSize="12sp"
-                    android:textIsSelectable="true"
-                    android:paddingBottom="10dp"
-                    android:paddingTop="10dp"
                     android:background="#AAAED581"
                     android:onClick="showDetails"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp"
                     android:text="@string/see_details"
-                    />
+                    android:textAlignment="center"
+                    android:textIsSelectable="true"
+                    android:textSize="12sp" />
 
                 <View
                     android:layout_width="2dp"
-                    android:layout_height="match_parent"
-                    />
+                    android:layout_height="match_parent" />
 
                 <TextView
                     android:id="@+id/czn"
                     android:layout_width="0dp"
-                    android:layout_weight="1"
                     android:layout_height="wrap_content"
-                    android:textAlignment="center"
-                    android:textSize="12sp"
-                    android:textIsSelectable="true"
-                    android:paddingBottom="10dp"
-                    android:paddingTop="10dp"
+                    android:layout_weight="1"
                     android:background="#AAAED581"
                     android:onClick="close"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp"
                     android:text="@string/close"
-                    />
+                    android:textAlignment="center"
+                    android:textIsSelectable="true"
+                    android:textSize="12sp" />
 
 
             </LinearLayout>
@@ -1070,56 +1008,54 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="15dp"
-            android:paddingTop="15dp"
-            android:paddingBottom="15dp"
             android:layout_marginBottom="15dp"
+            android:layout_marginTop="15dp"
             android:background="#AAAED581"
             android:orientation="vertical"
-            >
+            android:paddingBottom="15dp"
+            android:paddingTop="15dp">
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="#8BC34A"
-                android:textColor="#000"
-                android:text="Select Boric Acid/Solubor for Boron"
                 android:padding="10dp"
-                />
+                android:text="Select Boric Acid/Solubor for Boron"
+                android:textColor="#000" />
 
             <RadioGroup
                 android:id="@+id/radio_fb"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
-                android:orientation="horizontal"
                 android:background="@drawable/back_white"
                 android:onClick="onClickFB"
-                >
+                android:orientation="horizontal">
 
                 <RadioButton
                     android:id="@+id/radiofb1"
                     android:layout_width="0dp"
-                    android:layout_weight="1"
                     android:layout_height="match_parent"
-                    android:text="Boric Acid"
-                    android:onClick="onClickFB"
-                    android:button="@android:color/transparent"                            android:textAlignment="center"
+                    android:layout_weight="1"
                     android:background="@drawable/back_radio1"
-                    />
+                    android:button="@android:color/transparent"
+                    android:onClick="onClickFB"
+                    android:text="Boric Acid"
+                    android:textAlignment="center" />
 
                 <View
                     android:layout_width="0dp"
-                    android:layout_height="match_parent"/>
+                    android:layout_height="match_parent" />
 
                 <RadioButton
                     android:id="@+id/radiofb2"
                     android:layout_width="0dp"
-                    android:layout_weight="1"
                     android:layout_height="match_parent"
-                    android:text="Solubor"
-                    android:onClick="onClickFB"
-                    android:button="@android:color/transparent"                            android:textAlignment="center"
+                    android:layout_weight="1"
                     android:background="@drawable/back_radio1"
+                    android:button="@android:color/transparent"
+                    android:onClick="onClickFB"
+                    android:text="Solubor"
+                    android:textAlignment="center"
 
                     />
             </RadioGroup>
@@ -1127,26 +1063,24 @@
             <View
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:background="#F1F8E9"
-                />
+                android:background="#F1F8E9" />
 
             <android.support.design.widget.TextInputLayout
                 android:id="@+id/bWrapper"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@drawable/back_white"
-                >
+                android:background="@drawable/back_white">
 
                 <EditText
                     android:id="@+id/edtxt_B1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:maxLength="7"
-                    android:inputType="numberDecimal"
                     android:hint="Enter Available B(ug/g)"
-                    android:paddingTop="10dp"
+                    android:inputType="numberDecimal"
+                    android:maxLength="7"
                     android:paddingBottom="10dp"
                     android:paddingLeft="10dp"
+                    android:paddingTop="10dp"
 
                     />
             </android.support.design.widget.TextInputLayout>
@@ -1155,59 +1089,59 @@
                 android:id="@+id/radio_b"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
-                android:orientation="horizontal"
                 android:background="@drawable/back_white"
                 android:onClick="onClickRB"
-                >
+                android:orientation="horizontal">
 
                 <RadioButton
                     android:id="@+id/radioBVL"
                     android:layout_width="0dp"
-                    android:layout_weight="1.2"
                     android:layout_height="match_parent"
-                    android:text="Very Low"
-                    android:padding="5dp"
-                    android:onClick="onClickRB"
-                    android:button="@android:color/transparent"                            android:textAlignment="center"
+                    android:layout_weight="1.2"
                     android:background="@drawable/back_radio"
-                    />
+                    android:button="@android:color/transparent"
+                    android:onClick="onClickRB"
+                    android:padding="5dp"
+                    android:text="Very Low"
+                    android:textAlignment="center" />
 
                 <RadioButton
                     android:id="@+id/radioBL"
                     android:layout_width="0dp"
-                    android:layout_weight="1"
                     android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/back_radio"
+                    android:button="@android:color/transparent"
+                    android:onClick="onClickRB"
                     android:padding="5dp"
                     android:text="Low"
-                    android:onClick="onClickRB"
-                    android:button="@android:color/transparent"                            android:textAlignment="center"
-                    android:background="@drawable/back_radio"
+                    android:textAlignment="center"
 
                     />
 
                 <RadioButton
                     android:id="@+id/radioBM"
                     android:layout_width="0dp"
-                    android:layout_weight="1.1"
                     android:layout_height="match_parent"
+                    android:layout_weight="1.1"
+                    android:background="@drawable/back_radio"
+                    android:button="@android:color/transparent"
+                    android:onClick="onClickRB"
                     android:padding="5dp"
                     android:text="Medium"
-                    android:onClick="onClickRB"
-                    android:button="@android:color/transparent"                            android:textAlignment="center"
-                    android:background="@drawable/back_radio"
-                    />
+                    android:textAlignment="center" />
 
                 <RadioButton
                     android:id="@+id/radioBO"
                     android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:text="Optimum"
-                    android:padding="5dp"
-                    android:onClick="onClickRB"
                     android:layout_height="match_parent"
-                    android:button="@android:color/transparent"                            android:textAlignment="center"
+                    android:layout_weight="1"
                     android:background="@drawable/back_radio"
-                    />
+                    android:button="@android:color/transparent"
+                    android:onClick="onClickRB"
+                    android:padding="5dp"
+                    android:text="Optimum"
+                    android:textAlignment="center" />
 
             </RadioGroup>
 
@@ -1216,57 +1150,64 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="#F1F8E9"
-                android:textSize="15sp"
                 android:padding="5dp"
-                />
+                android:textSize="15sp" />
 
             <LinearLayout
                 android:id="@+id/res_b"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                >
+                android:orientation="horizontal">
 
                 <TextView
                     android:id="@+id/db"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:textAlignment="center"
-                    android:textSize="12sp"
-                    android:textIsSelectable="true"
-                    android:paddingBottom="10dp"
-                    android:paddingTop="10dp"
                     android:background="#AAAED581"
                     android:onClick="showDetails"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp"
                     android:text="@string/see_details"
-                    />
+                    android:textAlignment="center"
+                    android:textIsSelectable="true"
+                    android:textSize="12sp" />
 
                 <View
                     android:layout_width="2dp"
-                    android:layout_height="match_parent"
-                    />
+                    android:layout_height="match_parent" />
 
                 <TextView
                     android:id="@+id/cb"
                     android:layout_width="0dp"
-                    android:layout_weight="1"
                     android:layout_height="wrap_content"
-                    android:textAlignment="center"
-                    android:textSize="12sp"
-                    android:textIsSelectable="true"
-                    android:paddingBottom="10dp"
-                    android:paddingTop="10dp"
+                    android:layout_weight="1"
                     android:background="#AAAED581"
                     android:onClick="close"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp"
                     android:text="@string/close"
-                    />
+                    android:textAlignment="center"
+                    android:textIsSelectable="true"
+                    android:textSize="12sp" />
 
 
             </LinearLayout>
 
 
         </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_recomm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp"
+            android:background="#AAAED581"
+            android:onClick="freq"
+            android:text="Apply for your land" />
 
 
     </LinearLayout>

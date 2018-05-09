@@ -80,10 +80,10 @@ T. Aman rice,BR5,3
 T. Aman rice,BRRI dhan34,3
 T. Aman rice,BRRI dhan37,3
 T. Aman rice,BRRI dhan38,3
-T. Aman rice,Binadhan-9,4
+T. Aman rice,Binadhan-9,5
 Aromatic rice,All,1
-T. Aman rice,LIV under Transplanted Culture,5
-T. Aman rice,LIV under Broadcast Culture,6
+T. Aman rice,LIV under Transplanted Culture,4
+B. Aman rice,LIV under Broadcast Culture,1
 Wheat (Irrigated),Sourav (BARI Gom-19),1
 Wheat (Irrigated),Gourab (BARI Gom-20),1
 Wheat (Irrigated),Shatabdi (BARI Gom-21),1
@@ -140,3 +140,281 @@ Sweet potato,Bari Misti Alu-2 (Kamalashundhuri),1
 Sweet potato,Bari Misti Alu-3 (Daulatpuri),1
 Sweet potato,Bari Misti Alu-4,1
 Sweet potato,Bari Misti Alu-5,1
+Barley,BARI Barley-1,1
+Barley,BARI Barley-2,1
+Proso Millet,BARI Cheena-1(Tushar),1
+Foxtail Millet,Titas,1
+Foxtail Millet,BARI Kaon-2,1
+Foxtail Millet,BARI Kaon-3,1
+Jute,CVL-1,1
+Jute,CVL-3,1
+Jute,CC-45,1
+Jute,BJRI Deshi pat-5,1
+Jute,BJRI Deshi pat-6,1
+Jute,BJRI Deshi pat-7,1
+Jute,Binadeshipat-2,1
+Jute,Atompat-38,1
+Jute,O-9897,2
+Jute,OM-1,2
+Jute,BJRI Tossa Pat-4,2
+Kenaf,HC-2,1
+Kenaf,HC-95,1
+Kenaf,BJRI Kenaf-3,1
+Mesta,HS-24,1
+Jute seed,CVL-1,1
+Jute seed,CVL-3,1
+Jute seed,CC-45,1
+Jute seed,BJRI Deshi pat-5,1
+Jute seed,BJRI Deshi pat-6,1
+Jute seed,BJRI Deshi pat-7,1
+Jute seed,Binadeshipat-2,1
+Jute seed,O-9897,2
+Jute seed,OM-1,2
+Jute seed,BJRI Tossa Pat-4,2
+Kenaf seed,HC-2,1
+Kenaf seed,HC-95,1
+Kenaf seed,BJRI Kenaf-3,1
+Mesta seed,HS-24,1
+Cotton,CB-9,1
+Cotton,CB-10,1
+Cotton,Others,1
+Cotton,CB-12,2
+Cotton,Rupali-1,3
+Cotton,DM-2,3
+Lentil,BARI Masur-3,1
+Lentil,BARI Masur-4,1
+Lentil,BARI Masur-5,1
+Lentil,BARI Masur-6,1
+Lentil,BARI Masur-7,1
+Lentil,Binamasur-2,1
+Lentil,Binamasur-3,1
+Lentil,Binamasur-4,1
+Lentil,Binamasur-5,1
+Lentil,Binamasur-6,1
+Chickpea,BARI Chola-2,1
+Chickpea,BARI Chola-3,1
+Chickpea,BARI Chola-4,1
+Chickpea,BARI Chola-5,1
+Chickpea,BARI Chola-6,1
+Chickpea,BARI Chola-7,1
+Chickpea,Hyposola,2
+Chickpea,Binasola-2,2
+Chickpea,Binasola-3,2
+Chickpea,Binasola-4,2
+Chickpea,Binasola-5,2
+Chickpea,Binasola-6,2
+Munbean,BARI mung-2,1
+Munbean,BARI mung-3,1
+Munbean,BARI mung-4,1
+Munbean,BARI mung-5,1
+Munbean,BARI mung-6,1
+Munbean,Binamoog-5,1
+Munbean,Binamoog-6,1
+Munbean,Binamoog-7,1
+Munbean,Binamoog-8,1
+Munbean,BAU Mung-1,1
+Munbean,BU Mung-1,1
+Munbean,BU Mung-2,1
+Munbean,BU Mung-4,1
+Blackgram,BARI mash-1,1
+Blackgram,BARI mash-2,1
+Blackgram,BARI mash-3,1
+Blackgram,Binamash-1,1
+Grasspea,BARI Khesari-1,1
+Grasspea,BARI Khesari-2,1
+Grasspea,BARI Khesari-3,1
+Grasspea,Binakhesari-1,1
+Cowpea,BARI felon-2,1
+Sesame,BARI Til-2,1
+Sesame,BARI Til-3,1
+Sesame,BARI Til-4,1
+Sesame,Binatil-1,1
+Sesame,Binatil-2,1
+Groundnut,BARI Chinabadam-6,1
+Groundnut,BARI Chinabadam-7,1
+Groundnut,BARI Chinabadam-8,1
+Groundnut,BARI Chinabadam-9,1
+Groundnut,Binachinabadam-1,1
+Groundnut,Binachinabadam-2,1
+Groundnut,Binachinabadam-3,1
+Groundnut,Binachinabadam-4,1
+Soyabean,Sohag,1
+Soyabean,BARI Soyabean-5,1
+Soyabean,BARI Soyabean-6,1
+Soyabean,Binasoyabean-1,1
+Soyabean,Binasoyabean-2,1
+Sunflower,Kironi,1
+Sunflower,BARI surjomukhi-2,1
+Safflower,BARI Saf-1,1
+Linseed,BARI Tishi-1 (Nila),1
+Niger,BARI Guji-11 (Shova),1
+Mukhikachu,Bilashi,1
+Mukhikachu,Others,1
+Panikachu,Latiraj,1
+Panikachu,BARI Panikachu-2,1
+Panikachu,BARI Panikachu-3,1
+Panikachu,Others,1
+Cabbage,K-K Cross,1
+Cabbage,Atlas,1
+Cabbage,Hybrid,1
+Cabbage,BARI Badhakopi-1 (Provati),2
+Cabbage,BARI Badhakopi-2 (Agradut),2
+Cabbage,IPSA cabbage,2
+Cauliflower,Snow while,1
+Cauliflower,Early tropical,1
+Cauliflower,White corona,1
+Cauliflower,Whilte shot,1
+Cauliflower,BARI Phulcopi-1,2
+Cauliflower,BARI Phulcopi-2,2
+Chinese Cabbage,BARI ChinaCopi-1,1
+Broccoli,All varieties,1
+Batisak,BARI Barisak-1,1
+Tomato (Winter),BARI Tomato-2,1
+Tomato (Winter),BARI Tomato-3,1
+Tomato (Winter),BARI Tomato-14,1
+Tomato (Winter),BARI Tomato-15,1
+Tomato (Winter),BARI Hybrid Tomato-5,1
+Tomato (Winter),BARI Hybrid Tomato-6,1
+Tomato (Winter),BARI Hybrid Tomato-7,1
+Tomato (Winter),Roma VF,1
+Tomato (Winter),Binatomato-4,1
+Tomato (Winter),Binatomato-5,1
+Tomato (Winter),Binatomato-6,1
+Tomato (Winter),Binatomato-7,1
+Tomato (Summer),BARI Hybrid Tomato-3,1
+Tomato (Summer),BARI Hybrid Tomato-4,1
+Tomato (Summer),BARI Hybrid Tomato-8,1
+Tomato (Summer),Binatomato-2,1
+Tomato (Summer),Binatomato-3,1
+Brinjal,BARI Begun-1,1
+Brinjal,BARI Begun-4,1
+Brinjal,BARI Begun-6,1
+Brinjal,BARI Begun-8,1
+Brinjal,BARI Begun-10,1
+Brinjal,BARI Hybrid Begun-3,1
+Brinjal,BARI Hybrid Begun-4,1
+Brinjal,Others,1
+Ladys Finger,BARI Dherosh-1,1
+Ladys Finger,Others,1
+Radish,BARI Mula-1 (Tasaki Mula),1
+Radish,BARI Mula-2 (Pinky),1
+Radish,BARI Mula-3 (Druti),1
+Radish,BARI Mula-4,1
+Radish,Others,1
+Carrot,All cultivars,1
+Country Bean,BARI Sheem-1,1
+Country Bean,BARI Sheem-4,1
+Country Bean,BARI Sheem-6,1
+Country Bean,IPSA Shim-2,1
+Country Bean,Others,1
+Yardlong Bean,BARI Borboti-1,1
+Yardlong Bean,Kagor Natoki,1
+Yardlong Bean,Others,1
+French Bean,BARI Jharshim-1,1
+French Bean,BARI Jharshim-2,1
+French Bean,BARI Jharshim-3,1
+Garden Pea,BARI Motor shuti-1,1
+Garden Pea,BARI Motor shuti-2,1
+Garden Pea,BARI Motor shuti-3,1
+Garden Pea,IPSA Motorshoti-1,1
+Garden Pea,IPSA Motorshoti-2,1
+Garden Pea,IPSA Motorshoti-3,1
+Sweet Gourd,BARI Misti Kumra-1,1
+Sweet Gourd,BARI Misti Kumra-2,1
+Sweet Gourd,Others,1
+Bottle Gourd,BARI Lau-1,1
+Bottle Gourd,BARI Lau-2,1
+Bottle Gourd,BARI Lau-3,1
+Bottle Gourd,BARI Lau-4,1
+Bottle Gourd,Others,1
+Ash Gourd,BARI Chal Kumra-1,1
+Ash Gourd,IPSA Ash Gourd-1,1
+Teasle Gourd,All cultivars,1
+Bitter Gourd,BARI Karola-1,1
+Bitter Gourd,Others,1
+Point Gourd,BARI Potol-1,1
+Point Gourd,BARI Potol-2,1
+Shake Gourd,BARI Chichinga-1,1
+Shake Gourd,Others,1
+Ridge Gourd,BARI Jhinga-1,1
+Ridge Gourd,BARI Chichinga-4,1
+Sponge Gourd,All cultivars,1
+Cucumber,All varieties,1
+Kangkong,BARI Gimakalmi-1,1
+Indian Spinach,BARI Puishak-1,1
+Indian Spinach,BARI Puishak-2,1
+Indian Spinach,Others,1
+Spinach,Kupipalong,1
+Spinach,Others,1
+Amaranthus,BARI Danta-1,1
+Amaranthus,BARI Danta-2,1
+Amaranthus,BARI Sabuj Dantashak-1,1
+Amaranthus,Others,1
+Red Amaranthus,BARI Lalshak,1
+Red Amaranthus,Others,1
+Onion,BARI Piaz-1,1
+Onion,BARI Piaz-2,1
+Onion,BARI Piaz-3,1
+Onion,BARI Piaz-4,1
+Onion,BARI Piaz-5,1
+Summer Onion,BARI Piaz-2,1
+Summer Onion,BARI Piaz-3,1
+Summer Onion,BARI Piaz-5,1
+Onion Seed,BARI Piaz-1,1
+Onion Seed,Others,1
+Garlic,BARI Rashun-1,1
+Garlic,BARI Rashun-2,1
+Garlic,BAU Rashun-1,1
+Garlic,BAU Rashun-2,1
+Garlic,BAU Rashun-3,1
+Garlic,Others,1
+Ginger,BARI Ada-1,1
+Ginger,Others,1
+Tumeric,BARI Halud-1,1
+Tumeric,BARI Halud-2,1
+Tumeric,BARI Halud-3,1
+Chilli,BARI Morich-1,1
+Chilli,Bogra local,1
+Chilli,Jamalpur local,1
+Coriander,BARI Dhonia-1,1
+Black Cumin,BARI Kalozira-1,1
+Black Cumin,Others,1
+Fenugreek,BARI Methi-1,1
+Fenugreek,BARI Methi-2,1
+Black Pepper,Jainta gulmorich,1
+Sugarcane,All varieties,1
+Tobacco,Sesmaria,1
+Betel Leaf,BARI Pan-1,1
+Betel Leaf,BARI Pan-2,1
+Betel Leaf,BARI Pan-3,1
+Napier Grass,IGFRI-3,1
+Napier Grass,IGFRI-6,1
+Napier Grass,IGFRI-7,1
+Napier Grass,IGFRI-10,1
+Napier Grass,CO-3,1
+Para Grass,All varieties,1
+German Grass,All varieties,1
+Dhal Grass,All varieties,1
+Guinea Grass,All varieties,1
+Jumbo,All varieties,1
+Zamboo Grass,All varieties,1
+Pineapple,Giant kew,1
+Pineapple,Honey queen,1
+Pineapple,Ghorasal,1
+Pineapple,Others,1
+Water Melon,All cultivars,1
+Marigold,Freanch marigold,1
+Marigold,African marigold,2
+Rose,Hybrid tea,1
+Tuberose,Double,1
+Gladiolus,BARI Gladiolus-1,1
+Gladiolus,BARI Gladiolus-2,1
+Gladiolus,BARI Gladiolus-3,1
+Zinnia,All cultivars,1
+Chrysanthemum,Lagre flowered varieties,1
+Chrysanthemum,Small flowered varieties,2
+Chrysanthemum,BARI Chondromollika-1,2
+Chrysanthemum,BARI Chondromollika-2,2
+Orchid,BARI Orchid-1,1
+Gerbera,BARI Gerbera-1,1
+Suger Beet,BARI Gerbera-2,1

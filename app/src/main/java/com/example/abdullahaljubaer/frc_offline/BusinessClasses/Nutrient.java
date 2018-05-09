@@ -42,7 +42,7 @@ public class Nutrient {
 
     private double calculateFr (double Uf, double Ci, double Cs, double St, double Ls) {
 
-        if (Cs <= 0.0000000001) return -1.0;
+        if (Cs <= 0.00000001) return -1.0;
 
         return Uf - ((Ci / Cs) * (St - Ls));
 

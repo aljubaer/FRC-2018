@@ -17,8 +17,10 @@ import android.widget.Toast;
 
 import com.example.abdullahaljubaer.frc_offline.BusinessClasses.Crop;
 import com.example.abdullahaljubaer.frc_offline.BusinessClasses.Texture;
+import com.example.abdullahaljubaer.frc_offline.CustomViews.CustomListDialog;
 import com.example.abdullahaljubaer.frc_offline.CustomViews.CustomSearchableDialog;
 import com.example.abdullahaljubaer.frc_offline.DatabaseClasses.CropClassDBHelper;
+import com.example.abdullahaljubaer.frc_offline.DatabaseClasses.CropGroupDBHelper;
 import com.example.abdullahaljubaer.frc_offline.DatabaseClasses.TextureClassDBHelper;
 import com.example.abdullahaljubaer.frc_offline.R;
 
@@ -35,6 +37,7 @@ public class CropInputActivity extends AppCompatActivity {
     public static Crop mCrop = null;
     public static Texture mTexture = null;
 
+    private TextView textViewGroup;
     private TextView textViewCrop;
     private TextView textViewVariety;
     private TextView textViewTexture;
@@ -52,12 +55,14 @@ public class CropInputActivity extends AppCompatActivity {
     private String errT = "* Must select a texture!!!";
 
     private Boolean isChecked = false;
+    ArrayList<String> cropSeason = null;
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_frc_crop_input);
 
+        textViewGroup = findViewById(R.id.txt_cropgroup);
         textViewCrop = findViewById(R.id.txt_cropname);
         textViewVariety = findViewById(R.id.txt_var);
         textViewTexture = findViewById(R.id.txt_texture);
@@ -71,9 +76,11 @@ public class CropInputActivity extends AppCompatActivity {
     @Override
     protected void onRestart() {
         super.onRestart();
+        textViewGroup.setText("Crop group");
         textViewCrop.setText("Crop season");
         textViewVariety.setText("Crop variety");
         textViewTexture.setText("Texture");
+        cropSeason = null;
         isChecked = false;
         mCrop = null;
         mTexture = null;
@@ -114,10 +121,36 @@ public class CropInputActivity extends AppCompatActivity {
         return arrayList;
     }
 
+    public void selectCropGroup ( View view ) {
+        ArrayList<String> cropGroup;
+        cropGroup = readCursor( MainActivity.cropGroupDBHelper.getAllGroup(), CropGroupDBHelper.COLUMN_GROUP);
+        new CustomListDialog().init(this, cropGroup, mAlertDialog, textViewGroup);
+
+        textViewGroup.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable editable) {
+                if (editable.toString().equals("Crop group"))return;
+                cropSeason = readCursor(MainActivity.cropGroupDBHelper.getSeason(editable.toString()),
+                        CropGroupDBHelper.COLUMN_SEASON);
+            }
+        });
+
+    }
 
     public void selectCrop ( View view ){
-        ArrayList<String> cropSeason;
-        cropSeason = readCursor( MainActivity.cropClassDbHelper.getAllCropSeason(), CropClassDBHelper.COLUMN_SEASON);
+        if (cropSeason == null)
+            cropSeason = readCursor( MainActivity.cropClassDbHelper.getAllCropSeason(),
+                    CropClassDBHelper.COLUMN_SEASON);
         CustomSearchableDialog searchableDialog = new CustomSearchableDialog();
         searchableDialog.init(this, cropSeason, mAlertDialog, textViewCrop);
 
@@ -161,7 +194,6 @@ public class CropInputActivity extends AppCompatActivity {
                 String var = textViewVariety.getText().toString();
                 String gg = MainActivity.cropGroupDBHelper.getCropGroup(crop);
                 mCrop = new Crop(crop, var, gg);
-                //mCrop.setDB(MainActivity.cropClassDbHelper, MainActivity.nutrientRecommendationDBHelper);
                 textErrorVar.setText("");
             }
         });
@@ -171,7 +203,7 @@ public class CropInputActivity extends AppCompatActivity {
         textureList = readCursor(MainActivity.textureClassDBHelper.getDistTexture(), TextureClassDBHelper.COLUMN_TEXTURE);
         if (!isChecked) textErrorCrop.setText(errC);
         if (mCrop == null) textErrorVar.setText(errV);
-        else    new CustomSearchableDialog().init(this, textureList, mAlertDialog, textViewTexture);
+        else    new CustomListDialog().init(this, textureList, mAlertDialog, textViewTexture);
         textViewTexture.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
@@ -199,11 +231,6 @@ public class CropInputActivity extends AppCompatActivity {
         if (mTexture == null) textErrorTexture.setText(errT);
         else {
             Intent intent = new Intent(this, NutrientInputActivityCopy.class);
-
-            //intent.putExtra("crop", (Serializable) mCrop);
-            //intent.putExtra("texture", (Serializable) mTexture);
-
-
 
             startActivity(intent);
         }

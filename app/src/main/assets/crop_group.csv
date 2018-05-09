@@ -1,12 +1,100 @@
-Rice,Boro rice,Wetland
-Rice,T. Aman rice,Wetland
-Rice,T. Aus rice,Wetland
-Rice,B. Aus rice,Wetland
-Rice,Aromatic rice,Wetland
-Wheat,Wheat (Irrigated),Upland
-Wheat,Wheat (Rainfed),Upland
-Maize,Maize (Hybrid maize),Upland
-Maize,Maize,Upland
-Mustard,Mustard,Upland
-Potato,Potato,Upland
-Potato,Sweet potato,Upland
+CEREAL CROPS,Boro rice,Wetland
+CEREAL CROPS,T. Aus rice,Wetland
+CEREAL CROPS,B. Aus rice,Wetland
+CEREAL CROPS,T. Aman rice,Wetland
+CEREAL CROPS,Aromatic rice,Wetland
+CEREAL CROPS,B. Aman rice,Wetland
+CEREAL CROPS,Wheat (Irrigated),Upland
+CEREAL CROPS,Wheat (Rainfed),Upland
+CEREAL CROPS,Maize (Hybrid maize),Upland
+CEREAL CROPS,Maize,Upland
+OIL SEED CROPS,Mustard,Upland
+ROOT AND TUBER CROPS,Potato,Upland
+ROOT AND TUBER CROPS,Sweet potato,Upland
+CEREAL CROPS,Barley,Upland
+CEREAL CROPS,Proso Millet,Upland
+CEREAL CROPS,Foxtail Millet,Upland
+FIBRE CROPS,Jute,Wetland
+FIBRE CROPS,Kenaf,Wetland
+FIBRE CROPS,Mesta,Wetland
+FIBRE CROPS,Jute seed,Wetland
+FIBRE CROPS,Kenaf seed,Wetland
+FIBRE CROPS,Mesta seed,Wetland
+FIBRE CROPS,Cotton,Upland
+PULSE CROPS,Lentil,Upland
+PULSE CROPS,Chickpea,Upland
+PULSE CROPS,Munbean,Upland
+PULSE CROPS,Blackgram,Upland
+PULSE CROPS,Grasspea,Upland
+PULSE CROPS,Cowpea,Upland
+OIL SEED CROPS,Sesame,Upland
+OIL SEED CROPS,Groundnut,Upland
+OIL SEED CROPS,Soyabean,Upland
+OIL SEED CROPS,Sunflower,Upland
+OIL SEED CROPS,Safflower,Upland
+OIL SEED CROPS,Linseed,Upland
+OIL SEED CROPS,Niger,Upland
+AROIDS,Mukhikachu,Upland
+AROIDS,Panikachu,Upland
+VEGETABLE CROPS,Cabbage,Upland
+VEGETABLE CROPS,Cauliflower,Upland
+VEGETABLE CROPS,Chinese Cabbage,Upland
+VEGETABLE CROPS,Broccoli,Upland
+VEGETABLE CROPS,Batisak,Upland
+VEGETABLE CROPS,Tomato (Winter),Upland
+VEGETABLE CROPS,Tomato (Summer),Upland
+VEGETABLE CROPS,Brinjal,Upland
+VEGETABLE CROPS,Ladys Finger,Upland
+VEGETABLE CROPS,Radish,Upland
+VEGETABLE CROPS,Carrot,Upland
+VEGETABLE CROPS,Country Bean,Upland
+VEGETABLE CROPS,Yardlong Bean,Upland
+VEGETABLE CROPS,French Bean,Upland
+VEGETABLE CROPS,Garden Pea,Upland
+VEGETABLE CROPS,Sweet Gourd,Upland
+VEGETABLE CROPS,Bottle Gourd,Upland
+VEGETABLE CROPS,Ash Gourd,Upland
+VEGETABLE CROPS,Teasle Gourd,Upland
+VEGETABLE CROPS,Bitter Gourd,Upland
+VEGETABLE CROPS,Point Gourd,Upland
+VEGETABLE CROPS,Shake Gourd,Upland
+VEGETABLE CROPS,Ridge Gourd,Upland
+VEGETABLE CROPS,Sponge Gourd,Upland
+VEGETABLE CROPS,Cucumber,Upland
+VEGETABLE CROPS,Kangkong,Upland
+VEGETABLE CROPS,Indian Spinach,Upland
+VEGETABLE CROPS,Spinach,Upland
+VEGETABLE CROPS,Amaranthus,Upland
+VEGETABLE CROPS,Red Amaranthus,Upland
+SPICE CROPS,Onion,Upland
+SPICE CROPS,Summer Onion,Upland
+SPICE CROPS,Onion Seed,Upland
+SPICE CROPS,Garlic,Upland
+SPICE CROPS,Ginger,Upland
+SPICE CROPS,Tumeric,Upland
+SPICE CROPS,Chilli,Upland
+SPICE CROPS,Coriander,Upland
+SPICE CROPS,Black Cumin,Upland
+SPICE CROPS,Fenugreek,Upland
+SPICE CROPS,Black Pepper,Upland
+PLANTATION CROPS,Sugarcane,Upland
+PLANTATION CROPS,Tobacco,Upland
+PLANTATION CROPS,Betel Leaf,Upland
+FODDER CROPS,Napier Grass,Upland
+FODDER CROPS,Para Grass,Upland
+FODDER CROPS,German Grass,Upland
+FODDER CROPS,Dhal Grass,Upland
+FODDER CROPS,Guinea Grass,Upland
+FODDER CROPS,Jumbo,Upland
+FODDER CROPS,Zamboo Grass,Upland
+FRUIT CROPS,Pineapple,Upland
+FRUIT CROPS,Water Melon,Upland
+FLOWERS,Marigold,Upland
+FLOWERS,Rose,Upland
+FLOWERS,Tuberose,Upland
+FLOWERS,Gladiolus,Upland
+FLOWERS,Zinnia,Upland
+FLOWERS,Chrysanthemum,Upland
+FLOWERS,Orchid,Upland
+FLOWERS,Gerbera,Upland
+FLOWERS,Suger Beet,Upland
