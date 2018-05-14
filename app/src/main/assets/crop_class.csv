@@ -1,8 +1,9 @@
+Crop,Variation,Class
 Boro rice,BRRI dhan29,1
 Boro rice,Binadhan-6,1
-Boro rice,BRRI hybrid dhan1,1
-Boro rice,BRRI hybrid dhan2,1
-Boro rice,BRRI hybrid dhan3,1
+Boro rice,BRRI hybrit dhan1,1
+Boro rice,BRRI hybrit dhan2,1
+Boro rice,BRRI hybrit dhan3,1
 Boro rice,BR3,2
 Boro rice,BR8,2
 Boro rice,BR9,2
@@ -66,7 +67,7 @@ T. Aman rice,BRRI dhan51,1
 T. Aman rice,BRRI dhan52,1
 T. Aman rice,BRRI dhan53,1
 T. Aman rice,BRRI dhan54,1
-T. Aman rice,BRRI hybrid dhan4,1
+T. Aman rice,BRRI hybrit dhan4,1
 T. Aman rice,Binadhan-4,1
 T. Aman rice,Binadhan-7,1
 T. Aman rice,Binadhan-8,1
@@ -82,7 +83,7 @@ T. Aman rice,BRRI dhan37,3
 T. Aman rice,BRRI dhan38,3
 T. Aman rice,Binadhan-9,5
 Aromatic rice,All,1
-T. Aman rice,LIV under Transplanted Culture,4
+T. Aman rice,LIV under Transplanted Culture,6
 B. Aman rice,LIV under Broadcast Culture,1
 Wheat (Irrigated),Sourav (BARI Gom-19),1
 Wheat (Irrigated),Gourab (BARI Gom-20),1
@@ -203,19 +204,19 @@ Chickpea,Binasola-3,2
 Chickpea,Binasola-4,2
 Chickpea,Binasola-5,2
 Chickpea,Binasola-6,2
-Munbean,BARI mung-2,1
-Munbean,BARI mung-3,1
-Munbean,BARI mung-4,1
-Munbean,BARI mung-5,1
-Munbean,BARI mung-6,1
-Munbean,Binamoog-5,1
-Munbean,Binamoog-6,1
-Munbean,Binamoog-7,1
-Munbean,Binamoog-8,1
-Munbean,BAU Mung-1,1
-Munbean,BU Mung-1,1
-Munbean,BU Mung-2,1
-Munbean,BU Mung-4,1
+Mungbean,BARI mung-2,1
+Mungbean,BARI mung-3,1
+Mungbean,BARI mung-4,1
+Mungbean,BARI mung-5,1
+Mungbean,BARI mung-6,1
+Mungbean,Binamoog-5,1
+Mungbean,Binamoog-6,1
+Mungbean,Binamoog-7,1
+Mungbean,Binamoog-8,1
+Mungbean,BAU Mung-1,1
+Mungbean,BU Mung-1,1
+Mungbean,BU Mung-2,1
+Mungbean,BU Mung-4,1
 Blackgram,BARI mash-1,1
 Blackgram,BARI mash-2,1
 Blackgram,BARI mash-3,1
@@ -281,11 +282,11 @@ Tomato (Winter),Binatomato-4,1
 Tomato (Winter),Binatomato-5,1
 Tomato (Winter),Binatomato-6,1
 Tomato (Winter),Binatomato-7,1
-Tomato (Summer),BARI Hybrid Tomato-3,1
-Tomato (Summer),BARI Hybrid Tomato-4,1
-Tomato (Summer),BARI Hybrid Tomato-8,1
-Tomato (Summer),Binatomato-2,1
-Tomato (Summer),Binatomato-3,1
+Tomato (Summer),BARI Hybrid Tomato-3,2
+Tomato (Summer),BARI Hybrid Tomato-4,2
+Tomato (Summer),BARI Hybrid Tomato-8,2
+Tomato (Summer),Binatomato-2,2
+Tomato (Summer),Binatomato-3,2
 Brinjal,BARI Begun-1,1
 Brinjal,BARI Begun-4,1
 Brinjal,BARI Begun-6,1
@@ -357,11 +358,11 @@ Onion,BARI Piaz-2,1
 Onion,BARI Piaz-3,1
 Onion,BARI Piaz-4,1
 Onion,BARI Piaz-5,1
-Summer Onion,BARI Piaz-2,1
-Summer Onion,BARI Piaz-3,1
-Summer Onion,BARI Piaz-5,1
-Onion Seed,BARI Piaz-1,1
-Onion Seed,Others,1
+Onion (Summer),BARI Piaz-2,1
+Onion (Summer),BARI Piaz-3,1
+Onion (Summer),BARI Piaz-5,1
+Onion seed,BARI Piaz-1,1
+Onion seed,Others,1
 Garlic,BARI Rashun-1,1
 Garlic,BARI Rashun-2,1
 Garlic,BAU Rashun-1,1

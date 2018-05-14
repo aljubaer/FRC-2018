@@ -5,11 +5,12 @@ import android.content.res.AssetManager;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * Created by ABDULLAH AL JUBAER on 23-03-18.
@@ -18,8 +19,11 @@ import java.io.InputStreamReader;
 public class DBHelper extends SQLiteOpenHelper {
 
     public static final String DATABASE_NAME = "frc.db";
-    public static final Integer DATABASE_VERSION = 13;
+    public static final Integer DATABASE_VERSION = 14;
     public final Context context;
+
+    public static Map<Fertilizer, Double> composition = new HashMap<>();
+
 
     public DBHelper(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
@@ -28,6 +32,8 @@ public class DBHelper extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
+
+        //initComposition();
 
         // ............ Crop Class ...........
 
@@ -304,5 +310,46 @@ public class DBHelper extends SQLiteOpenHelper {
 
     public Cursor getData() {
         return null;
+    }
+
+    private void initComposition () {
+        String mCSVFile = "soil_analysis_interpretation.csv";
+        AssetManager manager = context.getAssets();
+        InputStream inStream = null;
+        try {
+            inStream = manager.open(mCSVFile);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        BufferedReader buffer = new BufferedReader(new InputStreamReader(inStream));
+        String line = "";
+
+        try {
+            while ((line = buffer.readLine()) != null){
+                String words[] = line.split(",");
+                composition.put(new Fertilizer(words[1], words[0]), Double.parseDouble(words[2]));
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+}
+
+class Fertilizer {
+    private String nutrient;
+    private String fertilizer;
+
+    public Fertilizer(String nutrient, String fertilizer) {
+        this.nutrient = nutrient;
+        this.fertilizer = fertilizer;
+    }
+
+    public String getNutrient() {
+        return nutrient;
+    }
+
+    public String getFertilizer() {
+        return fertilizer;
     }
 }

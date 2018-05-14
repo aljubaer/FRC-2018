@@ -1,5 +1,7 @@
 package com.example.abdullahaljubaer.frc_offline.BusinessClasses;
 
+import org.jetbrains.annotations.Contract;
+
 /**
  * Created by ABDULLAH AL JUBAER on 25-03-18.
  */
@@ -36,16 +38,19 @@ public class Nutrient {
     public double calculateRequiredNutrient ( Crop crop, String status ) {
         this.status = status;
         recommendationInterpretation = crop.getInterpretation(symbol, status);
-        if (recommendationInterpretation.getInterval() < .000001)return 0.0;
-        return recommendationInterpretation.getUpperLimit();
+        return calculateFr(recommendationInterpretation.getUpperLimit(), recommendationInterpretation.getInterval());
     }
 
+    @Contract(pure = true)
     private double calculateFr (double Uf, double Ci, double Cs, double St, double Ls) {
-
         if (Cs <= 0.00000001) return -1.0;
-
         return Uf - ((Ci / Cs) * (St - Ls));
+    }
 
+    @Contract(pure = true)
+    private double calculateFr (double Uf, double Ci) {
+        if (Ci < 0.000001) return 0.0;
+        return Uf - (Ci / 2.0);
     }
 
     public String getName() {

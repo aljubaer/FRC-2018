@@ -2,6 +2,7 @@ package com.example.abdullahaljubaer.frc_offline.GUI;
 
 import android.content.Context;
 import android.content.Intent;
+import android.content.res.AssetManager;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.design.widget.TextInputLayout;
@@ -36,6 +37,7 @@ import com.example.abdullahaljubaer.frc_offline.Results.ResultProducer;
 import com.example.abdullahaljubaer.frc_offline.Results.StatusBasedResultProducer;
 import com.example.abdullahaljubaer.frc_offline.Results.TestBasedResultProducer;
 
+import java.io.InputStream;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.IllegalFormatException;
@@ -159,8 +161,6 @@ public class NutrientInputActivityCopy extends AppCompatActivity {
         calculate();
 
     }
-
-
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -1322,6 +1322,44 @@ public class NutrientInputActivityCopy extends AppCompatActivity {
     }
 
     public void freq (View view) {
+
+        double[] rn = new double[6];
+
+        System.arraycopy(requiredNutrient, 0, rn, 0, 6);
+
+        if (frr[4].equals("Zinc Sulphate Hepta")){
+            rn[3] -= (fq[4] * 0.11);
+        }
+        else if (frr[4].equals("Zinc Sulphate Mono")){
+            rn[3] -= (fq[4] * 0.18);
+        }
+        if (frr[2].equals("SoP")){
+            rn[3] -= (fq[2] * 0.17);
+        }
+        if (frr[1].equals("TSP")){
+            rn[3] -= (fq[0] * .013);
+        }
+        if (frr[1].equals("DAP")){
+            rn[0] -= (fq[1] * .18);
+        }
+        if (rn[3] < 0.0)rn[3] = 0.0;
+        if (rn[0] < 0.0)rn[0] = 0.0;
+        if (frr[3].equals("Ammonium Sulphate")){
+            fq[3] = rn[3] * (100.0 / 23.5);
+            rn[0] -= (fq[3] * .211);
+        }
+        else if (frr[3].equals("Gypsum")){
+            fq[3] = rn[3] * (100.0 / 18);
+        }
+        System.out.println(rn[0]);
+        if (frr[0].equals("Urea")){
+            fq[0] = rn[0] * (100.0 / 46.0);
+        }
+        else if (frr[0].equals("Guti Urea")){
+            fq[0] = rn[0] * (100.0 / 46.6) * 0.7;
+        }
+
+
 
         Intent intent = new Intent(this, RecommendationActivity.class);
 

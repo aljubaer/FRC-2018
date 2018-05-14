@@ -6,17 +6,17 @@ package com.example.abdullahaljubaer.frc_offline.BusinessClasses;
 
 public class Interpretation {
 
-    private String status;
-    private double upperLimit;
-    private double lowerLimit;
-    private double interval;
+    private String status = "";
+    private double upperLimit = 0.0;
+    private double lowerLimit = 0.0;
+    private double interval = 0.0;
 
 
-    public Interpretation(String status, double lowerLimit,double upperLimit, double interval) {
+    public Interpretation(String status, String lowerLimit, String upperLimit, String interval) throws NumberFormatException {
         this.status = status;
-        this.upperLimit = upperLimit;
-        this.lowerLimit = lowerLimit;
-        this.interval = interval;
+        this.upperLimit = Double.valueOf(upperLimit);
+        this.lowerLimit = Double.valueOf(lowerLimit);
+        this.interval = Double.valueOf(interval);
     }
 
     public String getStatus() {

@@ -15,7 +15,7 @@
         android:layout_height="wrap_content"
         android:background="@drawable/back_round"
         android:orientation="horizontal"
-
+        android:layout_marginTop="10dp"
         >
 
         <TextView
@@ -24,7 +24,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1.5"
             android:text="Land Area"
-            android:textSize="24sp"
+            android:textSize="20sp"
             android:textAlignment="gravity"
             android:gravity="center"
             />
@@ -62,7 +62,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/txt_g"
-        android:layout_marginTop="25dp"
+        android:layout_marginTop="15dp"
         android:stretchColumns="*"
         android:background="@drawable/back_round"
         >

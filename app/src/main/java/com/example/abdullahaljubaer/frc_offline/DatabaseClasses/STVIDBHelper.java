@@ -60,7 +60,7 @@ public class STVIDBHelper extends DBHelper {
             d3 = res.getString(res.getColumnIndex(COLUMN_INTERVAL));
         }
 
-        return new Interpretation(status, Double.parseDouble(d1), Double.parseDouble(d2), Double.parseDouble(d3));
+        return new Interpretation(status, d1, d2, d3);
 
     }
 
