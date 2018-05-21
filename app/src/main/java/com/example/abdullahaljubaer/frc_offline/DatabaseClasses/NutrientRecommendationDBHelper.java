@@ -41,6 +41,7 @@ public class NutrientRecommendationDBHelper extends DBHelper {
     public Cursor getData() {
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor res =  db.rawQuery( "SELECT * FROM " + TABLE_NAME, null );
+        //res.close();
         return res;
     }
 
@@ -60,6 +61,7 @@ public class NutrientRecommendationDBHelper extends DBHelper {
             d3 = res.getString(res.getColumnIndex(COLUMN_INTERVAL));
         }
 
+        res.close();
         return new Interpretation(status, d1, d2, d3);
 
     }

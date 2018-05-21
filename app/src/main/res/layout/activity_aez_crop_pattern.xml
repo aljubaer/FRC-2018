@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#DCEDC8"
+    android:id="@+id/LL_CP"
+    >
+
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/back_border"
+        android:orientation="horizontal"
+        >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="AEZ No"
+            android:textAlignment="center"
+            android:padding="10dp"
+            android:background="#AED581"
+            android:textSize="16sp"
+            android:textColor="#000"
+            />
+
+        <Spinner
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:textAlignment="center"
+            >
+        </Spinner>
+
+    </LinearLayout>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#9CCC65"
+        android:textColor="#000"
+        android:text="Croping patterns"
+        android:textSize="18sp"
+        android:padding="10dp"
+        android:textAlignment="center"
+        />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:background="#689F38"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#AED581"
+        android:textColor="#000"
+        android:text="Rabi - Kharif-I - Kharif-II"
+        android:textSize="18sp"
+        android:padding="10dp"
+        android:textAlignment="center"
+        />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:background="#689F38"
+        />
+
+    <ListView
+        android:id="@+id/aez_cp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </ListView>
+
+
+
+
+
+</LinearLayout>

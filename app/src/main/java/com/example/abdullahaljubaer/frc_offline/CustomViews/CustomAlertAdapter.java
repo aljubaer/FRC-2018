@@ -18,8 +18,8 @@ import java.util.ArrayList;
 
 public class CustomAlertAdapter extends BaseAdapter {
 
-    Context ctx = null;
-    ArrayList<String> list = null;
+    private Context ctx = null;
+    private ArrayList<String> list = null;
 
     private LayoutInflater mInflater = null;
 
@@ -44,7 +44,6 @@ public class CustomAlertAdapter extends BaseAdapter {
         return 0;
     }
 
-
     @Override
     public View getView(int position, View convertView, ViewGroup arg2) {
 
@@ -53,20 +52,20 @@ public class CustomAlertAdapter extends BaseAdapter {
         if (convertView == null ) {
             holder = new ViewHolder();
             convertView = (View) mInflater.inflate(R.layout.list_view, null);
-            holder.titlename = (TextView) convertView.findViewById(R.id.textView_titllename);
+            holder.titleName = (TextView) convertView.findViewById(R.id.textView_title_name);
             convertView.setTag(holder);
         }
         else {
             holder = (ViewHolder) convertView.getTag();
         }
 
-        String dataValue= list.get(position);
-        holder.titlename.setText(dataValue);
+        String dataValue = list.get(position);
+        holder.titleName.setText(dataValue);
         return convertView;
     }
     private static class ViewHolder {
 
-        TextView titlename;
+        TextView titleName;
 
     }
 

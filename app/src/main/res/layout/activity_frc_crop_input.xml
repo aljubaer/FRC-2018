@@ -58,7 +58,7 @@
                 android:id="@+id/txt_cropname"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Crop season"
+                android:text="Crop / Season"
                 android:padding="15dp"
                 android:layout_marginBottom="0dp"
                 android:textSize="18sp"

@@ -34,12 +34,14 @@ public class CropGroupDBHelper extends DBHelper {
     public Cursor getData () {
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor res =  db.rawQuery( "SELECT * FROM " + TABLE_NAME, null );
+        //res.close();
         return res;
     }
 
     public Cursor getAllGroup () {
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor res = db.rawQuery("SELECT DISTINCT " + COLUMN_GROUP + " FROM " + TABLE_NAME, null);
+        //res.close();
         return res;
     }
 
@@ -47,6 +49,7 @@ public class CropGroupDBHelper extends DBHelper {
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor res = db.rawQuery("SELECT DISTINCT " + COLUMN_SEASON + " FROM " + TABLE_NAME +
                 " WHERE " + COLUMN_GROUP + " = '" + group + "'", null);
+        //res.close();
         return res;
     }
 
@@ -61,6 +64,7 @@ public class CropGroupDBHelper extends DBHelper {
         if (res.moveToFirst()) {
             data = res.getString(res.getColumnIndex(COLUMN_CROP_TYPE));
         }
+        res.close();
         return data;
     }
 }

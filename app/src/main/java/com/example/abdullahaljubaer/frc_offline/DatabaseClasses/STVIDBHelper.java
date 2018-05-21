@@ -40,6 +40,7 @@ public class STVIDBHelper extends DBHelper {
     public Cursor getData() {
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor res =  db.rawQuery( "SELECT * FROM " + TABLE_NAME, null );
+        //res.close();
         return res;
     }
 
@@ -59,6 +60,7 @@ public class STVIDBHelper extends DBHelper {
             d2 = res.getString(res.getColumnIndex(COLUMN_UPPER_LIMIT));
             d3 = res.getString(res.getColumnIndex(COLUMN_INTERVAL));
         }
+        res.close();
 
         return new Interpretation(status, d1, d2, d3);
 

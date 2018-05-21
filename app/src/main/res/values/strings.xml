@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">FRG-2012</string>
+    <string name="app_name">FRG-2018</string>
     <item name="databaseVersion" format="integer" type="string">1</item>
     <string name="see_details"><u>See details</u></string>
     <string name="close"><u>Close</u></string>
@@ -9,7 +9,7 @@
     </string>
 
     <string name="crop_details">
-        Crop season: Boro Rice\nVariety: BRRI hybrit dhan3\nYield goal: 7.5+/-0.75\nTexture:
+        Crop season: Boro Rice\nVariety: BRRI hybrid dhan3\nYield goal: 7.5+/-0.75\nTexture:
         Loamy\nType: Upland crop
     </string>
 

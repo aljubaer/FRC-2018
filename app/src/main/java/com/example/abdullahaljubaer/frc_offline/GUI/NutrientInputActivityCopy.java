@@ -1337,13 +1337,13 @@ public class NutrientInputActivityCopy extends AppCompatActivity {
             rn[3] -= (fq[2] * 0.17);
         }
         if (frr[1].equals("TSP")){
-            rn[3] -= (fq[0] * .013);
+            rn[3] -= (fq[1] * .013);
         }
         if (frr[1].equals("DAP")){
             rn[0] -= (fq[1] * .18);
         }
         if (rn[3] < 0.0)rn[3] = 0.0;
-        if (rn[0] < 0.0)rn[0] = 0.0;
+
         if (frr[3].equals("Ammonium Sulphate")){
             fq[3] = rn[3] * (100.0 / 23.5);
             rn[0] -= (fq[3] * .211);
@@ -1351,15 +1351,14 @@ public class NutrientInputActivityCopy extends AppCompatActivity {
         else if (frr[3].equals("Gypsum")){
             fq[3] = rn[3] * (100.0 / 18);
         }
-        System.out.println(rn[0]);
+        if (rn[0] < 0.0)rn[0] = 0.0;
+        //System.out.println(rn[0]);
         if (frr[0].equals("Urea")){
             fq[0] = rn[0] * (100.0 / 46.0);
         }
         else if (frr[0].equals("Guti Urea")){
             fq[0] = rn[0] * (100.0 / 46.6) * 0.7;
         }
-
-
 
         Intent intent = new Intent(this, RecommendationActivity.class);
 

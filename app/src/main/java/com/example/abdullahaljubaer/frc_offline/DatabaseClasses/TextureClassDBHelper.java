@@ -27,8 +27,7 @@ public class TextureClassDBHelper extends DBHelper {
     @Override
     public int numberOfRows() {
         SQLiteDatabase db = this.getReadableDatabase();
-        int numRows = (int) DatabaseUtils.queryNumEntries(db, TABLE_NAME);
-        return numRows;
+        return (int) DatabaseUtils.queryNumEntries(db, TABLE_NAME);
     }
 
     @Override
@@ -54,6 +53,7 @@ public class TextureClassDBHelper extends DBHelper {
         if (res.moveToFirst()) {
             data = res.getString(res.getColumnIndex(COLUMN_CLASS));
         }
+        res.close();
         return data;
     }
 }

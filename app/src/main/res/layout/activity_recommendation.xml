@@ -8,370 +8,386 @@
     android:paddingTop="10dp"
     >
 
-
-    <LinearLayout
-        android:id="@+id/LL_LA"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/back_round"
-        android:orientation="horizontal"
-        android:layout_marginTop="10dp"
-        >
+        android:layout_height="match_parent">
 
-        <TextView
-            android:padding="10dp"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1.5"
-            android:text="Land Area"
-            android:textSize="20sp"
-            android:textAlignment="gravity"
-            android:gravity="center"
-            />
-
-        <EditText
-            android:id="@+id/edit_area"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:maxLength="7"
-            android:textSize="18sp"
-            android:textAlignment="center"
-            android:padding="10dp"
-            android:inputType="numberDecimal"
-            android:background="@drawable/back_border"
-            />
-
-        <Spinner
-            android:id="@+id/spn_unit_land"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1.5"
-            >
-        </Spinner>
-
-    </LinearLayout>
-
-    <TextView
-        android:id="@+id/txt_g"
-        android:layout_below="@+id/LL_LA"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
-
-    <TableLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/txt_g"
-        android:layout_marginTop="15dp"
-        android:stretchColumns="*"
-        android:background="@drawable/back_round"
-        >
-
-        <TableRow
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:orientation="vertical"
             >
 
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="2"
-                android:text="Fertilizer"
-                android:padding="10dp"
-                android:textSize="20sp"
-                android:textAlignment="gravity"
-                android:gravity="center"
-                android:background="#AAAED581"
-                />
+            <LinearLayout
+                android:id="@+id/LL_LA"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/back_round"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                >
+
+                <TextView
+                    android:padding="10dp"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.5"
+                    android:text="Land Area"
+                    android:textSize="20sp"
+                    android:textAlignment="gravity"
+                    android:gravity="center"
+                    />
+
+                <EditText
+                    android:id="@+id/edit_area"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:maxLength="7"
+                    android:textSize="18sp"
+                    android:textAlignment="center"
+                    android:padding="10dp"
+                    android:inputType="numberDecimal"
+                    android:background="@drawable/back_border"
+                    />
+
+                <Spinner
+                    android:id="@+id/spn_unit_land"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.5"
+                    >
+                </Spinner>
+
+            </LinearLayout>
 
             <TextView
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:text="Req. Dose(kg)"
-                android:padding="10dp"
-                android:textSize="20sp"
-                android:textAlignment="gravity"
-                android:gravity="center"
-                android:background="#AAAED581"
-                />
+                android:id="@+id/txt_g"
+                android:layout_below="@+id/LL_LA"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
 
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:text="Cost"
-                android:padding="10dp"
-                android:textSize="20sp"
-                android:textAlignment="gravity"
-                android:gravity="center"
-                android:background="#AAAED581"
-                />
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txt_g"
+                android:layout_marginTop="15dp"
+                android:stretchColumns="*"
+                android:background="@drawable/back_round"
+                >
 
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    >
 
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2"
+                        android:text="Fertilizer"
+                        android:padding="10dp"
+                        android:textSize="20sp"
+                        android:textAlignment="gravity"
+                        android:gravity="center"
+                        android:background="#AAAED581"
+                        />
 
-        </TableRow>
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="Req. Dose(kg)"
+                        android:padding="10dp"
+                        android:textSize="20sp"
+                        android:textAlignment="gravity"
+                        android:gravity="center"
+                        android:background="#AAAED581"
+                        />
 
-        <View
-            android:layout_height="4dp"
-            android:layout_width="match_parent"
-            android:background="#7CB342"
-            />
-
-        <TableRow>
-            <TextView
-                android:id="@+id/n_1"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="2"
-                android:text="Urea"
-                android:padding="10dp"
-                android:textSize="18sp"
-                android:textAlignment="gravity"
-                android:gravity="center"
-                android:background="@drawable/back_border"
-                />
-
-            <TextView
-                android:id="@+id/n_2"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:text="-"
-                android:padding="10dp"
-                android:textSize="18sp"
-                android:textAlignment="gravity"
-                android:gravity="center"
-                android:background="@drawable/back_border"
-                />
-
-
-            <TextView
-                android:id="@+id/n_3"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:text="-"
-                android:padding="10dp"
-                android:textSize="18sp"
-                android:textAlignment="gravity"
-                android:gravity="center"
-                android:background="@drawable/back_border"
-                />
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="Cost"
+                        android:padding="10dp"
+                        android:textSize="20sp"
+                        android:textAlignment="gravity"
+                        android:gravity="center"
+                        android:background="#AAAED581"
+                        />
 
 
 
-        </TableRow>
+                </TableRow>
 
-        <TableRow>
-            <TextView
-                android:id="@+id/p_1"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="2"
-                android:text="DAP"
-                android:padding="10dp"
-                android:textSize="18sp"
-                android:textAlignment="gravity"
-                android:gravity="center"
-                android:background="@drawable/back_border"
-                />
+                <View
+                    android:layout_height="4dp"
+                    android:layout_width="match_parent"
+                    android:background="#7CB342"
+                    />
 
-            <TextView
-                android:id="@+id/p_2"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:text="-"
-                android:padding="10dp"
-                android:textSize="18sp"
-                android:textAlignment="gravity"
-                android:gravity="center"
-                android:background="@drawable/back_border"
-                />
+                <TableRow>
+                    <TextView
+                        android:id="@+id/n_1"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2"
+                        android:text="Urea"
+                        android:padding="10dp"
+                        android:textSize="18sp"
+                        android:textAlignment="gravity"
+                        android:gravity="center"
+                        android:background="@drawable/back_border"
+                        />
 
-            <TextView
-                android:id="@+id/p_3"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:text="-"
-                android:padding="10dp"
-                android:textSize="18sp"
-                android:textAlignment="gravity"
-                android:gravity="center"
-                android:background="@drawable/back_border"
-                />
+                    <TextView
+                        android:id="@+id/n_2"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="-"
+                        android:padding="10dp"
+                        android:textSize="18sp"
+                        android:textAlignment="gravity"
+                        android:gravity="center"
+                        android:background="@drawable/back_border"
+                        />
 
 
-        </TableRow>
+                    <TextView
+                        android:id="@+id/n_3"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="-"
+                        android:padding="10dp"
+                        android:textSize="18sp"
+                        android:textAlignment="gravity"
+                        android:gravity="center"
+                        android:background="@drawable/back_border"
+                        />
 
 
-        <TableRow>
-            <TextView
-                android:id="@+id/k_1"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="2"
-                android:text="MoP"
-                android:padding="10dp"
-                android:textSize="18sp"
-                android:textAlignment="gravity"
-                android:gravity="center"
-                android:background="@drawable/back_border"
-                />
-            <TextView
-                android:id="@+id/k_2"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:text="-"
-                android:padding="10dp"
-                android:textSize="18sp"
-                android:textAlignment="gravity"
-                android:gravity="center"
-                android:background="@drawable/back_border"
-            />
 
-            <TextView
-                android:id="@+id/k_3"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:text="-"
-                android:padding="10dp"
-                android:textSize="18sp"
-                android:textAlignment="gravity"
-                android:gravity="center"
-                android:background="@drawable/back_border"
-            />
-        </TableRow>
+                </TableRow>
 
+                <TableRow>
+                    <TextView
+                        android:id="@+id/p_1"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2"
+                        android:text="DAP"
+                        android:padding="10dp"
+                        android:textSize="18sp"
+                        android:textAlignment="gravity"
+                        android:gravity="center"
+                        android:background="@drawable/back_border"
+                        />
 
-        <TableRow>
-            <TextView
-                android:id="@+id/s_1"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="2"
-                android:text="Gypsum"
-                android:padding="10dp"
-                android:textSize="18sp"
-                android:textAlignment="gravity"
-                android:gravity="center"
-                android:background="@drawable/back_border"
-                />
-            <TextView
-                android:id="@+id/s_2"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:text="-"
-                android:padding="10dp"
-                android:textSize="18sp"
-                android:textAlignment="gravity"
-                android:gravity="center"
-                android:background="@drawable/back_border"
-                />
-            <TextView
-                android:id="@+id/s_3"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:text="-"
-                android:padding="10dp"
-                android:textSize="18sp"
-                android:textAlignment="gravity"
-                android:gravity="center"
-                android:background="@drawable/back_border"
-                />
+                    <TextView
+                        android:id="@+id/p_2"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="-"
+                        android:padding="10dp"
+                        android:textSize="18sp"
+                        android:textAlignment="gravity"
+                        android:gravity="center"
+                        android:background="@drawable/back_border"
+                        />
 
-        </TableRow>
+                    <TextView
+                        android:id="@+id/p_3"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="-"
+                        android:padding="10dp"
+                        android:textSize="18sp"
+                        android:textAlignment="gravity"
+                        android:gravity="center"
+                        android:background="@drawable/back_border"
+                        />
 
 
-        <TableRow>
-            <TextView
-                android:id="@+id/zn_1"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="2"
-                android:text="Zinc Sulphate Hepta"
-                android:padding="10dp"
-                android:textSize="18sp"
-                android:textAlignment="gravity"
-                android:gravity="center"
-                android:background="@drawable/back_border"
-                />
-            <TextView
-                android:id="@+id/zn_2"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:text="-"
-                android:padding="10dp"
-                android:textSize="18sp"
-                android:textAlignment="gravity"
-                android:gravity="center"
-                android:background="@drawable/back_border"
-                />
-            <TextView
-                android:id="@+id/zn_3"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:text="-"
-                android:padding="10dp"
-                android:textSize="18sp"
-                android:textAlignment="gravity"
-                android:gravity="center"
-                android:background="@drawable/back_border"
-                />
+                </TableRow>
 
 
-        </TableRow>
+                <TableRow>
+                    <TextView
+                        android:id="@+id/k_1"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2"
+                        android:text="MoP"
+                        android:padding="10dp"
+                        android:textSize="18sp"
+                        android:textAlignment="gravity"
+                        android:gravity="center"
+                        android:background="@drawable/back_border"
+                        />
+                    <TextView
+                        android:id="@+id/k_2"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="-"
+                        android:padding="10dp"
+                        android:textSize="18sp"
+                        android:textAlignment="gravity"
+                        android:gravity="center"
+                        android:background="@drawable/back_border"
+                        />
 
-        <TableRow>
-            <TextView
-                android:id="@+id/b_1"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="2"
-                android:text="Solubor"
-                android:padding="10dp"
-                android:textSize="18sp"
-                android:textAlignment="gravity"
-                android:gravity="center"
-                android:background="@drawable/back_border"
-                />
-
-            <TextView
-                android:id="@+id/b_2"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:text="-"
-                android:padding="10dp"
-                android:textSize="18sp"
-                android:textAlignment="gravity"
-                android:gravity="center"
-                android:background="@drawable/back_border"
-                />
-            <TextView
-                android:id="@+id/b_3"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:text="-"
-                android:padding="10dp"
-                android:textSize="18sp"
-                android:textAlignment="gravity"
-                android:gravity="center"
-                android:background="@drawable/back_border"
-                />
-
-        </TableRow>
+                    <TextView
+                        android:id="@+id/k_3"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="-"
+                        android:padding="10dp"
+                        android:textSize="18sp"
+                        android:textAlignment="gravity"
+                        android:gravity="center"
+                        android:background="@drawable/back_border"
+                        />
+                </TableRow>
 
 
-    </TableLayout>
+                <TableRow>
+                    <TextView
+                        android:id="@+id/s_1"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2"
+                        android:text="Gypsum"
+                        android:padding="10dp"
+                        android:textSize="18sp"
+                        android:textAlignment="gravity"
+                        android:gravity="center"
+                        android:background="@drawable/back_border"
+                        />
+                    <TextView
+                        android:id="@+id/s_2"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="-"
+                        android:padding="10dp"
+                        android:textSize="18sp"
+                        android:textAlignment="gravity"
+                        android:gravity="center"
+                        android:background="@drawable/back_border"
+                        />
+                    <TextView
+                        android:id="@+id/s_3"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="-"
+                        android:padding="10dp"
+                        android:textSize="18sp"
+                        android:textAlignment="gravity"
+                        android:gravity="center"
+                        android:background="@drawable/back_border"
+                        />
+
+                </TableRow>
+
+
+                <TableRow>
+                    <TextView
+                        android:id="@+id/zn_1"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2"
+                        android:text="Zinc Sulphate Hepta"
+                        android:padding="10dp"
+                        android:textSize="18sp"
+                        android:textAlignment="gravity"
+                        android:gravity="center"
+                        android:background="@drawable/back_border"
+                        />
+                    <TextView
+                        android:id="@+id/zn_2"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="-"
+                        android:padding="10dp"
+                        android:textSize="18sp"
+                        android:textAlignment="gravity"
+                        android:gravity="center"
+                        android:background="@drawable/back_border"
+                        />
+                    <TextView
+                        android:id="@+id/zn_3"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="-"
+                        android:padding="10dp"
+                        android:textSize="18sp"
+                        android:textAlignment="gravity"
+                        android:gravity="center"
+                        android:background="@drawable/back_border"
+                        />
+
+
+                </TableRow>
+
+                <TableRow>
+                    <TextView
+                        android:id="@+id/b_1"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2"
+                        android:text="Solubor"
+                        android:padding="10dp"
+                        android:textSize="18sp"
+                        android:textAlignment="gravity"
+                        android:gravity="center"
+                        android:background="@drawable/back_border"
+                        />
+
+                    <TextView
+                        android:id="@+id/b_2"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="-"
+                        android:padding="10dp"
+                        android:textSize="18sp"
+                        android:textAlignment="gravity"
+                        android:gravity="center"
+                        android:background="@drawable/back_border"
+                        />
+                    <TextView
+                        android:id="@+id/b_3"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="-"
+                        android:padding="10dp"
+                        android:textSize="18sp"
+                        android:textAlignment="gravity"
+                        android:gravity="center"
+                        android:background="@drawable/back_border"
+                        />
+
+                </TableRow>
+
+
+            </TableLayout>
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+
 
 </RelativeLayout>

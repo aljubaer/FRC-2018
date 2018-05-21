@@ -75,6 +75,7 @@ public class CustomListDialog {
                 dialog.dismiss();
             }
         });
+        
         dialog = mDialog.show();
 
     }

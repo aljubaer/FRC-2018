@@ -98,7 +98,6 @@ public class RecommendationActivity extends AppCompatActivity {
                 } catch (NumberFormatException e) {
                     editArea.setError("Invalid Input");
                 }
-
             }
         });
 
@@ -146,9 +145,6 @@ public class RecommendationActivity extends AppCompatActivity {
     class CustomOnItemSelectedListener implements AdapterView.OnItemSelectedListener {
 
         public void onItemSelected(AdapterView<?> parent, View view, int pos,long id) {
-            Toast.makeText(parent.getContext(),
-                    "OnItemSelectedListener : " + parent.getItemAtPosition(pos).toString(),
-                    Toast.LENGTH_SHORT).show();
             unit = parent.getItemAtPosition(pos).toString();
             calculate();
         }

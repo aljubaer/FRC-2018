@@ -50,7 +50,7 @@ public class CustomSearchableDialog {
         final EditText editText = new EditText(context);
         final ListView listView = new ListView(context);
         editText.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_search, 0, 0, 0);
-        editText.setPadding(10,10,10,30);
+        editText.setPadding(10,10,10,15);
         editText.setTextSize(18);
         currentValueList = new ArrayList<>();
         currentValueList = (ArrayList<String>) values.clone();

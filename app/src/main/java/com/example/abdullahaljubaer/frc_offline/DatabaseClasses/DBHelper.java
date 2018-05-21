@@ -19,7 +19,7 @@ import java.util.Map;
 public class DBHelper extends SQLiteOpenHelper {
 
     public static final String DATABASE_NAME = "frc.db";
-    public static final Integer DATABASE_VERSION = 14;
+    public static final Integer DATABASE_VERSION = 15;
     public final Context context;
 
     public static Map<Fertilizer, Double> composition = new HashMap<>();
@@ -288,10 +288,6 @@ public class DBHelper extends SQLiteOpenHelper {
         }
         db.setTransactionSuccessful();
         db.endTransaction();
-
-
-
-
     }
 
     @Override
