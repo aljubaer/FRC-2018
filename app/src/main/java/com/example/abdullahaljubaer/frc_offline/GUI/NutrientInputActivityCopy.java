@@ -2,7 +2,6 @@ package com.example.abdullahaljubaer.frc_offline.GUI;
 
 import android.content.Context;
 import android.content.Intent;
-import android.content.res.AssetManager;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.design.widget.TextInputLayout;
@@ -24,10 +23,10 @@ import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.abdullahaljubaer.frc_offline.BusinessClasses.Crop;
-import com.example.abdullahaljubaer.frc_offline.BusinessClasses.Interpretation;
-import com.example.abdullahaljubaer.frc_offline.BusinessClasses.Nutrient;
-import com.example.abdullahaljubaer.frc_offline.BusinessClasses.Texture;
+import com.example.abdullahaljubaer.frc_offline.FunctionalClasses.Crop;
+import com.example.abdullahaljubaer.frc_offline.FunctionalClasses.Interpretation;
+import com.example.abdullahaljubaer.frc_offline.FunctionalClasses.Nutrient;
+import com.example.abdullahaljubaer.frc_offline.FunctionalClasses.Texture;
 import com.example.abdullahaljubaer.frc_offline.CustomViews.DropDownAnim;
 import com.example.abdullahaljubaer.frc_offline.CustomViews.GuideAlertDialog;
 import com.example.abdullahaljubaer.frc_offline.CustomViews.ResultDialog;
@@ -37,10 +36,8 @@ import com.example.abdullahaljubaer.frc_offline.Results.ResultProducer;
 import com.example.abdullahaljubaer.frc_offline.Results.StatusBasedResultProducer;
 import com.example.abdullahaljubaer.frc_offline.Results.TestBasedResultProducer;
 
-import java.io.InputStream;
 import java.util.Arrays;
 import java.util.HashMap;
-import java.util.IllegalFormatException;
 import java.util.Map;
 
 /**

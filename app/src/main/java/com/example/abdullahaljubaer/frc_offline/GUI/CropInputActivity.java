@@ -15,8 +15,8 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.abdullahaljubaer.frc_offline.BusinessClasses.Crop;
-import com.example.abdullahaljubaer.frc_offline.BusinessClasses.Texture;
+import com.example.abdullahaljubaer.frc_offline.FunctionalClasses.Crop;
+import com.example.abdullahaljubaer.frc_offline.FunctionalClasses.Texture;
 import com.example.abdullahaljubaer.frc_offline.CustomViews.CustomListDialog;
 import com.example.abdullahaljubaer.frc_offline.CustomViews.CustomSearchableDialog;
 import com.example.abdullahaljubaer.frc_offline.DatabaseClasses.CropClassDBHelper;

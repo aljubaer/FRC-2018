@@ -1,4 +1,4 @@
-package com.example.abdullahaljubaer.frc_offline.BusinessClasses;
+package com.example.abdullahaljubaer.frc_offline.FunctionalClasses;
 
 import android.os.Parcel;
 import android.os.Parcelable;

@@ -20,10 +20,10 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.abdullahaljubaer.frc_offline.BusinessClasses.Crop;
-import com.example.abdullahaljubaer.frc_offline.BusinessClasses.Interpretation;
-import com.example.abdullahaljubaer.frc_offline.BusinessClasses.Nutrient;
-import com.example.abdullahaljubaer.frc_offline.BusinessClasses.Texture;
+import com.example.abdullahaljubaer.frc_offline.FunctionalClasses.Crop;
+import com.example.abdullahaljubaer.frc_offline.FunctionalClasses.Interpretation;
+import com.example.abdullahaljubaer.frc_offline.FunctionalClasses.Nutrient;
+import com.example.abdullahaljubaer.frc_offline.FunctionalClasses.Texture;
 import com.example.abdullahaljubaer.frc_offline.CustomViews.DropDownAnim;
 import com.example.abdullahaljubaer.frc_offline.CustomViews.GuideAlertDialog;
 import com.example.abdullahaljubaer.frc_offline.CustomViews.ResultAlertDialog;

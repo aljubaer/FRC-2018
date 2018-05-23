@@ -1,0 +1,669 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#DCEDC8"
+    >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+
+                <TextView
+                    android:padding="15dp"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:text="AEZ No"
+                    android:textSize="20sp"
+                    />
+
+                <Spinner
+                    android:id="@+id/spn_aez"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent">
+                </Spinner>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+
+                <TextView
+                    android:padding="15dp"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:text="Land type"
+                    android:textSize="20sp"
+                    />
+
+                <Spinner
+                    android:id="@+id/spn_land"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent">
+                </Spinner>
+
+            </LinearLayout>
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txt_g"
+                android:layout_marginTop="25dp"
+                android:stretchColumns="*"
+                android:background="@drawable/back_round"
+                >
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    >
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.3"
+                        android:text="Season"
+                        android:padding="10dp"
+                        android:textSize="16sp"
+                        android:textAlignment="gravity"
+                        android:gravity="center"
+                        android:background="#8BC34A"
+                        />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="Robi"
+                        android:padding="10dp"
+                        android:textSize="16sp"
+                        android:textAlignment="gravity"
+                        android:gravity="center"
+                        android:background="#8BC34A"
+                        />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="Kharif-I"
+                        android:padding="10dp"
+                        android:textSize="16sp"
+                        android:textAlignment="gravity"
+                        android:gravity="center"
+                        android:background="#8BC34A"
+                        />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="Kharif-II"
+                        android:padding="10dp"
+                        android:textSize="16sp"
+                        android:textAlignment="gravity"
+                        android:gravity="center"
+                        android:background="#8BC34A"
+                        />
+
+
+
+                </TableRow>
+
+                <View
+                    android:layout_height="4dp"
+                    android:layout_width="match_parent"
+                    android:background="#7CB342"
+                    />
+
+                <TableRow>
+                    <TextView
+                        android:id="@+id/n_1"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.3"
+                        android:text="Crop"
+                        android:padding="10dp"
+                        android:textSize="16sp"
+                        android:textAlignment="gravity"
+                        android:gravity="center"
+                        android:background="@drawable/back_border_dark"
+                        />
+
+                    <Spinner
+                        android:id="@+id/spn_c1"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="-"
+                        android:padding="10dp"
+                        android:textSize="18sp"
+                        android:textAlignment="gravity"
+                        android:gravity="center"
+                        android:background="@drawable/back_border"
+                        />
+
+
+                    <Spinner
+                        android:id="@+id/spn_c2"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="-"
+                        android:padding="10dp"
+                        android:textSize="18sp"
+                        android:textAlignment="gravity"
+                        android:gravity="center"
+                        android:background="@drawable/back_border"
+                        />
+
+                    <Spinner
+                        android:id="@+id/spn_c3"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="-"
+                        android:padding="10dp"
+                        android:textSize="18sp"
+                        android:textAlignment="gravity"
+                        android:gravity="center"
+                        android:background="@drawable/back_border"
+                        />
+
+
+
+                </TableRow>
+
+                <TableRow>
+                    <TextView
+                        android:id="@+id/p_1"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.3"
+                        android:text="Yield (kg)"
+                        android:padding="10dp"
+                        android:textSize="16sp"
+                        android:textAlignment="gravity"
+                        android:gravity="center"
+                        android:background="@drawable/back_border_dark"
+                        />
+
+                    <EditText
+                        android:id="@+id/edt_y1"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="0"
+                        android:padding="10dp"
+                        android:textSize="18sp"
+                        android:textAlignment="gravity"
+                        android:gravity="center"
+                        android:background="@drawable/back_border"
+                        android:inputType="numberDecimal"
+                        android:maxLines="1"
+                        android:maxLength="5"
+                        />
+
+                    <EditText
+                        android:id="@+id/edt_y2"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="0"
+                        android:padding="10dp"
+                        android:textSize="18sp"
+                        android:textAlignment="gravity"
+                        android:gravity="center"
+                        android:background="@drawable/back_border"
+                        android:inputType="numberDecimal"
+                        android:maxLines="1"
+                        android:maxLength="5"
+                        />
+
+                    <EditText
+                        android:id="@+id/edt_y3"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="0"
+                        android:padding="10dp"
+                        android:textSize="18sp"
+                        android:textAlignment="gravity"
+                        android:gravity="center"
+                        android:background="@drawable/back_border"
+                        android:inputType="numberDecimal"
+                        android:maxLines="1"
+                        android:maxLength="5"
+                        />
+
+
+                </TableRow>
+
+
+                <TableRow>
+                    <TextView
+                        android:id="@+id/k_1"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.3"
+                        android:text="N (kg/ha)"
+                        android:padding="10dp"
+                        android:textSize="16sp"
+                        android:textAlignment="gravity"
+                        android:gravity="center"
+                        android:background="@drawable/back_border_dark"
+                        />
+                    <EditText
+                        android:id="@+id/edt_n1"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="0"
+                        android:padding="10dp"
+                        android:textSize="18sp"
+                        android:textAlignment="gravity"
+                        android:gravity="center"
+                        android:background="@drawable/back_border"
+                        android:inputType="numberDecimal"
+                        android:maxLines="1"
+                        android:maxLength="5"
+                        />
+
+                    <EditText
+                        android:id="@+id/edt_n2"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="0"
+                        android:padding="10dp"
+                        android:textSize="18sp"
+                        android:textAlignment="gravity"
+                        android:gravity="center"
+                        android:background="@drawable/back_border"
+                        android:inputType="numberDecimal"
+                        android:maxLines="1"
+                        android:maxLength="5"
+                        />
+
+                    <EditText
+                        android:id="@+id/edt_n3"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="0"
+                        android:padding="10dp"
+                        android:textSize="18sp"
+                        android:textAlignment="gravity"
+                        android:gravity="center"
+                        android:background="@drawable/back_border"
+                        android:inputType="numberDecimal"
+                        android:maxLines="1"
+                        android:maxLength="5"
+                        />
+                </TableRow>
+
+
+                <TableRow>
+                    <TextView
+                        android:id="@+id/s_1"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.3"
+                        android:text="P (kg/ha)"
+                        android:padding="10dp"
+                        android:textSize="16sp"
+                        android:textAlignment="gravity"
+                        android:gravity="center"
+                        android:background="@drawable/back_border_dark"
+                        />
+                    <EditText
+                        android:id="@+id/edt_p1"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="0"
+                        android:padding="10dp"
+                        android:textSize="18sp"
+                        android:textAlignment="gravity"
+                        android:gravity="center"
+                        android:background="@drawable/back_border"
+                        android:inputType="numberDecimal"
+                        android:maxLines="1"
+                        android:maxLength="5"
+                        />
+                    <EditText
+                        android:id="@+id/edt_p2"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="0"
+                        android:padding="10dp"
+                        android:textSize="18sp"
+                        android:textAlignment="gravity"
+                        android:gravity="center"
+                        android:background="@drawable/back_border"
+                        android:inputType="numberDecimal"
+                        android:maxLines="1"
+                        android:maxLength="5"
+                        />
+
+                    <EditText
+                        android:id="@+id/edt_p3"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="0"
+                        android:padding="10dp"
+                        android:textSize="18sp"
+                        android:textAlignment="gravity"
+                        android:gravity="center"
+                        android:background="@drawable/back_border"
+                        android:inputType="numberDecimal"
+                        android:maxLines="1"
+                        android:maxLength="5"
+                        />
+                </TableRow>
+
+                <TableRow>
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.3"
+                        android:text="K (kg/ha)"
+                        android:padding="10dp"
+                        android:textSize="16sp"
+                        android:textAlignment="gravity"
+                        android:gravity="center"
+                        android:background="@drawable/back_border_dark"
+                        />
+                    <EditText
+                        android:id="@+id/edt_k1"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="0"
+                        android:padding="10dp"
+                        android:textSize="18sp"
+                        android:textAlignment="gravity"
+                        android:gravity="center"
+                        android:background="@drawable/back_border"
+                        android:inputType="numberDecimal"
+                        android:maxLines="1"
+                        android:maxLength="5"
+                        />
+                    <EditText
+                        android:id="@+id/edt_k2"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="0"
+                        android:padding="10dp"
+                        android:textSize="18sp"
+                        android:textAlignment="gravity"
+                        android:gravity="center"
+                        android:background="@drawable/back_border"
+                        android:inputType="numberDecimal"
+                        android:maxLines="1"
+                        android:maxLength="5"
+                        />
+                    <EditText
+                        android:id="@+id/edt_k3"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="0"
+                        android:padding="10dp"
+                        android:textSize="18sp"
+                        android:textAlignment="gravity"
+                        android:gravity="center"
+                        android:background="@drawable/back_border"
+                        android:inputType="numberDecimal"
+                        android:maxLines="1"
+                        android:maxLength="5"
+                        />
+                </TableRow>
+
+                <TableRow>
+                    <TextView
+                        android:id="@+id/zn_1"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.3"
+                        android:text="Manure"
+                        android:padding="10dp"
+                        android:textSize="15sp"
+                        android:textAlignment="gravity"
+                        android:gravity="center"
+                        android:background="@drawable/back_border_dark"
+                        />
+                    <Spinner
+                        android:id="@+id/spn_m1"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="-"
+                        android:padding="10dp"
+                        android:textSize="18sp"
+                        android:textAlignment="gravity"
+                        android:gravity="center"
+                        android:background="@drawable/back_border"
+                        />
+                    <Spinner
+                        android:id="@+id/spn_m2"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:padding="10dp"
+                        android:textSize="18sp"
+                        android:textAlignment="gravity"
+                        android:gravity="center"
+                        android:background="@drawable/back_border"
+                        />
+
+                    <Spinner
+                        android:id="@+id/spn_m3"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:padding="10dp"
+                        android:textSize="18sp"
+                        android:textAlignment="gravity"
+                        android:gravity="center"
+                        android:background="@drawable/back_border"
+                        />
+
+
+                </TableRow>
+
+                <TableRow>
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.3"
+                        android:text="Rate (t/ha)"
+                        android:padding="10dp"
+                        android:textSize="15sp"
+                        android:textAlignment="gravity"
+                        android:gravity="center"
+                        android:background="@drawable/back_border_dark"
+                        />
+                    <EditText
+                        android:id="@+id/edt_r1"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="0"
+                        android:padding="10dp"
+                        android:textSize="18sp"
+                        android:textAlignment="gravity"
+                        android:gravity="center"
+                        android:background="@drawable/back_border"
+                        android:inputType="numberDecimal"
+                        android:maxLines="1"
+                        android:maxLength="5"
+                        />
+                    <EditText
+                        android:id="@+id/edt_r2"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="0"
+                        android:padding="10dp"
+                        android:textSize="18sp"
+                        android:textAlignment="gravity"
+                        android:gravity="center"
+                        android:background="@drawable/back_border"
+                        android:inputType="numberDecimal"
+                        android:maxLines="1"
+                        android:maxLength="5"
+                        />
+                    <EditText
+                        android:id="@+id/edt_r3"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="0"
+                        android:padding="10dp"
+                        android:textSize="18sp"
+                        android:textAlignment="gravity"
+                        android:gravity="center"
+                        android:background="@drawable/back_border"
+                        android:inputType="numberDecimal"
+                        android:maxLines="1"
+                        android:maxLength="5"
+                        />
+                </TableRow>
+
+
+                <TableRow>
+                    <TextView
+                        android:id="@+id/b_1"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.3"
+                        android:text="Residues removed(%)"
+                        android:padding="10dp"
+                        android:textSize="16sp"
+                        android:textAlignment="gravity"
+                        android:gravity="center"
+                        android:background="@drawable/back_border_dark"
+                        />
+
+                    <EditText
+                        android:id="@+id/edt_rr1"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="0"
+                        android:padding="10dp"
+                        android:textSize="18sp"
+                        android:textAlignment="gravity"
+                        android:gravity="center"
+                        android:background="@drawable/back_border"
+                        android:inputType="numberDecimal"
+                        android:maxLines="1"
+                        android:maxLength="5"
+                        />
+
+                    <EditText
+                        android:id="@+id/edt_rr2"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="0"
+                        android:padding="10dp"
+                        android:textSize="18sp"
+                        android:textAlignment="gravity"
+                        android:gravity="center"
+                        android:background="@drawable/back_border"
+                        android:inputType="numberDecimal"
+                        android:maxLines="1"
+                        android:maxLength="5"
+                        />
+
+
+                    <EditText
+                        android:id="@+id/edt_rr3"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="0"
+                        android:padding="10dp"
+                        android:textSize="18sp"
+                        android:textAlignment="gravity"
+                        android:gravity="center"
+                        android:background="@drawable/back_border"
+                        android:inputType="numberDecimal"
+                        android:maxLines="1"
+                        android:maxLength="5"
+                        />
+
+
+                </TableRow>
+
+                <View
+                    android:layout_height="4dp"
+                    android:layout_width="match_parent"
+                    android:background="#7CB342"
+                    />
+
+                <TableRow>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:padding="10dp"
+                        android:textSize="18sp"
+                        android:textAlignment="gravity"
+                        android:gravity="center"
+                        />
+
+                    <Button
+                        android:layout_margin="15dp"
+                        android:padding="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Generate Graph"
+                        android:onClick="generateGraph"
+                        android:background="#9CCC65"
+                        />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:padding="10dp"
+                        android:textSize="18sp"
+                        android:textAlignment="gravity"
+                        android:gravity="center"
+                        />
+
+                </TableRow>
+
+            </TableLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

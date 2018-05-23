@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#DCEDC8"
+    >
+
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="8"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="25dp"
+            android:paddingBottom="25dp"
+            android:layout_margin="15dp"
+            android:layout_marginBottom="50dp"
+            android:background="#AAAED581"
+            android:id="@+id/linearLayout">
+
+            <Button
+                android:id="@+id/btn_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Test Based Fertilizer Recommondation"
+                android:padding="15dp"
+                android:textColor="#000"
+                android:layout_marginBottom="0dp"
+                android:textSize="20sp"
+                android:onClick="selectCropGroup"
+                android:textAlignment="center"
+                android:drawableRight="@drawable/ic_chevron_right_black"
+                android:background="@drawable/back_round"
+                android:focusable="true"
+                />
+            <TextView
+                android:id="@+id/error_cropgroup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="15dp"
+                android:textSize="12sp"
+                android:textColor="#FF0000"
+                />
+
+            <Button
+                android:id="@+id/btn_aez"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="AEZ Based Fertilizer Recommendation"
+                android:textAlignment="center"
+                android:textColor="#000"
+                android:padding="15dp"
+                android:layout_marginBottom="0dp"
+                android:textSize="20sp"
+                android:onClick="selectCrop"
+                android:drawableRight="@drawable/ic_chevron_right_black"
+                android:background="@drawable/back_round"
+                android:focusable="true"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="15dp"
+                android:textSize="12sp"
+                android:textColor="#FF0000"
+                />
+
+            <Button
+                android:id="@+id/btn_balance"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Nutrient Balance Estimation"
+                android:padding="15dp"
+                android:layout_marginBottom="0dp"
+                android:textSize="20sp"
+                android:textColor="#000"
+                android:textAlignment="center"
+                android:onClick="selectVar"
+                android:drawableRight="@drawable/ic_chevron_right_black"
+                android:background="@drawable/back_round"
+                android:focusable="true"
+                />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

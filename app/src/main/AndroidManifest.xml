@@ -23,6 +23,8 @@
         <activity android:name=".GUI.NutrientInputActivity"></activity>
         <activity android:name=".GUI.NutrientInputActivityCopy"></activity>
         <activity android:name=".GUI.AezCropPatternActivity"></activity>
+        <activity android:name=".GUI.BalanceActivity"></activity>
+        <activity android:name=".GUI.GraphActivity"></activity>
     </application>
 
 </manifest>

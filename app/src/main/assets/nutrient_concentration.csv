@@ -1,0 +1,36 @@
+Boro rice,N,1.65,0.67
+Boro rice,P,0.28,0.06
+Boro rice,K,0.34,2.22
+T.Aus rice,N,1.14,0.66
+T.Aus rice,P,0.35,0.08
+T.Aus rice,K,0.37,2.12
+T.Aman rice,N,1.45,0.68
+T.Aman rice,P,0.26,0.06
+T.Aman rice,K,0.33,2.12
+Wheat,N,1.77,0.62
+Wheat,P,0.32,0.14
+Wheat,K,0.38,2.02
+Mustard,N,3.65,0.91
+Mustard,P,0.52,0.45
+Mustard,K,0.95,2.85
+Maize,N,1.46,0.5
+Maize,P,0.36,0.12
+Maize,K,0.29,1.12
+Potato,N,0.35,0.12
+Potato,P,0.05,0.1
+Potato,K,0.4,0.1
+Jute,N,3.25,3.25
+Jute,P,6.65,6.65
+Jute,K,6.65,6.65
+Cabbage,N,0.28,0.28
+Cabbage,P,0.04,0.04
+Cabbage,K,0.25,0.25
+Chickpea,N,3.5,1.1
+Chickpea,P,0.4,0.12
+Chickpea,K,0.6,2.0
+Mungbean,N,0.0,0.0
+Mungbean,P,0.0,0.0
+Mungbean,K,0.0,0.0
+GM,N,0.0,0.0
+GM,P,0.0,0.0
+GM,K,0.0,0.0

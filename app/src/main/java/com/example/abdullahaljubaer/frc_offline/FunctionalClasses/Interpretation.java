@@ -1,4 +1,4 @@
-package com.example.abdullahaljubaer.frc_offline.BusinessClasses;
+package com.example.abdullahaljubaer.frc_offline.FunctionalClasses;
 
 /**
  * Created by ABDULLAH AL JUBAER on 25-03-18.

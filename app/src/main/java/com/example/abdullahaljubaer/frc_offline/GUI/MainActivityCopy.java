@@ -9,8 +9,8 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 
-import com.example.abdullahaljubaer.frc_offline.BusinessClasses.Crop;
-import com.example.abdullahaljubaer.frc_offline.BusinessClasses.Texture;
+import com.example.abdullahaljubaer.frc_offline.FunctionalClasses.Crop;
+import com.example.abdullahaljubaer.frc_offline.FunctionalClasses.Texture;
 import com.example.abdullahaljubaer.frc_offline.DatabaseClasses.*;
 import com.example.abdullahaljubaer.frc_offline.R;
 
