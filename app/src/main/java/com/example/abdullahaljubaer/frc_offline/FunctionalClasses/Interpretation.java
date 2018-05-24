@@ -12,11 +12,12 @@ public class Interpretation {
     private double interval = 0.0;
 
 
-    public Interpretation(String status, String lowerLimit, String upperLimit, String interval) throws NumberFormatException {
+    public Interpretation(String status, String lowerLimit, String upperLimit, String interval) {
         this.status = status;
-        this.upperLimit = Double.valueOf(upperLimit);
-        this.lowerLimit = Double.valueOf(lowerLimit);
-        this.interval = Double.valueOf(interval);
+
+        if (!upperLimit.equals(""))this.upperLimit = Double.valueOf(upperLimit);
+        if (!lowerLimit.equals(""))this.lowerLimit = Double.valueOf(lowerLimit);
+        if (!interval.equals(""))this.interval = Double.valueOf(interval);
     }
 
     public String getStatus() {
