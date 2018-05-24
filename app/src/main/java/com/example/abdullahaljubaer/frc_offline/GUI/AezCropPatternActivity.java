@@ -19,7 +19,10 @@ import android.widget.Spinner;
 
 import com.example.abdullahaljubaer.frc_offline.CustomViews.CustomAlertAdapter;
 import com.example.abdullahaljubaer.frc_offline.CustomViews.PatternAlertDialog;
+import com.example.abdullahaljubaer.frc_offline.CustomViews.ResultDialog;
+import com.example.abdullahaljubaer.frc_offline.DatabaseClasses.AezCropPatternDBHelper;
 import com.example.abdullahaljubaer.frc_offline.R;
+import com.example.abdullahaljubaer.frc_offline.Results.AezBasedResultProducer;
 
 import java.util.ArrayList;
 
@@ -35,7 +38,7 @@ public class AezCropPatternActivity extends AppCompatActivity {
     private AlertDialog dialog = null;
     private ArrayList<String> aez = new ArrayList<>();
     private Spinner spnAez;
-    private String currAez = "1";
+    private String currAez = "1", currCP = "";
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
@@ -64,12 +67,16 @@ public class AezCropPatternActivity extends AppCompatActivity {
         spnAez.setOnItemSelectedListener(new CustomOnItemSelectedListener());
         final LayoutInflater inflater = (LayoutInflater)getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         final View v;
-        v = inflater.inflate(R.layout.pattern_nutrient, null, false);
+
 
         listViewCropPattern.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                new PatternAlertDialog(AezCropPatternActivity.this, v, dialog);
+                currCP = cropingPattern.get(i);
+                View v = inflater.inflate(R.layout.pattern_nutrient, null, false);
+                new ResultDialog(AezCropPatternActivity.this, v, dialog, new AezBasedResultProducer(
+                        MainActivity.patternDBHelper.getPatternRecommendation(currAez, currCP)));
+                //new PatternAlertDialog(AezCropPatternActivity.this, v, dialog);
             }
         });
 
@@ -99,6 +106,4 @@ public class AezCropPatternActivity extends AppCompatActivity {
 
         }
     }
-
-
 }
