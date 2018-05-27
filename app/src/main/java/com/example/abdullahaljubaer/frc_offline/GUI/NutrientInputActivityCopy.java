@@ -44,7 +44,7 @@ import java.util.Map;
  * Created by ABDULLAH AL JUBAER on 18-04-18.
  */
 
-public class NutrientInputActivityCopy extends AppCompatActivity {
+public class NutrientInputActivityCopy extends BaseActivity {
 
     private Crop mCrop;
     private Texture mTexture;

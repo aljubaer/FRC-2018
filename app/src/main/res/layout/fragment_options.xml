@@ -2,95 +2,48 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#DCEDC8"
-    >
-
+    android:background="#DCEDC8">
 
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="8"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
-        >
+        android:layout_weight="8">
 
         <LinearLayout
+            android:id="@+id/linearLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:paddingLeft="10dp"
-            android:paddingRight="10dp"
-            android:paddingTop="25dp"
-            android:paddingBottom="25dp"
             android:layout_margin="15dp"
             android:layout_marginBottom="50dp"
             android:background="#AAAED581"
-            android:id="@+id/linearLayout">
+            android:orientation="vertical"
+            android:paddingBottom="25dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="25dp">
 
-            <Button
+            <android.support.v7.widget.AppCompatButton
                 android:id="@+id/btn_text"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Test Based Fertilizer Recommondation"
-                android:padding="15dp"
-                android:textColor="#000"
-                android:layout_marginBottom="0dp"
-                android:textSize="20sp"
+                style="@style/OptionButtonStyle"
                 android:onClick="selectCropGroup"
-                android:textAlignment="center"
-                android:drawableRight="@drawable/ic_chevron_right_black"
-                android:background="@drawable/back_round"
-                android:focusable="true"
-                />
-            <TextView
-                android:id="@+id/error_cropgroup"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:paddingLeft="15dp"
-                android:textSize="12sp"
-                android:textColor="#FF0000"
-                />
+                android:text="Test Based Fertilizer Recommondation" />
 
-            <Button
+            <android.support.v7.widget.AppCompatButton
                 android:id="@+id/btn_aez"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="AEZ Based Fertilizer Recommendation"
-                android:textAlignment="center"
-                android:textColor="#000"
-                android:padding="15dp"
-                android:layout_marginBottom="0dp"
-                android:textSize="20sp"
+                style="@style/OptionButtonStyle"
+                android:layout_marginTop="16dp"
                 android:onClick="selectCrop"
-                android:drawableRight="@drawable/ic_chevron_right_black"
-                android:background="@drawable/back_round"
-                android:focusable="true"
-                />
+                android:text="AEZ Based Fertilizer Recommendation" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:paddingLeft="15dp"
-                android:textSize="12sp"
-                android:textColor="#FF0000"
-                />
-
-            <Button
+            <android.support.v7.widget.AppCompatButton
                 android:id="@+id/btn_balance"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Nutrient Balance Estimation"
-                android:padding="15dp"
-                android:layout_marginBottom="0dp"
-                android:textSize="20sp"
-                android:textColor="#000"
-                android:textAlignment="center"
+                style="@style/OptionButtonStyle"
+                android:layout_marginTop="16dp"
                 android:onClick="selectVar"
-                android:drawableRight="@drawable/ic_chevron_right_black"
-                android:background="@drawable/back_round"
-                android:focusable="true"
-                />
+                android:text="Nutrient Balance Estimation" />
 
         </LinearLayout>
 

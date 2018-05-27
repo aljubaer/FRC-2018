@@ -17,7 +17,7 @@ import com.example.abdullahaljubaer.frc_offline.R;
 import java.util.ArrayList;
 import java.util.Arrays;
 
-public class BalanceActivity extends AppCompatActivity {
+public class BalanceActivity extends BaseActivity {
 
     private Spinner spnAez, spnLand;
     private Spinner[] spnCrop;

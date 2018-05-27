@@ -12,7 +12,7 @@ import com.github.mikephil.charting.data.BarEntry;
 
 import java.util.ArrayList;
 
-public class GraphActivity extends AppCompatActivity {
+public class GraphActivity extends BaseActivity {
 
     BarChart chart ;
     ArrayList<BarEntry> barEntries;

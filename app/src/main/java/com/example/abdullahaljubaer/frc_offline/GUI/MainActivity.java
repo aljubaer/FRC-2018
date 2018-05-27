@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
 
+import com.binjar.prefsdroid.Preference;
 import com.example.abdullahaljubaer.frc_offline.DatabaseClasses.*;
 import com.example.abdullahaljubaer.frc_offline.R;
 
@@ -33,41 +34,46 @@ public class MainActivity extends AppCompatActivity {
         DBHelper dbHelper = new DBHelper(this);
 
         cropGroupDBHelper = new CropGroupDBHelper(this);
-        System.out.println( cropGroupDBHelper.numberOfRows() );
+        System.out.println(cropGroupDBHelper.numberOfRows());
 
         nutrientRecommendationDBHelper = new NutrientRecommendationDBHelper(this);
-        System.out.println( nutrientRecommendationDBHelper.numberOfRows() );
+        System.out.println(nutrientRecommendationDBHelper.numberOfRows());
 
         textureClassDBHelper = new TextureClassDBHelper(this);
-        System.out.println( textureClassDBHelper.numberOfRows() );
+        System.out.println(textureClassDBHelper.numberOfRows());
 
         stvidbHelper = new STVIDBHelper(this);
-        System.out.println( stvidbHelper.numberOfRows() );
+        System.out.println(stvidbHelper.numberOfRows());
 
         cropClassDbHelper = new CropClassDBHelper(this);
-        System.out.println( cropClassDbHelper.numberOfRows() );
+        System.out.println(cropClassDbHelper.numberOfRows());
 
         patternDBHelper = new AezCropPatternDBHelper(this);
-        System.out.println( patternDBHelper.numberOfRows());
+        System.out.println(patternDBHelper.numberOfRows());
 
         database = new Database(this);
 
-        FragmentManager fragmentManager = getFragmentManager();
-        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-        StartUpFragment startUpFragment = new StartUpFragment();
-        fragmentTransaction.add( R.id.fragment_container, startUpFragment);
-        fragmentTransaction.commit();
+        if (Preference.getBoolean("ShowStartPage", false)) {
+            start(null);
+        } else {
+            FragmentManager fragmentManager = getFragmentManager();
+            FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+            StartUpFragment startUpFragment = new StartUpFragment();
+            fragmentTransaction.add(R.id.fragment_container, startUpFragment);
+            fragmentTransaction.commit();
+            Preference.putBoolean("ShowStartPage", true);
+        }
 
     }
 
-    public void start (View view) {
+    public void start(View view) {
         //Intent intent = new Intent(this, CropInputActivity.class);
         //startActivity(intent);
 
         FragmentManager fragmentManager = getFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
         OptionSelectFragment optionSelectFragment = new OptionSelectFragment(this);
-        fragmentTransaction.replace( R.id.fragment_container, optionSelectFragment);
+        fragmentTransaction.replace(R.id.fragment_container, optionSelectFragment);
         fragmentTransaction.commit();
 
     }

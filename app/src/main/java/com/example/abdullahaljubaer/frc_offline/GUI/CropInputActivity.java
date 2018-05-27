@@ -31,7 +31,7 @@ import java.util.ArrayList;
  * Created by ABDULLAH AL JUBAER on 04-04-18.
  */
 
-public class CropInputActivity extends AppCompatActivity {
+public class CropInputActivity extends BaseActivity {
 
 
     public static Crop mCrop = null;

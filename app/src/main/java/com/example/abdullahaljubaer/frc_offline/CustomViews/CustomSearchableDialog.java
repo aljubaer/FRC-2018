@@ -13,6 +13,7 @@ import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import com.example.abdullahaljubaer.frc_offline.AppUtils;
 import com.example.abdullahaljubaer.frc_offline.R;
 
 import java.util.ArrayList;
@@ -50,7 +51,9 @@ public class CustomSearchableDialog {
         final EditText editText = new EditText(context);
         final ListView listView = new ListView(context);
         editText.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_search, 0, 0, 0);
-        editText.setPadding(10,10,10,15);
+        int paddingVer = AppUtils.getPixel(R.dimen.searchEditTextPaddingVer);
+        int paddingHz = AppUtils.getPixel(R.dimen.searchEditTextPaddingHz);
+        editText.setPadding(paddingHz, paddingVer, paddingHz, paddingVer);
         editText.setTextSize(18);
         currentValueList = new ArrayList<>();
         currentValueList = (ArrayList<String>) values.clone();

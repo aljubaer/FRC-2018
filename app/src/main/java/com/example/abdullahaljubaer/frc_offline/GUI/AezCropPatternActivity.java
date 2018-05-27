@@ -30,7 +30,7 @@ import java.util.ArrayList;
  * Created by ABDULLAH AL JUBAER on 21-05-18.
  */
 
-public class AezCropPatternActivity extends AppCompatActivity {
+public class AezCropPatternActivity extends BaseActivity {
 
 
     private ListView listViewCropPattern;
