@@ -19,7 +19,7 @@ import java.util.Map;
 
 public class DBHelper extends SQLiteOpenHelper {
 
-    public static final String DATABASE_NAME = "frg-2018-1.db";
+    public static final String DATABASE_NAME = "frg-2018-fina.db";
     public static final Integer DATABASE_VERSION = 1;
     public final Context context;
 
@@ -713,6 +713,49 @@ public class DBHelper extends SQLiteOpenHelper {
         db.setTransactionSuccessful();
         db.endTransaction();
 
+
+        // --------------------- Crop pattern ------------------
+
+
+        queryCreateDB = String.format("CREATE TABLE IF NOT EXISTS `district_aez` " +
+                "( `district` text NOT NULL, `division` text NOT NULL, `aez_no` text NOT NULL);");
+        db.execSQL(queryCreateDB);
+
+        mCSVFile = "district_aez.csv";
+        manager = context.getAssets();
+        inStream = null;
+        try {
+            inStream = manager.open(mCSVFile);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        buffer = new BufferedReader(new InputStreamReader(inStream));
+        line = "";
+        columns = "";
+        str1 = "INSERT INTO `district_aez` (district, division, aez_no) VALUES (";
+        str2 = ");";
+
+        db.beginTransaction();
+        try {
+            while ((line = buffer.readLine()) != null) {
+                StringBuilder sb = new StringBuilder(str1);
+                String[] str = line.split(",");
+                sb.append("'" + str[0] + "', ");
+                sb.append("'" + str[1] + "', ");
+                sb.append("'" + str[2] + "'");
+                sb.append(str2);
+                db.execSQL(sb.toString());
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        db.setTransactionSuccessful();
+        db.endTransaction();
+
+
+
+
     }
 
     @Override
@@ -723,14 +766,15 @@ public class DBHelper extends SQLiteOpenHelper {
         db.execSQL("DROP TABLE IF EXISTS " + NutrientRecommendationDBHelper.TABLE_NAME);
         db.execSQL("DROP TABLE IF EXISTS " + TextureClassDBHelper.TABLE_NAME);
         db.execSQL("DROP TABLE IF EXISTS variety");
-        db.execSQL("DROP TABLE IF EXISTS `nutrient_uptake`");
-        db.execSQL("DROP TABLE IF EXISTS `nutrient_concentration`");
-        db.execSQL("DROP TABLE IF EXISTS `fertilizer`");
+        db.execSQL("DROP TABLE IF EXISTS nutrient_uptake");
+        db.execSQL("DROP TABLE IF EXISTS nutrient_concentration");
+        db.execSQL("DROP TABLE IF EXISTS fertilizer");
         db.execSQL("DROP TABLE IF EXISTS sedimentation");
         db.execSQL("DROP TABLE IF EXISTS aez");
         db.execSQL("DROP TABLE IF EXISTS crop");
         db.execSQL("DROP TABLE IF EXISTS erosion");
         db.execSQL("DROP TABLE IF EXISTS crop_patterns");
+        db.execSQL("DROP TABLE IF EXISTS district_aez");
         onCreate(db);
     }
 

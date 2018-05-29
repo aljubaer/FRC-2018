@@ -34,6 +34,7 @@ public class RecommendationActivity extends BaseActivity {
     private TextView[][] cells;
     private Map<String, Double> mpArea = new HashMap<>();
     private double currentArea = 1.0;
+    private double[] cost = new double[6];
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -113,10 +114,54 @@ public class RecommendationActivity extends BaseActivity {
     private void calculate() {
         for (int i = 0; i < 6; i++) {
             double val = fq[i] * currentArea * mpArea.get(unit);
-            System.out.println(fq[i] + " " + currentArea + mpArea.get(unit));
+            //System.out.println(fq[i] + " " + currentArea + mpArea.get(unit));
             String s = String.format("%.2f", val);
             cells[i][1].setText(s);
         }
+        if (frr[0].equals("Urea")){
+            double val = fq[0] * currentArea * mpArea.get(unit) * 20.0;
+            //System.out.println(fq[i] + " " + currentArea + mpArea.get(unit));
+            String s = String.format("%.0f", val);
+            cells[0][2].setText(s);
+        }
+        if (frr[0].equals("Guti Urea")){
+            double val = fq[0] * currentArea * mpArea.get(unit) * 22.0;
+            //System.out.println(fq[i] + " " + currentArea + mpArea.get(unit));
+            String s = String.format("%.0f", val);
+            cells[0][2].setText(s);
+        }
+        if (frr[1].equals("TSP")){
+            double val = fq[1] * currentArea * mpArea.get(unit) * 22.0;
+            //System.out.println(fq[i] + " " + currentArea + mpArea.get(unit));
+            String s = String.format("%.0f", val);
+            cells[1][2].setText(s);
+        }
+        if (frr[1].equals("DAP")){
+            double val = fq[1] * currentArea * mpArea.get(unit) * 27.0;
+            //System.out.println(fq[i] + " " + currentArea + mpArea.get(unit));
+            String s = String.format("%.0f", val);
+            cells[1][2].setText(s);
+        }
+        if (frr[2].equals("MoP")){
+            double val = fq[2] * currentArea * mpArea.get(unit) * 15.0;
+            //System.out.println(fq[i] + " " + currentArea + mpArea.get(unit));
+            String s = String.format("%.0f", val);
+            cells[2][2].setText(s);
+        }
+        double val = fq[3] * currentArea * mpArea.get(unit) * 12.0;
+        //System.out.println(fq[i] + " " + currentArea + mpArea.get(unit));
+        String s = String.format("%.0f", val);
+        cells[3][2].setText(s);
+
+        val = fq[4] * currentArea * mpArea.get(unit) * 170.0;
+        //System.out.println(fq[i] + " " + currentArea + mpArea.get(unit));
+        s = String.format("%.0f", val);
+        cells[4][2].setText(s);
+
+        val = fq[5] * currentArea * mpArea.get(unit) * 200.0;
+        //System.out.println(fq[i] + " " + currentArea + mpArea.get(unit));
+        s = String.format("%.0f", val);
+        cells[5][2].setText(s);
     }
 
     @Override
@@ -126,6 +171,7 @@ public class RecommendationActivity extends BaseActivity {
         return true;
     }
 
+    /*
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
 
@@ -138,6 +184,7 @@ public class RecommendationActivity extends BaseActivity {
         }
         return true;
     }
+    */
 
     class CustomOnItemSelectedListener implements AdapterView.OnItemSelectedListener {
 

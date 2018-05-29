@@ -197,6 +197,7 @@ public class NutrientInputActivityCopy extends BaseActivity {
                 String res1, res2;
                 try {
                     soilTextValue = Double.parseDouble(editTexts[0].getText().toString());
+                    if (soilTextValue > 0.6) throw new NumberFormatException();
                     Nutrient nitrogen = new Nutrient("Nitrogen", "N");
                     nutrients[0] = nitrogen;
                     val = nitrogen.calculateRequiredNutrient(mCrop, mTexture, soilTextValue);
@@ -278,6 +279,7 @@ public class NutrientInputActivityCopy extends BaseActivity {
                 double val = 0.0;
                 try {
                     soilTextValue = Double.parseDouble(editTexts[1].getText().toString());
+                    if (soilTextValue > 35) throw new NumberFormatException();
                     Nutrient phosphorus = new Nutrient("Phosphorus", "P");
                     nutrients[1] = phosphorus;
                     val = phosphorus.calculateRequiredNutrient(mCrop, mTexture, soilTextValue);
@@ -361,6 +363,7 @@ public class NutrientInputActivityCopy extends BaseActivity {
                 double val = 0.0;
                 try {
                     soilTextValue = Double.parseDouble(editTexts[2].getText().toString());
+                    if (soilTextValue > 0.45) throw new NumberFormatException();
                     Nutrient potassium = new Nutrient("Potassium", "K");
                     nutrients[2] = potassium;
                     val = potassium.calculateRequiredNutrient(mCrop, mTexture, soilTextValue);
@@ -442,6 +445,7 @@ public class NutrientInputActivityCopy extends BaseActivity {
                 double val = 0.0;
                 try {
                     soilTextValue = Double.parseDouble(editTexts[3].getText().toString());
+                    if (soilTextValue > 55.0) throw new NumberFormatException();
                     Nutrient sulphur = new Nutrient("Sulphur", "S");
                     nutrients[3] = sulphur;
                     val = sulphur.calculateRequiredNutrient(mCrop, mTexture, soilTextValue);
@@ -532,6 +536,7 @@ public class NutrientInputActivityCopy extends BaseActivity {
                 double val = 0.0;
                 try {
                     soilTextValue = Double.parseDouble(editTexts[4].getText().toString());
+                    if (soilTextValue > 3.0) throw new NumberFormatException();
                     Nutrient zinc = new Nutrient("Zinc", "Zn");
                     nutrients[4] = zinc;
                     val = zinc.calculateRequiredNutrient(mCrop, mTexture, soilTextValue);
@@ -624,6 +629,7 @@ public class NutrientInputActivityCopy extends BaseActivity {
                 double val = 0.0;
                 try {
                     soilTextValue = Double.parseDouble(editTexts[5].getText().toString());
+                    if (soilTextValue > 1.0) throw new NumberFormatException();
                     Nutrient boron = new Nutrient("Boron", "B");
                     nutrients[5] = boron;
                     val = boron.calculateRequiredNutrient(mCrop, mTexture, soilTextValue);

@@ -47,6 +47,25 @@ public class AezCropPatternDBHelper extends DBHelper {
         return recommendation;
     }
 
+    public ArrayList<String> getAllDistrict () {
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor res;
+
+        res = db.rawQuery("SELECT DISTINCT district FROM district_aez", null);
+        return super.readCursor(res, "district");
+    }
+
+    public String getAezByDistrict (String dis) {
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor res;
+        res = db.rawQuery("SELECT aez_no FROM district_aez WHERE district = '" + dis + "'", null);
+        String data = "8";
+        if (res.moveToFirst()){
+             data = res.getString(res.getColumnIndex("aez_no"));
+        }
+        return data;
+    }
+
     ArrayList<String> readCursor(Cursor cursor, String column ) {
         ArrayList<String> arrayList = new ArrayList<>();
         if (cursor.moveToFirst()){

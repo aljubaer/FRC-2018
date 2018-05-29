@@ -13,8 +13,11 @@ import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.Spinner;
+import android.widget.TextView;
 
+import com.example.abdullahaljubaer.frc_offline.App;
 import com.example.abdullahaljubaer.frc_offline.CustomViews.CustomAlertAdapter;
+import com.example.abdullahaljubaer.frc_offline.CustomViews.CustomSearchableDialog;
 import com.example.abdullahaljubaer.frc_offline.CustomViews.ResultDialog;
 import com.example.abdullahaljubaer.frc_offline.R;
 import com.example.abdullahaljubaer.frc_offline.Results.AezBasedResultProducer;
@@ -34,11 +37,15 @@ public class AezCropPatternActivity extends BaseActivity {
     private AlertDialog dialog = null;
     private ArrayList<String> aez = new ArrayList<>();
     private Spinner spnAez, spnUnit;
-    private String currAez = "1", currCP = "";
+    private String currAez = "", currCP = "";
     private double landCoEfficient = 1.0, landArea = 1.0;
     private List<String> units = new ArrayList<>();
     private AezBasedResultProducer producer = null;
     private EditText editArea;
+    private ArrayList<String> districtList = null;
+    private TextView dropDownDistrict;
+    private android.app.AlertDialog mAlertDialog = null;
+
 
 
     @Override
@@ -46,11 +53,16 @@ public class AezCropPatternActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_aez_crop_pattern);
 
+        dropDownDistrict = findViewById(R.id.dist);
+
+        districtList = MainActivity.patternDBHelper.getAllDistrict();
+
         listViewCropPattern = findViewById(R.id.aez_cp);
 
         croppingPattern = MainActivity.patternDBHelper.getAllCropPatterns("1");
         CustomAlertAdapter arrayAdapter = new CustomAlertAdapter(AezCropPatternActivity.this, croppingPattern);
         listViewCropPattern.setAdapter(arrayAdapter);
+
 
         aez.add("1");
         aez.add("2");
@@ -58,14 +70,16 @@ public class AezCropPatternActivity extends BaseActivity {
         aez.add("8");
         aez.add("9");
 
-        spnAez = findViewById(R.id.spn_aez_cp);
+        //spnAez = findViewById(R.id.spn_aez_cp);
 
+        /*
         ArrayAdapter<String> spnAdapter = new ArrayAdapter<String>(
                 AezCropPatternActivity.this, android.R.layout.simple_spinner_item, aez);
         spnAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spnAez.setAdapter(spnAdapter);
 
         spnAez.setOnItemSelectedListener(new CustomOnItemSelectedListener());
+        */
 
         units.add("hector");
         units.add("decimal");
@@ -74,7 +88,7 @@ public class AezCropPatternActivity extends BaseActivity {
 
         ArrayAdapter<String> spnAdapter1 = new ArrayAdapter<String>(
                 AezCropPatternActivity.this, android.R.layout.simple_spinner_item, units);
-        spnAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spnAdapter1.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spnUnit.setAdapter(spnAdapter1);
 
         spnUnit.setOnItemSelectedListener(new CustomOnItemSelectedListener());
@@ -116,7 +130,6 @@ public class AezCropPatternActivity extends BaseActivity {
                 }
             }
         });
-
     }
 
     private void initList (String c) {
@@ -126,6 +139,28 @@ public class AezCropPatternActivity extends BaseActivity {
     }
 
     public void selectDistrict (View view) {
+
+        new CustomSearchableDialog().init(AezCropPatternActivity.this, districtList, mAlertDialog, (TextView) view);
+
+        dropDownDistrict.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable editable) {
+                if (!editable.toString().equals("")) {
+                    currAez = MainActivity.patternDBHelper.getAezByDistrict(editable.toString());
+                    initList(currAez);
+                }
+            }
+        });
 
     }
 
@@ -137,13 +172,14 @@ public class AezCropPatternActivity extends BaseActivity {
                     "OnItemSelectedListener : " + parent.getItemAtPosition(pos).toString(),
                     Toast.LENGTH_SHORT).show();
                     */
-
+            /*
             if (parent.getId() == R.id.spn_aez_cp){
                 currAez = parent.getItemAtPosition(pos).toString();
                 initList(currAez);
             }
+            */
 
-            else if (parent.getId() == R.id.spn_unit_land1) {
+            if (parent.getId() == R.id.spn_unit_land1) {
                 if (parent.getItemAtPosition(pos).toString().equals(units.get(0))) {
                     landCoEfficient = 1.0;
                 }
