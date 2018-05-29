@@ -16,11 +16,12 @@
     <string name="title_activity_fullscreen">FullscreenActivity</string>
     <string name="dummy_button">Dummy Button</string>
     <string name="dummy_content">DUMMY\nCONTENT</string>
-    <string name="full_name"><b>Fertilizer Recommendation Guide - 2012</b></string>
+    <string name="full_name"><b>Fertilizer Recommendation Guide - 2018</b></string>
     <string name="description">
-        Fertilizer Recommendation Calculator provides guidelines for achieving high yield goal based
+        Fertilizer Recommendation Guide provides guidelines for achieving high yield goal based
         fertilizer recommendation for different crops. If soil test values of a field are available,
-        specific fertilizer dose for that particular field can be calculated using this app.
+        specific fertilizer dose for that particular field can be calculated using this app. It also can
+        provide cropping pattern and aez based recommendation and estimate nutrient balance.
     </string>
 
 </resources>

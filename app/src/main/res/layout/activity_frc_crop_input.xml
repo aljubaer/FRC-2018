@@ -5,12 +5,6 @@
     android:background="#DCEDC8"
     >
 
-    <include
-        android:id="@+id/toolbar"
-        layout="@layout/toolbar"
-        />
-
-
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -33,10 +27,10 @@
             android:id="@+id/linearLayout">
 
             <TextView
-                android:id="@+id/txt_cropgroup"
+                android:id="@+id/txt_crop_group"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Crop group"
+                android:text="Crop category"
                 android:padding="15dp"
                 android:textColor="#000"
                 android:layout_marginBottom="0dp"
@@ -56,7 +50,7 @@
                 />
 
             <TextView
-                android:id="@+id/txt_cropname"
+                android:id="@+id/txt_crop_name"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Crop / Season"
@@ -124,68 +118,22 @@
                 android:textColor="#FF0000"
                 />
 
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                >
-
                 <Button
                     android:id="@+id/button2"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_alignParentTop="true"
-                    android:layout_centerHorizontal="true"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginEnd="32dp"
                     android:onClick="proceed"
                     android:text="Proceed"
+                    android:textColor="#000"
+                    android:textSize="16sp"
                     android:background="@drawable/back_nutrient"
                     />
-
-
-            </RelativeLayout>
-
 
 
         </LinearLayout>
 
     </ScrollView>
-    <!--
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true">
 
-        <ImageButton
-            android:id="@+id/imageButton2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true"
-            android:layout_marginBottom="13dp"
-            android:background="@drawable/forward_button"
-            android:onClick="proceed"
-            android:padding="10dp"
-            android:src="@drawable/ic_chevron_right_black"
-            android:textSize="24sp" />
-
-        <ImageButton
-            android:id="@+id/imageButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:layout_weight="1"
-            android:background="@drawable/back_button"
-            android:onClick="goPrevious"
-            android:padding="10dp"
-            android:src="@drawable/ic_chevron_left"
-            android:textSize="24sp" />
-
-
-    </RelativeLayout>
-    -->
 </RelativeLayout>

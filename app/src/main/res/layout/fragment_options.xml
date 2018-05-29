@@ -29,14 +29,14 @@
                 android:id="@+id/btn_text"
                 style="@style/OptionButtonStyle"
                 android:onClick="selectCropGroup"
-                android:text="Test Based Fertilizer Recommondation" />
+                android:text="Soil Test Based Fertilizer Recommendation" />
 
             <android.support.v7.widget.AppCompatButton
                 android:id="@+id/btn_aez"
                 style="@style/OptionButtonStyle"
                 android:layout_marginTop="16dp"
                 android:onClick="selectCrop"
-                android:text="AEZ Based Fertilizer Recommendation" />
+                android:text="Cropping Pattern And AEZ Based Fertilizer Recommendation" />
 
             <android.support.v7.widget.AppCompatButton
                 android:id="@+id/btn_balance"

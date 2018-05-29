@@ -5,7 +5,6 @@ import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.v7.app.AppCompatActivity;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.Menu;
@@ -62,8 +61,8 @@ public class CropInputActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_frc_crop_input);
 
-        textViewGroup = findViewById(R.id.txt_cropgroup);
-        textViewCrop = findViewById(R.id.txt_cropname);
+        textViewGroup = findViewById(R.id.txt_crop_group);
+        textViewCrop = findViewById(R.id.txt_crop_name);
         textViewVariety = findViewById(R.id.txt_var);
         textViewTexture = findViewById(R.id.txt_texture);
 
@@ -93,6 +92,7 @@ public class CropInputActivity extends BaseActivity {
         return true;
     }
 
+    /*
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
 
@@ -107,6 +107,7 @@ public class CropInputActivity extends BaseActivity {
         }
         return true;
     }
+    */
 
 
     public ArrayList<String> readCursor(Cursor cursor, String column ) {

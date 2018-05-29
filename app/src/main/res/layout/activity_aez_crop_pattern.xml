@@ -8,9 +8,17 @@
     android:id="@+id/LL_CP"
     >
 
-    <LinearLayout
+    <View
         android:layout_marginTop="10dp"
-        android:layout_marginBottom="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:background="#689F38"
+        />
+
+
+    <LinearLayout
+        android:layout_marginTop="0dp"
+        android:layout_marginBottom="0dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/back_border"
@@ -20,7 +28,50 @@
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
+            android:layout_weight="1.5"
+            android:text="District"
+            android:textAlignment="center"
+            android:padding="10dp"
+            android:background="#AED581"
+            android:textSize="16sp"
+            android:textColor="#000"
+            />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2.38"
+            android:textAlignment="center"
+            android:padding="0dp"
+            android:textColor="#000"
+            android:textSize="16sp"
+            android:layout_marginRight="12dp"
+            android:onClick="selectDistrict"
+            android:drawableRight="@drawable/ic_arrow_drop_down_1"
+            android:focusable="true"
+            />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:background="#689F38"
+        />
+
+    <LinearLayout
+        android:layout_marginTop="0dp"
+        android:layout_marginBottom="0dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/back_border"
+        android:orientation="horizontal"
+        >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.5"
             android:text="AEZ No"
             android:textAlignment="center"
             android:padding="10dp"
@@ -33,20 +84,82 @@
             android:id="@+id/spn_aez_cp"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="1"
+            android:layout_weight="2.5"
             android:textAlignment="center"
             >
         </Spinner>
 
     </LinearLayout>
 
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:background="#689F38"
+        />
+
+    <LinearLayout
+        android:id="@+id/LL_LA1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#AED581"
+        android:orientation="horizontal"
+        >
+
+        <TextView
+            android:padding="10dp"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1.5"
+            android:text="Land Area"
+            android:textColor="#000"
+            android:textSize="16sp"
+            android:textAlignment="gravity"
+            android:gravity="center"
+            />
+
+        <EditText
+            android:id="@+id/edit_area1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:maxLength="7"
+            android:textSize="16sp"
+            android:textAlignment="center"
+            android:padding="10dp"
+            android:inputType="numberDecimal"
+            android:background="#FFF"
+            />
+
+        <Spinner
+            android:id="@+id/spn_unit_land1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1.5"
+            >
+        </Spinner>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:background="#689F38"
+        android:layout_marginBottom="16dp"
+
+        />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:background="#689F38"
+        />
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="#9CCC65"
         android:textColor="#000"
-        android:text="Croping patterns"
+        android:text="Cropping patterns"
         android:textSize="18sp"
         android:padding="10dp"
         android:textAlignment="center"
@@ -78,9 +191,17 @@
     <ListView
         android:id="@+id/aez_cp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:background="#F1F8E9"
+        >
 
     </ListView>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:background="#689F38"
+        />
 
 
 

@@ -19,12 +19,31 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".GUI.RecommendationActivity"></activity>
-        <activity android:name=".GUI.CropInputActivity"></activity>
-        <activity android:name=".GUI.NutrientInputActivity"></activity>
-        <activity android:name=".GUI.NutrientInputActivityCopy"></activity>
-        <activity android:name=".GUI.AezCropPatternActivity"></activity>
-        <activity android:name=".GUI.BalanceActivity"></activity>
+        <activity
+            android:name=".GUI.RecommendationActivity"
+            android:windowSoftInputMode="stateHidden">
+
+        </activity>
+        <activity
+            android:name=".GUI.CropInputActivity"
+            android:windowSoftInputMode="stateHidden">
+        </activity>
+        <activity
+            android:name=".GUI.NutrientInputActivity"
+            android:windowSoftInputMode="stateHidden">
+        </activity>
+        <activity
+            android:name=".GUI.NutrientInputActivityCopy"
+            android:windowSoftInputMode="stateHidden">
+        </activity>
+        <activity
+            android:name=".GUI.AezCropPatternActivity"
+            android:windowSoftInputMode="stateHidden">
+        </activity>
+        <activity
+            android:name=".GUI.BalanceActivity"
+            android:windowSoftInputMode="stateHidden">
+        </activity>
         <activity android:name=".GUI.GraphActivity"></activity>
     </application>
 

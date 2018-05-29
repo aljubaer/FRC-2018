@@ -34,7 +34,7 @@ public class DropDownAnim extends Animation {
         };
 
         // 1dp/ms
-        a.setDuration((int)(targetHeight / v.getContext().getResources().getDisplayMetrics().density));
+        a.setDuration((int)(targetHeight / v.getContext().getResources().getDisplayMetrics().density)*8);
         v.startAnimation(a);
     }
 
@@ -59,7 +59,7 @@ public class DropDownAnim extends Animation {
         };
 
         // 1dp/ms
-        a.setDuration((int)(initialHeight / v.getContext().getResources().getDisplayMetrics().density));
+        a.setDuration((int)(initialHeight / v.getContext().getResources().getDisplayMetrics().density)*8);
         v.startAnimation(a);
     }
 }

@@ -6,7 +6,6 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.design.widget.TextInputLayout;
 import android.support.v7.app.AlertDialog;
-import android.support.v7.app.AppCompatActivity;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.LayoutInflater;
@@ -76,6 +75,7 @@ public class NutrientInputActivityCopy extends BaseActivity {
     private Nutrient[] nutrients = new Nutrient[6];
     private int[] last = new int[6];
     private double[] fq = new double[6];
+    private Boolean[] isVisible = new Boolean[6];
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
@@ -132,6 +132,7 @@ public class NutrientInputActivityCopy extends BaseActivity {
         Arrays.fill(isCalculated, false);
         isChecked = new Boolean[6];
         Arrays.fill(isChecked, false);
+        Arrays.fill(isVisible, false);
 
         Bundle extras = getIntent().getExtras();
 
@@ -166,6 +167,7 @@ public class NutrientInputActivityCopy extends BaseActivity {
         return true;
     }
 
+    /*
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
 
@@ -178,6 +180,7 @@ public class NutrientInputActivityCopy extends BaseActivity {
         }
         return true;
     }
+    */
 
     private double soilTextValue = 0.1;
     String r = "";
@@ -1253,12 +1256,16 @@ public class NutrientInputActivityCopy extends BaseActivity {
     }
 
     private void collapseOne(int i){
+        if (!isVisible[i]) return;
+        isVisible[i] = false;
         DropDownAnim.collapse(inputLayout[i]);
         DropDownAnim.collapse(radioGroups[i]);
         DropDownAnim.collapse(linearLayoutsDC[i]);
     }
 
     private void expandOne(int i){
+        if (isVisible[i])return;
+        isVisible[i] = true;
         DropDownAnim.expand(inputLayout[i]);
         DropDownAnim.expand(radioGroups[i]);
         DropDownAnim.expand(linearLayoutsDC[i]);

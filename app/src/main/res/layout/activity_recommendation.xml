@@ -18,13 +18,18 @@
             android:orientation="vertical"
             >
 
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:background="#689F38"
+                />
+
             <LinearLayout
                 android:id="@+id/LL_LA"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@drawable/back_round"
+                android:background="#AED581"
                 android:orientation="horizontal"
-                android:layout_marginTop="10dp"
                 >
 
                 <TextView
@@ -33,7 +38,8 @@
                     android:layout_height="match_parent"
                     android:layout_weight="1.5"
                     android:text="Land Area"
-                    android:textSize="20sp"
+                    android:textColor="#000"
+                    android:textSize="16sp"
                     android:textAlignment="gravity"
                     android:gravity="center"
                     />
@@ -61,17 +67,28 @@
 
             </LinearLayout>
 
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:background="#689F38"
+                />
+
             <TextView
                 android:id="@+id/txt_g"
                 android:layout_below="@+id/LL_LA"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
 
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:background="#689F38"
+                />
+
             <TableLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/txt_g"
-                android:layout_marginTop="15dp"
                 android:stretchColumns="*"
                 android:background="@drawable/back_round"
                 >
@@ -87,10 +104,11 @@
                         android:layout_weight="2"
                         android:text="Fertilizer"
                         android:padding="10dp"
-                        android:textSize="20sp"
+                        android:textSize="16sp"
+                        android:textColor="#000"
                         android:textAlignment="gravity"
                         android:gravity="center"
-                        android:background="#AAAED581"
+                        android:background="#8BC34A"
                         />
 
                     <TextView
@@ -98,11 +116,11 @@
                         android:layout_height="match_parent"
                         android:layout_weight="1"
                         android:text="Req. Dose(kg)"
-                        android:padding="10dp"
-                        android:textSize="20sp"
+                        android:textColor="#000"
+                        android:textSize="16sp"
                         android:textAlignment="gravity"
                         android:gravity="center"
-                        android:background="#AAAED581"
+                        android:background="#8BC34A"
                         />
 
                     <TextView
@@ -110,11 +128,11 @@
                         android:layout_height="match_parent"
                         android:layout_weight="1"
                         android:text="Cost"
-                        android:padding="10dp"
-                        android:textSize="20sp"
+                        android:textSize="16sp"
+                        android:textColor="#000"
                         android:textAlignment="gravity"
                         android:gravity="center"
-                        android:background="#AAAED581"
+                        android:background="#8BC34A"
                         />
 
 
@@ -134,11 +152,12 @@
                         android:layout_height="match_parent"
                         android:layout_weight="2"
                         android:text="Urea"
+                        android:textColor="#000"
                         android:padding="10dp"
                         android:textSize="18sp"
                         android:textAlignment="gravity"
                         android:gravity="center"
-                        android:background="@drawable/back_border"
+                        android:background="@drawable/back_border_dark"
                         />
 
                     <TextView
@@ -179,11 +198,12 @@
                         android:layout_height="match_parent"
                         android:layout_weight="2"
                         android:text="DAP"
+                        android:textColor="#000"
                         android:padding="10dp"
                         android:textSize="18sp"
                         android:textAlignment="gravity"
                         android:gravity="center"
-                        android:background="@drawable/back_border"
+                        android:background="@drawable/back_border_dark"
                         />
 
                     <TextView
@@ -223,11 +243,12 @@
                         android:layout_height="match_parent"
                         android:layout_weight="2"
                         android:text="MoP"
+                        android:textColor="#000"
                         android:padding="10dp"
                         android:textSize="18sp"
                         android:textAlignment="gravity"
                         android:gravity="center"
-                        android:background="@drawable/back_border"
+                        android:background="@drawable/back_border_dark"
                         />
                     <TextView
                         android:id="@+id/k_2"
@@ -265,10 +286,11 @@
                         android:layout_weight="2"
                         android:text="Gypsum"
                         android:padding="10dp"
+                        android:textColor="#000"
                         android:textSize="18sp"
                         android:textAlignment="gravity"
                         android:gravity="center"
-                        android:background="@drawable/back_border"
+                        android:background="@drawable/back_border_dark"
                         />
                     <TextView
                         android:id="@+id/s_2"
@@ -306,10 +328,11 @@
                         android:layout_weight="2"
                         android:text="Zinc Sulphate Hepta"
                         android:padding="10dp"
+                        android:textColor="#000"
                         android:textSize="18sp"
                         android:textAlignment="gravity"
                         android:gravity="center"
-                        android:background="@drawable/back_border"
+                        android:background="@drawable/back_border_dark"
                         />
                     <TextView
                         android:id="@+id/zn_2"
@@ -346,11 +369,12 @@
                         android:layout_height="match_parent"
                         android:layout_weight="2"
                         android:text="Solubor"
+                        android:textColor="#000"
                         android:padding="10dp"
                         android:textSize="18sp"
                         android:textAlignment="gravity"
                         android:gravity="center"
-                        android:background="@drawable/back_border"
+                        android:background="@drawable/back_border_dark"
                         />
 
                     <TextView
@@ -382,6 +406,12 @@
 
 
             </TableLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:background="#689F38"
+                />
 
         </LinearLayout>
 
