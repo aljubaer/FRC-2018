@@ -1,0 +1,96 @@
+.root{
+	-fx-background-color: #00bfff;
+}
+
+
+.borderColor{
+	-fx-border-color:black;
+	-fx-font-family: 'Helvetica', Arial, sans-serif;
+	-fx-font-size: 12px;
+}
+.lightblue{
+	-fx-background-color : #E3F2FD;
+	
+}
+.red{
+	-fx-background-color : #FF9E80;
+}
+.grey{
+	-fx-background-color : grey;
+}
+.orange{
+	-fx-background-color : #FFAB40;
+}
+.yellow{
+	-fx-background-color : #FFD740;
+}
+
+
+
+
+
+/*Style of each column header in the tableView*/
+.table-view .column-header {
+     -fx-background-color: transparent;
+} 
+
+/*Style of each column header's background in the tableView*/
+.table-view .column-header-background{
+    -fx-background-color: linear-gradient(#131313 0.0%, #424141 100.0%);
+}
+
+ /*Style of each column header's label  in the tableView*/
+.table-view .column-header-background .label{
+     -fx-background-color: transparent; 
+    -fx-font-weight:bold;
+    -fx-text-fill: white;
+}
+
+
+/*Style of each column in the tableView*/
+.table-view .table-column{
+    -fx-alignment:center;
+}
+
+ /*Style of each table cell*/
+.table-view .table-cell{
+    -fx-font-weight:bold;
+    -fx-font-size:15px;         
+    /* -fx-text-fill:orange; */
+
+}
+
+
+/*Style for each  non odd row of table view*/
+ .table-row-cell{
+    -fx-background-color: white;
+    -fx-background-insets: 0.0, 0.0 0.0 1.0 0.0;
+    -fx-padding: 0.0em; 
+}
+
+
+
+/* Style of each entire row in the table view*/
+.table-row-cell:selected {
+   /* -fx-border-color:transparent firebrick transparent firebrick  ;
+    -fx-border-width:2.0; */
+}
+
+.combo-box-baseRed1 {
+    -fx-background-color: -fx-shadow-highlight-color, -fx-outer-border, -fx-inner-border, red;
+    -fx-background-insets: 0 0 -1 0, 0, 1, 2;
+    -fx-background-radius: 3px, 3px, 2px, 1px;
+}
+.combo-box-baseOrange1 {
+    -fx-background-color: -fx-shadow-highlight-color, -fx-outer-border, -fx-inner-border, orange;
+    -fx-background-insets: 0 0 -1 0, 0, 1, 2;
+    -fx-background-radius: 3px, 3px, 2px, 1px;
+}
+.combo-box-baseYellow1 {
+    -fx-background-color: -fx-shadow-highlight-color, -fx-outer-border, -fx-inner-border, yellow;
+    -fx-background-insets: 0 0 -1 0, 0, 1, 2;
+    -fx-background-radius: 3px, 3px, 2px, 1px;
+}
+
+
+

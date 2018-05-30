@@ -1,0 +1,360 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="520.0" prefWidth="1116.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Accordion layoutX="86.0" layoutY="97.0" prefHeight="406.0" prefWidth="955.0" style="-fx-base: #BC8F8F;">
+        <panes>
+          <TitledPane animated="false" prefHeight="178.0" prefWidth="732.0" text="Input">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="16.0" />
+               </font>
+               <content>
+                  <GridPane>
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints maxHeight="107.60000610351562" minHeight="0.0" prefHeight="35.19999389648437" vgrow="SOMETIMES" />
+                      <RowConstraints maxHeight="225.60000610351565" minHeight="10.0" prefHeight="217.60000610351565" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <GridPane prefHeight="6.0" prefWidth="833.0" GridPane.columnSpan="2">
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints maxHeight="55.200006103515626" minHeight="10.0" prefHeight="24.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="53.600006103515625" minHeight="10.0" prefHeight="16.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <Label prefHeight="33.0" prefWidth="186.0" style="-fx-border-color: black; -fx-border-width: 1px; -fx-background-color: lightBlue;" text="SEASON">
+                                 <font>
+                                    <Font name="Berlin Sans FB" size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label prefHeight="29.0" prefWidth="186.0" style="-fx-border-color: black; -fx-border-width: 1px; -fx-background-color: lightBlue;" text="CROP" GridPane.rowIndex="1">
+                                 <font>
+                                    <Font name="Berlin Sans FB" size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label prefHeight="52.0" prefWidth="224.0" style="-fx-border-color: black; -fx-background-color: red; -fx-border-width: 1px;" text="Rabi" GridPane.columnIndex="1">
+                                 <font>
+                                    <Font name="Berlin Sans FB" size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="rabiCrop1" prefHeight="52.0" prefWidth="224.0" style="-fx-border-color: black; -fx-background-color: red; -fx-border-width: 1px;" text="-" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                 <font>
+                                    <Font name="Berlin Sans FB" size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label prefHeight="52.0" prefWidth="224.0" style="-fx-border-color: black; -fx-border-width: 1px; -fx-background-color: orange;" text="Kharif - I" GridPane.columnIndex="2">
+                                 <font>
+                                    <Font name="Berlin Sans FB" size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="k1Crop1" prefHeight="52.0" prefWidth="224.0" style="-fx-border-color: black; -fx-border-width: 1px; -fx-background-color: orange;" text="-" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                                 <font>
+                                    <Font name="Berlin Sans FB" size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label prefHeight="52.0" prefWidth="224.0" style="-fx-border-color: black; -fx-background-color: yellow; -fx-border-width: 1px;" text="Kharif - II" GridPane.columnIndex="3">
+                                 <font>
+                                    <Font name="Berlin Sans FB" size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="k2Crop1" prefHeight="52.0" prefWidth="224.0" style="-fx-border-color: black; -fx-background-color: yellow; -fx-border-width: 1px;" text="-" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                                 <font>
+                                    <Font name="Berlin Sans FB" size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label prefHeight="52.0" prefWidth="224.0" style="-fx-border-color: black; -fx-background-color: grey; -fx-border-width: 1px;" text="YEAR" GridPane.columnIndex="4">
+                                 <font>
+                                    <Font name="Berlin Sans FB" size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label prefHeight="52.0" prefWidth="224.0" style="-fx-border-color: black; -fx-background-color: grey; -fx-border-width: 1px;" text="TOTAL" GridPane.columnIndex="4" GridPane.rowIndex="1">
+                                 <font>
+                                    <Font name="Berlin Sans FB" size="15.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </GridPane>
+                        <TableView fx:id="tableInput" prefHeight="86.0" prefWidth="922.0" GridPane.columnSpan="2" GridPane.rowIndex="1" />
+                     </children>
+                  </GridPane>
+               </content>
+            </TitledPane>
+          <TitledPane animated="false" text="Output">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="16.0" />
+               </font>
+               <content>
+                  <GridPane>
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints maxHeight="107.60000610351562" minHeight="0.0" prefHeight="40.59998779296875" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="219.80001220703124" minHeight="10.0" prefHeight="211.80001220703124" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <GridPane prefHeight="6.0" prefWidth="833.0" GridPane.columnSpan="2">
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints maxHeight="55.200006103515626" minHeight="10.0" prefHeight="24.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="53.600006103515625" minHeight="10.0" prefHeight="16.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <Label prefHeight="33.0" prefWidth="186.0" style="-fx-border-color: black; -fx-border-width: 1px; -fx-background-color: lightBlue;" text="SEASON">
+                                 <font>
+                                    <Font name="Berlin Sans FB" size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label prefHeight="29.0" prefWidth="186.0" style="-fx-border-color: black; -fx-border-width: 1px; -fx-background-color: lightBlue;" text="CROP" GridPane.rowIndex="1">
+                                 <font>
+                                    <Font name="Berlin Sans FB" size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label prefHeight="52.0" prefWidth="224.0" style="-fx-border-color: black; -fx-background-color: red; -fx-border-width: 1px;" text="Rabi" GridPane.columnIndex="1">
+                                 <font>
+                                    <Font name="Berlin Sans FB" size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="rabiCrop2" prefHeight="52.0" prefWidth="224.0" style="-fx-border-color: black; -fx-background-color: red; -fx-border-width: 1px;" text="-" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                 <font>
+                                    <Font name="Berlin Sans FB" size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label prefHeight="52.0" prefWidth="224.0" style="-fx-border-color: black; -fx-border-width: 1px; -fx-background-color: orange;" text="Kharif - I" GridPane.columnIndex="2">
+                                 <font>
+                                    <Font name="Berlin Sans FB" size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="k1Crop2" prefHeight="52.0" prefWidth="224.0" style="-fx-border-color: black; -fx-border-width: 1px; -fx-background-color: orange;" text="-" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                                 <font>
+                                    <Font name="Berlin Sans FB" size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label prefHeight="52.0" prefWidth="224.0" style="-fx-border-color: black; -fx-background-color: yellow; -fx-border-width: 1px;" text="Kharif - II" GridPane.columnIndex="3">
+                                 <font>
+                                    <Font name="Berlin Sans FB" size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="k2Crop2" prefHeight="52.0" prefWidth="224.0" style="-fx-border-color: black; -fx-background-color: yellow; -fx-border-width: 1px;" text="-" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                                 <font>
+                                    <Font name="Berlin Sans FB" size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label prefHeight="52.0" prefWidth="224.0" style="-fx-border-color: black; -fx-background-color: grey; -fx-border-width: 1px;" text="YEAR" GridPane.columnIndex="4">
+                                 <font>
+                                    <Font name="Berlin Sans FB" size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label prefHeight="52.0" prefWidth="224.0" style="-fx-border-color: black; -fx-background-color: grey; -fx-border-width: 1px;" text="TOTAL" GridPane.columnIndex="4" GridPane.rowIndex="1">
+                                 <font>
+                                    <Font name="Berlin Sans FB" size="15.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </GridPane>
+                        <TableView fx:id="tableOutput" prefHeight="86.0" prefWidth="922.0" GridPane.columnSpan="2" GridPane.rowIndex="1" />
+                     </children>
+                  </GridPane>
+               </content>
+            </TitledPane>
+            <TitledPane prefHeight="200.0" prefWidth="200.0" text="Partial Balance Sheet">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="16.0" />
+               </font>
+               <content>
+                  <GridPane>
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints maxHeight="107.60000610351562" minHeight="0.0" prefHeight="40.59998779296875" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="219.80001220703124" minHeight="10.0" prefHeight="211.80001220703124" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <GridPane prefHeight="6.0" prefWidth="833.0" GridPane.columnSpan="2">
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints maxHeight="55.200006103515626" minHeight="10.0" prefHeight="24.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="53.600006103515625" minHeight="10.0" prefHeight="16.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <Label prefHeight="33.0" prefWidth="186.0" style="-fx-border-color: black; -fx-border-width: 1px; -fx-background-color: lightBlue;" text="SEASON">
+                                 <font>
+                                    <Font name="Berlin Sans FB" size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label prefHeight="29.0" prefWidth="186.0" style="-fx-border-color: black; -fx-border-width: 1px; -fx-background-color: lightBlue;" text="CROP" GridPane.rowIndex="1">
+                                 <font>
+                                    <Font name="Berlin Sans FB" size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label prefHeight="52.0" prefWidth="224.0" style="-fx-border-color: black; -fx-background-color: red; -fx-border-width: 1px;" text="Rabi" GridPane.columnIndex="1">
+                                 <font>
+                                    <Font name="Berlin Sans FB" size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="rabiCrop3" prefHeight="52.0" prefWidth="224.0" style="-fx-border-color: black; -fx-background-color: red; -fx-border-width: 1px;" text="-" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                 <font>
+                                    <Font name="Berlin Sans FB" size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label prefHeight="52.0" prefWidth="224.0" style="-fx-border-color: black; -fx-border-width: 1px; -fx-background-color: orange;" text="Kharif - I" GridPane.columnIndex="2">
+                                 <font>
+                                    <Font name="Berlin Sans FB" size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="k1Crop3" prefHeight="52.0" prefWidth="224.0" style="-fx-border-color: black; -fx-border-width: 1px; -fx-background-color: orange;" text="-" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                                 <font>
+                                    <Font name="Berlin Sans FB" size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label prefHeight="52.0" prefWidth="224.0" style="-fx-border-color: black; -fx-background-color: yellow; -fx-border-width: 1px;" text="Kharif - II" GridPane.columnIndex="3">
+                                 <font>
+                                    <Font name="Berlin Sans FB" size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="k2Crop3" prefHeight="52.0" prefWidth="224.0" style="-fx-border-color: black; -fx-background-color: yellow; -fx-border-width: 1px;" text="-" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                                 <font>
+                                    <Font name="Berlin Sans FB" size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label prefHeight="52.0" prefWidth="224.0" style="-fx-border-color: black; -fx-background-color: grey; -fx-border-width: 1px;" text="YEAR" GridPane.columnIndex="4">
+                                 <font>
+                                    <Font name="Berlin Sans FB" size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label prefHeight="52.0" prefWidth="224.0" style="-fx-border-color: black; -fx-background-color: grey; -fx-border-width: 1px;" text="TOTAL" GridPane.columnIndex="4" GridPane.rowIndex="1">
+                                 <font>
+                                    <Font name="Berlin Sans FB" size="15.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </GridPane>
+                        <TableView fx:id="tablePartialBalanceSheet" prefHeight="86.0" prefWidth="922.0" GridPane.columnSpan="2" GridPane.rowIndex="1" />
+                     </children>
+                  </GridPane>
+               </content>
+            </TitledPane>
+            <TitledPane animated="false" prefHeight="259.0" prefWidth="950.0" text="Balance Sheet">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="16.0" />
+               </font>
+               <content>
+                  <GridPane>
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints maxHeight="107.60000610351562" minHeight="0.0" prefHeight="40.59998779296875" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="219.80001220703124" minHeight="10.0" prefHeight="211.80001220703124" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <GridPane prefHeight="6.0" prefWidth="833.0" GridPane.columnSpan="2">
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints maxHeight="55.200006103515626" minHeight="10.0" prefHeight="24.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="53.600006103515625" minHeight="10.0" prefHeight="16.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <Label prefHeight="33.0" prefWidth="186.0" style="-fx-border-color: black; -fx-border-width: 1px; -fx-background-color: lightBlue;" text="SEASON">
+                                 <font>
+                                    <Font name="Berlin Sans FB" size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label prefHeight="29.0" prefWidth="186.0" style="-fx-border-color: black; -fx-border-width: 1px; -fx-background-color: lightBlue;" text="CROP" GridPane.rowIndex="1">
+                                 <font>
+                                    <Font name="Berlin Sans FB" size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label prefHeight="52.0" prefWidth="224.0" style="-fx-border-color: black; -fx-background-color: red; -fx-border-width: 1px;" text="Rabi" GridPane.columnIndex="1">
+                                 <font>
+                                    <Font name="Berlin Sans FB" size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="rabiCrop4" prefHeight="52.0" prefWidth="224.0" style="-fx-border-color: black; -fx-background-color: red; -fx-border-width: 1px;" text="-" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                 <font>
+                                    <Font name="Berlin Sans FB" size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label prefHeight="52.0" prefWidth="224.0" style="-fx-border-color: black; -fx-border-width: 1px; -fx-background-color: orange;" text="Kharif - I" GridPane.columnIndex="2">
+                                 <font>
+                                    <Font name="Berlin Sans FB" size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="k1Crop4" prefHeight="52.0" prefWidth="224.0" style="-fx-border-color: black; -fx-border-width: 1px; -fx-background-color: orange;" text="-" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                                 <font>
+                                    <Font name="Berlin Sans FB" size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label prefHeight="52.0" prefWidth="224.0" style="-fx-border-color: black; -fx-background-color: yellow; -fx-border-width: 1px;" text="Kharif - II" GridPane.columnIndex="3">
+                                 <font>
+                                    <Font name="Berlin Sans FB" size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="k2Crop4" prefHeight="52.0" prefWidth="224.0" style="-fx-border-color: black; -fx-background-color: yellow; -fx-border-width: 1px;" text="-" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                                 <font>
+                                    <Font name="Berlin Sans FB" size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label prefHeight="52.0" prefWidth="224.0" style="-fx-border-color: black; -fx-background-color: grey; -fx-border-width: 1px;" text="YEAR" GridPane.columnIndex="4">
+                                 <font>
+                                    <Font name="Berlin Sans FB" size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label prefHeight="52.0" prefWidth="224.0" style="-fx-border-color: black; -fx-background-color: grey; -fx-border-width: 1px;" text="TOTAL" GridPane.columnIndex="4" GridPane.rowIndex="1">
+                                 <font>
+                                    <Font name="Berlin Sans FB" size="15.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </GridPane>
+                        <TableView fx:id="tableBalanceSheet" prefHeight="86.0" prefWidth="922.0" GridPane.columnSpan="2" GridPane.rowIndex="1" />
+                     </children>
+                  </GridPane>
+               </content>
+            </TitledPane>
+        </panes>
+      </Accordion>
+   </children>
+</AnchorPane>
