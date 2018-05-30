@@ -1,0 +1,681 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<ScrollPane xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Fertilizer.myPanelController">
+   <content>
+      <AnchorPane prefHeight="794.0" prefWidth="1518.0" style="-fx-background-color: #AED581; -fx-padding: 10px; -fx-border-color: darkblue; -fx-border-width: 2px;">
+         <children>
+            <Label layoutX="219.0" layoutY="14.0" prefHeight="71.0" prefWidth="396.0" text="NUTRIENT ESTIMATION BALANCE CALCULATOR" textFill="#141069" AnchorPane.leftAnchor="219.0" AnchorPane.rightAnchor="251.0">
+               <font>
+                  <Font name="Calibri Bold" size="36.0" />
+               </font>
+            </Label>
+            <GridPane layoutX="34.0" layoutY="187.0" prefHeight="152.0" prefWidth="963.0" style="-fx-background-color: lightblue;">
+              <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="347.9999633789063" minWidth="10.0" prefWidth="313.5999755859375" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="99.20001220703125" minWidth="0.0" prefWidth="0.39997558593751137" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="486.4" minWidth="10.0" prefWidth="484.4000244140625" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="184.9999877929688" minWidth="0.0" prefWidth="0.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="245.99997558593748" minWidth="10.0" prefWidth="153.20000000000005" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="93.5999755859375" minWidth="0.0" prefWidth="0.0" />
+              </columnConstraints>
+              <rowConstraints>
+                  <RowConstraints maxHeight="61.60001831054687" minHeight="10.0" prefHeight="44.00001220703125" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="61.60001831054687" minHeight="10.0" prefHeight="44.00001220703125" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="80.00000610351563" minHeight="10.0" prefHeight="46.40001220703125" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="72.39999999999999" minHeight="10.0" prefHeight="46.399987792968744" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="72.79996337890626" minHeight="10.0" prefHeight="44.79998168945312" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <VBox style="-fx-border-color: black; -fx-border-width: 3px;" GridPane.rowSpan="5">
+                     <children>
+                        <HBox prefHeight="66.0" prefWidth="315.0" style="-fx-background-color: lightblue;">
+                           <children>
+                              <Label alignment="CENTER" prefHeight="69.0" prefWidth="80.0" style="-fx-background-color: #E3F2FD;" text="Season" textAlignment="CENTER">
+                                 <font>
+                                    <Font name="Berlin Sans FB" size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label alignment="CENTER" prefHeight="53.0" prefWidth="114.0" style="-fx-background-color: #E3F2FD;" text="Crop" textAlignment="CENTER">
+                                 <font>
+                                    <Font name="Berlin Sans FB" size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label alignment="CENTER" prefHeight="54.0" prefWidth="122.0" style="-fx-background-color: #E3F2FD;" text="Yield" textAlignment="CENTER">
+                                 <font>
+                                    <Font name="Berlin Sans FB" size="18.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="45.0" prefWidth="315.0" style="-fx-background-color: red;">
+                           <children>
+                              <Label prefHeight="46.0" prefWidth="80.0" style="-fx-background-color: #FF9e80;" text="Rabi:" textAlignment="CENTER">
+                                 <font>
+                                    <Font name="Berlin Sans FB" size="18.0" />
+                                 </font>
+                              </Label>
+                              <ComboBox fx:id="rabi" onAction="#onAction" prefHeight="46.0" prefWidth="115.0" promptText="Select Variety" style="-fx-base: #FF9e80; -fx-font-weight: bold; -fx-font-size: 11px;" />
+                              <Spinner fx:id="rabiYield" editable="true" onInputMethodTextChanged="#onAction" onKeyTyped="#onAction" prefHeight="42.0" prefWidth="119.0" style="-fx-base: #FF9e80; -fx-font-weight: bold; -fx-font-size: 11px;" />
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="46.0" prefWidth="315.0" style="-fx-background-color: orange;">
+                           <children>
+                              <Label prefHeight="45.0" prefWidth="80.0" style="-fx-background-color: #FFAB40;" text="Kharif I:" textAlignment="CENTER">
+                                 <font>
+                                    <Font name="Berlin Sans FB" size="18.0" />
+                                 </font>
+                              </Label>
+                              <ComboBox fx:id="k1" onAction="#onAction" prefHeight="45.0" prefWidth="114.0" promptText="Select Variety" style="-fx-base: #FFAB40; -fx-font-weight: bold; -fx-font-size: 11;" />
+                              <Spinner fx:id="k1Yield" editable="true" onInputMethodTextChanged="#onAction" onKeyTyped="#onAction" prefHeight="33.0" prefWidth="119.0" style="-fx-base: #FFAB40; -fx-font-weight: bold; -fx-font-size: 11;" />
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="43.0" prefWidth="63.0" style="-fx-background-color: yellow;">
+                           <children>
+                              <Label prefHeight="43.0" prefWidth="81.0" style="-fx-background-color: #FFD740;" text="Kharif II:" textAlignment="CENTER">
+                                 <font>
+                                    <Font name="Berlin Sans FB" size="18.0" />
+                                 </font>
+                              </Label>
+                              <ComboBox fx:id="k2" onAction="#onAction" prefHeight="30.0" prefWidth="118.0" promptText="Select Variety" style="-fx-base: #FFD740; -fx-font-weight: bold; -fx-font-size: 11;" />
+                              <Spinner fx:id="k2Yield" editable="true" onInputMethodTextChanged="#onAction" onKeyTyped="#onAction" prefHeight="42.0" prefWidth="121.0" style="-fx-base: #FFD740; -fx-font-weight: bold; -fx-font-size: 11;" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="200.0" prefWidth="497.0" style="-fx-border-color: black; -fx-border-width: 3px;" GridPane.columnIndex="2" GridPane.rowSpan="5">
+                     <children>
+                        <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="22.0" prefWidth="486.0" style="-fx-background-color: #E3F2FD;" text="Fertilizer" textAlignment="CENTER">
+                           <font>
+                              <Font name="Berlin Sans FB" size="18.0" />
+                           </font>
+                        </Label>
+                        <HBox prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: lightblue;">
+                           <children>
+                              <Label alignment="CENTER" prefHeight="30.0" prefWidth="94.0" style="-fx-background-color: #E3F2FD;" text="N" textAlignment="CENTER">
+                                 <font>
+                                    <Font name="Berlin Sans FB" size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label alignment="CENTER" prefHeight="30.0" prefWidth="89.0" style="-fx-background-color: #E3F2FD;" text="P" textAlignment="CENTER">
+                                 <font>
+                                    <Font name="Berlin Sans FB" size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label alignment="CENTER" prefHeight="30.0" prefWidth="87.0" style="-fx-background-color: #E3F2FD;" text="K" textAlignment="CENTER">
+                                 <font>
+                                    <Font name="Berlin Sans FB" size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label alignment="CENTER" prefHeight="30.0" prefWidth="121.0" style="-fx-background-color: #E3F2FD;" text="Manure" textAlignment="CENTER">
+                                 <font>
+                                    <Font name="Berlin Sans FB" size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label alignment="CENTER" prefHeight="30.0" prefWidth="81.0" style="-fx-background-color: #E3F2FD;" text="Rate" textAlignment="CENTER">
+                                 <font>
+                                    <Font name="Berlin Sans FB" size="18.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <Spinner fx:id="rabiN" editable="true" onInputMethodTextChanged="#onAction" onKeyTyped="#onAction" prefHeight="38.0" prefWidth="87.0" style="-fx-base: #FF9e80; -fx-font-weight: bold; -fx-font-size: 11px;" />
+                              <Spinner fx:id="rabiP" editable="true" onInputMethodTextChanged="#onAction" onKeyTyped="#onAction" prefHeight="33.0" prefWidth="86.0" style="-fx-base: #FF9e80; -fx-font-weight: bold; -fx-font-size: 11px;" />
+                              <Spinner fx:id="rabiK" editable="true" onInputMethodTextChanged="#onAction" onKeyTyped="#onAction" onMouseClicked="#onAction" prefHeight="38.0" prefWidth="88.0" style="-fx-base: #FF9e80; -fx-font-weight: bold; -fx-font-size: 11px;" />
+                              <ComboBox fx:id="rabiManure" onAction="#onAction" prefHeight="30.0" prefWidth="136.0" promptText="Select Manure" style="-fx-base: #FF9e80; -fx-font-weight: bold; -fx-font-size: 11px;" />
+                              <Spinner fx:id="rabiRate" editable="true" onInputMethodTextChanged="#onAction" onKeyTyped="#onAction" prefHeight="30.0" prefWidth="86.0" style="-fx-base: #FF9e80; -fx-font-weight: bold; -fx-font-size: 11px;" />
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <HBox prefHeight="34.0" prefWidth="268.0">
+                                 <children>
+                                    <Spinner fx:id="k1N" editable="true" onInputMethodTextChanged="#onAction" onKeyTyped="#onAction" prefHeight="37.0" prefWidth="86.0" style="-fx-base: #FFAB40; -fx-font-weight: bold; -fx-font-size: 11;" />
+                                    <Spinner fx:id="k1P" editable="true" onInputMethodTextChanged="#onAction" onKeyTyped="#onAction" prefHeight="33.0" prefWidth="86.0" style="-fx-base: #FFAB40; -fx-font-weight: bold; -fx-font-size: 11;" />
+                                    <Spinner fx:id="k1K" editable="true" onInputMethodTextChanged="#onAction" onKeyTyped="#onAction" prefHeight="38.0" prefWidth="88.0" style="-fx-base: #FFAB40; -fx-font-weight: bold; -fx-font-size: 11;" />
+                                 </children>
+                              </HBox>
+                              <ComboBox fx:id="k1Manure" onAction="#onAction" prefHeight="46.4" prefWidth="136.0" promptText="Select Manure" style="-fx-base: #FFAB40; -fx-font-weight: bold; -fx-font-size: 11;" />
+                              <Spinner fx:id="k1Rate" editable="true" onInputMethodTextChanged="#onAction" onKeyTyped="#onAction" prefHeight="34.0" prefWidth="94.0" style="-fx-base: #FFAB40; -fx-font-weight: bold; -fx-font-size: 11;" />
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <HBox prefHeight="34.0" prefWidth="268.0">
+                                 <children>
+                                    <Spinner fx:id="k2N" editable="true" onInputMethodTextChanged="#onAction" onKeyTyped="#onAction" prefHeight="31.0" prefWidth="87.0" style="-fx-base: #FFD740; -fx-font-weight: bold; -fx-font-size: 11;" />
+                                    <Spinner fx:id="k2P" editable="true" onInputMethodTextChanged="#onAction" onKeyTyped="#onAction" prefHeight="33.0" prefWidth="86.0" style="-fx-base: #FFD740; -fx-font-weight: bold; -fx-font-size: 11;" />
+                                    <Spinner fx:id="k2K" editable="true" onInputMethodTextChanged="#onAction" onKeyTyped="#onAction" prefHeight="32.0" prefWidth="88.0" style="-fx-base: #FFD740; -fx-font-weight: bold; -fx-font-size: 11;" />
+                                 </children>
+                              </HBox>
+                              <ComboBox fx:id="k2Manure" onAction="#onAction" prefHeight="46.4" prefWidth="136.0" promptText="Select Manure" style="-fx-base: #FFD740; -fx-font-weight: bold; -fx-font-size: 11;" />
+                              <Spinner fx:id="k2Rate" editable="true" onInputMethodTextChanged="#onAction" onKeyTyped="#onAction" prefHeight="34.0" prefWidth="94.0" style="-fx-base: #FFD740; -fx-font-weight: bold; -fx-font-size: 11;" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="170.0" prefWidth="170.0" style="-fx-border-color: black; -fx-border-width: 3px;" GridPane.columnIndex="4" GridPane.rowSpan="5">
+                     <children>
+                        <Label alignment="CENTER" prefHeight="53.0" prefWidth="154.0" style="-fx-background-color: #E3F2FD;" text="Residues Removed (%)" textAlignment="CENTER">
+                           <font>
+                              <Font name="Berlin Sans FB" size="14.0" />
+                           </font>
+                        </Label>
+                        <Spinner fx:id="rabiResidue" editable="true" onInputMethodTextChanged="#onAction" onKeyTyped="#onAction" prefHeight="30.0" prefWidth="349.0" style="-fx-base: #FF9e80; -fx-font-weight: bold; -fx-font-size: 11px;" />
+                        <Spinner fx:id="k1Residue" editable="true" onInputMethodTextChanged="#onAction" onKeyTyped="#onAction" prefHeight="30.0" prefWidth="353.0" style="-fx-base: #FFAB40; -fx-font-weight: bold; -fx-font-size: 11;" />
+                        <Spinner fx:id="k2Residue" editable="true" onInputMethodTextChanged="#onAction" onKeyTyped="#onAction" prefHeight="30.0" prefWidth="350.0" style="-fx-base: #FFD740; -fx-font-weight: bold; -fx-font-size: 11;" />
+                     </children>
+                  </VBox>
+               </children>
+            </GridPane>
+            <GridPane layoutX="44.0" layoutY="89.0" prefHeight="79.0" prefWidth="278.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints maxHeight="42.4" minHeight="10.0" prefHeight="42.4" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="25.599996948242186" minHeight="0.0" prefHeight="6.399993896484375" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="48.79999999999999" minHeight="10.0" prefHeight="42.400006103515615" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <HBox prefHeight="100.0" prefWidth="200.0" style="-fx-border-color: black; -fx-border-width: 3px;" GridPane.columnSpan="2">
+                     <children>
+                        <Label prefHeight="38.0" prefWidth="110.0" style="-fx-background-color: #E3F2FD;" text="AEZ No:" textAlignment="CENTER">
+                           <font>
+                              <Font name="Berlin Sans FB" size="18.0" />
+                           </font>
+                        </Label>
+                        <ComboBox fx:id="aez" onAction="#onAction" prefHeight="38.0" prefWidth="171.0" promptText="Select AEZ No" style="-fx-background-color: linear-gradient( #D2B48C 100.0%, white 40.0%); -fx-text-fill: white; -fx-font-weight: bold;" />
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="100.0" prefWidth="200.0" style="-fx-border-color: black; -fx-border-width: 3px;" GridPane.columnSpan="2" GridPane.rowIndex="2">
+                     <children>
+                        <Label prefHeight="39.0" prefWidth="153.0" style="-fx-background-color: #E3F2FD;" text="Land Type:" textAlignment="CENTER">
+                           <font>
+                              <Font name="Berlin Sans FB" size="18.0" />
+                           </font>
+                        </Label>
+                        <ComboBox fx:id="landType" onAction="#onAction" prefHeight="39.0" prefWidth="209.0" promptText="Select Land Type" style="-fx-background-color: #D2B48C; -fx-font-weight: bold;" />
+                     </children>
+                  </HBox>
+               </children>
+            </GridPane>
+            <TabPane layoutX="1025.0" layoutY="61.0" prefHeight="718.0" prefWidth="462.0" style="-fx-border-color: darkgreen; -fx-background-color: lightBlue; -fx-border-width: 1.5px;" tabClosingPolicy="UNAVAILABLE">
+              <tabs>
+                <Tab style="-fx-border-color: linear-gradient(#131313 0.0%, #424141 100.0%); -fx-font-weight: bold; -fx-background-color: #AED581;" text="Partial Balance Graph">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="706.0" prefWidth="558.0">
+                           <children>
+                              <BarChart fx:id="partialBalanceGraph" layoutX="-86.0" layoutY="-125.0" prefHeight="767.0" prefWidth="572.0" AnchorPane.bottomAnchor="12.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="28.0" AnchorPane.topAnchor="0.0">
+                                <xAxis>
+                                  <CategoryAxis label="Nutrients" side="BOTTOM" />
+                                </xAxis>
+                                <yAxis>
+                                  <NumberAxis label="Partial Balance" side="LEFT" />
+                                </yAxis>
+                              </BarChart>
+                           </children>
+                        </AnchorPane>
+                  </content>
+                </Tab>
+                <Tab style="-fx-border-color: linear-gradient(#131313 0.0%, #424141 100.0%); -fx-font-weight: bold; -fx-background-color: #AED581;" text="Balance Graph">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="300.0" prefWidth="1016.0">
+                           <children>
+                              <BarChart fx:id="balanceGraph" layoutX="-37.0" layoutY="-30.0" prefHeight="777.6" prefWidth="599.2" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                <xAxis>
+                                  <CategoryAxis label="Nutrients" prefWidth="936.0" side="BOTTOM" />
+                                </xAxis>
+                                <yAxis>
+                                  <NumberAxis label="Balance Sheet" side="LEFT" style="-fx-tick-label-font-size: 12;" />
+                                </yAxis>
+                              </BarChart>
+                           </children>
+                        </AnchorPane>
+                  </content>
+                </Tab>
+                  <Tab style="-fx-border-color: linear-gradient(#131313 0.0%, #424141 100.0%); -fx-font-weight: bold; -fx-background-color: #AED581;" text="Crop Balance Sheet">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <BarChart fx:id="cropBalanceGraph" layoutX="47.0" layoutY="37.0" prefHeight="772.0" prefWidth="593.6" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                <xAxis>
+                                  <CategoryAxis side="BOTTOM" />
+                                </xAxis>
+                                <yAxis>
+                                  <NumberAxis side="LEFT" />
+                                </yAxis>
+                              </BarChart>
+                           </children>
+                        </AnchorPane>
+                    </content>
+                  </Tab>
+                  <Tab style="-fx-border-color: linear-gradient(#131313 0.0%, #424141 100.0%); -fx-font-weight: bold; -fx-background-color: #AED581;" text="Crop Partial Balance Sheet">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <BarChart fx:id="cropPartialBalanceGraph" layoutX="80.0" layoutY="76.0" prefHeight="772.0" prefWidth="593.6" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                <xAxis>
+                                  <CategoryAxis side="BOTTOM" />
+                                </xAxis>
+                                <yAxis>
+                                  <NumberAxis side="LEFT" />
+                                </yAxis>
+                              </BarChart>
+                           </children>
+                        </AnchorPane>
+                    </content>
+                  </Tab>
+              </tabs>
+            </TabPane>
+            <Accordion layoutX="36.0" layoutY="401.0" prefHeight="399.0" prefWidth="982.0" style="-fx-base: #A9A9A9;">
+               <panes>
+                  <TitledPane animated="false" prefHeight="178.0" prefWidth="732.0" text="Input">
+                     <font>
+                        <Font name="Arial Rounded MT Bold" size="16.0" />
+                     </font>
+                     <content>
+                        <GridPane>
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints maxHeight="107.60000610351562" minHeight="0.0" prefHeight="40.59998779296875" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="219.80001220703124" minHeight="10.0" prefHeight="211.80001220703124" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <GridPane prefHeight="6.0" prefWidth="833.0" GridPane.columnSpan="2">
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints maxHeight="55.200006103515626" minHeight="10.0" prefHeight="24.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="53.600006103515625" minHeight="10.0" prefHeight="16.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                                 <children>
+                                    <Label alignment="CENTER" prefHeight="22.0" prefWidth="196.0" style="-fx-border-color: black; -fx-border-width: 1px; -fx-background-color: #E3F2FD;" text="SEASON">
+                                       <font>
+                                          <Font name="Berlin Sans FB" size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <Label alignment="CENTER" prefHeight="19.0" prefWidth="194.0" style="-fx-border-color: black; -fx-border-width: 1px; -fx-background-color: #E3F2FD;" text="CROP" GridPane.rowIndex="1">
+                                       <font>
+                                          <Font name="Berlin Sans FB" size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <Label alignment="CENTER" prefHeight="52.0" prefWidth="224.0" style="-fx-border-color: black; -fx-background-color: #FF9E80; -fx-border-width: 1px;" text="Rabi" GridPane.columnIndex="1">
+                                       <font>
+                                          <Font name="Berlin Sans FB" size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="rabiCrop1" alignment="CENTER" prefHeight="52.0" prefWidth="224.0" style="-fx-border-color: black; -fx-background-color: #FF9E80; -fx-border-width: 1px;" text="-" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                       <font>
+                                          <Font name="Berlin Sans FB" size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <Label alignment="CENTER" prefHeight="52.0" prefWidth="224.0" style="-fx-border-color: black; -fx-border-width: 1px; -fx-background-color: #FFAB40;" text="Kharif - I" GridPane.columnIndex="2">
+                                       <font>
+                                          <Font name="Berlin Sans FB" size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="k1Crop1" alignment="CENTER" prefHeight="52.0" prefWidth="224.0" style="-fx-border-color: black; -fx-border-width: 1px; -fx-background-color: #FFAB40;" text="-" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                                       <font>
+                                          <Font name="Berlin Sans FB" size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <Label alignment="CENTER" prefHeight="52.0" prefWidth="224.0" style="-fx-border-color: black; -fx-background-color: #FFD740; -fx-border-width: 1px;" text="Kharif - II" GridPane.columnIndex="3">
+                                       <font>
+                                          <Font name="Berlin Sans FB" size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="k2Crop1" alignment="CENTER" prefHeight="52.0" prefWidth="224.0" style="-fx-border-color: black; -fx-background-color: #FFD740; -fx-border-width: 1px;" text="-" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                                       <font>
+                                          <Font name="Berlin Sans FB" size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <Label alignment="CENTER" prefHeight="52.0" prefWidth="224.0" style="-fx-border-color: black; -fx-background-color: grey; -fx-border-width: 1px;" text="YEAR" GridPane.columnIndex="4">
+                                       <font>
+                                          <Font name="Berlin Sans FB" size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <Label alignment="CENTER" prefHeight="52.0" prefWidth="224.0" style="-fx-border-color: black; -fx-background-color: grey; -fx-border-width: 1px;" text="TOTAL" GridPane.columnIndex="4" GridPane.rowIndex="1">
+                                       <font>
+                                          <Font name="Berlin Sans FB" size="15.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </GridPane>
+                              <TableView fx:id="tableInput" prefHeight="86.0" prefWidth="922.0" GridPane.columnSpan="2" GridPane.rowIndex="1" />
+                           </children>
+                        </GridPane>
+                     </content>
+                  </TitledPane>
+                  <TitledPane animated="false" text="Output">
+                     <font>
+                        <Font name="Arial Rounded MT Bold" size="16.0" />
+                     </font>
+                     <content>
+                        <GridPane>
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints maxHeight="107.60000610351562" minHeight="0.0" prefHeight="40.59998779296875" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="219.80001220703124" minHeight="10.0" prefHeight="211.80001220703124" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <GridPane prefHeight="6.0" prefWidth="833.0" GridPane.columnSpan="2">
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints maxHeight="55.200006103515626" minHeight="10.0" prefHeight="24.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="53.600006103515625" minHeight="10.0" prefHeight="16.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                                 <children>
+                                    <Label prefHeight="22.0" prefWidth="194.0" style="-fx-border-color: black; -fx-border-width: 1px; -fx-background-color: #E3F2FD;" text="SEASON">
+                                       <font>
+                                          <Font name="Berlin Sans FB" size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <Label prefHeight="19.0" prefWidth="193.0" style="-fx-border-color: black; -fx-border-width: 1px; -fx-background-color: #E3F2FD;" text="CROP" GridPane.rowIndex="1">
+                                       <font>
+                                          <Font name="Berlin Sans FB" size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <Label prefHeight="52.0" prefWidth="224.0" style="-fx-border-color: black; -fx-background-color: #FF9E80; -fx-border-width: 1px;" text="Rabi" GridPane.columnIndex="1">
+                                       <font>
+                                          <Font name="Berlin Sans FB" size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="rabiCrop2" prefHeight="52.0" prefWidth="224.0" style="-fx-border-color: black; -fx-background-color: #FF9E80; -fx-border-width: 1px;" text="-" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                       <font>
+                                          <Font name="Berlin Sans FB" size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <Label prefHeight="52.0" prefWidth="224.0" style="-fx-border-color: black; -fx-border-width: 1px; -fx-background-color: #FFAB40;" text="Kharif - I" GridPane.columnIndex="2">
+                                       <font>
+                                          <Font name="Berlin Sans FB" size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="k1Crop2" prefHeight="52.0" prefWidth="224.0" style="-fx-border-color: black; -fx-border-width: 1px; -fx-background-color: #FFAB40;" text="-" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                                       <font>
+                                          <Font name="Berlin Sans FB" size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <Label prefHeight="52.0" prefWidth="224.0" style="-fx-border-color: black; -fx-background-color: #FFD740; -fx-border-width: 1px;" text="Kharif - II" GridPane.columnIndex="3">
+                                       <font>
+                                          <Font name="Berlin Sans FB" size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="k2Crop2" prefHeight="52.0" prefWidth="224.0" style="-fx-border-color: black; -fx-background-color: #FFD740; -fx-border-width: 1px;" text="-" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                                       <font>
+                                          <Font name="Berlin Sans FB" size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <Label prefHeight="52.0" prefWidth="224.0" style="-fx-border-color: black; -fx-background-color: grey; -fx-border-width: 1px;" text="YEAR" GridPane.columnIndex="4">
+                                       <font>
+                                          <Font name="Berlin Sans FB" size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <Label prefHeight="52.0" prefWidth="224.0" style="-fx-border-color: black; -fx-background-color: grey; -fx-border-width: 1px;" text="TOTAL" GridPane.columnIndex="4" GridPane.rowIndex="1">
+                                       <font>
+                                          <Font name="Berlin Sans FB" size="15.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </GridPane>
+                              <TableView fx:id="tableOutput" prefHeight="86.0" prefWidth="922.0" GridPane.columnSpan="2" GridPane.rowIndex="1" />
+                           </children>
+                        </GridPane>
+                     </content>
+                  </TitledPane>
+                  <TitledPane prefHeight="200.0" prefWidth="200.0" text="Partial Balance Sheet">
+                     <font>
+                        <Font name="Arial Rounded MT Bold" size="16.0" />
+                     </font>
+                     <content>
+                        <GridPane>
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints maxHeight="107.60000610351562" minHeight="0.0" prefHeight="40.00001220703125" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="219.80001220703124" minHeight="10.0" prefHeight="204.79998779296878" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <GridPane prefHeight="6.0" prefWidth="833.0" GridPane.columnSpan="2">
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints maxHeight="55.200006103515626" minHeight="10.0" prefHeight="24.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="53.600006103515625" minHeight="10.0" prefHeight="16.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                                 <children>
+                                    <Label prefHeight="22.0" prefWidth="194.0" style="-fx-border-color: black; -fx-border-width: 1px; -fx-background-color: #E3F2FD;" text="SEASON">
+                                       <font>
+                                          <Font name="Berlin Sans FB" size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <Label prefHeight="18.0" prefWidth="193.0" style="-fx-border-color: black; -fx-border-width: 1px; -fx-background-color: #E3F2FD;" text="CROP" GridPane.rowIndex="1">
+                                       <font>
+                                          <Font name="Berlin Sans FB" size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <Label prefHeight="52.0" prefWidth="224.0" style="-fx-border-color: black; -fx-background-color: #FF9E80; -fx-border-width: 1px;" text="Rabi" GridPane.columnIndex="1">
+                                       <font>
+                                          <Font name="Berlin Sans FB" size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="rabiCrop3" prefHeight="52.0" prefWidth="224.0" style="-fx-border-color: black; -fx-background-color: #FF9E80; -fx-border-width: 1px;" text="-" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                       <font>
+                                          <Font name="Berlin Sans FB" size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <Label prefHeight="52.0" prefWidth="224.0" style="-fx-border-color: black; -fx-border-width: 1px; -fx-background-color: #FFAB40;" text="Kharif - I" GridPane.columnIndex="2">
+                                       <font>
+                                          <Font name="Berlin Sans FB" size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="k1Crop3" prefHeight="52.0" prefWidth="224.0" style="-fx-border-color: black; -fx-border-width: 1px; -fx-background-color: #FFAB40;" text="-" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                                       <font>
+                                          <Font name="Berlin Sans FB" size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <Label prefHeight="52.0" prefWidth="224.0" style="-fx-border-color: black; -fx-background-color: #FFD740; -fx-border-width: 1px;" text="Kharif - II" GridPane.columnIndex="3">
+                                       <font>
+                                          <Font name="Berlin Sans FB" size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="k2Crop3" prefHeight="52.0" prefWidth="224.0" style="-fx-border-color: black; -fx-background-color: #FFD740; -fx-border-width: 1px;" text="-" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                                       <font>
+                                          <Font name="Berlin Sans FB" size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <Label prefHeight="52.0" prefWidth="224.0" style="-fx-border-color: black; -fx-background-color: grey; -fx-border-width: 1px;" text="YEAR" GridPane.columnIndex="4">
+                                       <font>
+                                          <Font name="Berlin Sans FB" size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <Label prefHeight="52.0" prefWidth="224.0" style="-fx-border-color: black; -fx-background-color: grey; -fx-border-width: 1px;" text="TOTAL" GridPane.columnIndex="4" GridPane.rowIndex="1">
+                                       <font>
+                                          <Font name="Berlin Sans FB" size="15.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </GridPane>
+                              <TableView fx:id="tablePartialBalanceSheet" prefHeight="86.0" prefWidth="922.0" GridPane.columnSpan="2" GridPane.rowIndex="1" />
+                           </children>
+                        </GridPane>
+                     </content>
+                  </TitledPane>
+                  <TitledPane animated="false" prefHeight="259.0" prefWidth="950.0" text="Balance Sheet">
+                     <font>
+                        <Font name="Arial Rounded MT Bold" size="16.0" />
+                     </font>
+                     <content>
+                        <GridPane>
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints maxHeight="107.60000610351562" minHeight="0.0" prefHeight="40.59998779296875" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="219.80001220703124" minHeight="10.0" prefHeight="211.80001220703124" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <GridPane prefHeight="6.0" prefWidth="833.0" GridPane.columnSpan="2">
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints maxHeight="55.200006103515626" minHeight="10.0" prefHeight="24.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="53.600006103515625" minHeight="10.0" prefHeight="16.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                                 <children>
+                                    <Label prefHeight="22.0" prefWidth="194.0" style="-fx-border-color: black; -fx-border-width: 1px; -fx-background-color: #E3F2FD;" text="SEASON">
+                                       <font>
+                                          <Font name="Berlin Sans FB" size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <Label prefHeight="19.0" prefWidth="194.0" style="-fx-border-color: black; -fx-border-width: 1px; -fx-background-color: #E3F2FD;" text="CROP" GridPane.rowIndex="1">
+                                       <font>
+                                          <Font name="Berlin Sans FB" size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <Label prefHeight="52.0" prefWidth="224.0" style="-fx-border-color: black; -fx-background-color: #FF9E80; -fx-border-width: 1px;" text="Rabi" GridPane.columnIndex="1">
+                                       <font>
+                                          <Font name="Berlin Sans FB" size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="rabiCrop4" prefHeight="52.0" prefWidth="224.0" style="-fx-border-color: black; -fx-background-color: #FF9E80; -fx-border-width: 1px;" text="-" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                       <font>
+                                          <Font name="Berlin Sans FB" size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <Label prefHeight="52.0" prefWidth="224.0" style="-fx-border-color: black; -fx-border-width: 1px; -fx-background-color: #FFAB40;" text="Kharif - I" GridPane.columnIndex="2">
+                                       <font>
+                                          <Font name="Berlin Sans FB" size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="k1Crop4" prefHeight="52.0" prefWidth="224.0" style="-fx-border-color: black; -fx-border-width: 1px; -fx-background-color: #FFAB40;" text="-" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                                       <font>
+                                          <Font name="Berlin Sans FB" size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <Label prefHeight="52.0" prefWidth="224.0" style="-fx-border-color: black; -fx-background-color: #FFD740; -fx-border-width: 1px;" text="Kharif - II" GridPane.columnIndex="3">
+                                       <font>
+                                          <Font name="Berlin Sans FB" size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="k2Crop4" prefHeight="52.0" prefWidth="224.0" style="-fx-border-color: black; -fx-background-color: #FFD740; -fx-border-width: 1px;" text="-" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                                       <font>
+                                          <Font name="Berlin Sans FB" size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <Label prefHeight="52.0" prefWidth="224.0" style="-fx-border-color: black; -fx-background-color: grey; -fx-border-width: 1px;" text="YEAR" GridPane.columnIndex="4">
+                                       <font>
+                                          <Font name="Berlin Sans FB" size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <Label prefHeight="52.0" prefWidth="224.0" style="-fx-border-color: black; -fx-background-color: grey; -fx-border-width: 1px;" text="TOTAL" GridPane.columnIndex="4" GridPane.rowIndex="1">
+                                       <font>
+                                          <Font name="Berlin Sans FB" size="15.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </GridPane>
+                              <TableView fx:id="tableBalanceSheet" prefHeight="86.0" prefWidth="922.0" GridPane.columnSpan="2" GridPane.rowIndex="1" />
+                           </children>
+                        </GridPane>
+                     </content>
+                  </TitledPane>
+               </panes>
+            </Accordion>
+            <GridPane layoutX="707.0" layoutY="99.0" prefHeight="76.0" prefWidth="281.0">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints maxHeight="42.4" minHeight="10.0" prefHeight="42.4" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="25.599996948242186" minHeight="0.0" prefHeight="6.399993896484375" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="48.79999999999999" minHeight="10.0" prefHeight="42.400006103515615" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <HBox prefHeight="39.0" prefWidth="289.0" style="-fx-border-color: black; -fx-border-width: 3px;" GridPane.columnSpan="2">
+                     <children>
+                        <Label prefHeight="30.0" prefWidth="151.0" style="-fx-background-color: #E3F2FD;" text="Avg Rainfaill:" textAlignment="CENTER">
+                           <font>
+                              <Font name="Berlin Sans FB" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="avgRainfall" prefHeight="30.0" prefWidth="132.0" style="-fx-background-color: linear-gradient( #D2B48C 100.0%, white 40.0%);" textAlignment="RIGHT">
+                           <font>
+                              <Font name="Berlin Sans FB" size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="100.0" prefWidth="200.0" style="-fx-border-color: black; -fx-border-width: 3px;" GridPane.columnSpan="2" GridPane.rowIndex="2">
+                     <children>
+                        <Label prefHeight="39.0" prefWidth="153.0" style="-fx-background-color: #E3F2FD;" text="Fertility Class:" textAlignment="CENTER">
+                           <font>
+                              <Font name="Berlin Sans FB" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="fertilityClass" prefHeight="32.0" prefWidth="134.0" style="-fx-background-color: linear-gradient( #D2B48C 100.0%, white 40.0%);" textAlignment="RIGHT">
+                           <font>
+                              <Font name="Berlin Sans FB" size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+               </children>
+            </GridPane>
+         </children>
+      </AnchorPane>
+   </content>
+</ScrollPane>
