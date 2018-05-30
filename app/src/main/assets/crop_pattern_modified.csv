@@ -1,10 +1,10 @@
 Season,AEZ,CP,CROP,YIELD GOAL,N,P,K,S,Mg,Zn,B,Mo,Cowdung,Poultry Manure
 Rabi,1,Boro rice - Fallow - T.Aman rice,Boro rice,7.5,150,20,65,18,0,1.3,0,0,0,0
-Kharif - 1,1,Boro rice - Fallow - T.Aman rice,T.Aman rice,5,90,10,35,10,0,1,0,0,0,0
-Kharif - 2,1,Boro rice - Fallow - T.Aman rice,Fallow,0,0,0,0,0,0,0,0,0,0,0
+Kharif - 1,1,Boro rice - Fallow - T.Aman rice,Fallow,0,0,0,0,0,0,0,0,0,0,0
+Kharif - 2,1,Boro rice - Fallow - T.Aman rice,T.Aman rice,5,90,10,35,10,0,1,0,0,0,0
 Rabi,1,Wheat - Fallow - T.Aman rice,Wheat,4.5,120,30,60,10,4,1,1,0,0,0
-Kharif - 1,1,Wheat - Fallow - T.Aman rice,T.Aman rice,5,90,10,35,10,0,1,0,0,0,0
-Kharif - 2,1,Wheat - Fallow - T.Aman rice,Fallow,0,0,0,0,0,0,0,0,0,0,0
+Kharif - 1,1,Wheat - Fallow - T.Aman rice,Fallow,0,0,0,0,0,0,0,0,0,0,0
+Kharif - 2,1,Wheat - Fallow - T.Aman rice,T.Aman rice,5,90,10,35,10,0,1,0,0,0,0
 Rabi,1,Wheat - Jute - T.Aman rice,Wheat,4.5,120,30,60,10,4,1,1,0,0,0
 Kharif - 1,1,Wheat - Jute - T.Aman rice,Jute(O),4.5,111,10,42,9,0,0,0,0,0,0
 Kharif - 2,1,Wheat - Jute - T.Aman rice,T.Aman rice,5,90,10,35,10,0,1,0,0,0,0
@@ -70,24 +70,147 @@ Kharif - 1,8,Potato - Fallow - T.Aman rice,Fallow,0,0,0,0,0,0,0,0,0,0,0
 Kharif - 2,8,Potato - Fallow - T.Aman rice,T.Aman rice,5,90,10,30,12,0,1,0,0,0,0
 Rabi,8,Potato - Jute - Fallow,Potato,30,135,30,90,15,5,2,1,0,0,0
 Kharif - 1,8,Potato - Jute - Fallow,Jute(C) ,3.5,75,8,18,8,0,0,0,0,0,0
-Kharif - 2,9,Boro rice - T.Aus rice - T.Aman rice,Boro rice,7.5,150,20,65,18,0,1.3,0,0,0,0
-Rabi,9,Boro rice - T.Aus rice - T.Aman rice,T.Aus,4,75,10,25,9,0,0.6,0,0,0,0
-Kharif - 1,9,Boro rice - T.Aus rice - T.Aman rice,T.Aman rice,5,90,10,35,12,0,1,0,0,0,0
-Kharif - 2,9,Boro rice - Fallow - T.Aman rice,Boro rice,7.5,150,20,65,18,0,1.3,0,0,0,0
-Rabi,9,Boro rice - Fallow - T.Aman rice,Fallow,0,0,0,0,0,0,0,0,0,0,0
-Kharif - 1,9,Boro rice - Fallow - T.Aman rice,T.Aman rice,5,90,10,35,12,0,1,0,0,0,0
-Kharif - 2,9,Boro rice - Jute - T.Aman rice,Boro rice,7.5,150,20,65,18,0,1.3,0,0,0,0
-Rabi,9,Boro rice - Jute - T.Aman rice,Jute(O),4.5,111,10,42,13,0,0,0,0,0,0
-Kharif - 1,9,Boro rice - Jute - T.Aman rice,T.Aman rice,5,90,10,35,12,0,1,0,0,0,0
-Kharif - 2,9,Wheat - Jute - T.Aman rice,Wheat,4.5,120,30,60,15,4,1,1,0,0,0
-Rabi,9,Wheat - Jute - T.Aman rice,Jute(O),4.5,111,10,42,13,0,0,0,0,0,0
-Kharif - 1,9,Wheat - Jute - T.Aman rice,T.Aman rice,5,90,10,35,12,0,1,0,0,0,0
-Kharif - 2,9,Wheat - Jute - Fallow,Wheat,4.5,120,30,60,15,4,1,1,0,0,0
-Rabi,9,Wheat - Jute - Fallow,Jute(C) ,3.5,75,8,28,8,0,0,0,0,0,0
-Kharif - 1,9,Wheat - Jute - Fallow,Fallow,0,0,0,0,0,0,0,0,0,0,0
-Kharif - 2,9,Potato - Jute - T.Aman rice,Potato,30,135,30,90,15,5,2,1,0,0,0
-Rabi,9,Potato - Jute - T.Aman rice,Jute(O),4.5,111,10,32,13,0,0,0,0,0,0
-Kharif - 1,9,Potato - Jute - T.Aman rice,T.Aman rice,5,90,10,30,12,0,1,0,0,0,0
-Kharif - 2,9,Potato - Jute - Fallow,Potato,30,135,30,90,15,5,2,1,0,0,0
-Rabi,9,Potato - Jute - Fallow,Jute(C) ,3.5,75,8,28,8,0,0,0,0,0,0
-Kharif - 1,9,Potato - Jute - Fallow,Fallow,0,0,0,0,0,0,0,0,0,0,0
+Kharif - 2,8,Potato - Jute - Fallow,Fallow,0,0,0,0,0,0,0,0,0,0,0
+Rabi,9,Boro rice - T.Aus rice - T.Aman rice,Boro rice,7.5,150,20,65,18,0,1.3,0,0,0,0
+Kharif - 1,9,Boro rice - T.Aus rice - T.Aman rice,T.Aus,4,75,10,25,9,0,0.6,0,0,0,0
+Kharif - 2,9,Boro rice - T.Aus rice - T.Aman rice,T.Aman rice,5,90,10,35,12,0,1,0,0,0,0
+Rabi,9,Boro rice - Fallow - T.Aman rice,Boro rice,7.5,150,20,65,18,0,1.3,0,0,0,0
+Kharif - 1,9,Boro rice - Fallow - T.Aman rice,Fallow,0,0,0,0,0,0,0,0,0,0,0
+Kharif - 2,9,Boro rice - Fallow - T.Aman rice,T.Aman rice,5,90,10,35,12,0,1,0,0,0,0
+Rabi,9,Boro rice - Jute - T.Aman rice,Boro rice,7.5,150,20,65,18,0,1.3,0,0,0,0
+Kharif - 1,9,Boro rice - Jute - T.Aman rice,Jute(O),4.5,111,10,42,13,0,0,0,0,0,0
+Kharif - 2,9,Boro rice - Jute - T.Aman rice,T.Aman rice,5,90,10,35,12,0,1,0,0,0,0
+Rabi,9,Wheat - Jute - T.Aman rice,Wheat,4.5,120,30,60,15,4,1,1,0,0,0
+Kharif - 1,9,Wheat - Jute - T.Aman rice,Jute(O),4.5,111,10,42,13,0,0,0,0,0,0
+Kharif - 2,9,Wheat - Jute - T.Aman rice,T.Aman rice,5,90,10,35,12,0,1,0,0,0,0
+Rabi,9,Wheat - Jute - Fallow,Wheat,4.5,120,30,60,15,4,1,1,0,0,0
+Kharif - 1,9,Wheat - Jute - Fallow,Jute(C) ,3.5,75,8,28,8,0,0,0,0,0,0
+Kharif - 2,9,Wheat - Jute - Fallow,Fallow,0,0,0,0,0,0,0,0,0,0,0
+Rabi,9,Potato - Jute - T.Aman rice,Potato,30,135,30,90,15,5,2,1,0,0,0
+Kharif - 1,9,Potato - Jute - T.Aman rice,Jute(O),4.5,111,10,32,13,0,0,0,0,0,0
+Kharif - 2,9,Potato - Jute - T.Aman rice,T.Aman rice,5,90,10,30,12,0,1,0,0,0,0
+Rabi,9,Potato - Jute - Fallow,Potato,30,135,30,90,15,5,2,1,0,0,0
+Kharif - 1,9,Potato - Jute - Fallow,Jute(C) ,3.5,75,8,28,8,0,0,0,0,0,0
+Kharif - 2,9,Potato - Jute - Fallow,Fallow,0,0,0,0,0,0,0,0,0,0,0
+Rabi,16,Potato - B. Aman rice,Potato,30,135,20,90,10,3,2,1,0,5,3
+Kharif,16,Potato - B. Aman rice,B. Aman rice,2.5,30,6,14,4,0,0,0,0,0,0
+Rabi,16,Potato - Boro rice - Fallow,Potato,30,135,20,90,10,3,2,1,0,0,3
+Kharif - 1,16,Potato - Boro rice - Fallow,Boro rice,7.5,150,10,55,12,0,1.3,0,0,0,0
+Kharif - 2,16,Potato - Boro rice - Fallow,Fallow,0,0,0,0,0,0,0,0,0,0,0
+Rabi,16,Mustard - Boro rice - Fallow,Mustard,1.8,90,18,32,10,1.5,1,1,0,0,0
+Kharif - 3,16,Mustard - Boro rice - Fallow,Boro rice,7.5,150,10,55,12,0,1.3,0,0,0,0
+Kharif - 4,16,Mustard - Boro rice - Fallow,Fallow,0,0,0,0,0,0,0,0,0,0,0
+Rabi,16,Mustard - B.Aman rice,Mustard,1.8,90,18,32,10,1.5,1,1,0,0,0
+Kharif,16,Mustard - B.Aman rice,B. Aman rice,2.5,30,6,14,4,0,0,0,0,0,0
+Rabi,16,Boro rice - B.Aman rice ,Boro rice,7.5,150,15,65,12,0,1.5,0,0,0,0
+Kharif,16,Boro rice - B.Aman rice ,B. Aman rice,2.5,30,6,14,4,0,0,0,0,0,0
+Rabi,16,Boro rice - Fallow - Fallow,Boro rice,7.5,150,15,65,12,0,1.5,0,0,0,0
+Kharif - 13,16,Boro rice - Fallow - Fallow,Fallow,0,0,0,0,0,0,0,0,0,0,0
+Kharif - 14,16,Boro rice - Fallow - Fallow,Fallow,0,0,0,0,0,0,0,0,0,0,0
+Rabi,16,Boro rice - T.Aus rice - T.Aman rice,Boro rice,7.5,150,15,65,12,0,1.5,0,0,0,0
+Kharif - 15,16,Boro rice - T.Aus rice - T.Aman rice,T.Aus rice,4,75,6,25,6,0,0.6,0,0,0,0
+Kharif - 16,16,Boro rice - T.Aus rice - T.Aman rice,T.Aman rice,5,90,6,35,8,0,1,0,0,0,0
+Rabi,16,Wheat - Jute (O) - Fallow,Wheat,4.5,120,20,60,10,0,1.3,1,0,0,0
+Kharif - 17,16,Wheat - Jute (O) - Fallow,Jute (O),4.5,111,10,42,9,0,0,0,0,0,0
+Kharif - 18,16,Wheat - Jute (O) - Fallow,Fallow,0,0,0,0,0,0,0,0,0,0,0
+Rabi,17,Boro rice - Fallow - T. Aman rice,Boro rice,7.5,150,20,65,15,0,1.3,0,0,0,0
+Kharif - 19,17,Boro rice - Fallow - T. Aman rice,Fallow,0,0,0,0,0,0,0,0,0,0,0
+Kharif - 20,17,Boro rice - Fallow - T. Aman rice,T.Aman rice,5,90,10,35,10,0,1,0,0,0,0
+Rabi,17,Boro rice - Fallow - Fallow,Boro rice,7.5,150,20,65,15,0,1.3,0,0,0,0
+Kharif - 21,17,Boro rice - Fallow - Fallow,Fallow,0,0,0,0,0,0,0,0,0,0,0
+Kharif - 22,17,Boro rice - Fallow - Fallow,Fallow,0,0,0,0,0,0,0,0,0,0,0
+Rabi,17,Boro rice - B.Aman rice ,Boro rice,7.5,150,20,65,15,0,1.3,0,0,0,0
+Kharif,17,Boro rice - B.Aman rice ,B. Aman rice,2.5,30,6,14,5,0,,0,0,0,0
+Rabi,17,Wheat - Fallow - T.Aman rice,Wheat,4.5,120,30,60,15,0,1.3,1,0,0,0
+Kharif - 19,17,Wheat - Fallow - T.Aman rice,Fallow,0,0,0,0,0,0,0,0,0,0,0
+Kharif - 20,17,Wheat - Fallow - T.Aman rice,T.Aman rice,5,90,10,35,10,0,1,0,0,0,0
+Rabi,17,Fallow - Fallow - T.Aman rice,Fallow,0,0,0,0,0,0,0,0,0,0,0
+Kharif - 21,17,Fallow - Fallow - T.Aman rice,Fallow,0,0,0,0,0,0,0,0,0,0,0
+Kharif - 22,17,Fallow - Fallow - T.Aman rice,T.Aman rice,5,90,15,40,10,0,1,0,0,0,0
+Rabi,17,Soybean - T. Aus rice - T. Aman rice,Soybean,2,24,30,40,15,0,1,0.5,0.6,0,0
+Kharif - 23,17,Soybean - T. Aus rice - T. Aman rice,T.Aus rice,4,75,10,25,8,0,0.6,0,0,0,0
+Kharif - 24,17,Soybean - T. Aus rice - T. Aman rice,T. Aman rice,5,90,10,35,10,0,1,0,0,0,0
+Rabi,17,Lentil - Fallow - T.Aman rice,Lentil,1.8,18,30,25,18,0,1,0.4,0.2,0,0
+Kharif - 25,17,Lentil - Fallow - T.Aman rice,Fallow,0,0,0,0,0,0,0,0,0,0,0
+Kharif - 26,17,Lentil - Fallow - T.Aman rice,T.Aman rice,5,90,10,25,8,0,0.6,0,0,0,0
+Rabi,17,Chickpea - Fallow - T.Aman rice,Chickpea,2.5,33,24,30,21,0,1,0.5,0.2,0,0
+Kharif - 27,17,Chickpea - Fallow - T.Aman rice,Fallow,0,0,0,0,0,0,0,0,0,0,0
+Kharif - 28,17,Chickpea - Fallow - T.Aman rice,T.Aman rice,5,90,10,25,8,0,0.6,0,0,0,0
+Rabi,18,Boro rice - Fallow - T.Aman rice,Boro rice,7.5,150,15,65,12,0,1.3,0,0,0,0
+Kharif - 29,18,Boro rice - Fallow - T.Aman rice,Fallow,0,0,0,0,0,0,0,0,0,0,0
+Kharif - 30,18,Boro rice - Fallow - T.Aman rice,T.Aman rice,5,90,6,35,8,0,1,0,0,0,0
+Rabi,18,Fallow - Fallow - T.Aman rice,Fallow,0,0,0,0,0,0,0,0,0,0,0
+Kharif - 31,18,Fallow - Fallow - T.Aman rice,Fallow,0,0,0,0,0,0,0,0,0,0,0
+Kharif - 32,18,Fallow - Fallow - T.Aman rice,T.Aman rice,5,90,10,40,8,0,1,0,0,0,0
+Rabi,18,Groundnut - Fallow - T.Aman rice,Groundnut,2.5,50,45,40,35,0,1,0.5,0,0,0
+Kharif - 33,18,Groundnut - Fallow - T.Aman rice,Fallow,0,0,0,0,0,0,0,0,0,0,0
+Kharif - 34,18,Groundnut - Fallow - T.Aman rice,T.Aman rice,5,90,6,35,8,0,1,0,0,0,0
+Rabi,18,Fallow - T.Aus rice - T.Aman rice,Fallow,0,0,0,0,0,0,0,0,0,0,0
+Kharif - 35,18,Fallow - T.Aus rice - T.Aman rice,T.Aus rice,4,75,10,30,6,0,0.6,0,0,0,0
+Kharif - 36,18,Fallow - T.Aus rice - T.Aman rice,T.Aman rice,5,90,6,35,8,0,1,0,0,0,0
+Rabi,20,Boro rice - Fallow - T.Aman rice,Boro rice,7.5,150,20,65,12,0,1.3,0,0,0,0
+Kharif - 37,20,Boro rice - Fallow - T.Aman rice,Fallow,0,0,0,0,0,0,0,0,0,0,0
+Kharif - 38,20,Boro rice - Fallow - T.Aman rice,T.Aman rice,5,90,10,35,8,0,1,0,0,0,0
+Rabi,20,Boro rice - Fallow - Fallow,Boro rice,7.5,150,20,65,12,0,1,0,0,0,0
+Kharif - 39,20,Boro rice - Fallow - Fallow,Fallow,0,0,0,0,0,0,0,0,0,0,0
+Kharif - 40,20,Boro rice - Fallow - Fallow,Fallow,0,0,0,0,0,0,0,0,0,0,0
+Rabi,20,Mustard - Fallow - T.Aman rice,Mustard,1.8,90,27,32,10,1.5,1,0.5,0,0,0
+Kharif - 41,20,Mustard - Fallow - T.Aman rice,Fallow,0,0,0,0,0,0,0,0,0,0,0
+Kharif - 42,20,Mustard - Fallow - T.Aman rice,T.Aman rice,5,90,10,35,8,0,1,0,0,0,0
+Rabi,20,Fallow - Fallow - T.Aman rice,Fallow,0,0,0,0,0,0,0,0,0,0,0
+Kharif - 43,20,Fallow - Fallow - T.Aman rice,Fallow,0,0,0,0,0,0,0,0,0,0,0
+Kharif - 44,20,Fallow - Fallow - T.Aman rice,T.Aman rice,5,90,10,35,8,0,1,0,0,0,0
+Rabi,20,Fallow - T.Aus rice - T.Aman rice,Fallow,0,0,0,0,0,0,0,0,0,0,0
+Kharif - 45,20,Fallow - T.Aus rice - T.Aman rice,T.Aus rice,4,75,15,30,6,0,0,0,0,0,0
+Kharif - 46,20,Fallow - T.Aus rice - T.Aman rice,T.Aman rice,5,90,10,35,8,0,1,0,0,0,0
+Rabi,13,Boro rice - Fallow - Fallow,Boro rice,7.5,125,20,35,6,0,1.3,0,0,0,0
+Kharif - 47,13,Boro rice - Fallow - Fallow,Fallow,0,0,0,0,0,0,0,0,0,0,0
+Kharif - 48,13,Boro rice - Fallow - Fallow,Fallow,0,0,0,0,0,0,0,0,0,0,0
+Rabi,13,Boro rice - Fallow - T.Aman rice,Boro rice,7.5,125,20,35,6,0,1.3,0,0,0,0
+Kharif - 49,13,Boro rice - Fallow - T.Aman rice,Fallow,0,0,0,0,0,0,0,0,0,0,0
+Kharif - 50,13,Boro rice - Fallow - T.Aman rice,T.Aman rice,5,75,10,18,4,0,1,0,0,0,0
+Rabi,13,Mungbean - T.Aus rice - T.Aman rice,Mungbean,1.5,20,30,12,6,0,0,0,0,0,0
+Kharif - 51,13,Mungbean - T.Aus rice - T.Aman rice,T.Aus rice,4,65,10,12,3,0,0.6,0,0,0,0
+Kharif - 52,13,Mungbean - T.Aus rice - T.Aman rice,T.Aman rice,5,75,10,18,4,0,1,0,0,0,0
+Rabi,13,Grasspea - Fallow - T.Aman rice,Grasspea,1.5,20,30,12,6,0,0,0,0,0,0
+Kharif - 53,13,Grasspea - Fallow - T.Aman rice,Fallow,0,0,0,0,0,0,0,0,0,0,0
+Kharif - 54,13,Grasspea - Fallow - T.Aman rice,T.Aman rice,5,75,10,18,4,0,1,0,0,0,0
+Rabi,13,Chilli - Fallow - T.Amar rice,Chilli,2,80,57,32,5,0,1,0.25,0,0,0
+Kharif - 1,13,Chilli - Fallow - T.Amar rice,Fallow,0,0,0,0,0,0,0,0,0,0,0
+Kharif - 2,13,Chilli - Fallow - T.Amar rice,T.Aman rice,5,75,10,18,4,0,1,0,0,0,0
+Rabi,11,Boro rice - T.Aus rice - T.Aman rice,Boro rice,7.5,150,20,65,18,0,1.3,0,0,0,0
+Kharif - 1,11,Boro rice - T.Aus rice - T.Aman rice,T.Aus,4,75,10,25,9,0,0.6,0,0,0,0
+Kharif - 2,11,Boro rice - T.Aus rice - T.Aman rice,T.Aman rice,5,90,10,35,12,0,1,0,0,0,0
+Rabi,11,Boro rice - Fallow - T.Aman rice,Boro rice,7.5,150,20,65,18,0,1.3,0,0,0,0
+Kharif - 1,11,Boro rice - Fallow - T.Aman rice,Fallow,0,0,0,0,0,0,0,0,0,0,0
+Kharif - 2,11,Boro rice - Fallow - T.Aman rice,T.Aman rice,5,90,10,35,12,0,1,0,0,0,0
+Rabi,11,Boro rice - Jute - T.Aman rice,Boro rice,7.5,150,20,65,18,0,1.3,0,0,0,0
+Kharif - 1,11,Boro rice - Jute - T.Aman rice,Jute(O),4.5,111,10,42,13,0,0,0,0,0,0
+Kharif - 2,11,Boro rice - Jute - T.Aman rice,T.Aman rice,5,90,10,35,12,0,1,0,0,0,0
+Rabi,11,Wheat - Jute - T.Aman rice,Wheat,4.5,120,30,60,15,4,1,1,0,0,0
+Kharif - 1,11,Wheat - Jute - T.Aman rice,Jute(O),4.5,111,10,42,13,0,0,0,0,0,0
+Kharif - 2,11,Wheat - Jute - T.Aman rice,T.Aman rice,5,90,10,35,12,0,1,0,0,0,0
+Rabi,11,Wheat - Fallow - T.Aman rice,Wheat,4.5,120,30,60,15,4,1,1,0,0,0
+Kharif - 1,11,Wheat - Fallow - T.Aman rice,Fallow,0,0,0,0,0,0,0,0,0,0,0
+Kharif - 2,11,Wheat - Fallow - T.Aman rice,T.Aman rice,5,90,10,35,12,0,1,0,0,0,0
+Rabi,11,Wheat - T.Aus rice - T.Aman rice,Wheat,4.5,120,30,60,15,4,1,1,0,0,0
+Kharif - 3,11,Wheat - T.Aus rice - T.Aman rice,T.Aus rice,4,75,10,25,9,0,0.6,0,0,0,0
+Kharif - 4,11,Wheat - T.Aus rice - T.Aman rice,T.Aman rice,5,90,10,35,12,0,1,0,0,0,0
+Rabi,11,Lentil - Fallow - T.Aman rice,Lentil,1.8,18,30,25,18,0,1,0.4,0.2,0,0
+Kharif - 5,11,Lentil - Fallow - T.Aman rice,Fallow,0,0,0,0,0,0,0,0,0,0,0
+Kharif - 6,11,Lentil - Fallow - T.Aman rice,T.Aman rice,5,90,10,25,8,0,0.6,0,0,0,0
+Rabi,11,Onion - Jute - T.Aman rice,Onion,16,90,45,80,30,0,3,1.5,0,0,0
+Kharif - 1,11,Onion - Jute - T.Aman rice,Jute(O),4.5,111,10,32,13,0,0,0,0,0,0
+Kharif - 2,11,Onion - Jute - T.Aman rice,T.Aman rice,5,90,10,35,12,0,0,0,0,0,0
+Rabi,11,Potato - Jute - T.Aman rice,Potato,30,135,30,90,15,5,2,1,0,5,3
+Kharif - 1,11,Potato - Jute - T.Aman rice,Jute(O),4.5,111,10,32,13,0,0,0,0,0,0
+Kharif - 2,11,Potato - Jute - T.Aman rice,T.Aman rice,5,90,10,30,12,0,1,0,0,0,0
+Rabi,11,Maize - Fallow - T.Aman rice,Maize,10,255,75,80,52,5,2,1.5,0,0,0
+Kharif - 1,11,Maize - Fallow - T.Aman rice,Fallow,0,0,0,0,0,0,0,0,0,0,0
+Kharif - 2,11,Maize - Fallow - T.Aman rice,T.Aman rice,5,90,10,30,12,0,1,0,0,0,0
+Rabi,11,Maize - Jute - T.Aman rice,Maize,10,255,75,80,52,5,5,1.5,0,0,0
+Kharif - 1,11,Maize - Jute - T.Aman rice,Jute(O),4.5,111,10,32,13,0,0,0,0,0,0
+Kharif - 2,11,Maize - Jute - T.Aman rice,T.Aman rice,5,90,10,30,12,0,1,0,0,0,0
+Rabi,11,Onion - Brinjal - T.Aman rice,Onion,16,90,45,80,30,0,1.5,1.5,0,5,3
+Kharif - 1,11,Onion - Brinjal - T.Aman rice,Brinjal,60,120,25,42,15,0,1,0.6,0,0,0
+Kharif - 2,11,Onion - Brinjal - T.Aman rice,T.Aman rice,5,90,10,30,12,0,1,0,0,0,0

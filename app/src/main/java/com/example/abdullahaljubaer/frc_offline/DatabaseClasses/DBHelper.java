@@ -20,7 +20,7 @@ import java.util.Map;
 public class DBHelper extends SQLiteOpenHelper {
 
     public static final String DATABASE_NAME = "frg-2018-fina.db";
-    public static final Integer DATABASE_VERSION = 1;
+    public static final Integer DATABASE_VERSION = 2;
     public final Context context;
 
     //public static Map<Fertilizer, Double> composition = new HashMap<>();

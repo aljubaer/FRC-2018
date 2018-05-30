@@ -25,7 +25,12 @@ public class AezBasedResultProducer implements IResultProducer {
 
         for (int i = 2; i < aez.size(); i++) {
             for (int j = 0; j < aez.get(i).size(); j++) {
-                String s = String.valueOf(Double.parseDouble(aez.get(i).get(j)) * val);
+                String s = "0.0";
+                try {
+                    s = String.valueOf(Double.parseDouble(aez.get(i).get(j)) * val);
+                } catch (Exception e) {
+                    s = "0.0";
+                }
                 aez.set(i, aez.get(i)).set(j, s);
             }
         }

@@ -150,7 +150,6 @@ public class NutrientInputActivityCopy extends BaseActivity {
         txtTop = findViewById(R.id.txt_top);
         txtTop.setText("Crop season: " + mCrop.getSeasonName()
                 + "\nVariety: " + mCrop.getVarietyName()
-                + "\nYield goal: -"
                 + "\nTexture: " + mTexture.getTexture()
                 + "\nLand type: " + mTexture.getLandType());
 

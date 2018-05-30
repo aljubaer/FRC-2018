@@ -59,9 +59,9 @@ public class AezCropPatternActivity extends BaseActivity {
 
         listViewCropPattern = findViewById(R.id.aez_cp);
 
-        croppingPattern = MainActivity.patternDBHelper.getAllCropPatterns("1");
-        CustomAlertAdapter arrayAdapter = new CustomAlertAdapter(AezCropPatternActivity.this, croppingPattern);
-        listViewCropPattern.setAdapter(arrayAdapter);
+       // croppingPattern = MainActivity.patternDBHelper.getAllCropPatterns("1");
+       // CustomAlertAdapter arrayAdapter = new CustomAlertAdapter(AezCropPatternActivity.this, croppingPattern);
+       // listViewCropPattern.setAdapter(arrayAdapter);
 
 
         aez.add("1");
